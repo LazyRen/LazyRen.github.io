@@ -4,7 +4,7 @@
 # IMPORTANT: Set the URL of your site.
 # Set to https://<username>.github.io when hosting on GitHub Pages
 # (unless you are using a custom domain).
-url:                   https://domain.tld
+url:                   https://LazyRen.github.io
 
 # IMPORTANT: Set The "base URL" of your site.
 # When your site sits in a subdirectory, set to /<name of directory>
@@ -16,21 +16,20 @@ baseurl:               ''
 
 # Language of your content in 2-letter code, e.g.: en, de.
 # You may also provide a location, e.g.: en-us, de_AT.
-lang:                  en
+lang:                  ko-KR, en-US
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Hydejack
+title:                 Lazy Ren
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  "Best Jekyll Theme by a Mile".
-  **Hydejack** is your presence on the web, featuring a blog, portfolio, and resume.
+  Work Hard to be Lazy.
+  SW Engineer at Samsung Research.
 
 # A shorter description for the sidebar.
 tagline:               >
-  "Best Jekyll Theme by a Mile".
-  Open `_config.yml` to edit this text.
+  Work Hard to be Lazy.
 
 # A list of keywords for your blog
 keywords:              []
@@ -38,25 +37,62 @@ keywords:              []
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                  /assets/icons/icon.png
+logo:                  http://graph.facebook.com/100007955266112/picture?type=large
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
-  name:                <firstname> <lastname>
-  email:               <mail@domain.tld>
-  # Used by `jekyll-seo-tag`:
-  # twitter:             <username>
+  name:                DaeIn Lee
+  email:               lazy0ren@gmail.com
+  picture:  /assets/img/seattle.png
+  social:
+    github:          lazyren
+    email:           lazy0ren@gmail.com
+    linkedin:        daein-lee-3b6ba9139
+    rss:             https://lazyren.github.io/feed.xml
+    # facebook:        <username>
+    # google:          <number>
+    # vk:              <username>
+    # youtube:         <string_string_string>
+    # vimeo:           <username>
+    # vine:            <username>
+    # spotify:         <user>/<number>
+    # soundcloud:      <username>
+    # lastfm:          <username>
+    # instagram:       <username>
+    # flickr:          <string@string>
+    # 500px:           <username>
+    # dribbble:        <username>
+    # behance:         <username>
+    # deviantart:      <username>
+    # ello:            <username>
+    # twitch:          <username>
+    # steam:           <number>
+    # reddit:          <username>
+    # tumblr:          <username>
+    # pinterest:       <username>
+    # foursquare:      <number>
+    # yelp:            <string>
+    # stackoverflow:   <number/username>
+    # npm:             <username>
+    # hackernews:      <username>
+    # trello:          <firstnamelastname>
+    # xing:            <firstname_lastname_counter>
+    # blogger:         <number>
+    # delicious:       <username>
+    # stumbleupon:     <username>
+    # paypal:          <username>
+    # download:        <url>
 
 # Add links to the sidebar.
-menu:
-  - title:             Blog
-    url:               /blog/
-  - title:             Projects
-    url:               /projects/
-  - title:             Résumé*
-    url:               /resume/
-  - title:             Documentation
-    url:               /docs/
+# menu:
+#   - title:             Blog
+#     url:               /blog/
+#   - title:             Projects
+#     url:               /projects/
+#   - title:             Résumé*
+#     url:               /resume/
+#   - title:             Documentation
+#     url:               /docs/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
@@ -70,11 +106,13 @@ menu:
 copyright:             © 2018. All rights reserved.
 
 # Format of the permalinks
-permalink:             /blog/:categories/:year-:month-:day-:title/
+# permalink:             /blog/:categories/:year-:month-:day-:title/
+permalink:           none
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              10
-paginate_path:         /blog/page-:num/
+paginate_path:         /page-:num/
+excerpt_separator:     <!--more-->
 
 
 # Customizaton
@@ -109,6 +147,15 @@ defaults:
       accent_image:
         background:    rgb(32,32,32)
         overlay:       false
+  - scope:
+      path: about.md
+    values:
+      menu: true
+      order: 1
+  - scope:
+      type: posts
+    values:
+      comments: true
 
   # `jekyll-seo-tag` will mark collection outputs as `BlogPosting`,
   # but we want them to be `WebPage`s:
@@ -134,11 +181,11 @@ defaults:
 
 # Set your Google Analytics id to receive `pageview` events.
 # To remove Google Anaylics from your page, remove the line below.
-# google_analytics:      UA-XXXXXXXX-X
+google_analytics:      UA-68290006-3
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
-# disqus:                <disqus_shortname>
+disqus:                lazyrengithub
 
 # Setting a tinyletter username will enable the newsletter subscription box.
 # tinyletter:            <tinyletter_username>
@@ -226,7 +273,7 @@ hydejack:
 
 collections:
   featured_categories:
-    permalink:         /blog/:name/
+    permalink:         /:name/
     output:            true
 
   featured_tags:
@@ -284,7 +331,7 @@ plugins:
 # ---------------------------------------------------------------------------------------
 
 # Where you proof that you own this site (used by jekyll-seo-tag)
-# google_site_verification: <verification-id>
+google_site_verification: "zIn7l_GwuOi4WnyRQsdhI9Jpn6IAs0SLR_4HG8OZzsM"
 # -- or --
 # webmaster_verifications:
 #   google:              <verification-id>
@@ -326,7 +373,7 @@ relative_links:
 titles_from_headings:
   strip_title:         true
   collections:         true
-  
+
 replace_img:
   re_img:              <img\s*(?<attrs>.*?)\s*/>
   re_ignore:           (re|data)-ignore
@@ -352,3 +399,9 @@ compress_html:
 
 sass:
   style:               compressed
+
+# jekyll-feed settings
+feed:
+  categories:
+    - devlog
+    - review
