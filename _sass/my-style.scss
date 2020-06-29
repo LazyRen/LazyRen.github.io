@@ -9,27 +9,10 @@
 }
 
 //Sidebar Modification
-
 .sidebar {
-  // <<< inline
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgba(255, 255, 255, .75);
-  // text-align: center;
-  z-index: 2;
-  min-height: 100vh;
-  // >>>
-
-  a {
-    color: #fff; // inline
-    border-bottom-color: rgba(255, 255, 255, 0.2); // inline
-    &:hover { border-bottom-color: #fff; } // link
-  }
+  text-align: left;
 }
 
-// <<<<< INLINE
 .sidebar-sticky {
   position: absolute;
   height: 95%;
@@ -50,7 +33,6 @@ a.sidebar-nav-subitem {
   padding: .25rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-// >>>>>
 
 .list-wrapper {
   text-align: left;

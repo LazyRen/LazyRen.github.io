@@ -16,6 +16,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ## Attributions
+
 Appropriate credit as per Creative Commons licenses.
 
 | Work                                                   | License        | Changes
@@ -25,9 +26,11 @@ Appropriate credit as per Creative Commons licenses.
 | [Touch-161562.svg][41]                                 | [CC0-1.0]      | Composition
 
 ## Licenses
+
 Parts of this software are provided under separate licenses.
 
 ### Hyde
+
 This software also uses portions of the
 `poole/hyde`
 project, which is MIT licensed with the following copyright:
@@ -37,6 +40,7 @@ project, which is MIT licensed with the following copyright:
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### hy-drawer
+
 This software also uses portions of the
 `hydecorp/hy-drawer`
 project, which is GPL-3.0 licensed with the following copyright:
@@ -46,6 +50,7 @@ project, which is GPL-3.0 licensed with the following copyright:
 A copy of the [GPL-3.0] license is provided as part of this distribution.
 
 ### hy-push-state
+
 This software also uses portions of the
 `hydecorp/hy-push-state`
 project, which is GPL-3.0 licensed with the following copyright:
@@ -55,6 +60,7 @@ project, which is GPL-3.0 licensed with the following copyright:
 A copy of the [GPL-3.0] license is provided as part of this distribution.
 
 ### hy-img
+
 This software also uses portions of the
 `hydecorp/hy-img`
 project, which is GPL-3.0 licensed with the following copyright:
@@ -64,6 +70,7 @@ project, which is GPL-3.0 licensed with the following copyright:
 A copy of the [GPL-3.0] license is provided as part of this distribution.
 
 ### hy-component
+
 This software also uses portions of the
 `hydecorp/hy-component`
 project, which is MIT licensed with the following copyright:
@@ -73,6 +80,7 @@ project, which is MIT licensed with the following copyright:
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### RxJS
+
 This software also uses portions of the
 `ReactiveX/rxjs`
 project, which is Apache-2.0 licensed with the following copyright:
@@ -85,6 +93,7 @@ No `NOTICE` file was provided.
 A copy of the [Apache-2.0] license is provided as part of this distribution.
 
 ### KaTeX
+
 This software also uses portions of the
 `Khan/KaTeX`
 project, which is MIT licensed with the following copyright:
@@ -94,6 +103,7 @@ project, which is MIT licensed with the following copyright:
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### core-js
+
 This software also uses portions of the
 `zloirock/core-js`
 project, which is MIT licensed with the following copyright:
@@ -103,6 +113,7 @@ project, which is MIT licensed with the following copyright:
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### color
+
 This software also uses portions of the
 `Qix-/color`
 project, which is MIT licensed with the following copyright:
@@ -112,6 +123,7 @@ project, which is MIT licensed with the following copyright:
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### elem-dataset
+
 This software also uses portions of the
 `awcross/elem-dataset`
 project, which is MIT licensed with the following copyright:
@@ -121,6 +133,7 @@ project, which is MIT licensed with the following copyright:
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### Web Animations
+
 This software also uses portions of the
 `web-animations/web-animations-js`
 project, which is Apache-2.0 licensed with the following copyright:
@@ -133,22 +146,24 @@ No `NOTICE` file was provided.
 A copy of the [Apache-2.0] license is provided as part of this distribution.
 
 ### Modernizr
+
 This software also uses portions of the
 `Modernizr/Modernizr`
 project, which is MIT licensed with the following copyright:
 
-> Copyright (c)  
->  Faruk Ates  
->  Paul Irish  
->  Alex Sexton  
->  Ryan Seddon  
->  Patrick Kettner  
->  Stu Cox  
->  Richard Herrera  
+> Copyright (c)
+> Faruk Ates
+> Paul Irish
+> Alex Sexton
+> Ryan Seddon
+> Patrick Kettner
+> Stu Cox
+> Richard Herrera
 
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### Compress HTML in Jekyll
+
 This software also uses portions of the
 `penibelst/jekyll-compress-html`
 project, which is MIT licensed with the following copyright:
@@ -158,6 +173,7 @@ project, which is MIT licensed with the following copyright:
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### The HTML5 Shiv
+
 This software also uses portions of the
 `aFarkas/html5shiv`
 project, which is MIT licensed with the following copyright:
@@ -167,6 +183,7 @@ project, which is MIT licensed with the following copyright:
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### loadCSS
+
 This software also uses portions of the
 `filamentgroup/loadCSS`
 project, which is MIT licensed with the following copyright:
@@ -176,6 +193,7 @@ project, which is MIT licensed with the following copyright:
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### Ratchet
+
 This software also uses portions of the
 `twbs/ratchet`
 project, which is MIT licensed with the following copyright:
@@ -185,6 +203,7 @@ project, which is MIT licensed with the following copyright:
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### Swipe
+
 This software also uses portions of the
 `thebird/Swipe`
 project, which is MIT licensed with the following copyright:
@@ -194,6 +213,7 @@ project, which is MIT licensed with the following copyright:
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### smoothState
+
 This software also uses portions of the
 `miguel-perez/smoothState.js`
 project, which is MIT licensed with the following copyright:
@@ -203,6 +223,7 @@ project, which is MIT licensed with the following copyright:
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### camelcase
+
 This software also uses portions of the
 `sindresorhus/camelcase`
 project, which is MIT licensed with the following copyright:
@@ -212,6 +233,7 @@ project, which is MIT licensed with the following copyright:
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### decamelize
+
 This software also uses portions of the
 `sindresorhus/decamelize`
 project, which is MIT licensed with the following copyright:
@@ -221,25 +243,28 @@ project, which is MIT licensed with the following copyright:
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### jQuery
+
 This software also uses portions of the
 `jquery/jquery`
 project, which is MIT licensed with the following copyright:
 
-> Copyright JS Foundation and other contributors, https://js.foundation/
+> Copyright JS Foundation and other contributors, <https://js.foundation/>
 
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### Bootstrap
+
 This software also uses portions of the
 `twbs/bootstrap`
 project, which is MIT licensed with the following copyright:
 
-> Copyright (c) 2011-2018 Twitter, Inc.  
+> Copyright (c) 2011-2018 Twitter, Inc.
 > Copyright (c) 2011-2018 The Bootstrap Authors
 
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### Smooth Scroll behavior polyfill
+
 This software also uses portions of the
 `iamdustan/smoothscroll`
 project, which is MIT licensed with the following copyright:
@@ -249,6 +274,7 @@ project, which is MIT licensed with the following copyright:
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### Atom One Light Syntax
+
 This software also uses portions of the
 `atom/one-light-syntax`
 project, which is MIT licensed with the following copyright:
@@ -258,6 +284,7 @@ project, which is MIT licensed with the following copyright:
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### Atom One Dark Syntax
+
 This software also uses portions of the
 `atom/one-dark-syntax`
 project, which is MIT licensed with the following copyright:
@@ -267,6 +294,7 @@ project, which is MIT licensed with the following copyright:
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### ResizeObserver Polyfill
+
 This software also uses portions of the
 `que-etc/resize-observer-polyfill`
 project, which is MIT licensed with the following copyright:
@@ -276,6 +304,7 @@ project, which is MIT licensed with the following copyright:
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### regenerator
+
 This software also uses portions of the
 `facebook/regenerator`
 project, which is MIT licensed with the following copyright:
@@ -285,6 +314,7 @@ project, which is MIT licensed with the following copyright:
 A copy of the [MIT] license is provided as part of this distribution.
 
 ### AMP HTML
+
 This software also uses portions of the
 `ampproject/amphtml`
 project, which is Apache-2.0 licensed with the following copyright:
@@ -297,6 +327,7 @@ No `NOTICE` file was provided.
 A copy of the [Apache-2.0] license is provided as part of this distribution.
 
 ### Intersection Observers
+
 This software also uses portions of the
 `w3c/IntersectionObserver`
 project, which is W3C licensed with the following copyright:
@@ -307,8 +338,8 @@ No substantial changes to the software were made.
 
 A copy of the [W3C] license is provided as part of this distribution.
 
-
 ### webcomponents.js (v1 spec polyfills)
+
 This software also uses portions of the
 `webcomponents/webcomponentsjs`
 project, which is BSD-style licensed with the following copyright:

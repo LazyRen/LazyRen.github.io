@@ -1,12 +1,11 @@
 ---
 layout: resume
-title: Résumé*
+title: Resume
 description: >
-  This is the `description` of your resume page, as it will be seen by search engines.
-  Open `resume.md` to edit this text.
+  Hi, I'm DaeIn Lee, currently working for Samsung Research.
 hide_description: false
 menu: true
-order: 3
+order: 1
 left_column:
  - work
  - volunteer
