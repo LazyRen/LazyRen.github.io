@@ -1,0 +1,77 @@
+---
+# Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
+layout: base
+---
+
+{% assign project = page %}
+{% assign separator = site.data.strings.separator | default:"|" %}
+{% assign nsd = site.hydejack.no_structured_data | default:site.no_structured_data %}
+{% assign proj_format = site.data.strings.date_formats.project | default:"%Y" %}
+{% assign from_to_separator = strings.from_to_separator | default:strings.resume.from_to_separator | default:"–" %}
+
+<article
+  id="project"
+  class="page"
+  role="article"
+  {% unless nsd %}vocab="http://schema.org/" typeof="CreativeWork" resource="#project"{% endunless %}
+  >
+  <header>
+    <h1 class="page-title" property="name">{{ project.title }}</h1>
+
+    <p class="post-date heading">
+      {% assign parent = site.pages | where:"show_collection",project.collection | first %}
+      {% if parent %}
+        <a href="{{ parent.url | relative_url }}" class="flip-title" property="genre">{{ parent.title }}</a>
+        {{ separator }}
+      {% endif %}
+
+
+      <time datetime="{{ project.date | date_to_xmlschema }}">{{ project.date | date:proj_format }}</time>
+      {% if project.end_date.size > 0 %}
+        {{from_to_separator}}
+        <time datetime="{{ project.end_date | date_to_xmlschema }}">{{ project.end_date | date:proj_format }}</time>
+      {% endif %}
+
+      <span class="fr">
+        <span class="sr-only">{{ separator }} {{ site.data.strings.links | default:"Links" }}{{ site.data.strings.colon }}</span>
+        {% for link in project.links %}
+          <a class="external" href="{{ link.url }}" property="sameAs">{{ link.title }}</a>
+          {% unless forloop.last %}{{ separator }}{% endunless %}
+        {% endfor %}
+      </span>
+    </p>
+
+    {% assign screenshot = project.screenshot %}
+    <div class="img lead sixteen-nine">
+      {% if screenshot %}
+        {% include components/hy-img.html
+          img=screenshot
+          sizes="(min-width: 90em) 48rem, (min-width: 54em) 42rem, (min-width: 42em) 38rem, 100vw"
+          alt=project.title
+          property="image"
+        %}
+      {% endif %}
+    </div>
+
+    {% include components/message.html text=project.description hide=page.hide_description property="description" alt="" %}
+    {% if project.caption %}<meta property="disambiguatingDescription" content="{{ project.caption }}"/>{% endif %}
+  </header>
+
+  {{ content }}
+</article>
+
+<hr class="dingbat related" />
+
+{% assign addons = page.addons | default:site.hydejack.project_addons %}
+{% unless addons %}{% assign addons = "about,newsletter,other" | split:"," %}{% endunless %}
+{% for addon in addons %}
+  {% case addon %}
+  {% when 'about' %}
+     {% include components/about.html %}
+  {% when 'newsletter' %}
+    {% include pro/newsletter.html %}
+  {% when 'other' %}
+    {% include pro/other-projects.html %}
+  {% else %}
+  {% endcase %}
+{% endfor %}

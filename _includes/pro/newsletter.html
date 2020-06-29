@@ -1,0 +1,38 @@
+{% capture my_newsletter %}{% include my-newsletter.html %}{% endcapture %}
+{% assign  my_newsletter = my_newsletter | strip_newlines %}
+
+{% if my_newsletter.size > 0 %}
+  <aside class="message message-newsletter related mb4" role="complementary">
+    {{ my_newsletter }}
+  </aside>
+{% elsif site.tinyletter %}
+  <aside class="message message-newsletter related mb4" role="complementary">
+    <h2>{{ site.data.strings.tinyletter.title | default:"Newsletter" }}</h2>
+
+    {% capture form %}
+    <form
+      action="https://tinyletter.com/{{ site.tinyletter }}"
+      method="post"
+      target="popupwindow"
+      onsubmit="window.open('https://tinyletter.com/{{ site.tinyletter }}', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
+      >
+      <div class="form-row">
+        <div class="col col-sm-6">
+          <label class="sr-only" for="tlemail">{{ site.data.strings.tinyletter.label | default:"Email" }}</label>
+          <input class="form-control" type="email" name="email" id="tlemail" placeholder="{{ site.data.strings.tinyletter.placeholder | default:'mail@example.com' }}" />
+        </div>
+        <div class="col-auto">
+          <input class="btn btn-primary" type="submit" value="{{ site.data.strings.tinyletter.button | default:'Subscribe' }}" />
+        </div>
+      </div>
+      <input type="hidden" value="1" name="embed"/>
+    </form>
+    {% endcapture %}
+
+    {{ site.data.strings.tinyletter.message
+      | default:"Subscribe to my newsletter. <!--form-->"
+      | markdownify
+      | replace:"<!--form-->", form
+    }}
+  </aside>
+{% endif %}

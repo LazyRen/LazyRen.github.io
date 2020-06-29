@@ -1,0 +1,41 @@
+{% if resume.education.size > 0 %}
+<section>
+  <div class="npb">
+  <h2 id="education" class="h3 faded hr">
+    {{ strings.resume.education | default:"Education" }}
+    <span class="symbol {{ icons.education | default:'icon-library' }}"></span>
+  </h2>
+  {% for edu in resume.education %}
+  <section>
+    <header class="{% unless forloop.first %}mt4{% endunless %}">
+      {% if edu.startDate.size > 0 %}
+        <p class="faded">
+          {% include components/from-to.html from=edu.startDate to=edu.endDate format=from_to_format %}
+        </p>
+      {% endif %}
+      <h3 class="h4 faded" {% if edu.endDate.size > 0 %}property="alumniOf" typeof="EducationalOrganization"{% endif %}>
+        {% capture study_type %}<span class="bc">{{ edu.studyType }}</span>{% endcapture %}
+        {% capture area %}<span class="bc">{{ edu.area }}</span>{% endcapture %}
+        {% capture institution %}<span class="bc" {% if edu.endDate.size > 0 %}property="name"{% endif %}>{{ edu.institution }}</span>{% endcapture %}
+        {% capture gpa %}<span class="bc">{{ edu.gpa }}</span>{% endcapture %}
+        {{ strings.resume.education_title
+          | default:"<!--study_type--> in <!--area--> from <!--institution--> with GPA of <!--gpa-->"
+          | replace:"<!--study_type-->", study_type
+          | replace:"<!--area-->", area
+          | replace:"<!--institution-->", institution
+          | replace:"<!--gpa-->", gpa
+        }}
+      </h3>
+    </header>
+
+    <h4 class="sr-only">{{ strings.resume.courses | default:"Courses" }}</h4>
+    <ul>
+      {% for course in edu.courses %}
+        <li>{{ course }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% if forloop.first %}</div>{% endif %}
+  {% endfor %}
+</section>
+{% endif %}

@@ -1,0 +1,21 @@
+{% if resume.interests.size > 0 %}
+<section class="npb">
+  <h2 id="interests" class="h3 faded hr">
+    {{ strings.resume.interests | default:"Interests" }}
+    <span class="symbol {{ icons.interests | default:'icon-heart' }}"></span>
+  </h2>
+  <dl class="skills">
+    {% for int in resume.interests %}
+      <dt class="h4">{{ int.name }}</dt>
+      <dd>
+        <span class="sr-only">{{ strings.resume.keywords | default:"Keywords" }}{{ colon }}</span>
+        <ul class="tags">
+          {% for key in int.keywords %}
+            <li class="tag">{{ key }}</li>
+          {% endfor %}
+        </ul>
+      </dd>
+    {% endfor %}
+  </dl>
+</section>
+{% endif %}

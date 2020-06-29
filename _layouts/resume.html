@@ -1,0 +1,86 @@
+---
+# Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
+layout: base
+---
+
+{% assign strings = site.data.strings %}
+{% assign colon = strings.colon | default:":" %}
+{% assign icons = strings.resume.icons %}
+{% assign from_to_format = strings.date_formats.resume | default:"%b %Y" %}
+
+{% assign nsd = site.hydejack.no_structured_data | default:site.no_structured_data %}
+{% assign resume = page.resume | default:site.data.resume %}
+{% assign basics = resume.basics %}
+
+<article
+  id="resume"
+  class="page {% unless nsd %}vcard h-card{% endunless %}"
+  role="article"
+  {% unless nsd %}vocab="http://schema.org/" typeof="Person" resource="#resume"{% endunless %}
+  >
+  {% include pro/resume/header.html %}
+  {% include components/message.html text=page.description hide=page.hide_description alt="" %}
+
+  <div class="columns contact">
+    {% include pro/resume/basics.html %}
+    {% include pro/resume/profiles.html %}
+  </div>
+
+  <div class="columns">
+    {% assign l_col = page.left_column %}
+    {% assign r_col = page.right_column %}
+    {% unless l_col %}{% assign l_col = 'work,volunteer,education,awards,publications,references' | split:',' %}{% endunless %}
+    {% unless r_col %}{% assign r_col = 'languages,skills,interests' | split:',' %}{% endunless %}
+
+    <div class="column column-3-5">
+      {% for sec in l_col %}
+        {% case sec %}
+        {% when 'work' %}
+          {% include pro/resume/work.html %}
+        {% when 'volunteer' %}
+          {% include pro/resume/volunteer.html %}
+        {% when 'education' %}
+          {% include pro/resume/education.html %}
+        {% when 'awards' %}
+          {% include pro/resume/awards.html %}
+        {% when 'publications' %}
+          {% include pro/resume/publications.html %}
+        {% when 'references' %}
+          {% include pro/resume/references.html %}
+        {% when 'languages' %}
+          {% include pro/resume/languages.html %}
+        {% when 'skills' %}
+          {% include pro/resume/skills.html %}
+        {% when 'interests' %}
+          {% include pro/resume/interests.html %}
+        {% else %}
+        {% endcase %}
+      {% endfor %}
+    </div>
+    <div class="column column-2-5">
+      {% for sec in r_col %}
+        {% case sec %}
+        {% when 'work' %}
+          {% include pro/resume/work.html %}
+        {% when 'volunteer' %}
+          {% include pro/resume/volunteer.html %}
+        {% when 'education' %}
+          {% include pro/resume/education.html %}
+        {% when 'awards' %}
+          {% include pro/resume/awards.html %}
+        {% when 'publications' %}
+          {% include pro/resume/publications.html %}
+        {% when 'references' %}
+          {% include pro/resume/references.html %}
+        {% when 'languages' %}
+          {% include pro/resume/languages.html %}
+        {% when 'skills' %}
+          {% include pro/resume/skills.html %}
+        {% when 'interests' %}
+          {% include pro/resume/interests.html %}
+        {% else %}
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</article>

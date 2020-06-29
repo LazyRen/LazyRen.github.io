@@ -1,0 +1,32 @@
+{% if resume.awards.size > 0 %}
+<section>
+  <div class="npb">
+  <h2 id="awards" class="h3 faded hr">
+    {{ strings.resume.awards | default:"Awards" }}
+    <span class="symbol {{ icons.awards | default:'icon-trophy' }}"></span>
+  </h2>
+  {% for awa in resume.awards %}
+  <section>
+    <header class="{% unless forloop.first %}mt4{% endunless %}">
+      {% if awa.date.size > 0 %}
+        <p class="faded">
+          <time datetime="{{ awa.date | date_to_xmlschema }}">{{ awa.date | date:from_to_format }}</time>
+        </p>
+      {% endif %}
+      <h3 class="h4 faded" property="award">
+        {% capture title %}<span class="bc">{{ awa.title }}</span>{% endcapture %}
+        {% capture awarder %}<span class="bc">{{ awa.awarder }}</span>{% endcapture %}
+        {{ strings.resume.awards_title
+          | default:"<!--title--> from <!--awarder-->"
+          | replace:"<!--title-->", title
+          | replace:"<!--awarder-->", awarder
+        }}
+      </h3>
+    </header>
+
+    {% include components/message.html text=awa.summary alt="" %}
+  </section>
+  {% if forloop.first %}</div>{% endif %}
+  {% endfor %}
+</section>
+{% endif %}

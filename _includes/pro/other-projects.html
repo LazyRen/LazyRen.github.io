@@ -1,0 +1,23 @@
+{% assign p1 = page.previous | default:page.next.next %}
+{% assign p2 = page.next | default:page.previous.previous %}
+
+{% if p1 or p2 %}
+<aside class="other-projects related mb4" role="complementary">
+  <h2>{{ site.data.strings.other_projects | default:"Other Projects" }}</h2>
+  <div class="columns">
+    {% assign p1 = page.previous | default:page.next.next %}
+    {% if p1 %}
+      <div class="column column-1-2">
+        {% include pro/project-card.html project=p1 %}
+      </div>
+    {% endif %}
+
+    {% assign p2 = page.next | default:page.previous.previous %}
+    {% if p2 %}
+      <div class="column column-1-2">
+        {% include pro/project-card.html project=p2 %}
+      </div>
+    {% endif %}
+  </div>
+</aside>
+{% endif %}

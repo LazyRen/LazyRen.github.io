@@ -1,0 +1,21 @@
+{% if basics.profiles.size > 0 %}
+  <dl class="column column-2-5">
+    {% for pro in basics.profiles %}
+      {% assign platform = pro.network | downcase %}
+      {% assign = data_social = site.data.social[platform] %}
+      {% assign icon = data_social.icon %}
+      {% if data_social.name %}
+        {% assign name = data_social.name %}
+      {% else %}
+        {% assign name = pro.network %}
+      {% endif %}
+      <dt class="faded">
+        <span class="{{ icon | default:icons.fallback | default:'icon-link' }}" title="{{ name }}"></span>
+        <span class="sr-only">{{ name }}</span>
+      </dt>
+      <dd class="bold">
+        {% include components/link.html href=pro.url class="nickname p-nickname" title=pro.username property="sameAs" %}
+      </dd>
+    {% endfor %}
+  </dl>
+{% endif %}

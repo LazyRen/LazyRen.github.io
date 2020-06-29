@@ -1,0 +1,16 @@
+{% if resume.references.size > 0 %}
+<section>
+  <div class="npb">
+  <h2 id="references" class="h3 faded hr">
+    {{ strings.resume.references | default:"References" }}
+    <span class="symbol {{ icons.references | default:'icon-quotes-right' }}"></span>
+  </h2>
+  {% for ref in resume.references %}
+    <blockquote class="reference">
+      <p>{{ ref.reference }}</p>
+      <footer>— <cite>{{ ref.name }}</cite></footer>
+    </blockquote>
+  {% if forloop.first %}</div>{% endif %}
+  {% endfor %}
+</section>
+{% endif %}

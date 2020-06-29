@@ -1,0 +1,22 @@
+// Copyright (c) 2019 Florian Klampfer <https://qwtel.com/>
+
+// <<<<< LINK
+.message-newsletter {
+  > *:first-child { margin-top: 3rem; }
+  > *:last-child { margin-bottom: 3rem; }
+
+  @media screen and (min-width: $break-point-1) {
+    padding: 1rem 3rem;
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+form {
+  margin-bottom: 1rem;
+}
+
+button[type=submit], input[type=submit] { cursor: pointer; }
+// >>>>>
