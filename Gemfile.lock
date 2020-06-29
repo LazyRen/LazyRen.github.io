@@ -257,7 +257,7 @@ DEPENDENCIES
   jekyll-seo-tag
   jekyll-sitemap
   jekyll-titles-from-headings
-  rake
+  rake (>= 12.3.3)
   tzinfo-data
 
 BUNDLED WITH
