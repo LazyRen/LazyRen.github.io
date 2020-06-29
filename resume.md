@@ -2,10 +2,10 @@
 layout: resume
 title: Resume
 description: >
-  Hi, I'm DaeIn Lee, currently working for Samsung Research.
-hide_description: false
+  Hi, I'm DaeIn Lee, SW engineer at Samsung Research.
+hide_description: true
 menu: true
-order: 1
+order: 4
 left_column:
  - work
  - volunteer

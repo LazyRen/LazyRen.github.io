@@ -46,8 +46,8 @@ author:
   picture:  /assets/img/seattle.png
   social:
     github:          lazyren
-    email:           lazy0ren@gmail.com
     linkedin:        daein-lee-3b6ba9139
+    email:           lazy0ren@gmail.com
     rss:             https://lazyren.github.io/feed.xml
     # facebook:        <username>
     # google:          <number>
@@ -85,9 +85,9 @@ author:
 
 # Add links to the sidebar.
 # menu:
-#   - title:             Blog
+# - title:             Blog
 #     url:               /blog/
-#   - title:             Projects
+# - title:             Projects
 #     url:               /projects/
 #   - title:             Résumé*
 #     url:               /resume/
@@ -140,18 +140,6 @@ font:                  Noto Sans, Helvetica, Arial, sans-serif
 font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
 defaults:
-  - scope:
-      path:            hyde
-    values:
-      accent_color:    rgb(38,139,210)
-      accent_image:
-        background:    rgb(32,32,32)
-        overlay:       false
-  - scope:
-      path: about.md
-    values:
-      menu: true
-      order: 1
   - scope:
       type: posts
     values:

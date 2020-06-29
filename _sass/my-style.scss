@@ -41,23 +41,21 @@ a.sidebar-nav-subitem {
 
 .list-body {
   text-align: left;
-  margin:4px;
+  margin: 4px;
 }
 
 // Submenu Insertion
 
 .folder {
-  color:#eee;
-  width:30px;
-  height:30px;
+  color: #fff;
+  font-size: x-large;
   position: absolute;
-  cursor:pointer;
-  right:10px;
+  cursor: pointer;
+  right: 30px;
 }
 
 .folder:hover {
-  background: #000;
-  opacity: 0.1;
+  color: #4FB1BA;
 }
 
 input[type="checkbox"]{

@@ -10,11 +10,11 @@ author1:
   about:             |
     Work Hard to be Lazy.
 
-    SW Engineer at Samsung Research
+    SW Engineer at [Samsung Research](https://research.samsung.com/).
 
-    [Resume][resume]
+    Please check my [Resume][resume] to find out more about me!
 
-    [resume]: https://docs.google.com/document/d/1x3Rq1PUZf4fqy4Mll6OxbDVySHt67iN-tq1cOjj9iYc/edit?usp=sharing
+    [resume]: /resume
 
   # This photo will be used in the about section
   picture:
@@ -29,8 +29,8 @@ author1:
   # Rearrange to change the order in which they appear
   social:
      github:          lazyren
-     email:           lazy0ren@gmail.com
      linkedin:        daein-lee-3b6ba9139
+     email:           lazy0ren@gmail.com
      rss:             https://lazyren.github.io/feed.xml
      # facebook:        <username>
      # google:          <number>
