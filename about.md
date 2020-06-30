@@ -1,7 +1,7 @@
 ---
 layout: welcome
 title: About
-permalink: /about/
+permalink: /about
 more_posts: posts.md
 menu: true
 order: 1
@@ -10,7 +10,8 @@ order: 1
 # Hello, World!
 
 Hi, I'm **DaeIn Lee**, or *a.k.a.* **Lazy Ren**.<br>
-I'm currently working at **[Samsung Research](https://research.samsung.com/)**, and previsouly was student of **[Hanyang Univ](https://www.hanyang.ac.kr/)**.<br>
+I'm currently working at **[Samsung Research](https://research.samsung.com/)**,<br>
+and previsouly was CSE student of **[Hanyang University](https://www.hanyang.ac.kr/)**.<br>
 I like to solve brain teasing problems in field of CSE.<br>
 (probably the reason I liked multi-core programming course).<br>
 And I'm also a [heavy gamer](https://steamcommunity.com/id/lazyren)!<br>
@@ -52,11 +53,12 @@ Try a new process, if that doesn’t help as much as you hoped, try another proc
 The worst thing that could happen is that you don’t find any improvement in your work process and go back to your original process and just work hard.<br>
 Did you lose anything?
 
-[origin](http://blog.vivekmahbubani.com/2007/03/work-hard-to-be-lazy.html)<br>
+[original post](http://blog.vivekmahbubani.com/2007/03/work-hard-to-be-lazy.html)<br>
 
 ***
 
-Blog created by DaeIn Lee on July 19. 2018 in Vancouver, based on a jekyll theme [Hydejack](https://github.com/hydecorp/hydejack)
+Blog created by DaeIn Lee on July 19. 2018 in Vancouver,<br>
+based on a jekyll theme [Hydejack](https://hydejack.com).
 
 ***
 
