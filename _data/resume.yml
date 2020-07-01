@@ -1,23 +1,13 @@
-# If you have a `resume.json` file, copy it into `_data` and delete this file.
-# If you don't have a JSON Resume you can just edit this YAML file instead.
-# See also: <https://jsonresume.org/>.
 basics:
-  name: "Richard Hendricks"
+  name: "DaeIn Lee"
   label: "Programmer"
-  picture: "/assets/icons/icon.png"
-  email: ""
-  phone: "(912) 555-4321"
-  website: "https://piedpiper.com"
+  picture: "http://graph.facebook.com/100007955266112/picture?type=large"
+  email: "daein0lee@gmail.com"
+  phone: "(81) 010-3026-3127"
+  website: "https://lazyren.github.io/"
   summary: >
-    Richard hails from Tulsa.
-    He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinals!)
-    Before starting Pied Piper, he worked for Hooli as a part time software developer.
-    While his work focuses on applied information theory,
-    mostly optimizing lossless compression schema of both the length-limited and adaptive variants,
-    his non-work interests range widely,
-    everything from quantum computing to chaos theory.
-    He could tell you about it, but THAT would NOT be a “length-limited” conversation!
-    Open `_data/resume.yml` to edit this text.
+    I'm trying to migrate my original resume to json(this file).
+    It will be updated soon. Thank you!
   location:
     address: "2712 Broadway St"
     postalCode: "CA 94115"
@@ -29,7 +19,7 @@ basics:
       username: "RHendricksCEO"
       url: ""
     - network: "LinkedIn"
-      username: "Richard Hendricks"
+      username: "DaeIn Lee"
       url: ""
 work:
   - company: "Pied Piper"
@@ -101,3 +91,5 @@ references:
     reference: >
       It is my pleasure to recommend Richard, his performance working as a consultant for Main St.
       Company proved that he will be a valuable addition to any company.
+
+# <https://jsonresume.org/>

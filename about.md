@@ -15,7 +15,7 @@ and previsouly was CSE student of **[Hanyang University](https://www.hanyang.ac.
 I like to solve brain teasing problems in field of CSE.<br>
 (probably the reason I liked multi-core programming course).<br>
 And I'm also a [heavy gamer](https://steamcommunity.com/id/lazyren)!<br>
-Pleaseh check my [resume](/resume) if you wish to know more about me.
+Pleaseh check my [resume](/resume/) if you wish to know more about me.
 
 ***
 
