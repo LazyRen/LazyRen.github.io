@@ -6,90 +6,188 @@ basics:
   phone: "(81) 010-3026-3127"
   website: "https://lazyren.github.io/"
   summary: >
-    I'm trying to migrate my original resume to json(this file).
-    It will be updated soon. Thank you!
-  location:
-    address: "2712 Broadway St"
-    postalCode: "CA 94115"
-    city: "San Francisco"
-    countryCode: "US"
-    region: "California"
+    Hello, I'm DaeIn Lee from Samsung Research.<br>
+    I like to solve brain teasing problems in the field of CSE.<br>
+    As a fast learner, I am confident that I can satisfy expectations of coworkers.
+  # location:
+  #   address: "2712 Broadway St"
+  #   postalCode: "CA 94115"
+  #   city: "San Francisco"
+  #   countryCode: "US"
+  #   region: "California"
   profiles:
-    - network: "Twitter"
-      username: "RHendricksCEO"
-      url: ""
+    - network: "Github"
+      username: "LazyRen"
+      url: "https://github.com/LazyRen"
     - network: "LinkedIn"
       username: "DaeIn Lee"
-      url: ""
+      url: "https://www.linkedin.com/in/daein-lee-3b6ba9139/"
 work:
-  - company: "Pied Piper"
-    position: "CEO/President"
-    website: "https://piedpiper.com"
-    startDate: "2013-12-01"
+  - company: "Samsung Research"
+    position: "SW Engineer"
+    website: "https://research.samsung.com/"
+    startDate: "2020-02-03"
     endDate: ""
     summary: >
-      Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has
-      consistently fielded high Weisman Scores™ that are not merely competitive,
-      but approach the theoretical limit of lossless compression.
+      Samsung Research is the advanced research and development (R&D) hub of Samsung Electronics.<br>
+      The hub leads the development of the future technologies with more than 10,000 researchers and developers working in overseas R&D centers.
     highlights:
-      - "Build an algorithm for artist to detect if their music was violating copy right infringement laws"
-      - "Successfully won Techcrunch Disrupt"
-      - "Optimized an algorithm that holds the current world record for Weisman Scores"
+      - "Software Capacity Building T/F"
+  - company: "Samsung Research"
+    position: "Intern"
+    website: "https://research.samsung.com/"
+    startDate: "2019-06-24"
+    endDate: "2019-08-30"
+    summary:
+    highlights:
+      - "Software engineering internship at Smart Device team."
+      - "8 week internship to develop smart switch circuit PMU firmware with the purpose of increasing power efficiency."
+  - company: "LG CNS"
+    position: "Intern"
+    website: "https://www.lgcns.co.kr/"
+    startDate: "2019-01-03"
+    endDate: "2019-02-28"
+    summary:
+    highlights:
+      - "Software Engineering Internship at Development Platform team."
+      - "6 week internship to develop new Enterprise Application Platform pages."
+      - "Gained better understanding of overall web development."
+  - company: "Fortify Inc."
+    position: "Intern"
+    website: "https://fortify.pro/"
+    startDate: "2019-01-03"
+    endDate: "2019-02-28"
+    summary:
+    highlights:
+      - "Building responsive homepage for 'fortify.pro'."
+      - "Backend/frontend development and service usage analysis using mongoDB for Gaia Landscape Inc."
 volunteer:
-  - organization: "CoderDojo"
-    position: "Teacher"
-    website: "https://coderdojo.com/"
-    startDate: "2012-01-01"
-    endDate: "2013-01-01"
-    summary: "Global movement of free coding clubs for young people."
+  - organization: "Hanyang Mentoring Program"
+    position: "Mentor"
+    website: ""
+    startDate: "2018-03-02"
+    endDate: "2018-12-21"
+    summary: "Mentoring for the major courses of CSE with juniors"
     highlights:
-      - "Awarded 'Teacher of the Month'"
+      - "Data Structure; Teaching & helping sophomores on the data structure course."
+      - "Database  Systems; Teaching & helping sophomores on the database system course."
+      - "Awarded 'Hanyang Best Mentor' for mentoring Database Systems course."
+  - organization: "Hanmille, Foreigner Mentoring Program"
+    position: "Mentor"
+    website: ""
+    startDate: "2014-03-02"
+    endDate: "2014-12-18"
+    summary: "Mentoring & helping foreign students to easily adjust to Korea."
+    highlights:
 education:
-  - institution: "University of Oklahoma"
-    area: "Information Technology"
+  - institution: "Hanyang University, Seoul"
+    area: "Computer Science & Engineering"
     studyType: "Bachelor"
-    startDate: "2011-06-01"
-    endDate: "2014-01-01"
-    gpa: "4.0"
+    startDate: "2014-03-02"
+    endDate: "2020-02-21"
+    gpa: "4.0 (major 4.28) / 4.5"
     courses:
-      - "DB1101 - Basic SQL"
-      - "CS2011 - Java Introduction"
+      - "Concurrent Programming"
+      - "Data Science"
+      - "Operating Systems"
+      - "Computer Architecture"
+      - "Database Systems"
+      - "System Programming"
+  - certificate: "Engineer Information Processing (정보처리기사)"
+    date: "2019-11-22"
+projects:
+  - title: "Bw-Tree Performance Boosting"
+    startDate: "2018-08-01"
+    endDate: "2019-10-31"
+    summary: "Evaluating cache / multi thread Performance of <a href='https://github.com/wangziqi2013/BwTree'>Open Bw-Tree</a> to find bottleneck and improvement performance."
+    url: "https://lazyren.github.io/tag-bwtree/"
+    highlights:
+      - "Implementing update function based on the <a href='https://hyeontaek.com/papers/openbwtree-sigmod2018.pdf'>page</a>."
+      - "Make update function atomic & reduce call of traverse function."
+      - "Design TaS implemented Bw-Tree instead of CaS to reduce the overhead of failed CaS operations."
+  - title: "Wait-free Snapshot with Epoch Based Garbage Collection"
+    startDate: "2019-10-01"
+    endDate: "2019-10-31"
+    summary: "Concurrent Programming Course"
+    url: "https://github.com/LazyRen/2019-Concurrent-Programming/tree/master/project3"
+    highlights:
+      - "Implementing Wait-free Snapshot based on the textbook 'The Art of Multiprocessor Programming'"
+      - "Concurrent update & scan function implemented"
+      - "Implement epoch based garbage collection to prevent memory leak & concurrent GC."
+  - title: "Enhanced xv6"
+    startDate: "2018-03-02"
+    endDate: "2018-06-22"
+    summary: "Operating System Course"
+    url: "https://github.com/LazyRen/2018-Operating-Systems"
+    highlights:
+      - "Implement MLFQ & Stride scheduling instead of round robin scheduling."
+      - "Implement Light Weight Process that can be used with most of POSIX-thread functions."
+      - "Implement 'triple indirect block addressing' supporting large file upto 1030 MB instead of original 70 KB."
 awards:
-  - title: "Digital Compression Pioneer Award"
-    date: "2014-11-01"
-    awarder: "Techcrunch"
-    summary: "There is no spoon."
-publications:
-  - name: "Video compression for 3d media"
-    publisher: "Hooli"
-    releaseDate: "2014-10-01"
-    website: "https://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)"
-    summary: "Innovative middle-out compression algorithm that changes the way we store data."
+  - title: "Hanyang Academic Achievement Award"
+    awarder: "Hanyang Univ."
+    lists:
+      - "2018, 2nd semester"
+      - "2017, 2nd semester(Highest Honor)"
+  - title: "Hanyang Brain Scholarship"
+    awarder: "Hanyang Univ."
+    lists:
+      - "2019, 1st semester"
+      - "2018, 1st/2nd semester"
+      - "2017, 2nd semester"
+  - title: "Win 2nd place in advanced group"
+    date: "2018-11-17"
+    awarder: "Hanyang Collegiate Programming Contest 2018"
+    summary: ""
+  - title: "Win 2nd place in advanced group"
+    date: "2017-12-09"
+    awarder: "Hanyang Collegiate Programming Contest 2017"
+    summary: ""
+  - title: "Advanced to final competition"
+    date: "2017-09-09"
+    awarder: "Kakao Code Festival 2017"
+    summary: ""
+# publications:
+#   - name: "Video compression for 3d media"
+#     publisher: "Hooli"
+#     releaseDate: "2014-10-01"
+#     website: "https://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)"
+#     summary: "Innovative middle-out compression algorithm that changes the way we store data."
 skills:
+  - name: "Kernel Development"
+    level: "Intermediate"
+    keywords:
+      - "Concurrent Programming"
+      - "Operating System"
+      - "C/C++"
+  - name: "Algorithm"
+    level: "Intermediate"
   - name: "Web Development"
-    level: "Master"
+    level: "Junior"
     keywords:
       - "HTML"
       - "CSS"
       - "Javascript"
-  - name: "Compression"
+  - name: "Sociability"
     level: "Master"
     keywords:
-      - "Mpeg"
-      - "MP4"
-      - "GIF"
+      - "Leadership"
+      - "Affable"
 languages:
-  - language: "English"
+  - language: "Korean"
     fluency: "Native speaker"
+  - language: "English"
+    fluency: "Fluent"
 interests:
-  - name: "Wildlife"
+  - name: "Activity"
     keywords:
-      - "Ferrets"
-      - "Unicorns"
-references:
-  - name: "Erlich Bachman"
-    reference: >
-      It is my pleasure to recommend Richard, his performance working as a consultant for Main St.
-      Company proved that he will be a valuable addition to any company.
+      - "Tennis"
+      - "Snowboarding"
+  - name: "Reading"
+# references:
+#   - name: "Erlich Bachman"
+#     reference: >
+#       It is my pleasure to recommend Richard, his performance working as a consultant for Main St.
+#       Company proved that he will be a valuable addition to any company.
 
 # <https://jsonresume.org/>

@@ -8,7 +8,12 @@
   }
 }
 
-//Sidebar Modification
+// Remove menu button from the top
+#_menu {
+  display:none;
+}
+
+// Sidebar Modification
 .sidebar {
   text-align: center;
 }
@@ -74,4 +79,10 @@ input[type="checkbox"]:checked ~ ul{
   transform-origin: top;
   transition: transform .2s ease-out;
   transform: scaleY(1);
+}
+
+// Resume
+.project-date {
+  font-weight:var(--font-weight);
+  display:inline;
 }

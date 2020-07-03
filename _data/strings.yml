@@ -111,6 +111,9 @@ resume:
   volunteer_title:     <!--position--> at <!--organization-->
   education:           Education
   education_title:     <!--study_type--> in <!--area--> from <!--institution--> with GPA of <!--gpa-->
+  certificate_title:   <!--certificate-->
+  projects:            Projects
+  projects_title:      "<!--title-->: <!--date-->"
   courses:             Courses
   awards:              Awards
   awards_title:        <!--title--> from <!--awarder-->
@@ -132,6 +135,7 @@ resume:
     work:              icon-briefcase
     volunteer:         icon-earth
     education:         icon-library
+    projects:          icon-projects
     awards:            icon-trophy
     publications:      icon-book
     references:        icon-quotes-right

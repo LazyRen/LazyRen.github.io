@@ -9,12 +9,13 @@ menu: true
 order: 4
 left_column:
  - work
- - volunteer
  - education
- - awards
+ - volunteer
+ - projects
  - publications
  - references
 right_column:
+ - awards
  - languages
  - skills
  - interests

@@ -22,6 +22,11 @@
           | replace:"<!--awarder-->", awarder
         }}
       </h3>
+      <ul>
+        {% for list in awa.lists %}
+        <li>{{ list }}</li>
+        {% endfor %}
+      </ul>
     </header>
 
     {% include components/message.html text=awa.summary alt="" %}
