@@ -86,3 +86,11 @@ input[type="checkbox"]:checked ~ ul{
   font-weight:var(--font-weight);
   display:inline;
 }
+
+// Printing
+@media print {
+   a[href]:after {
+      display: none;
+      visibility: hidden;
+   }
+}
