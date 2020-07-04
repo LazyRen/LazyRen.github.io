@@ -6,7 +6,9 @@ category: devlog
 tags: development
 ---
 
-# Hydejack Post Writing Tips & Tricks
+Hydejack 테머를 이용하여 포스트를 작성할때 참고할 syntax 입니다.
+
+<!--more-->
 
 ## Table of Contents
 
