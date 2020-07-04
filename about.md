@@ -9,11 +9,11 @@ order: 1
 
 # Hello, World!
 
-Hi, I'm **DaeIn Lee**, or *a.k.a.* **Lazy Ren**.<br>
+Hi, I'm **DaeIn Lee**, *a.k.a.* **Lazy Ren**.<br>
 I'm currently working at **[Samsung Research](https://research.samsung.com/)**,<br>
 and previsouly was CSE student of **[Hanyang University](https://www.hanyang.ac.kr/)**.<br>
 I like to solve brain teasing problems in field of CSE.<br>
-(probably the reason I liked multi-core programming course).<br>
+(probably the reason I liked multi-core programming / OS courses).<br>
 And I'm also a [heavy gamer](https://steamcommunity.com/id/lazyren)!<br>
 Pleaseh check my [resume](/resume/) if you wish to know more about me.
 
@@ -58,7 +58,7 @@ Did you lose anything?
 ***
 
 Blog created by DaeIn Lee on July 19. 2018 in Vancouver,<br>
-based on a jekyll theme [Hydejack](https://hydejack.com).
+based on the jekyll theme [Hydejack](https://hydejack.com).
 
 ***
 
