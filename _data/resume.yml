@@ -8,7 +8,8 @@ basics:
   summary: >
     Hello, I'm DaeIn Lee from Samsung Research.<br>
     I like to solve brain teasing problems in the field of CSE.<br>
-    As a fast learner, I am confident that I can satisfy expectations of coworkers.
+    I'd like to describe myself as a fast learner;<br>
+    I am confident that I can satisfy expectations of coworkers.
   # location:
   #   address: "2712 Broadway St"
   #   postalCode: "CA 94115"
@@ -55,8 +56,8 @@ work:
   - company: "Fortify Inc."
     position: "Intern"
     website: "https://fortify.pro/"
-    startDate: "2019-01-03"
-    endDate: "2019-02-28"
+    startDate: "2018-07-08"
+    endDate: "2018-08-24"
     summary:
     highlights:
       - "Building responsive homepage for 'fortify.pro'."
