@@ -10,7 +10,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 # gem "jekyll", "~> 4.1"
 
-gem "jekyll-theme-hydejack", path: "./#jekyll-theme-hydejack"
+# gem "jekyll-theme-hydejack", path: "./#jekyll-theme-hydejack"
 
 # IMPORTANT: The followign gem is used to compile math formulas to
 # KaTeX during site building.
@@ -38,6 +38,7 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
   gem "jekyll-titles-from-headings"
   gem "jekyll-include-cache", git: "https://github.com/hydecorp/jekyll-include-cache"
+  gem "github-pages"
 
   # Non-Github Pages plugins:
   gem "jekyll-last-modified-at"
@@ -46,3 +47,5 @@ end
 
 gem 'wdm' if Gem.win_platform?
 gem "tzinfo-data" if Gem.win_platform?
+
+gem 'rake', '>= 12.3.3'
