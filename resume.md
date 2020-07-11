@@ -1,9 +1,12 @@
 ---
 layout: resume
-title: Résumé
+title: Resume
+permalink: /resume/
 description: >
   Hi, I'm DaeIn Lee, SW engineer at Samsung Research.
 hide_description: true
+menu: true
+order: 4
 left_column:
  - work
  - education
@@ -16,9 +19,4 @@ right_column:
  - languages
  - skills
  - interests
-menu: true
-order: 4
-no_language_icons: false
-no_skill_icons: false
-no_buttons: false
 ---
