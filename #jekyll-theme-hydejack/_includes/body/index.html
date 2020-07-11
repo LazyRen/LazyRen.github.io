@@ -1,0 +1,23 @@
+{% include_cached pro/dark-mode-fix.html %}
+
+{% assign assets_url = "/assets/" | relative_url %}
+<hy-push-state
+  id="_pushState"
+  replace-selector="#_main"
+  link-selector="a[href]:not([href^='{{ assets_url }}']):not(.external):not(.no-push-state)"
+  script-selector="script"
+  duration="500"
+  hashchange
+>
+  {% if page.cover %}{% include_cached body/sidebar.html cover=page.cover theme_color=page.theme_color image=image color=color %}{% endif %}
+  {% include_cached body/menu.html %}
+  {% include body/main.html %}
+  {% unless page.cover %}{% include_cached body/sidebar.html cover=page.cover theme_color=page.theme_color image=image color=color %}{% endunless %}
+</hy-push-state>
+
+{% unless page.redirect %}
+  {% include_cached body/scripts.html %}
+  {% include my-body.html %}
+{% endunless %}
+
+{% include_cached templates/index.html %}

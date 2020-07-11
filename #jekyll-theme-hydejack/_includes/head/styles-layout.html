@@ -1,0 +1,9 @@
+{% assign layout = include.layout %}
+<style id="_styleInline">
+  {% include_cached head/css/inline %}
+  {% if layout == "projects" or layout == "project" or layout == "home" or layout == "welcome" or layout == "grid" or layout == "post" %}
+    {% include_cached head/css/projects %}
+  {% elsif layout == "resume" %}
+    {% include_cached head/css/resume %}
+  {% endif %}
+</style>

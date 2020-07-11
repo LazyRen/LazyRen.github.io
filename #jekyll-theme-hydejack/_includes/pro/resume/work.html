@@ -1,0 +1,47 @@
+{% if resume.work.size > 0 %}
+<section>
+  <div class="npb">
+  <h2 id="work" class="h3 hr-bottom">
+    {{ strings.resume.work | default:"Experience" }}
+    <span class="symbol {{ icons.work | default:'icon-briefcase' }}"></span>
+  </h2>
+  {% for work in resume.work %}
+  <section>
+    <header
+      class="{% unless forloop.first %}mt2{% endunless %}"
+      property="{% if work.endDate.size > 0 %}alumniOf{% else %}worksFor{% endif %}"
+      typeof="Organization"
+      >
+      {% if work.startDate.size > 0 %}
+        <p class="faded">
+          {% include components/from-to.html from=work.startDate to=work.endDate format=from_to_format %}
+        </p>
+      {% endif %}
+      <h3 class="h4 faded">
+        <meta property="name" content="{{ work.company }}"/>
+        {% capture position %}<span class="bc">{{ work.position }}</span>{% endcapture %}
+        {% capture company_class %}{% if work.endDate.size > 0 %}{% else %}org p-org h-card{% endif %}{% endcapture %}
+        {% capture company %}{% include components/link.html title=work.company href=work.website class=company_class span_class="bc" property="sameAs" %}{% endcapture %}
+        {{ strings.resume.work_title
+          | default:"<!--position--> at <!--company-->"
+          | replace:"<!--position-->", position
+          | replace:"<!--company-->", company
+        }}
+      </h3>
+    </header>
+
+    {% include components/message.html class="note" text=work.summary alt="" %}
+
+    {% if work.highlights.size > 0 %}
+    <h4 class="sr-only">{{ strings.resume.highlights | default:"Highlights" }}</h4>
+    <ul>
+      {% for highlight in work.highlights %}
+        <li>{{ highlight }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </section>
+  {% if forloop.first %}</div>{% endif %}
+  {% endfor %}
+</section>
+{% endif %}

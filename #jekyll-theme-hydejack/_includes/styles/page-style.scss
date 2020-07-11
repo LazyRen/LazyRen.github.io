@@ -1,0 +1,11 @@
+{% assign color       = include.color       %}
+{% assign theme_color = include.theme_color %}
+
+html {
+  --accent-color: {{ color }};
+  --accent-color-faded: #{fade-out({{ color }}, 0.5)};
+  --accent-color-darkened: #{darken({{ color }}, 7.5%)};
+  --theme-color: {{ theme_color }};
+  --dark-mode-body-bg: #{hsl(hue({{ theme_color }}), 10%, 17.5%)};
+  --dark-mode-border-color: #{hsl(hue({{ theme_color }}), 10%, 22.5%)};
+}

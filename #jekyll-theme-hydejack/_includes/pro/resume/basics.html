@@ -1,0 +1,105 @@
+<dl class="column column-3-5">
+  {% assign location = basics.location %}
+  {% if
+    location.address.size > 0 or
+    location.postalCode.size > 0 or
+    location.city.size > 0 or
+    location.region.size > 0 or
+    location.countryCode.size > 0
+  %}
+    <dt class="faded">
+      <span class="{{ icons.location | default:'icon-location' }}" title="{{ strings.resume.location | default:'Location' }}"></span>
+      <span class="sr-only">{{ strings.resume.location | default:"Location" }}</span>
+    </dt>
+
+    {% assign sep = strings.resume.location_separator | default:"," %}
+    <dd class="bold adr p-adr h-adr" property="address" typeof="PostalAddress">
+      {% if location.address.size > 0 %}
+        <span class="street-address p-street-address" property="streetAddress">{{ location.address }}</span>{{ sep }}
+      {% endif %}
+
+      {% if location.postalCode.size > 0 %}
+        <span class="postal-code p-postal-code" property="postalCode">{{ location.postalCode }}</span>{{ sep }}
+      {% endif %}
+
+      {% if location.city.size > 0 %}
+        <span class="locality p-locality" property="addressLocality">{{ location.city }}</span>{{ sep }}
+      {% endif %}
+
+      {% if location.region.size > 0 %}
+        <span class="region p-region" property="addressRegion">{{ location.region }}</span>{{ sep }}
+      {% endif %}
+
+      {% if location.countryCode.size > 0 %}
+        {% assign countryCode = location.countryCode | upcase %}
+        {% if major >= 4 and minor >= 1 %}
+          {% assign country = site.data.countries | find:"code",countryCode %}
+        {% else %}
+          {% assign country = site.data.countries | where:"code",countryCode | first %}
+        {% endif %}
+        {% if country %}
+          <meta property="addressCountry" content="{{ location.countryCode }}"/>
+          <span class="country-name p-country-name">{{ country.name }}</span>
+        {% else %}
+          <span class="country-name p-country-name" property="addressCountry">{{ location.countryCode }}</span>
+        {% endif %}
+      {% endif %}
+    </dd>
+  {% endif %}
+
+  {% if basics.born.size > 0 %}
+    <dt class="faded">
+      <span class="{{ icons.born | default:'icon-quill' }}" title="{{ strings.resume.born | default:'Born' }}"></span>
+      <span class="sr-only">{{ strings.resume.born | default:"Born" }}</span>
+    </dt>
+    <dd class="bold">{{ basics.born }}</dd>
+  {% endif %}
+
+  {% if basics.citizenship.size > 0 %}
+    <dt class="faded">
+      <span class="{{ icons.citizenship | default:'icon-flag' }}" title="{{ strings.resume.citizenship | default:'Citizenship' }}"></span>
+      <span class="sr-only">{{ strings.resume.citizenship | default:"Citizenship" }}</span>
+    </dt>
+    <dd class="bold">{{ basics.citizenship }}</dd>
+  {% endif %}
+
+  {% if basics.maritalStatus.size > 0 %}
+    <dt class="faded">
+      <span class="{{ icons.maritalStatus | default:'icon-man-woman' }}" title="{{ strings.resume.maritalStatus | default:'Marital status' }}"></span>
+      <span class="sr-only">{{ strings.resume.maritalStatus | default:"Marital status" }}</span>
+    </dt>
+    <dd class="bold">{{ basics.maritalStatus }}</dd>
+  {% endif %}
+
+  {% if basics.email.size > 0 %}
+    <dt class="faded">
+      <span class="{{ icons.email | default:'icon-mail2' }}" title="{{ strings.resume.email | default:'Email' }}"></span>
+      <span class="sr-only">{{ strings.resume.email | default:"Email" }}</span>
+    </dt>
+    <dd class="bold">
+      <meta property="email" content="{{ basics.email }}"/>
+      <a href="mailto:{{ basics.email }}" class="external no-print-link email u-email">{{ basics.email }}</a>
+    </dd>
+  {% endif %}
+
+  {% if basics.phone.size > 0 %}
+    <dt class="faded">
+      <span class="{{ icons.phone | default:'icon-phone' }}" title="{{ strings.resume.phone | default:'Phone' }}"></span>
+      <span class="sr-only">{{ strings.resume.phone | default:"Phone" }}</span>
+    </dt>
+    <dd class="bold">
+      <meta property="telephone" content="{{ basics.phone }}"/>
+      <a href="tel:{{ basics.phone | replace:' ','' }}" class="external no-print-link tel p-tel">{{ basics.phone }}</a>
+    </dd>
+  {% endif %}
+
+  {% if basics.website.size > 0 %}
+    <dt class="faded">
+      <span class="{{ icons.website | default:'icon-home3' }}" title="{{ strings.resume.website | default:'Website' }}"></span>
+      <span class="sr-only">{{ strings.resume.website | default:"Website" }}</span>
+    </dt>
+    <dd class="bold">
+      <a href="{{ basics.website }}" class="external no-print-link url u-url" property="sameAs">{{ basics.website }}</a>
+    </dd>
+  {% endif %}
+</dl>

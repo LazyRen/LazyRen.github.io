@@ -1,0 +1,44 @@
+{% assign project = include.project %}
+
+{% assign vars = site.data.variables %}
+{% assign break_point_1 = vars.break_point_1 | default:42 %}
+{% assign break_point_2 = vars.break_point_2 | default:54 %}
+{% assign break_point_5 = vars.break_point_5 | default:86 %}
+{% assign content_width = vars.content_width | default:38 %}
+{% assign content_width_2 = vars.content_width_2 | default:48 %}
+{% assign content_width_5 = vars.content_width_5 | default:54 %}
+
+{% if include.featured %}
+  {% capture sizes %}(min-width: {{ break_point_5 }}em) {{ content_width_5 }}rem, (min-width: {{ break_point_2 }}em) {{ content_width_2 }}rem, (min-width: {{ break_point_1 }}em) {{ content_width | minus:2 }}rem, {{ content_width | minus:2 }}rem{% endcapture %}
+{% else %}
+  {% capture sizes %}(min-width: {{ break_point_5 }}em) {{ content_width_5 | divided_by:2 | minus:0.5 }}rem, (min-width: {{ break_point_2 }}em) {{ content_width_2 | divided_by:2 | minus:0.5 }}rem, (min-width: {{ break_point_1 }}em) {{ content_width | minus:2 | divided_by:2 | minus:0.5 }}rem, {{ content_width | minus:2 }}rem{% endcapture %}
+{% endif %}
+
+{% assign screenshot = project.screenshot | default:project.image %}
+{% assign image_base = screenshot.src | default:screenshot.path | default:screenshot %}
+
+<article
+  class="project-card"
+  {% unless nsd %}vocab="http://schema.org/" typeof="CreativeWork" resource="{{ project.url | relative_url }}#project"{% endunless %}
+  >
+  <meta property="name" content="{{ project.title }}"/>
+  {% if image_base %}<meta property="image" content="{% include_cached smart-url url=image_base %}"/>{% endif %}
+
+  <a href="{{ project.url | relative_url }}" class="no-hover no-print-link flip-project" tabindex="-1">
+    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img">
+      {% if screenshot %}
+        {% include_cached components/hy-img.html img=screenshot alt=project.title sizes=sizes width=864 height=486 %}
+      {% endif %}
+    </div>
+  </a>
+  <h3 class="project-card-title flip-project-title">
+    <a href="{{ project.url | relative_url }}" class="flip-title" property="mainEntityOfPage">{{ project.title }}</a>
+  </h3>
+  {% if project.description or project.tagline or project.caption %}
+    <p class="project-card-text fine" property="disambiguatingDescription">
+      {{ project.tagline | default:project.caption | default:project.description | markdownify | replace:'<p>','' | replace:'</p>','' }}
+    </p>
+  {% endif %}
+  {% assign text = site.data.strings.continue_reading | default:"Continue reading <!--post_title-->" %}
+  <a class="fill-card no-hover" href="{{ project.url | relative_url }}" tabindex="-1"><span class="sr-only">{{ text | replace:"<!--post_title-->", project.title }}</span></a>
+</article>

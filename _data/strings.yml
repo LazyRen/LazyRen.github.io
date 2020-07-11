@@ -27,9 +27,14 @@ older:                 Older
 forward:               Forward
 back:                  Back
 permalink:             Permalink
-permalink_icon:        icon-link
+permalink_icon:        content-hash
 templates:             Templates (for web app)
 present:               present
+toc:                   Table of Contents
+note:                  Note
+description:           Description
+search:                Search
+search_placeholder:    Type something…
 
 loading:               Loading…
 redirecting:           Redirecting…
@@ -39,7 +44,7 @@ continue_reading:      >
 
 cookies_banner:
   text:                >
-    This site uses cookies.
+    This site uses cookies. [Cookies Policy](/cookies-policy/).
   okay:                Okay
 
 not_found:
@@ -49,6 +54,13 @@ not_found:
     <!--home_link--> to try finding it again.
   home_link:           Head back home
 
+offline:
+  title:               'You are Offline'
+  message:             |
+    Sorry, but you appear to be offline and this page has not been prepared for offline viewing.
+    <!--home_link--> to try finding another page.
+  home_link:           Head back home
+
 error:
   title:               Error
   message:             |
@@ -56,6 +68,7 @@ error:
 
 # Separators
 # ---------------------------------------------------------------------------------------
+posted:                'Posted'
 colon:                 ':'
 separator:             '|'
 category_start:        'in '
@@ -63,7 +76,6 @@ category_spearator:    ' / '
 tag_start:             'on '
 tag_separator:         ', '
 from_to_separator:     '–'
-
 
 # Date formats
 # ---------------------------------------------------------------------------------------
@@ -82,16 +94,18 @@ date_formats:
 # If you don't own the PRO version of Hydejack, modifying these will have no effect.
 
 tinyletter:
-  title:               Newsletter
+  title:               Commercial break
   label:               Email
-  placeholder:         mail@example.com
+  placeholder:         Enter your email address
   button:              Subscribe
   message:             |
-    Subscribe to my newsletter.
-    0
+    Pay the *iron price* for this theme by adding yourself to the mailing list.
+    Receive development updates, advanced tutorials,
+    and anything else I can come up with as it relates to **Hydejack**.
+
     <!--form-->
 
-    Open `_data/strings.yml` to edit this text.
+    No 3rd party products, no spam. Emails handled by [Tinyletter](https://tinyletter.com/)
     {:.faded}
 
 welcome:
@@ -111,9 +125,6 @@ resume:
   volunteer_title:     <!--position--> at <!--organization-->
   education:           Education
   education_title:     <!--study_type--> in <!--area--> from <!--institution--> with GPA of <!--gpa-->
-  certificate_title:   <!--certificate-->
-  projects:            Projects
-  projects_title:      "<!--title-->: <!--date-->"
   courses:             Courses
   awards:              Awards
   awards_title:        <!--title--> from <!--awarder-->
@@ -125,17 +136,24 @@ resume:
   skills:              Skills
   level:               Level
   interests:           Interests
+  summary:             Summary
   keywords:            Keywords
+  print:               Print
+  download_pdf:        PDF
+  download_vcf:        vCard
+  download_json:       JSON
   icons:
     fallback:          icon-link
     location:          icon-location
-    email:             icon-mail2
+    born:              icon-quill
+    citizenship:       icon-flag
+    maritalStatus:     icon-man-woman
+    email:             icon-envelop
     phone:             icon-phone
     website:           icon-home3
     work:              icon-briefcase
     volunteer:         icon-earth
     education:         icon-library
-    projects:          icon-projects
     awards:            icon-trophy
     publications:      icon-book
     references:        icon-quotes-right

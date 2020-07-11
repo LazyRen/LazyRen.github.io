@@ -1,0 +1,71 @@
+/*!
+ * Bootstrap v4.0.0 (https://getbootstrap.com)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@import "functions";
+@import "variables";
+@import "mixins";
+// @import "root";
+// @import "reboot";
+// @import "type";
+// @import "images";
+// @import "code";
+@import "grid";
+// @import "tables";
+@import "forms";
+@import "buttons";
+// @import "transitions";
+// @import "dropdown";
+// @import "button-group";
+@import "input-group";
+// @import "custom-forms";
+// @import "nav";
+// @import "navbar";
+// @import "card";
+// @import "breadcrumb";
+// @import "pagination";
+// @import "badge";
+// @import "jumbotron";
+// @import "alert";
+// @import "progress";
+// @import "media";
+// @import "list-group";
+// @import "close";
+// @import "modal";
+// @import "tooltip";
+// @import "popover";
+// @import "carousel";
+@import "utilities";
+// @import "print";
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.btn-primary:focus, .btn-primary.focus, .form-control:focus, .form-control.focus {
+  // box-shadow: 0 0 0 3px rgba({{ color }}, .5);
+  box-shadow: 0 0 0 3px var(--accent-color-faded);
+}
+
+.btn-primary:hover, .btn-primary.hover {
+  color: #fff;
+  background-color: var(--accent-color-darkened);
+  border-color: var(--accent-color-darkened);
+}
+
+.btn-primary:disabled, .btn-primary.disabled {
+  color: #fff;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.btn-primary:active, .btn-primary.active {
+  color: #fff;
+  background-color: var(--accent-color-darkened);
+  border-color: var(--accent-color-darkened);
+}

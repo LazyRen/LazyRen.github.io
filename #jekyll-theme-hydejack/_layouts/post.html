@@ -1,0 +1,40 @@
+---
+# Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+layout: base
+---
+
+{% include_cached components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image hide_description=page.hide_description %}
+
+<hr class="dingbat related" />
+
+{% assign addons = page.addons | default:site.hydejack.post_addons %}
+{% unless addons %}{% assign addons = "about,newsletter,related,random" | split:"," %}{% endunless %}
+{% for addon in addons %}
+  {% case addon %}
+  {% when 'about' %}
+     {% include_cached components/about.html author=page.author %}
+  {% when 'newsletter' %}
+    {% include if-non-null try="pro/newsletter.html" %}
+  {% when 'related' %}
+    {% include if-non-null try="pro/related-posts.html" fallback="components/related-posts.html" %}
+  {% when 'random' %}
+    {% include if-non-null try="pro/random-posts.html" %}
+  {% when 'comments' %}
+    {% include body/comments.html %}
+  {% else %}
+  {% endcase %}
+{% endfor %}

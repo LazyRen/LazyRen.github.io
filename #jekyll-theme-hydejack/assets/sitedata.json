@@ -1,0 +1,31 @@
+---
+sitemap: false
+---
+{% unless site.hydejack.no_search or jekyll.environment == 'development' %}
+{% assign pages = site.html_pages | where_exp:"page","page.sitemap != false" %}
+{
+  "pages": [
+    {% for page in pages %}{
+      {% if page.image       %}"image": {{       page.image       | jsonify }},{% endif %}
+      {% if page.title       %}"title": {{       page.title       | jsonify }},{% endif %}
+      {% if page.description %}"description": {{ page.description | markdownify | strip_html | jsonify }},{% endif %}
+      {% if page.content     %}"content": {{     page.content     | markdownify | strip_html | jsonify }},{% endif %}
+      "url": {{                                  page.url         | jsonify }}
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ], 
+  "documents": [
+    {% for doc in site.documents %}{
+      {% if doc.image       %}"image": {{       doc.image       | jsonify }},{% endif %}
+      {% if doc.title       %}"title": {{       doc.title       | jsonify }},{% endif %}
+      {% if doc.date        %}"date": {{        doc.date        | jsonify }},{% endif %}
+      {% if doc.description %}"description": {{ doc.description | markdownify | strip_html | jsonify }},{% endif %}
+      {% if doc.content     %}"content": {{     doc.content     | markdownify | strip_html | jsonify }},{% endif %}
+      {% if doc.categories  %}"categories": {{  doc.categories  | jsonify }},{% endif %}
+      {% if doc.tags        %}"tags": {{        doc.tags        | jsonify }},{% endif %}
+      {% if doc.keywords    %}"keywords": {{    doc.keywords    | jsonify }},{% endif %}
+      "collection": {{                          doc.collection  | jsonify }},
+      "url": {{                                 doc.url         | jsonify }}
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+{% else %}{}{% endunless %}

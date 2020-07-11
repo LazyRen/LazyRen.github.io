@@ -1,0 +1,37 @@
+---
+# Copyright (c) 2019 Florian Klampfer <https://qwtel.com/>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+layout: base
+---
+
+{% assign strings = site.data.strings %}
+
+<div class="page">
+  <h1 class="page-title">{{ page.title | default:strings.offline.title | default: "You Are Offline" }}</h1>
+  <div class="hr pb0"></div>
+
+  {% assign test = page.content | strip_newlines %}
+  {% if test != "" %}
+    {{ content }}
+  {% else %}
+    {% capture home_link %}<a href="{{ '/' | relative_url }}">{{ strings.offline.home_link | default:"Head back home" }}</a>{% endcapture %}
+    {% assign text = strings.offline.message
+      | default:"Sorry, but you appear to be offline and this page has not been prepared for offline viewing. <!--home_link--> to try finding another page." %}
+    <p class="lead">
+      {{ text | replace:"<!--home_link-->", home_link }}
+    </p>
+  {% endif %}
+</div>

@@ -1,0 +1,80 @@
+{
+  "name": "minisearch",
+  "version": "2.3.1",
+  "description": "Tiny but powerful full-text search engine for browser and Node",
+  "main": "dist/umd/index.js",
+  "module": "dist/es5m/index.js",
+  "es2015": "dist/es/index.js",
+  "author": "Luca Ongaro",
+  "homepage": "https://lucaong.github.io/minisearch/",
+  "bugs": "https://github.com/lucaong/minisearch/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucaong/minisearch.git"
+  },
+  "keywords": [
+    "search",
+    "full text",
+    "fuzzy",
+    "prefix",
+    "auto suggest",
+    "auto complete",
+    "index"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.1",
+    "@babel/node": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^25.1.0",
+    "benchmark": "^2.1.4",
+    "core-js": "^3.1.4",
+    "coveralls": "^3.0.2",
+    "docdash": "^1.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "fast-check": "^1.5.0",
+    "jest": "^25.1.0",
+    "jsdoc": "^3.6.4",
+    "regenerator-runtime": "^0.13.1",
+    "rollup": "^2.2.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-terser": "^5.3.0",
+    "snazzy": "^8.0.0",
+    "typescript": "^3.5.3"
+  },
+  "files": [
+    "/dist/umd/index.js",
+    "/dist/es/index.js",
+    "/dist/es5m/index.js",
+    "/src/**/*"
+  ],
+  "jest": {
+    "testURL": "http://localhost:3000/",
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/testSetup/jest.js"
+    ]
+  },
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "coverage": "jest --coverage",
+    "benchmark": "NODE_ENV=production BABEL_OUTPUT=commonjs babel-node --expose-gc benchmarks/index.js",
+    "build": "NODE_ENV=production rollup -c",
+    "build-minified": "MINIFY=true yarn build",
+    "build-docs": "jsdoc --configure jsdoc.json",
+    "lint": "eslint 'src/**/*.js'",
+    "lintfix": "eslint --fix 'src/**/*.js'",
+    "prepublishOnly": "yarn test && yarn build"
+  },
+  "sideEffects": false,
+  "types": "./src/index.d.ts"
+}

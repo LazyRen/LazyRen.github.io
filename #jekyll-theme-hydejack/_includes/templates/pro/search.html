@@ -1,0 +1,22 @@
+<template id="_search-template">
+  <button id="_search" class="nav-btn no-hover">
+    <label class="sr-only" for="_search-input">{{ site.data.strings.search | default:"Search" }}</label>
+    <span class="icon-search"></span>
+  </button>
+  <div id="_search-box">
+    <div class="nav-btn">
+      <span class="icon-search"></span>
+    </div>
+    <input 
+      id="_search-input"
+      type="search"
+      class="form-control form-control-lg nav-btn"
+      placeholder="{% unless site.hydejack.no_search or jekyll.environment == 'development' %}{{ site.data.strings.search_placeholder | default:'Type something...'}}{% else %}SEARCH NOT ENABLED DURING DEVELOPMENT{% endunless %}"
+    />
+    <button type="reset" class="nav-btn no-hover">
+      <span class="sr-only">{{ site.data.strings.close | default:"Close" }}</span>
+      <span class="icon-cross"></span>
+    </button>
+  </div>
+  <div id="_hits"></div>
+</template>

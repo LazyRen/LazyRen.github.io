@@ -1,0 +1,166 @@
+---
+# Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
+layout: about
+---
+
+{% assign strings = site.data.strings %}
+{% assign no_third_column = page.no_third_column | default:site.hydejack.no_third_column | default:false %}
+
+{% if content contains "<!--projects-->" %}
+{% capture projets_x %}
+{% if page.selected_projects %}
+  <div class="columns mt2 {% unless no_third_column %}columns-break{% endunless %}">
+    {% for project_path in page.selected_projects %}
+      {% if major >= 4 and minor >= 1 %}
+       {% assign project = site.projects | find_exp:"project", "project_path == project.path or project_path == project.url" %}
+      {% else %}
+                            {% assign project = site.projects | where_exp:"project", "project_path == project.path" | first %}
+        {% unless project %}{% assign project = site.projects | where_exp:"project", "project_path == project.url"  | first %}{% endunless %}
+      {% endif %}
+
+      {% assign featured = page.featured | default:project.featured | default:page.big_project | default:project.big_project %}
+      <div class="column {% if featured %}column-1{% else %}column-1-2{% endif %}">
+        {% if project %}
+          {% include_cached pro/project-card.html project=project featured=featured %}
+        {% else %}
+          Project with path <code>{{ project_path }}</code> not found.
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+{% elsif site.projects.size > 1 %}
+  <div class="columns mt2 {% unless no_third_column %}columns-break{% endunless %}">
+    {% assign ordered_projects = site.projects | sort:"date" | reverse %}
+    {% for project in ordered_projects limit:2 %}
+      {% assign featured = page.featured | default:project.featured | default:page.big_project | default:project.big_project %}
+      <div class="column {% if featured %}column-1{% else %}column-1-2{% endif %}">
+        {% include_cached pro/project-card.html project=project featured=featured %}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% assign projects_page = page.projects_page | default:page.more_projects %}
+{% if projects_page %}
+  {% if major >= 4 and minor >= 1 %}
+    {% assign more_projects = site.pages | find_exp:"page", "projects_page == page.path or projects_page == page.url" %}
+  {% else %}
+                              {% assign more_projects = site.pages | where_exp:"page", "projects_page == page.path" | first %}
+    {% unless more_projects %}{% assign more_projects = site.pages | where_exp:"page", "projects_page == page.url"  | first %}{% endunless %}
+  {% endif %}
+  
+  {% if more_projects %}
+    {% capture projects_title %}<a class="heading flip-title" href="{{ more_projects.url | relative_url }}">{{ more_projects.title }}</a>{% endcapture %}
+    {% assign text = strings.welcome.more_projects | default:"See <!--projects_title--> for more" %}
+    <p class="read-more mt1">
+      {{ text | replace:"<!--projects_title-->", projects_title }}
+    </p>
+  {% else %}
+    Page with path <code>{{ page.more_posts }}</code> not found.
+  {% endif  %}
+{% endif %}
+{% endcapture %}
+{% assign content = content | replace:"<!--projects-->", projets_x %}
+{% endif %}
+
+{% if content contains "<!--posts-->" %}
+{% capture posts_x %}
+{% if page.selected_posts %}
+  <div class="columns mt2 {% unless no_third_column %}columns-break{% endunless %}">
+    {% for post_path in page.selected_posts %}
+      {% if major >= 4 and minor >= 1 %}
+        {% assign post = site.posts | find_exp:"post", "post_path == post.path or post_path == post.url" %}
+      {% else %}
+                         {% assign post = site.posts | where_exp:"post", "post_path == post.path" | first %}
+        {% unless post %}{% assign post = site.posts | where_exp:"post", "post_path == post.url"  | first %}{% endunless %}
+      {% endif %}
+      <div class="column {% if featured %}column-1{% else %}column-1-2{% endif %}">
+        {% if post %}
+          {% include_cached pro/post-card.html post=post featured=featured %}
+        {% else %}
+          Post with path <code>{{ post_path }}</code> not found.
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+{% elsif site.posts.size > 1 %}
+  <div class="columns mt2 {% unless no_third_column %}columns-break{% endunless %}">
+    {% for post in site.posts limit:4 %}
+      <div class="column {% if featured %}column-1{% else %}column-1-2{% endif %}">
+        {% include_cached pro/post-card.html post=post featured=featured %}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% assign posts_page = page.posts_page | default:page.more_posts %}
+{% if posts_page %}
+  {% if major >= 4 and minor >= 1 %}
+    {% assign more_posts = site.pages | find_exp:"page", "posts_page == page.path or posts_page == page.url" %}
+  {% else %}
+                           {% assign more_posts = site.pages | where_exp:"page", "posts_page == page.path" | first %}
+    {% unless more_posts %}{% assign more_posts = site.pages | where_exp:"page", "posts_page == page.url"  | first %}{% endunless %}
+  {% endif %}
+  {% if more_posts %}
+    {% capture posts_title %}<a class="heading flip-title" href="{{ more_posts.url | relative_url }}">{{ more_posts.title }}</a>{% endcapture %}
+    {% assign text = strings.welcome.more_posts | default:"See <!--posts_title--> for more" %}
+    <p class="read-more mt1">
+      {{ text | replace:"<!--posts_title-->", posts_title }}
+    </p>
+  {% else %}
+    Page with path <code>{{ page.more_posts }}</code> not found.
+  {% endif  %}
+{% endif %}
+{% endcapture %}
+{% assign content = content | replace:"<!--posts-->", posts_x %}
+{% endif %}
+
+{% if content contains "<!--posts_list-->" %}
+{% capture posts_x %}
+{% if page.selected_posts %}
+  <ul class="related-posts mt2">
+    {% for post_path in page.selected_posts %}
+      {% if major >= 4 and minor >= 1 %}
+        {% assign post = site.posts | find_exp:"post", "post_path == post.path or post_path == post.url" %}
+      {% else %}
+                         {% assign post = site.posts | where_exp:"post", "post_path == post.path" | first %}
+        {% unless post %}{% assign post = site.posts | where_exp:"post", "post_path == post.url"  | first %}{% endunless %}
+      {% endif %}
+      {% if post %}
+        {% include_cached components/post-list-item.html post=post %}
+      {% else %}
+        <li>Post with path <code>{{ post_path }}</code> not found.</li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% elsif site.posts.size > 1 %}
+  <ul class="related-posts mt2">
+    {% for post in site.posts limit:5 %}
+      {% include_cached components/post-list-item.html post=post %}
+    {% endfor %}
+  </ul>
+{% endif %}
+
+{% assign posts_page = page.posts_page | default:page.more_posts %}
+{% if posts_page %}
+  {% if major >= 4 and minor >= 1 %}
+    {% assign more_posts = site.pages | find_exp:"page", "posts_page == page.path or posts_page == page.url" %}
+  {% else %}
+                           {% assign more_posts = site.pages | where_exp:"page", "posts_page == page.path" | first %}
+    {% unless more_posts %}{% assign more_posts = site.pages | where_exp:"page", "posts_page == page.url"  | first %}{% endunless %}
+  {% endif %}
+  {% if more_posts %}
+    {% capture posts_title %}<a class="heading flip-title" href="{{ more_posts.url | relative_url }}">{{ more_posts.title }}</a>{% endcapture %}
+    {% assign text = strings.welcome.more_posts | default:"See <!--posts_title--> for more" %}
+    <p class="read-more">
+      {{ text | replace:"<!--posts_title-->", posts_title }}
+    </p>
+  {% else %}
+    Page with path <code>{{ page.more_posts }}</code> not found.
+  {% endif  %}
+{% endif %}
+{% endcapture %}
+{% assign content = content | replace:"<!--posts_list-->", posts_x %}
+{% endif %}
+
+{{ content }}

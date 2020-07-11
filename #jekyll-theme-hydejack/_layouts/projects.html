@@ -1,0 +1,34 @@
+---
+# Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
+layout: page
+---
+
+{{ content }}
+
+{% assign show_collection = page.show_collection | default:"projects" %}
+{% assign ordered_projects = site[show_collection] | sort:"date" | reverse %}
+{% assign nsd = site.hydejack.no_structured_data | default:site.no_structured_data %}
+
+{% assign projects_group_by = site.data.strings.date_formats.projects_group_by | default:"%Y" %}
+{% assign no_third_column = page.no_third_column | default:site.hydejack.no_third_column | default:false %}
+
+{% assign prev_date = 0 %}
+{% if page.no_groups %}<div class="columns {% unless no_third_column %}columns-break{% endunless %}">{% endif %}
+{% for project in ordered_projects %}
+  {% assign current_date = project.date | date:projects_group_by %}
+
+  {% unless page.no_groups %}{% if current_date != prev_date %}
+    {% unless forloop.first %}</div>{% endunless %}
+
+    <h2 id="{{ projects_group_by | slugify }}-{{ current_date | slugify }}">{{ current_date }}</h2>
+    <div class="columns {% unless no_third_column %}columns-break{% endunless %}">
+    {% assign prev_date = current_date %}
+  {% endif %}{% endunless %}
+
+  {% assign featured = page.featured | default:project.featured | default:page.big_project | default:project.big_project %}
+  <div class="column {% if featured %}column-1{% else %}column-1-2{% endif %}">
+    {% include_cached pro/project-card.html project=project featured=featured %}
+  </div>
+
+  {% if forloop.last %}</div>{% endif %}
+{% endfor %}

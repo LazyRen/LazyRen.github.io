@@ -4,7 +4,7 @@
 # IMPORTANT: Set the URL of your site.
 # Set to https://<username>.github.io when hosting on GitHub Pages
 # (unless you are using a custom domain).
-url:                   https://LazyRen.github.io
+url:                   https://<username>.github.io
 
 # IMPORTANT: Set The "base URL" of your site.
 # When your site sits in a subdirectory, set to /<name of directory>
@@ -14,22 +14,25 @@ url:                   https://LazyRen.github.io
 # e.g. `/hydejack`.
 baseurl:               ''
 
+
+# General settings
+# ---------------------------------------------------------------------------------------
+
 # Language of your content in 2-letter code, e.g.: en, de.
 # You may also provide a location, e.g.: en-us, de_AT.
-lang:                  ko-KR, en-US
+lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Lazy Ren
+title:                 Hydejack
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  Work Hard to be Lazy.
-  SW Engineer at Samsung Research.
+  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
+  with a focus on personal sites that are meant to impress.
 
 # A shorter description for the sidebar.
-tagline:               >
-  Work Hard to be Lazy.
+tagline:               Change `tagline` in `_config.yml`
 
 # A list of keywords for your blog
 keywords:              []
@@ -37,86 +40,57 @@ keywords:              []
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                  https://graph.facebook.com/100007955266112/picture?type=large
+logo:                  /assets/img/logo.png
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
-  name:                DaeIn Lee
-  email:               lazy0ren@gmail.com
-  picture:  /assets/img/seattle.png
-  social:
-    linkedin:        daein-lee-3b6ba9139
-    github:          lazyren
-    email:           lazy0ren@gmail.com
-    rss:             https://lazyren.github.io/feed.xml
-    # facebook:        <username>
-    # google:          <number>
-    # vk:              <username>
-    # youtube:         <string_string_string>
-    # vimeo:           <username>
-    # vine:            <username>
-    # spotify:         <user>/<number>
-    # soundcloud:      <username>
-    # lastfm:          <username>
-    # instagram:       <username>
-    # flickr:          <string@string>
-    # 500px:           <username>
-    # dribbble:        <username>
-    # behance:         <username>
-    # deviantart:      <username>
-    # ello:            <username>
-    # twitch:          <username>
-    # steam:           <number>
-    # reddit:          <username>
-    # tumblr:          <username>
-    # pinterest:       <username>
-    # foursquare:      <number>
-    # yelp:            <string>
-    # stackoverflow:   <number/username>
-    # npm:             <username>
-    # hackernews:      <username>
-    # trello:          <firstnamelastname>
-    # xing:            <firstname_lastname_counter>
-    # blogger:         <number>
-    # delicious:       <username>
-    # stumbleupon:     <username>
-    # paypal:          <username>
-    # download:        <url>
+  # Used by `jekyll-feed`:
+  name:                <firstname> <lastname>
+  email:               <mail@domain.tld>
+  # # Used by `jekyll-seo-tag`:
+  # twitter:             <username>
 
 # Add links to the sidebar.
-# menu:
-# - title:             Blog
-#     url:               /blog/
-# - title:             Projects
-#     url:               /projects/
-#   - title:             Résumé*
-#     url:               /resume/
-#   - title:             Documentation
-#     url:               /docs/
+menu:
+  - title:             Blog
+    url:               /blog/
+  - title:             Projects
+    url:               /projects/
+  - title:             Résumé*
+    url:               /resume/
+  - title:             Documentation
+    url:               /docs/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
-# legal:
-#   - title:             Impress
-#     url:               /impress/
-#   - title:             Cookies Policy
-#     url:               /cookies-policy/
+legal:
+  - title:             LICENSE
+    url:               /LICENSE/
+  - title:             NOTICE
+    url:               /NOTICE/
+  - title:             CHANGELOG
+    url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2018. All rights reserved.
+copyright:             © 2020. All rights reserved.
 
 # Format of the permalinks
-# permalink:             /blog/:categories/:year-:month-:day-:title/
-permalink:           none
+permalink:             /blog/:categories/:year-:month-:day-:title/
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              10
-paginate_path:         /page-:num/
-excerpt_separator:     <!--more-->
+paginate_path:         /blog/:num/
+
+
+# Theme
+# ---------------------------------------------------------------------------------------
+
+theme: jekyll-theme-hydejack
+# remote_theme: hydecorp/hydejack@v9
 
 
 # Customizaton
-# ========================================================================================
+# ----------------------------------------------------------------------------------------
 
 # Sidebar image and theme color of the site.
 accent_image:          /assets/img/sidebar-bg.jpg
@@ -125,11 +99,11 @@ accent_color:          rgb(79,177,186)
 # This is used for the `theme-color` meta tag,
 # which changes the background color of the browser UI in certain browsers.
 # Defaults to `accent_color`.
-theme_color:           rgb(25,55,71)
+theme_color:           rgb(8,46,57)
 
 # The string encoding which fonts to fetch from Google Fonts.
 # See: <https://hydejack.com/docs/configuration/>
-google_fonts:          Roboto+Slab:400|Noto+Sans:400,400i,700,700i
+google_fonts:          Roboto+Slab:700|Noto+Sans:400,400i,700,700i
 
 # The text font. Expects a string that is a valid CSS font-family value.
 # To change font-weight, see _sass/variables.scss
@@ -139,11 +113,31 @@ font:                  Noto Sans, Helvetica, Arial, sans-serif
 # To change font-weight, see _sass/variables.scss
 font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
+# The font used for code blocks. Expects a string that is a valid CSS font-family value.
+font_code:             Fira Code, Menlo, Monaco, Consolas, monospace;
+
 defaults:
+  # You can use this to provide a default accent color and background for
+  # all pages under a given path:
   - scope:
-      type: posts
+      path:            hyde/
     values:
-      comments: true
+      accent_color:    rgb(38,139,210)
+      accent_image:
+        background:    rgb(32,32,32)
+        overlay:       false
+
+  # Don't include documents in assets in the sitemap
+  - scope:
+      path:            assets/
+    values:
+      sitemap:         false
+
+  # # You can use the following to enable comments on all posts.
+  # - scope:
+  #     type:            posts
+  #   values:
+  #     comments:        true
 
   # `jekyll-seo-tag` will mark collection outputs as `BlogPosting`,
   # but we want them to be `WebPage`s:
@@ -163,20 +157,27 @@ defaults:
       seo:
         type:          WebPage
 
+# kramdown:
+#   math_engine:         katex
+#   math_engine_opts:    {}
+#   footnote_backlink:   '&#x21a9;&#xfe0e;'
+
 
 # 3rd Party Integrations
 # ----------------------------------------------------------------------------------------
 
 # Set your Google Analytics id to receive `pageview` events.
 # To remove Google Anaylics from your page, remove the line below.
-google_analytics:      UA-68290006-3
+# google_analytics:      UA-XXXXXXXX-X
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
-disqus:                lazyrengithub
+# disqus:                <username>
 
 # Setting a tinyletter username will enable the newsletter subscription box.
-# tinyletter:            <tinyletter_username>
+# PRO version only!
+# tinyletter:            <username>
+
 
 # Hydejack Settings
 # ----------------------------------------------------------------------------------------
@@ -184,16 +185,13 @@ disqus:                lazyrengithub
 
 hydejack:
   # Configure the order of complementary content on blog posts
-  post_addons:         [about, newsletter, related, random]
+  post_addons:         [about, newsletter, related, random, comments]
 
   # Configure the order of complementary content on project pages
-  project_addons:      [about, newsletter, other]
-
-  # If you do not use Google Fonts, set to `true`.
-  no_google_fonts:     false
+  project_addons:      [about, newsletter, other, comments]
 
   # Set to `true` if you don't want to show an icon indicating external links
-  no_mark_external:    true
+  no_mark_external:    false
 
   # Set to `true` if third party plugins fail to work with dynamically loaded pages
   no_push_state:       false
@@ -201,8 +199,15 @@ hydejack:
   # Set to `true` if you want to disable the drawer
   no_drawer:           false
 
-  # Set to `true` to prevent usage of `hy-img` (lazy-loading images).
-  no_img:              false
+  # Set to `true` if you don't to use the auto-hiding (JavaScript based) navbar.
+  # Note that this will not hide the navbar completely, only replace it with a static one.
+  # Use custom css to hide completely, e.g. `#_navbar { display: none }`.
+  no_navbar:           false
+
+  # Set to true to disable the built-in search functionality.
+  # Note that search is disabled during local use to save on build time.
+  # Run Jekyll with the `JEKYLL_ENV` environment variable set to `production` to enable.
+  no_search:           false
 
   # Set to `true` if you do not want parts of the css inlined in <head/>
   # This will increase site build speed dramatically!
@@ -216,6 +221,17 @@ hydejack:
   # Set this to true if you want them to be the same width as other content.
   no_break_layout:     true
 
+  # Set to `true` to disable the dynamic Table of Contents on large screens.
+  no_toc:              false
+
+  # When set to `true`, will not extend the content in the "third column" on large screens.
+  # Instead, all content will remains within the center column.
+  # Note that this will not affect the Table of Contents, use `no_toc` instead.
+  no_third_column:     false
+
+  # Set to `true` if you don't like oversized headlines on large screens.
+  no_large_headings:   false
+
   # Set to `true` if you do not want to expose your resume and projects
   # in machine-readable formats.
   no_structured_data:  false
@@ -225,24 +241,28 @@ hydejack:
   no_theme_color:      false
 
   # Set to `true` when building with the `--lsi` option
-  use_lsi:             false
+  use_lsi:             true
 
   # When using Google Analytics, set to `true` to display a cookie notice banner.
   # When enabled, no user-related data will be stored until the user gives consent.
-  cookies_banner:      false
+  cookies_banner:      true
 
   # Set to `true` if you would like to add a "Powered by Hydejack" link in the footer.
+  # Note that this setting has no effect when using the free version.
   advertise:           false
+
+  # Buyers of the PRO version can opt to hide all dates from the theme.
+  # Frequent consumers of online content will know that nothing devalues a post like
+  # seeing an old date.
+  hide_dates:          false
 
   # Note that dark mode only works in the PRO version of Hydejack.
   dark_mode:
     # Set to `true` to always use the dark theme.
     always:            false
 
-    # Set to `true` to use the dark theme based on visitors' local time.
+    # Set to `true` to use the dark theme based on visitors' preference (OS setting).
     dynamic:           true
-    sunrise:           6
-    sunset:            18
 
     # Set to `true` to allow visitors to switch between light and dark mode.
     icon:              true
@@ -253,15 +273,17 @@ hydejack:
   # Only use if you know what Service Workers are and how they can impact your site!
   offline:
     enabled:           false
-    cache_version:     1
+    cache_version:     7
+    precache_assets:
+      - /assets/img/swipe.svg
 
 
 # Collections
-# ========================================================================================
+# ----------------------------------------------------------------------------------------
 
 collections:
   featured_categories:
-    permalink:         /:name/
+    permalink:         /blog/:name/
     output:            true
 
   featured_tags:
@@ -274,27 +296,23 @@ collections:
 
 
 # File inclusion/exclusion
-# ========================================================================================
+# ----------------------------------------------------------------------------------------
 
 exclude:
+  - ./#jekyll-theme-hydejack/node_modules
+  - ./#jekyll-theme-hydejack/.git
+  - .jekyll-cache
+  - .sass-cache
   - vendor
   - Gemfile
   - Gemfile.lock
-  - node_modules
-  - package.json
-  - package-lock.json
-  - webpack.config.js
-  - "*.gemspec"
-  - _js
-  - _plugins
-  - .sass-cache
 include:
-  - LICENSE.md
   - .well-known
+  - LICENSE.md
 
 
 # Plugins
-# ========================================================================================
+# ----------------------------------------------------------------------------------------
 
 plugins:
   - jekyll-default-layout
@@ -307,19 +325,15 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-titles-from-headings
-  - jekyll-replace-img
+  - jekyll-include-cache
+  - jekyll-last-modified-at
 
-# Theme
-# ---------------------------------------------------------------------------------------
-
-# theme: jekyll-theme-hydejack
-# remote_theme: qwtel/hydejack
 
 # SEO Tag
 # ---------------------------------------------------------------------------------------
 
 # Where you proof that you own this site (used by jekyll-seo-tag)
-google_site_verification: "zIn7l_GwuOi4WnyRQsdhI9Jpn6IAs0SLR_4HG8OZzsM"
+# google_site_verification: <verification-id>
 # -- or --
 # webmaster_verifications:
 #   google:              <verification-id>
@@ -327,11 +341,11 @@ google_site_verification: "zIn7l_GwuOi4WnyRQsdhI9Jpn6IAs0SLR_4HG8OZzsM"
 #   alexa:               <verification-id>
 #   yandex:              <verification-id>
 
-# Used for Twitter cards
+# Used for twitter cards
 # twitter:
-#   username:            <shortname>
+#   username:            <username>
 
-# Used for Facebook open graph
+# Used for facebook open graph
 # facebook:
 #   app_id:              <id>
 #   publisher:           <id>
@@ -345,51 +359,32 @@ google_site_verification: "zIn7l_GwuOi4WnyRQsdhI9Jpn6IAs0SLR_4HG8OZzsM"
 #     - https://github.com/<username>
 
 
-# Other Plugins
+# Jekyll Compose Defaults
 # ---------------------------------------------------------------------------------------
 
-optional_front_matter:
-  remove_originals:    true
-
-readme_index:
-  remove_originals:    true
-  with_frontmatter:    true
-
-relative_links:
-  collections:         true
-
-titles_from_headings:
-  strip_title:         true
-  collections:         true
-
-replace_img:
-  re_img:              <img\s*(?<attrs>.*?)\s*/>
-  re_ignore:           (re|data)-ignore
-  replacement:         |
-    <hy-img root-margin="512px" %{attrs}>
-      <noscript><img data-ignore %{attrs}/></noscript>
-      <span slot="loading" class="loading"><span class="icon-cog"></span></span>
-    </hy-img>
-
-kramdown:
-  footnote_backlink:   '&#x21a9;&#xfe0e;'
-  math_engine:         mathjax
-  math_engine_opts:
-    preview:           true
-    preview_as_code:   true
-
-compress_html:
-  comments:            ["<!-- ", " -->"]
-  clippings:           all
-  endings:             all
-  ignore:
-    envs:              [development]
-
-sass:
-  style:               compressed
-
-# jekyll-feed settings
-feed:
-  categories:
-    - devlog
-    - review
+jekyll_compose:
+  default_front_matter:
+    drafts:
+      layout: post
+      description: >
+        A short ~160 character description of your post for search engines,
+        social media previews, etc.
+      image:
+        path: /assets/img/sidebar-bg.jpg
+    posts:
+      layout: post
+      description: >
+        A short ~160 character description of your post for search engines,
+        social media previews, etc.
+      image:
+        path: /assets/img/sidebar-bg.jpg
+    projects:
+      layout: project
+      description: >
+        A short ~160 character description of your post for search engines,
+        social media previews, etc.
+      image:
+        path: /assets/img/sidebar-bg.jpg
+      links:
+        - title: Project Link
+          url: https://example.com
