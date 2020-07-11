@@ -12,3 +12,94 @@
     margin: 1rem 0;
   }
 }
+
+// Remove menu button from the top
+
+#_menu {
+  display:none;
+}
+
+// Sidebar Modification
+
+.sidebar {
+  text-align: center;
+}
+
+.sidebar-sticky {
+  position: absolute;
+  height: 95%;
+  padding-top: 5%;
+}
+
+a.sidebar-nav-item {
+  width:100%;
+  font-weight: normal;
+  display: block;
+  padding: .25rem 0;
+}
+
+a.sidebar-nav-subitem {
+  font-weight: normal;
+  display: block;
+  line-height: 1.75;
+  padding: .25rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.list-wrapper {
+  text-align: left;
+  display: flex;
+}
+
+.list-body {
+  text-align: left;
+  margin: 4px;
+}
+
+// Submenu Insertion
+
+.folder {
+  color: #fff;
+  font-size: x-large;
+  position: absolute;
+  cursor: pointer;
+  right: 30px;
+}
+
+.folder:hover {
+  color: #4FB1BA;
+}
+
+input[type="checkbox"]{
+  position: absolute;
+  left: -9999px;
+}
+
+input[type="checkbox"] ~ ul{
+  height: 0;
+  transform: scaleY(0);
+}
+
+input[type="checkbox"]:checked ~ ul{
+  list-style: none;
+  height: 100%;
+  transform-origin: top;
+  transition: transform .2s ease-out;
+  transform: scaleY(1);
+}
+
+// Resume
+
+.project-date {
+  font-weight:var(--font-weight);
+  display:inline;
+}
+
+// Printing
+
+@media print {
+   a[href]:after {
+      display: none;
+      visibility: hidden;
+   }
+}

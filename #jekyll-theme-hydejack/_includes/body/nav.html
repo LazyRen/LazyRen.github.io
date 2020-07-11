@@ -15,13 +15,17 @@
       </li>
     {% endfor %}
   {% else %}
-    {% assign pages = site.pages | where: "menu", true %}
-    {% assign documents = site.documents | where: "menu", true %}
-    {% assign nodes = pages | concat: documents | sort: "order" %}
+    {% assign pages = site.pages %}
+    {% assign documents = site.documents %}
+    {% assign nodes = pages | concat: documents | where: "menu", true | sort: "order" %}
+    {% assign subnodes = pages | concat: documents | where: "menu", false | where: "submenu", true | sort: "order" %}
 
     {% for node in nodes %}
+      {% assign count = count | plus: 1 %}
       {% unless node.redirect_to %}
         <li>
+          <input type="checkbox" id="list-item-{{ count }}" />
+          <div class="list-wrapper">
           <a
             {% if forloop.first %}id="_navigation"{% endif %}
             href="{{ node.url | relative_url }}"
@@ -30,6 +34,18 @@
             >
             {{ node.title }}
           </a>
+          {% if node.submenu %}<label class="folder" for="list-item-{{ count }}">▾</label>{% endif %}
+          </div>
+          <ul class="list-body">
+            {% for subnode in subnodes %}
+            {% if subnode.category == node.slug %}
+            <li>
+              <a class="sidebar-nav-subitem{% if page.url == subnode.url %} active{% endif %}"
+                href="{{ subnode.url | relative_url }}">{{ subnode.title }}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
         </li>
       {% else %}
         <li>
