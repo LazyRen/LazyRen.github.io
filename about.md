@@ -19,7 +19,7 @@ Pleaseh check my [resume](/resume/) if you wish to know more about me.
 
 ***
 
-<!--posts-->
+<!--posts_list-->
 
 ***
 

@@ -48,7 +48,7 @@ layout: about
                               {% assign more_projects = site.pages | where_exp:"page", "projects_page == page.path" | first %}
     {% unless more_projects %}{% assign more_projects = site.pages | where_exp:"page", "projects_page == page.url"  | first %}{% endunless %}
   {% endif %}
-  
+
   {% if more_projects %}
     {% capture projects_title %}<a class="heading flip-title" href="{{ more_projects.url | relative_url }}">{{ more_projects.title }}</a>{% endcapture %}
     {% assign text = strings.welcome.more_projects | default:"See <!--projects_title--> for more" %}
