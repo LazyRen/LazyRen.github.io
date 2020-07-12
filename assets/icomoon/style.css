@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?2kl1l8');
-  src:  url('fonts/icomoon.eot?2kl1l8#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?2kl1l8') format('truetype'),
-    url('fonts/icomoon.woff?2kl1l8') format('woff'),
-    url('fonts/icomoon.svg?2kl1l8#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?eyptxl');
+  src:  url('fonts/icomoon.eot?eyptxl#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?eyptxl') format('truetype'),
+    url('fonts/icomoon.woff?eyptxl') format('woff'),
+    url('fonts/icomoon.svg?eyptxl#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -300,4 +300,31 @@
 }
 .icon-file-pdf:before {
   content: "\eadf";
+}
+.icon-newspaper:before {
+  content: "\e904";
+}
+.icon-pencil:before {
+  content: "\e905";
+}
+.icon-pencil2:before {
+  content: "\e906";
+}
+.icon-quill1:before {
+  content: "\e908";
+}
+.icon-books:before {
+  content: "\e920";
+}
+.icon-profile:before {
+  content: "\e923";
+}
+.icon-coin-dollar:before {
+  content: "\e93b";
+}
+.icon-user-tie:before {
+  content: "\e976";
+}
+.icon-checkmark:before {
+  content: "\ea10";
 }
