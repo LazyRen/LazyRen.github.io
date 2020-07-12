@@ -8,7 +8,6 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    Work Hard to be Lazy.<br>
     SW Engineer at [Samsung Research](https://research.samsung.com/).<br>
     Please check my [Resume][resume] to find out more about me!<br>
 
