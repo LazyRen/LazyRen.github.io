@@ -50,5 +50,37 @@ low, mid, high 원소 중, 혹은 랜덤으로 선택된 세 원소 중 중간�
 
 ## 구현<sup id="a2">[1](#f2)</sup>
 
-<script src="https://gist.github.com/LazyRen/877d36376ecc7d02f9336c899fa7b350.js"></script>
+```c++
+template <typename T>
+void swap(T& a, T& b) {
+  T tmp = a;
+  a = b;
+  b = tmp;
+}
+
+/*
+ * Sort all elements in arr[]; range of closed interval [left, right].
+ */
+template <typename T>
+void quickSort(T arr[], int left, int right) {
+  if(left >= right)
+    return;
+
+  T pivot = arr[(left+right) / 2];
+  int l = left, r = right;
+
+  while (l <= r) {
+    while (arr[l] < pivot)
+      l++;
+    while (arr[r] > pivot)
+      r--;
+    if (l <= r)
+      swap(arr[l++],arr[r--]);
+  }
+
+  quickSort(arr, left, r);
+  quickSort(arr, l, right);
+}
+```
+
 <sup id="f2">[1](#a2)</sup> : [이 블로그](https://dpdpwl.tistory.com/46)의 코드를 베이스로 작성하였습니다. 코드 보고 이런 말 하면 조금 이상하지만 정말 아름답지 않습니까?
