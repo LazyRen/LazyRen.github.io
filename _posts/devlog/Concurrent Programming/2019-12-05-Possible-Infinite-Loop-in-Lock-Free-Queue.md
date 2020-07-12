@@ -16,6 +16,9 @@ Wait-free Bounded Queue는 atomic fetch_add() 함수를 사용하여 bounded된(
 
 변수값 하나의 저장유무와 같이 코드의 작은 부분의 차이가 병렬 프로그래밍에서 얼마나 중요한 차이를 불러일으킬 수 있는지 새삼 체감할 수 있었기에 이 문제를 완벽하게 이해해보고자 ppt를 작성해 보았습니다.
 
+* this unordered seed list will be replaced by the toc
+{:toc}
+
 ## Wait-free Bounded Queue Source Code
 
 ```c++
@@ -169,4 +172,6 @@ int main(void) {
 </div>
 </details>
 
-p.s. 블로그 내의 모든 keynote들은 [Github Page](https://github.com/LazyRen/LazyRen.github.io/tree/master/assets/ppt) 에서 확인할 수 있습니다.
+p.s. 블로그 내의 모든 keynote들은 [Github Page]에서 확인할 수 있습니다.(*keynote* 주의!)
+
+[Github Page]: https://github.com/LazyRen/LazyRen.github.io/tree/master/assets/presentation

@@ -8,11 +8,14 @@ tags: bwtree
 
 Open Bw Treed Benchmark 코드 흐름 따라가면서 파악하기.
 
+<!--more-->
+
+* this unordered seed list will be replaced by the toc
+{:toc}
+
 ## [basic_test.cpp](https://github.com/LazyRen/BwTree/blob/master/test/basic_test.cpp)
 
 간단한 insert/delete/read op.을 실행하여 correctness 확인
-
-<!--more-->
 
 ## Operations
 

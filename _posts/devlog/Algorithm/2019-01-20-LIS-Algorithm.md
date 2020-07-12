@@ -19,6 +19,9 @@ LIS란 임의의 수열이 주어졌을 때, 해당 수열에서 몇 개의 수�
 
 <!--more-->
 
+* this unordered seed list will be replaced by the toc
+{:toc}
+
 ## 이분탐색을 이용한 LIS의 길이 구하기
 
 C++로 해당 알고리즘을 구현하기 위해서는 [lower_bound()](http://www.cplusplus.com/reference/algorithm/lower_bound/) 함수에 대한 이해가 필수입니다.

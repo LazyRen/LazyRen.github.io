@@ -16,9 +16,10 @@ tags: development mac sublime-text
 [cpp_cmd.sh](https://gist.github.com/LazyRen/6e33fb372bf19c171f4b722cc2d90dd5)<br>
 [python_cmd.sh](https://gist.github.com/LazyRen/4e3a89ac10dcac82ebaaadade445c659)<br>
 
-해당 .sh 파일을 원하는 위치에 저장하신 후 ( /Users/사용자명/Library/Application Support/Sublime Text 3/Packages/User 를 추천드립니다.<br> ST가 자체적으로 관리하는 user config.를 모아놓은 곳입니다.)
+해당 .sh 파일을 원하는 위치에 저장하신 후 (`/Users/사용자명/Library/Application Support/Sublime Text 3/Packages/User` 를 추천드립니다.<br>
+ST가 자체적으로 관리하는 user config.를 모아놓은 곳입니다.)
 
-![New Build System](/assets/img/docs/2018823-01.png)
+![New Build System](/assets/img/2018-08-23/build_system.png)
 
 ST의 new build system에 아래 내용을 붙여넣으시면 됩니다. (혹은 위의 경로에 집어넣으셔도 됩니다.)<br>
 
@@ -27,4 +28,15 @@ ST의 new build system에 아래 내용을 붙여넣으시면 됩니다. (혹은
 [Python cmd.sublime-build](https://gist.github.com/LazyRen/1bb565bc42560a921af3fb63300b56f8)<br>
 
 주의하실 점은 해당 sublime-build에서<br>
-"sh /Users/LazyRen/Documents/Programming/c_cmd.sh " 이부분을 "sh /sh파일/저장하신/경로/sh파일명" 으로 바꾸셔야합니다.
+
+```shell
+sh /Users/LazyRen/Documents/Programming/c_cmd.sh
+```
+
+이부분을
+
+```shell
+sh /sh파일/저장하신/경로/sh파일명
+```
+
+으로 바꾸셔야합니다.

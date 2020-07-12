@@ -14,6 +14,9 @@ This work is licensed under a [Attribution-ShareAlike 3.0](https://creativecommo
 
 <!--more-->
 
+* this unordered seed list will be replaced by the toc
+{:toc}
+
 ## Introduction
 
 **Asynchronous Computation**

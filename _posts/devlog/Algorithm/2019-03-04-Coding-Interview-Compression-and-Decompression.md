@@ -12,6 +12,9 @@ tags: algorithm coding-interview
 
 <!--more-->
 
+* this unordered seed list will be replaced by the toc
+{:toc}
+
 `number[string]` 의 형태로 압축되어 있는 문자열을 압축 해제하는 것이 목표입니다.<br>
 Invalid Input은 주어지지 않는다고 하였기 때문에 `[` 와 `]` 의 갯수가 다르다던지, 문법에 어긋나는 형태의 문자열은 없을거라 가정합니다.
 

@@ -12,6 +12,9 @@ tags: bwtree
 
 <!--more-->
 
+* this unordered seed list will be replaced by the toc
+{:toc}
+
 # 발표 Script
 
 ## Intro

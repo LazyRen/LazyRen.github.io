@@ -10,10 +10,8 @@ Hydejack 테마를 이용하여 포스트를 작성할때 참고할 syntax 입�
 
 <!--more-->
 
-## Table of Contents
-
 * this unordered seed list will be replaced by the toc
-{:toc .large-only}
+{:toc}
 
 ## Build
 

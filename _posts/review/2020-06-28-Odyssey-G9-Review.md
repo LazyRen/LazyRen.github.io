@@ -1,17 +1,22 @@
 ---
-layout: post
-title: "49인치 32:9 모니터 오디세이 G9 리뷰(feat. Magic Borderless & PowerToys)"
+layout:   post
+title:    "49인치 32:9 모니터 오디세이 G9 리뷰(feat. Magic Borderless & PowerToys)"
 subtitle: "49인치 32:9 모니터 오디세이 G9 리뷰(feat. Magic Borderless & PowerToys)"
 category: review
-tags: hardware software
+tags:     hardware software
+image:
+  path:   /assets/img/2020-06-28/g9.jpg
 ---
 
 > 누군가가 그랬다.<br>
 > TV와 모니터는 거거익선이라고...
 
-![G9](/assets/img/2020-06-28/g9.jpg)
-
 블로그 리뷰 글의 영광스런 첫 타자는 **[삼성 오디세이 G9](https://www.samsung.com/sec/monitors/gaming-lc49g95tsskxkr/)** 이다.
+
+<!--more-->
+
+* this unordered seed list will be replaced by the toc
+{:toc}
 
 ### 상품 상세정보
 
@@ -24,8 +29,6 @@ tags: hardware software
 | HDR | 1000 |
 | 주사율 | Max 240 Hz |
 | G-Sync | Compatible |
-
-<!--more-->
 
 ## 구입 하기에 앞서
 

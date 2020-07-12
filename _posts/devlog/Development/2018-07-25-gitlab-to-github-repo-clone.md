@@ -11,6 +11,9 @@ tags: development translation git
 
 <!--more-->
 
+* this unordered seed list will be replaced by the toc
+{:toc}
+
 ## 1. 저장소 미러링하기
 
 1. 터미널을 엽니다.

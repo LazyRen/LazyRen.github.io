@@ -14,6 +14,9 @@ Mac osX은 매년 메이저 업데이트가 진행되며 올해에도 9월 25일
 
 <!--more-->
 
+* this unordered seed list will be replaced by the toc
+{:toc}
+
 ## 시작하기에 앞서
 
 백업은 필수이다! 물론  google drive, dropbox 혹은 git을 통해 많은 데이터가 저장되어 있지만 그럼에도 불구하고 일년이상 사용해온 맥북은 귀중한 많은 자료들을 가지고 있다. 나중에 포멧후에 자료가 어디갔는지 한참을 찾다가 땅을 치며 후회해도 이미 때는 늦었다. 꼼꼼하게 놓친 자료는 없는지, 혹은 재설치 후 진행할 세팅 파일(zshrc, vimrc, *.sublime-settings 등)들은 다 챙겼는지 확인하여야 한다.
@@ -298,7 +301,7 @@ passwd root
 
 * [git](https://git-scm.com/) 설치
 
-  ```sh
+  ```shell
   brew install git git-lfs
   ```
 

@@ -11,6 +11,9 @@ tags: development mac sublime-text
 
 <!--more-->
 
+* this unordered seed list will be replaced by the toc
+{:toc}
+
 ## Package Control Installation
 
 서브라임 텍스트 콘솔(ctrl + `)창에 아래 내용을 복사 & 붙여넣기 하여 실행하면 Package Control이 설치된다.
