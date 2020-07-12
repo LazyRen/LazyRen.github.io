@@ -184,6 +184,7 @@ interests:
     keywords:
       - "Tennis"
       - "Snowboarding"
+      - "Cycling"
   - name: "Reading"
     keywords:
       - "J. R. R. Tolkien"
@@ -191,8 +192,9 @@ interests:
       - "전민희"
   - name: "Gaming"
     keywords:
-      - "Company of Heroes 2"
-      - "Lostark"
+      - "<a href='https://steamcommunity.com/id/lazyren'>Steam</a>"
+      - "<a href='http://www.companyofheroes.com/leaderboards#profile/steam/76561198031392006/standings'>Company of Heroes 2</a>"
+      - "Blade & Soul"
 # references:
 #   - name: "Erlich Bachman"
 #     reference: >
