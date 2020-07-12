@@ -65,6 +65,14 @@ a.sidebar-nav-subitem {
   margin: 4px;
 }
 
+.sidebar-about {
+  > a.sidebar-title {
+    &::after {
+      width: 9rem;
+    }
+  }
+}
+
 // Submenu Insertion
 
 .folder {
