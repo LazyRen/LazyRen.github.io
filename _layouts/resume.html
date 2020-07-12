@@ -61,7 +61,7 @@ layout: base
     {% unless l_col %}{% assign l_col = 'work,volunteer,education,awards,publications,references' | split:',' %}{% endunless %}
     {% unless r_col %}{% assign r_col = 'languages,skills,interests' | split:',' %}{% endunless %}
 
-    <div class="column column-3-5">
+    <div class="column column-5-8">
       {% for sec in l_col %}
         {% case sec %}
         {% when 'work' %}
@@ -88,7 +88,7 @@ layout: base
         {% endcase %}
       {% endfor %}
     </div>
-    <div class="column column-2-5">
+    <div class="column column-3-8">
       {% for sec in r_col %}
         {% case sec %}
         {% when 'work' %}

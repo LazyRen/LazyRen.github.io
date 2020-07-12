@@ -25,6 +25,15 @@
     </header>
 
     {% include components/message.html class="note" text=awa.summary alt="" %}
+
+    {% if awa.highlights.size > 0 %}
+    <h4 class="sr-only">{{ strings.resume.highlights | default:"Highlights" }}</h4>
+    <ul>
+      {% for highlight in awa.highlights %}
+        <li>{{ highlight }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
   </section>
   {% if forloop.first %}</div>{% endif %}
   {% endfor %}

@@ -9,7 +9,7 @@
     display: inline-block;
     margin-bottom: .25rem;
 
-    // Fix avatar border overlapping name on small screens: 
+    // Fix avatar border overlapping name on small screens:
     position: relative;
     z-index: 2;
   }
@@ -18,7 +18,7 @@
     > p { margin-bottom: 0 }
   }
 
-  .page > header { 
+  .page > header {
     margin-bottom: 1.5rem
   }
 
@@ -26,7 +26,7 @@
     margin-top: 0;
   }
 
-  .mt2 { 
+  .mt2 {
     margin-top: 1rem;
   }
 
@@ -147,7 +147,7 @@
     width: 100%;
   }
 
-  .fr { 
+  .fr {
     float: none;
     display: inline-block;
     margin-left: .25rem;
@@ -157,12 +157,16 @@
     .fr { float: right }
     .column-3-5 { width: 66.67% }
     .column-2-5 { width: 33.33% }
+    .column-5-8 { width: 62.5% }
+    .column-3-8 { width: 37.5% }
   }
 
   @media screen and (min-width: $break-point-dynamic) {
     .columns.columns-break { width: calc(50vw + #{$half-content} - 6rem) }
     .columns-break > .column-3-5 { width: $content-width-5 + 1rem }
-    .columns-break > .column-2-5 { width: $content-width-5  / 2 - 5rem }
+    .columns-break > .column-2-5 { width: $content-width-5 / 2 - 5rem }
+    .columns-break > .column-5-8 { width: $content-width-5 - 12rem }
+    .columns-break > .column-3-8 { width: $content-width-5 / 2 + 4rem }
   }
 
   @media print {
@@ -186,5 +190,7 @@
     .fr { float: right }
     .column-3-5 { width: 70% }
     .column-2-5 { width: 30% }
+    .column-5-8 { width: 62.5% }
+    .column-3-8 { width: 37.5% }
   }
 }

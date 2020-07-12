@@ -1,13 +1,13 @@
 {% if resume.work.size > 0 %}
 <section>
   <div class="npb">
-    <h2 id="project" class="h3 faded hr">
+    <h2 id="project" class="h3 hr-bottom">
       {{ strings.resume.projects | default:"Projects" }}
       <span class="symbol {{ icons.projects | default:'icon-projects' }}"></span>
     </h2>
     {% for project in resume.projects %}
     <section>
-      <header class="{% unless forloop.first %}mt4{% endunless %}" typeof="Project">
+      <header class="{% unless forloop.first %}mt2{% endunless %}" typeof="Project">
         <h3 class="h4 faded">
           <meta property="name" content="{{ project.title }}" />
           {% capture title %}{% include components/link.html title=project.title href=project.url span_class="bc" property="sameAs" %}{% endcapture %}
@@ -26,14 +26,16 @@
 
       {% include components/message.html text=project.summary alt="" %}
 
+      {% if project.highlights.size > 0 %}
       <h4 class="sr-only">{{ strings.resume.highlights | default:"Highlights" }}</h4>
       <ul>
         {% for highlight in project.highlights %}
         <li>{{ highlight }}</li>
         {% endfor %}
       </ul>
+      {% endif %}
     </section>
-    {% if forloop.first %}</div>{% endif %}
+  {% if forloop.first %}</div>{% endif %}
   {% endfor %}
 </section>
 {% endif %}

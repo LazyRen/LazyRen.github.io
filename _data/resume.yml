@@ -3,7 +3,7 @@ basics:
   label: "Programmer"
   picture: "https://graph.facebook.com/100007955266112/picture?type=large"
   email: "daein0lee@gmail.com"
-  phone: "(81) 010-3026-3127"
+  phone: "(82) 010-3026-3127"
   website: "https://lazyren.github.io/"
   summary: >
     Hello, I'm DaeIn Lee from Samsung Research.<br>
@@ -123,16 +123,16 @@ projects:
     highlights:
       - "Implement MLFQ & Stride scheduling instead of round robin scheduling."
       - "Implement Light Weight Process that can be used with most of POSIX-thread functions."
-      - "Implement 'triple indirect block addressing' supporting large file upto 1030 MB instead of original 70 KB."
+      - "Implement 'triple indirect block addressing' to support large file upto 1030 MB original limitation was 70 KB."
 awards:
   - title: "Hanyang Academic Achievement Award"
     awarder: "Hanyang Univ."
-    lists:
+    highlights:
       - "2018, 2nd semester"
       - "2017, 2nd semester(Highest Honor)"
   - title: "Hanyang Brain Scholarship"
     awarder: "Hanyang Univ."
-    lists:
+    highlights:
       - "2019, 1st semester"
       - "2018, 1st/2nd semester"
       - "2017, 2nd semester"

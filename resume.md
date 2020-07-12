@@ -10,12 +10,12 @@ order: 4
 left_column:
  - work
  - education
- - volunteer
  - projects
  - publications
  - references
 right_column:
  - awards
+ - volunteer
  - languages
  - skills
  - interests
