@@ -114,10 +114,12 @@
   }
 
   .reference {
+    margin-top: 1.5rem;
     margin-left: -1rem;
 
     > footer {
       margin-bottom: 0;
+      font-weight: bold;
     }
   }
 
@@ -157,16 +159,20 @@
     .fr { float: right }
     .column-3-5 { width: 66.67% }
     .column-2-5 { width: 33.33% }
-    .column-5-8 { width: 62.5% }
-    .column-3-8 { width: 37.5% }
   }
 
   @media screen and (min-width: $break-point-dynamic) {
-    .columns.columns-break { width: calc(50vw + #{$half-content} - 6rem) }
-    .columns-break > .column-3-5 { width: $content-width-5 + 1rem }
-    .columns-break > .column-2-5 { width: $content-width-5 / 2 - 5rem }
-    .columns-break > .column-5-8 { width: $content-width-5 - 12rem }
-    .columns-break > .column-3-8 { width: $content-width-5 / 2 + 4rem }
+    .columns-break {
+      $helper: $content-width-5 / 2 - $content-margin-5 - 1rem;
+      width: calc(50vw + #{$helper});
+      > .column-3-5 {
+        width: $content-width-5;
+      }
+      > .column-2-5 {
+        width: calc(50vw + #{$helper} - #{$content-width-5});
+        max-width: $content-width-5 / 2 - $pad;
+      }
+    }
   }
 
   @media print {
@@ -186,11 +192,9 @@
   }
 
   @media print and (min-width: 5.247in) {
-    article > .note { padding-right: 10rem }
+    article > .note { padding-right: 11rem }
     .fr { float: right }
     .column-3-5 { width: 70% }
     .column-2-5 { width: 30% }
-    .column-5-8 { width: 62.5% }
-    .column-3-8 { width: 37.5% }
   }
 }

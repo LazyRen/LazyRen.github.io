@@ -25,7 +25,9 @@
 #markdown-toc {
   
   transition: opacity 300ms ease, transform 300ms ease, border-color 1s ease; 
-  
+  &:before {
+    left: 1rem;
+  }
 }
 
 body:not(.no-toc) #markdown-toc {

@@ -22,13 +22,19 @@ main:not(.layout-resume) {
   }
 
   @media screen and (min-width: $break-point-1) {
+    .columns {
+      margin-left: -1rem - $gutter;
+      margin-right: -1rem;
+    }
     .column-1-2 { width: 50%; }
   }
 
   @media screen and (min-width: $break-point-dynamic) {
     .columns-break { 
-      width: calc(50vw + #{$half-content} - 6rem);
-      > .column-1-2, > .column-1 {
+      $helper: $content-width-5 / 2 - $content-margin-5 - 1rem;
+      width: calc(50vw + #{$helper});
+      > .column-1-2, 
+      > .column-1 {
         width: ($content-width-5 / 2) - ($gutter / 2);
       }
     }

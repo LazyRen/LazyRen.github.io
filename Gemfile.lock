@@ -233,7 +233,7 @@ GEM
       sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    posix-spawn (0.3.14)
+    posix-spawn (0.3.15)
     public_suffix (3.1.1)
     rake (13.0.1)
     rb-fsevent (0.10.4)
@@ -260,7 +260,7 @@ GEM
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
     unicode-display_width (1.7.0)
-    zeitwerk (2.3.1)
+    zeitwerk (2.4.0)
 
 PLATFORMS
   ruby

@@ -4,15 +4,25 @@
 {% assign break_point_1 = vars.break_point_1 | default:42 %}
 {% assign break_point_2 = vars.break_point_2 | default:54 %}
 {% assign break_point_5 = vars.break_point_5 | default:86 %}
-{% assign content_width = vars.content_width | default:38 %}
+{% assign content_width   = vars.content_width   | default:42 %}
 {% assign content_width_2 = vars.content_width_2 | default:48 %}
 {% assign content_width_5 = vars.content_width_5 | default:54 %}
 
+{% assign sizes = '' %}
 {% if include.featured %}
-  {% capture sizes %}(min-width: {{ break_point_5 }}em) {{ content_width_5 }}rem, (min-width: {{ break_point_2 }}em) {{ content_width_2 }}rem, (min-width: {{ break_point_1 }}em) {{ content_width | minus:2 }}rem, {{ content_width | minus:2 }}rem{% endcapture %}
+  {% capture sizes %}(min-width: {{ break_point_5 }}em) {{ content_width_5 | plus:2 }}rem, 
+                     (min-width: {{ break_point_2 }}em) {{ content_width_2 | plus:2 }}rem, 
+                     (min-width: {{ break_point_1 }}em) {{ content_width   | plus:2 }}rem, 
+                                                        {{ content_width            }}rem
+  {% endcapture %}
 {% else %}
-  {% capture sizes %}(min-width: {{ break_point_5 }}em) {{ content_width_5 | divided_by:2 | minus:0.5 }}rem, (min-width: {{ break_point_2 }}em) {{ content_width_2 | divided_by:2 | minus:0.5 }}rem, (min-width: {{ break_point_1 }}em) {{ content_width | minus:2 | divided_by:2 | minus:0.5 }}rem, {{ content_width | minus:2 }}rem{% endcapture %}
+  {% capture sizes %}(min-width: {{ break_point_5 }}em) {{ content_width_5 | plus:2 | divided_by:2 | minus:0.5 }}rem, 
+                     (min-width: {{ break_point_2 }}em) {{ content_width_2 | plus:2 | divided_by:2 | minus:0.5 }}rem, 
+                     (min-width: {{ break_point_1 }}em) {{ content_width   | plus:2 | divided_by:2 | minus:0.5 }}rem, 
+                                                        {{ content_width                                       }}rem
+  {% endcapture %}
 {% endif %}
+{% assign sizes = sizes | strip_newlines %}
 
 {% assign screenshot = project.screenshot | default:project.image %}
 {% assign image_base = screenshot.src | default:screenshot.path | default:screenshot %}
