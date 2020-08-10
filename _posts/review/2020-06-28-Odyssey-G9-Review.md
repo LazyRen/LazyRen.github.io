@@ -64,9 +64,9 @@ image:
 우려했던 대로 32:9를 지원하는 게임이 많지 않다!
 
 내 인생 가장 오랫동안 즐겨했던 CoH2를 예로 들자면
-![CoH2 Loading](/assets/img/2020-06-28/coh2_loading.jpg)
+![CoH2 Loading](/assets/img/2020-06-28/coh2_loading.jpg)<br>
 위와 같이 로비/로딩 중에는 16:9로 나오고,
-![CoH2 Ingame Play](/assets/img/2020-06-28/coh2_ingame.jpg)
+![CoH2 Ingame Play](/assets/img/2020-06-28/coh2_ingame.jpg)<br>
 인게임에서는 32:9를 지원하지만 보이는 것과 같이 양 사이드로 갈수록 옆으로 많이 늘어나 매우 거슬리게 보인다.<br>
 가운데에 있는 유닛과 오른쪽에 있는 유닛은 거의 일직선상에 위치해 있는데도 불구하고 오른쪽이 훨씬 크게 보인다!
 
@@ -79,7 +79,7 @@ image:
 
 ### [Microsoft PowerToys](https://github.com/microsoft/PowerToys)
 
-![FancyZones Setting](/assets/img/2020-06-28/fancyzones_setting.png)
+![FancyZones Setting](/assets/img/2020-06-28/fancyzones_setting.png)<br>
 먼저 파워토이를 설치한 이후에 위와 같이 세팅을 해준다.<br>
 이후 `window + ~` 키를 누를 때마다 아래와 같은 창이 뜰 텐데, 상황에 맞춰 설정을 변경해 주면 된다.<br>
 이후 생성된 윈도우 창들은 `window + arrow keys`를 통해 각 그리드를 옮겨 가며 사용할 수 있다.
@@ -87,7 +87,7 @@ image:
 ![FancyZones Testing](/assets/img/2020-06-28/fancyzone.gif)
 
 * **멀티 태스킹**<br>
-    ![Grid 3](/assets/img/2020-06-28/grid3.png)
+    ![Grid 3](/assets/img/2020-06-28/grid3.png)<br>
     3칸 짜리 Grid를 선택하면 된다.<br>
     32:9의 광활한 화면은 3분할 하였을 때 가장 웹서핑 하기 좋은 크기가 만들어진다.<br>
     개발 할 때는 VS Code / 구글 / 터미널 하나씩 열어두면 좋다.
@@ -97,7 +97,7 @@ image:
     혹은 2칸 짜리 Grid를 선택하면 16:9 화면 2개로 분할된다.
     ![Priority Grid 3](/assets/img/2020-06-28/coh2_split.png)
 * **21:9 게임**<br>
-    ![Priority Grid 2](/assets/img/2020-06-28/grid2.png)
+    ![Priority Grid 2](/assets/img/2020-06-28/grid2.png)<br>
     2칸 짜리 Priority Grid를 선택하면 된다.<br>
     ![Lostark](/assets/img/2020-06-28/lostark.png)
     *아직 만난 적 없는 모코코를 알탭 없이 찾고 있어...*{:.figure}
@@ -109,14 +109,14 @@ image:
 
 ### [Magic Borderless](https://store.steampowered.com/app/1022230/Magic_Borderless/)
 
-![Magic Borderless](/assets/img/2020-06-28/magic_borderless.gif)
+![Magic Borderless](/assets/img/2020-06-28/magic_borderless.gif)<br>
 거추장 스러운 상단바를 없애주고, 프로그램 정렬 / 마우스 가두기 / 작업 표시줄 비활성화 등 사실상 창모드 게임을 위해 필요한 모든 기능을 제공하는 프로그램이다.<br>
 (당연하게도) 개발자에게서 받은 거라곤 하나도 없지만 이런 좋은 프로그램은 열심히 홍보해야 하니 다들 커피 한 잔 아껴서 구매해 보시길...
 
 사용법도 간단하다. 프로그램을 창모드로 실행할 경우 자동으로 감지하고(못한다면 트레이에서 열자) 실행된다.
-![Magic Borderless Setting 01](/assets/img/2020-06-28/magic_borderless_01.png)
+![Magic Borderless Setting 01](/assets/img/2020-06-28/magic_borderless_01.png)<br>
 프로그램 리스트 중 설정하고자 하는 프로그램을 선택하여 다음과 같이 설정한다.
-![Magic Borderless Setting 02](/assets/img/2020-06-28/magic_borderless_02.png)
+![Magic Borderless Setting 02](/assets/img/2020-06-28/magic_borderless_02.png)<br>
 
 * 테두리 없는 창(보더리스)<br>
     첫번째 옵션을 선택해주면 된다.
