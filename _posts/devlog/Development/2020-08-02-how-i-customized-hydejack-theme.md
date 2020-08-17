@@ -5,7 +5,7 @@ subtitle: "How I customized Hydejack Theme"
 category: devlog
 tags: development blog
 image:
-  path:   /assets/img/2020-08-02/showcase.png
+  path: /assets/img/2020-08-02/showcase.png
 ---
 
 Thanks to [@qwtel](https://qwtel.com/), I'm on the [showcase](https://hydejack.com/showcase/) of Hydejack's official site!<br>
