@@ -51,7 +51,7 @@ bool binary_search(T arr[], int left, int right, const T& x) {
     if (arr[m] == x)      // Number Found
       return true;
     else if (arr[m] < x)
-      l = m + 1;          // Search for higher half
+      l = m + 1;          // Search for upper half
     else
       r = m - 1;          // Search for lower half
   }
@@ -66,7 +66,7 @@ bool binary_search(T* arr, T* end, const T& x) {
     if (arr[m] == x)      // Number Found
       return true;
     else if (arr[m] < x)
-      l = m + 1;          // Search for higher half
+      l = m + 1;          // Search for upper half
     else
       r = m - 1;          // Search for lower half
   }
