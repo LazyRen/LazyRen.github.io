@@ -97,7 +97,7 @@ void sort(T* arr, T* end) {
     if (l <= r)
       swap(arr[l++],arr[r--]);
   }
-  sort(arr, arr + l);
+  sort(arr, arr + r);
   sort(arr + l, end);
 }
 ```
