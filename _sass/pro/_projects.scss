@@ -30,10 +30,10 @@ main:not(.layout-resume) {
   }
 
   @media screen and (min-width: $break-point-dynamic) {
-    .columns-break { 
+    .columns-break {
       $helper: $content-width-5 / 2 - $content-margin-5 - 1rem;
       width: calc(50vw + #{$helper});
-      > .column-1-2, 
+      > .column-1-2,
       > .column-1 {
         width: ($content-width-5 / 2) - ($gutter / 2);
       }
@@ -90,7 +90,7 @@ main:not(.layout-resume) {
         position: absolute;
         top: 0;
         left: 0;
-        right: 0; 
+        right: 0;
         bottom: 0;
         z-index: 0;
       }
