@@ -1,31 +1,321 @@
-/*!
- *  __  __                __                                     __
- * /\ \/\ \              /\ \             __                    /\ \
- * \ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
- *  \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
- *   \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
- *    \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
- *     \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
- *                 /\___/                \ \____/
- *                 \/__/                  \/___/
- *
- * Powered by Hydejack v9.0.4 <https://hydejack.com/>
- */
-(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{334:function(t,e,n){"use strict";n.d(e,"a",(function(){return l}));var r=n(1),i=n(113),o=n(68),a=n(47),c=n(46),u=n(114),s={};function l(){for(var t=[],e=0;e<arguments.length;e++)t[e]=arguments[e];var n=void 0,r=void 0;return Object(i.a)(t[t.length-1])&&(r=t.pop()),"function"==typeof t[t.length-1]&&(n=t.pop()),1===t.length&&Object(o.a)(t[0])&&(t=t[0]),Object(u.a)(t,r).lift(new f(n))}var f=function(){function t(t){this.resultSelector=t}return t.prototype.call=function(t,e){return e.subscribe(new p(t,this.resultSelector))},t}(),p=function(t){function e(e,n){var r=t.call(this,e)||this;return r.resultSelector=n,r.active=0,r.values=[],r.observables=[],r}return Object(r.c)(e,t),e.prototype._next=function(t){this.values.push(s),this.observables.push(t)},e.prototype._complete=function(){var t=this.observables,e=t.length;if(0===e)this.destination.complete();else{this.active=e,this.toRespond=e;for(var n=0;n<e;n++){var r=t[n];this.add(Object(c.a)(this,r,r,n))}}},e.prototype.notifyComplete=function(t){0==(this.active-=1)&&this.destination.complete()},e.prototype.notifyNext=function(t,e,n,r,i){var o=this.values,a=o[n],c=this.toRespond?a===s?--this.toRespond:this.toRespond:0;o[n]=e,0===c&&(this.resultSelector?this._tryResultSelector(o):this.destination.next(o.slice()))},e.prototype._tryResultSelector=function(t){var e;try{e=this.resultSelector.apply(this,t)}catch(t){return void this.destination.error(t)}this.destination.next(e)},e}(a.a)},348:function(t,e,n){"use strict";n.r(e),n.d(e,"HyDrawer",(function(){return Nt}));var r=n(322),i=n(310);function o(t,e){var n;if("undefined"==typeof Symbol||null==t[Symbol.iterator]){if(Array.isArray(t)||(n=function(t,e){if(!t)return;if("string"==typeof t)return a(t,e);var n=Object.prototype.toString.call(t).slice(8,-1);"Object"===n&&t.constructor&&(n=t.constructor.name);if("Map"===n||"Set"===n)return Array.from(t);if("Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return a(t,e)}(t))||e&&t&&"number"==typeof t.length){n&&(t=n);var r=0,i=function(){};return{s:i,n:function(){return r>=t.length?{done:!0}:{done:!1,value:t[r++]}},e:function(t){throw t},f:i}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var o,c=!0,u=!1;return{s:function(){n=t[Symbol.iterator]()},n:function(){var t=n.next();return c=t.done,t},e:function(t){u=!0,o=t},f:function(){try{c||null==n.return||n.return()}finally{if(u)throw o}}}}function a(t,e){(null==e||e>t.length)&&(e=t.length);for(var n=0,r=new Array(e);n<e;n++)r[n]=t[n];return r}function c(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}
-/**
- * @license
- * Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at
- * http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at
- * http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at
- * http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at
- * http://polymer.github.io/PATENTS.txt
- */
-var u=function(){function t(e){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),this.classes=new Set,this.changed=!1,this.element=e;var n,r=o((e.getAttribute("class")||"").split(/\s+/));try{for(r.s();!(n=r.n()).done;){var i=n.value;this.classes.add(i)}}catch(t){r.e(t)}finally{r.f()}}var e,n,r;return e=t,(n=[{key:"add",value:function(t){this.classes.add(t),this.changed=!0}},{key:"remove",value:function(t){this.classes.delete(t),this.changed=!0}},{key:"commit",value:function(){if(this.changed){var t="";this.classes.forEach((function(e){return t+=e+" "})),this.element.setAttribute("class",t)}}}])&&c(e.prototype,n),r&&c(e,r),t}(),s=new WeakMap,l=Object(i.e)((function(t){return function(e){if(!(e instanceof i.a)||e instanceof i.c||"class"!==e.committer.name||e.committer.parts.length>1)throw new Error("The `classMap` directive must be used in the `class` attribute and must be the only part in the attribute.");var n=e.committer,r=n.element,o=s.get(e);void 0===o&&(r.setAttribute("class",n.strings.join(" ")),s.set(e,o=new Set));var a=r.classList||new u(r);for(var c in o.forEach((function(e){e in t||(a.remove(e),o.delete(e))})),t){var l=t[c];l!=o.has(c)&&(l?(a.add(c),o.add(c)):(a.remove(c),o.delete(c)))}"function"==typeof a.commit&&a.commit()}})),f=new WeakMap,p=Object(i.e)((function(t){return function(e){if(!(e instanceof i.a)||e instanceof i.c||"style"!==e.committer.name||e.committer.parts.length>1)throw new Error("The `styleMap` directive must be used in the style attribute and must be the only part in the attribute.");var n=e.committer,r=n.element.style,o=f.get(e);for(var a in void 0===o&&(r.cssText=n.strings.join(" "),f.set(e,o=new Set)),o.forEach((function(e){e in t||(o.delete(e),-1===e.indexOf("-")?r[e]=null:r.removeProperty(e))})),t)o.add(a),-1===a.indexOf("-")?r[a]=t[a]:r.setProperty(a,t[a])}})),h=n(350),b=n(334),d=n(325),v=n(300),y=n(149),g=n(352),m=n(313),O=n(31),j=n(327),w=n(150),S=n(152),x=n(1),k=n(47),_=n(46);function E(t){return function(e){return e.lift(new T(t))}}var T=function(){function t(t){this.notifier=t}return t.prototype.call=function(t,e){var n=new C(t),r=e.subscribe(n);return r.add(Object(_.a)(n,this.notifier)),r},t}(),C=function(t){function e(){var e=null!==t&&t.apply(this,arguments)||this;return e.hasValue=!1,e}return Object(x.c)(e,t),e.prototype._next=function(t){this.value=t,this.hasValue=!0},e.prototype.notifyNext=function(t,e,n,r,i){this.emitValue()},e.prototype.notifyComplete=function(){this.emitValue()},e.prototype.emitValue=function(){this.hasValue&&(this.hasValue=!1,this.destination.next(this.value))},e}(k.a);function A(t){return void 0===t&&(t=Date),Object(O.a)((function(e){return{value:e,timestamp:t.now()}}))}var R=n(329),I=n(151),$=n(324),P=n(148),V=n(335),M=n(351),D=n(9);function X(t){return function(e){return e.lift(new z(t))}}var z=function(){function t(t){this.total=t}return t.prototype.call=function(t,e){return e.subscribe(new B(t,this.total))},t}(),B=function(t){function e(e,n){var r=t.call(this,e)||this;return r.total=n,r.count=0,r}return Object(x.c)(e,t),e.prototype._next=function(t){++this.count>this.total&&this.destination.next(t)},e}(D.a),W=n(309),N=n(64);function U(t,e,n,r){return n*Math.sin(t/r*(Math.PI/2))+e}function Y(t){return("ResizeObserver"in window?Object(W.e)(t):Object(N.a)({contentRect:{width:t.clientWidth}})).pipe(Object(O.a)((function(t){return t.contentRect.width})))}var F={fromAttribute:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"";return t.replace(/[\[\]]/g,"").split(",").map(Number)},toAttribute:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[];return t.join(",")}};var J=n(328),H=n(357);var L=function(){function t(t){this.notifier=t}return t.prototype.call=function(t,e){return e.subscribe(new q(t,this.notifier,e))},t}(),q=function(t){function e(e,n,r){var i=t.call(this,e)||this;return i.notifier=n,i.source=r,i.notifications=null,i.retries=null,i.retriesSubscription=null,i.sourceIsBeingSubscribedTo=!0,i}return Object(x.c)(e,t),e.prototype.notifyNext=function(t,e,n,r,i){this.sourceIsBeingSubscribedTo=!0,this.source.subscribe(this)},e.prototype.notifyComplete=function(e){if(!1===this.sourceIsBeingSubscribedTo)return t.prototype.complete.call(this)},e.prototype.complete=function(){if(this.sourceIsBeingSubscribedTo=!1,!this.isStopped){if(this.retries||this.subscribeToRetries(),!this.retriesSubscription||this.retriesSubscription.closed)return t.prototype.complete.call(this);this._unsubscribeAndRecycle(),this.notifications.next()}},e.prototype._unsubscribe=function(){var t=this.notifications,e=this.retriesSubscription;t&&(t.unsubscribe(),this.notifications=null),e&&(e.unsubscribe(),this.retriesSubscription=null),this.retries=null},e.prototype._unsubscribeAndRecycle=function(){var e=this._unsubscribe;return this._unsubscribe=null,t.prototype._unsubscribeAndRecycle.call(this),this._unsubscribe=e,this},e.prototype.subscribeToRetries=function(){var e;this.notifications=new m.a;try{e=(0,this.notifier)(this.notifications)}catch(e){return t.prototype.complete.call(this)}this.retries=e,this.retriesSubscription=Object(_.a)(this,e)},e}(k.a);var G=function(){function t(t){this.predicate=t}return t.prototype.call=function(t,e){return e.subscribe(new K(t,this.predicate))},t}(),K=function(t){function e(e,n){var r=t.call(this,e)||this;return r.predicate=n,r.skipping=!0,r.index=0,r}return Object(x.c)(e,t),e.prototype._next=function(t){var e=this.destination;this.skipping&&this.tryCallPredicate(t),this.skipping||e.next(t)},e.prototype.tryCallPredicate=function(t){try{var e=this.predicate(t,this.index++);this.skipping=Boolean(e)}catch(t){this.destination.error(t)}},e}(D.a);function Q(t,e){return function(t){if(Array.isArray(t))return t}(t)||function(t,e){if("undefined"==typeof Symbol||!(Symbol.iterator in Object(t)))return;var n=[],r=!0,i=!1,o=void 0;try{for(var a,c=t[Symbol.iterator]();!(r=(a=c.next()).done)&&(n.push(a.value),!e||n.length!==e);r=!0);}catch(t){i=!0,o=t}finally{try{r||null==c.return||c.return()}finally{if(i)throw o}}return n}(t,e)||function(t,e){if(!t)return;if("string"==typeof t)return Z(t,e);var n=Object.prototype.toString.call(t).slice(8,-1);"Object"===n&&t.constructor&&(n=t.constructor.name);if("Map"===n||"Set"===n)return Array.from(t);if("Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return Z(t,e)}(t,e)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function Z(t,e){(null==e||e>t.length)&&(e=t.length);for(var n=0,r=new Array(e);n<e;n++)r[n]=t[n];return r}function tt(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}var et=Math.abs.bind(Math),nt=function(){function t(){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t)}var e,n,r;return e=t,(n=[{key:"getStartObservable",value:function(){return Object(b.a)(this.$.mouseEvents).pipe(Object(P.a)((function(t){var e=Q(t,1)[0],n=Object(v.a)(document,"touchstart",{passive:!0}).pipe(Object(I.a)((function(t){return 1===t.touches.length})),Object(O.a)((function(t){return t.touches[0]}))),r=e?Object(v.a)(document,"mousedown").pipe(Object(O.a)((function(t){return t.event=t,t}))):y.a;return Object(d.a)(n,r)})))}},{key:"getMoveObservable",value:function(t,e){return Object(b.a)(this.$.mouseEvents,this.$.preventDefault).pipe(Object(P.a)((function(n){var r=Q(n,2),i=r[0],o=r[1],a=Object(v.a)(document,"touchmove",{passive:!o}).pipe(Object(O.a)((function(t){return t.touches[0].event=t,t.touches[0]}))),c=i?Object(v.a)(document,"mousemove",{passive:!o}).pipe(Object(W.l)(Object(d.a)(t.pipe(Object(J.a)(!0)),e.pipe(Object(J.a)(!1)))),Object(O.a)((function(t){return t.event=t,t}))):y.a;return Object(d.a)(a,c)})))}},{key:"getEndObservable",value:function(){return Object(b.a)(this.$.mouseEvents).pipe(Object(P.a)((function(t){var e=Q(t,1)[0],n=Object(v.a)(document,"touchend",{passive:!0}).pipe(Object(I.a)((function(t){return 0===t.touches.length})),Object(O.a)((function(t){return t.changedTouches[0]}))),r=e?Object(v.a)(document,"mouseup",{passive:!0}):y.a;return Object(d.a)(n,r)})))}},{key:"getIsSlidingObservable",value:function(t,e,n){return this.getIsSlidingObservableInner(t,e).pipe(Object(H.a)(1),Object($.a)(void 0),(r=function(){return n},function(t){return t.lift(new L(r))}));var r}},{key:"getIsSlidingObservableInner",value:function(t,e){var n,r=this;return this.threshold?t.pipe(Object(w.a)(e),(n=function(t){var e=Q(t,2),n=e[0],i=n.clientX,o=n.clientY,a=e[1],c=a.clientX,u=a.clientY;return et(u-o)<r.threshold&&et(c-i)<r.threshold},function(t){return t.lift(new G(n))}),Object(O.a)((function(t){var e=Q(t,2),n=e[0],r=n.clientX,i=n.clientY,o=e[1],a=o.clientX,c=o.clientY;return et(a-r)>=et(c-i)}))):t.pipe(Object(w.a)(e),Object(O.a)((function(t){var e=Q(t,2),n=e[0],i=n.clientX,o=n.clientY,a=n.event,c=e[1],u=c.clientX,s=c.clientY,l=et(u-i)>=et(s-o);return r.noScroll&&l&&a.preventDefault(),l})))}}])&&tt(e.prototype,n),r&&tt(e,r),t}();function rt(t,e){return function(t){if(Array.isArray(t))return t}(t)||function(t,e){if("undefined"==typeof Symbol||!(Symbol.iterator in Object(t)))return;var n=[],r=!0,i=!1,o=void 0;try{for(var a,c=t[Symbol.iterator]();!(r=(a=c.next()).done)&&(n.push(a.value),!e||n.length!==e);r=!0);}catch(t){i=!0,o=t}finally{try{r||null==c.return||c.return()}finally{if(i)throw o}}return n}(t,e)||function(t,e){if(!t)return;if("string"==typeof t)return it(t,e);var n=Object.prototype.toString.call(t).slice(8,-1);"Object"===n&&t.constructor&&(n=t.constructor.name);if("Map"===n||"Set"===n)return Array.from(t);if("Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return it(t,e)}(t,e)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function it(t,e){(null==e||e>t.length)&&(e=t.length);for(var n=0,r=new Array(e);n<e;n++)r[n]=t[n];return r}function ot(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}var at=Math.min.bind(Math),ct=Math.max.bind(Math),ut=function(){function t(){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t)}var e,n,r;return e=t,(n=[{key:"calcIsInRange",value:function(t,e){var n=t.clientX;switch(this.side){case"left":var r=rt(this.range,2),i=r[0],o=r[1];return n>i&&(e||n<o);case"right":var a=window.innerWidth-this.range[0],c=window.innerWidth-this.range[1];return n<a&&(e||n>c);default:throw Error()}}},{key:"calcIsSwipe",value:function(t,e,n,r,i){var o=t.clientX;return e.clientX!==o||n>0&&n<r}},{key:"calcWillOpen",value:function(t,e,n,r,i){switch(this.side){case"left":return i>.15||!(i<-.15)&&n>=r/2;case"right":return-i>.15||!(-i<-.15)&&n<=-r/2;default:throw Error()}}},{key:"calcTranslateX",value:function(t,e,n,r){var i=t.clientX,o=e.clientX;switch(this.side){case"left":return ct(0,at(r,n+(i-o)));case"right":return at(0,ct(-r,n+(i-o)));default:throw Error()}}}])&&ot(e.prototype,n),r&&ot(e,r),t}();function st(t){return(st="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function lt(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&ft(t,e)}function ft(t,e){return(ft=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t})(t,e)}function pt(t){var e=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(t){return!1}}();return function(){var n,r=bt(t);if(e){var i=bt(this).constructor;n=Reflect.construct(r,arguments,i)}else n=r.apply(this,arguments);return ht(this,n)}}function ht(t,e){return!e||"object"!==st(e)&&"function"!=typeof e?function(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}(t):e}function bt(t){return(bt=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)})(t)}function dt(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function vt(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}function yt(t,e,n){return e&&vt(t.prototype,e),n&&vt(t,n),t}var gt=function(){function t(){dt(this,t)}return yt(t,[{key:"updateDOM",value:function(t,e){var n=t/e*("left"===this.side?1:-1)||0;this.translateX=t,this.opacity=n,this.updater.updateDOM(t,n)}}]),t}(),mt=function(){function t(e){dt(this,t),this.parent=e}return yt(t,[{key:"contentEl",get:function(){return this.parent.contentEl}},{key:"scrimEl",get:function(){return this.parent.scrimEl}}],[{key:"getUpdaterForPlatform",value:function(t){return"attributeStyleMap"in Element.prototype&&"CSS"in window&&"number"in CSS?new jt(t):new Ot(t)}}]),t}(),Ot=function(t){lt(n,t);var e=pt(n);function n(t){return dt(this,n),e.call(this,t)}return yt(n,[{key:"updateDOM",value:function(t,e){this.contentEl.style.transform="translate(".concat(t,"px, 0px)"),this.scrimEl.style.opacity="".concat(e)}}]),n}(mt),jt=function(t){lt(n,t);var e=pt(n);function n(t){var r;return dt(this,n),(r=e.call(this,t)).tvalue=new CSSTransformValue([new CSSTranslate(CSS.px(0),CSS.px(0))]),r.ovalue=CSS.number(1),r}return yt(n,[{key:"updateDOM",value:function(t,e){this.tvalue[0].x.value=t,this.ovalue.value=e,this.contentEl.attributeStyleMap.set("transform",this.tvalue),this.scrimEl.attributeStyleMap.set("opacity",this.ovalue)}}]),n}(mt);function wt(){var t=function(t,e){e||(e=t.slice(0));return Object.freeze(Object.defineProperties(t,{raw:{value:Object.freeze(e)}}))}(["\n  @media screen {\n    :host {\n      touch-action: pan-x;\n    }\n\n    .full-screen {\n      position: fixed;\n      top: 0;\n      left: 0;\n      height: 100vh;\n      width: 100vw;\n    }\n\n    .full-height {\n      position: fixed;\n      top: 0;\n      height: 100vh;\n    }\n\n    .peek {\n      left: 0;\n      width: var(--hy-drawer-peek-width, 0px);\n      visibility: hidden;\n      z-index: calc(var(--hy-drawer-z-index, 100) - 1);\n    }\n\n    .scrim {\n      position: fixed;\n      top: 0;\n      left: 0;\n      height: 10vh;\n      width: 10vw;\n      transform: scale(10);\n      transform-origin: top left;\n      opacity: 0;\n      pointer-events: none;\n      background: var(--hy-drawer-scrim-background, rgba(0, 0, 0, 0.5));\n      z-index: var(--hy-drawer-z-index, 100);\n      -webkit-tap-highlight-color: transparent;\n    }\n\n    .range {\n      position: fixed;\n      top: 0;\n      height: 100vh;\n      z-index: calc(var(--hy-drawer-z-index, 100) + 1);\n    }\n\n    .grabbing-screen {\n      cursor: grabbing;\n      z-index: calc(var(--hy-drawer-z-index, 100) + 2);\n    }\n\n    .wrapper {\n      width: var(--hy-drawer-width, 300px);\n      background: var(--hy-drawer-background, inherit);\n      box-shadow: var(--hy-drawer-box-shadow, 0 0 15px rgba(0, 0, 0, 0.25));\n      z-index: calc(var(--hy-drawer-z-index, 100) + 3);\n      contain: strict;\n    }\n\n    .wrapper.left {\n      left:  calc(-1 * var(--hy-drawer-width, 300px) + var(--hy-drawer-peek-width, 0px));\n    }\n\n    .wrapper.right {\n      right:  calc(-1 * var(--hy-drawer-width, 300px) + var(--hy-drawer-peek-width, 0px));\n    }\n\n    .wrapper > .overflow {\n      position: absolute;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      left: 0;\n      overflow-x: hidden;\n      overflow-y: auto;\n      overscroll-behavior: contain;\n      -webkit-overflow-scrolling: touch;\n    }\n\n    .grab {\n      cursor: move;\n      cursor: grab;\n    }\n\n    .grabbing {\n      cursor: grabbing;\n    }\n  }\n\n  @media print {\n    .scrim {\n      display: none !important;\n    }\n\n    .wrapper {\n      transform: none !important;\n    }\n  }\n"]);return wt=function(){return t},t}var St=Object(r.b)(wt());function xt(t,e,n){return e in t?Object.defineProperty(t,e,{value:n,enumerable:!0,configurable:!0,writable:!0}):t[e]=n,t}function kt(){var t=Et(['<div class="grabbing-screen full-screen"></div>']);return kt=function(){return t},t}function _t(){var t=Et(['\n      <div class="peek full-height"></div>\n      <div\n        class="scrim"\n        style=',">\n      </div>\n      ","\n      <div\n        class=","\n        style=",'\n      >\n        <div class="overflow">\n          <slot></slot>\n        </div>\n      </div>\n    ']);return _t=function(){return t},t}function Et(t,e){return e||(e=t.slice(0)),Object.freeze(Object.defineProperties(t,{raw:{value:Object.freeze(e)}}))}function Tt(t,e){return function(t){if(Array.isArray(t))return t}(t)||function(t,e){if("undefined"==typeof Symbol||!(Symbol.iterator in Object(t)))return;var n=[],r=!0,i=!1,o=void 0;try{for(var a,c=t[Symbol.iterator]();!(r=(a=c.next()).done)&&(n.push(a.value),!e||n.length!==e);r=!0);}catch(t){i=!0,o=t}finally{try{r||null==c.return||c.return()}finally{if(i)throw o}}return n}(t,e)||At(t,e)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function Ct(t){return function(t){if(Array.isArray(t))return Rt(t)}(t)||function(t){if("undefined"!=typeof Symbol&&Symbol.iterator in Object(t))return Array.from(t)}(t)||At(t)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function At(t,e){if(t){if("string"==typeof t)return Rt(t,e);var n=Object.prototype.toString.call(t).slice(8,-1);return"Object"===n&&t.constructor&&(n=t.constructor.name),"Map"===n||"Set"===n?Array.from(t):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?Rt(t,e):void 0}}function Rt(t,e){(null==e||e>t.length)&&(e=t.length);for(var n=0,r=new Array(e);n<e;n++)r[n]=t[n];return r}function It(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function $t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}function Pt(t,e,n){return(Pt="undefined"!=typeof Reflect&&Reflect.get?Reflect.get:function(t,e,n){var r=function(t,e){for(;!Object.prototype.hasOwnProperty.call(t,e)&&null!==(t=zt(t)););return t}(t,e);if(r){var i=Object.getOwnPropertyDescriptor(r,e);return i.get?i.get.call(n):i.value}})(t,e,n||t)}function Vt(t,e){return(Vt=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t})(t,e)}function Mt(t){var e=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(t){return!1}}();return function(){var n,r=zt(t);if(e){var i=zt(this).constructor;n=Reflect.construct(r,arguments,i)}else n=r.apply(this,arguments);return Dt(this,n)}}function Dt(t,e){return!e||"object"!==Bt(e)&&"function"!=typeof e?Xt(t):e}function Xt(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}function zt(t){return(zt=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)})(t)}function Bt(t){return(Bt="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}var Wt=function(t,e,n,r){var i,o=arguments.length,a=o<3?e:null===r?r=Object.getOwnPropertyDescriptor(e,n):r;if("object"===("undefined"==typeof Reflect?"undefined":Bt(Reflect))&&"function"==typeof Reflect.decorate)a=Reflect.decorate(t,e,n,r);else for(var c=t.length-1;c>=0;c--)(i=t[c])&&(a=(o<3?i(a):o>3?i(e,n,a):i(e,n))||a);return o>3&&a&&Object.defineProperty(e,n,a),a},Nt=function(t){!function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&Vt(t,e)}(a,t);var e,n,i,o=Mt(a);function a(){var t;return It(this,a),(t=o.apply(this,arguments)).el=Xt(t),t.opened=!1,t.side="left",t.persistent=!1,t.threshold=10,t.noScroll=!1,t.mouseEvents=!1,t.range=[0,100],t.willChange=!1,t._initialized=Object(W.f)(),t.$={},t.upgrade=function(){var e=t.getDrawerWidth(),n=t.$.persistent.pipe(Object(O.a)((function(t){return!t}))),r=t.getStartObservable().pipe(Object(W.h)(n),Object(j.a)()),i={},o=Object(h.a)((function(){return i.translateX$.pipe(Object(O.a)((function(t){return 0!==t})))})),a=r.pipe(Object(w.a)(o),Object(O.a)((function(e){var n;return(n=t).calcIsInRange.apply(n,Ct(e))})),Object(S.a)((function(e){e&&(t.willChange=!0,t.fireEvent("prepare"))})),Object(j.a)()),c=t.getEndObservable().pipe(Object(W.h)(n,a),Object(S.a)((function(){t.mouseEvents&&(t.grabbing=!1)})),Object(j.a)()),u=t.getMoveObservable(r,c).pipe(Object(W.h)(n,a),Object(j.a)()),s=t.getIsSlidingObservable(u,r,c).pipe(Object(S.a)((function(e){t.isSliding=e,e&&t.mouseEvents&&(t.grabbing=!0)}))),l=i.translateX$=Object(h.a)((function(){var n=Object(b.a)(t.$.opened,t.$.side,e).pipe(Object(O.a)((function(t){var e=Tt(t,3),n=e[0],r=e[1],i=e[2];return n?i*("left"===r?1:-1):0}))),o=u.pipe(Object(W.h)(s),Object(S.a)((function(){return t.scrimClickable=!1})),Object(S.a)((function(e){var n=e.event;return t.noScroll&&n.preventDefault()})),Object(w.a)(r,i.startTranslateX$,e),Object(O.a)((function(e){var n;return(n=t).calcTranslateX.apply(n,Ct(e))})));return Object(d.a)(i.tweenTranslateX$,n,o)})).pipe(Object(j.a)());i.startTranslateX$=l.pipe(E(r));var f=l.pipe(A(),Object(R.a)(),Object(I.a)((function(t){var e=Tt(t,2),n=e[0].timestamp;return e[1].timestamp-n>0})),Object(O.a)((function(t){var e=Tt(t,2),n=e[0],r=n.value,i=n.timestamp,o=e[1];return(o.value-r)/(o.timestamp-i)})),Object($.a)(0)),p=c.pipe(Object(w.a)(r,l,e,f),Object(I.a)((function(e){var n;return(n=t).calcIsSwipe.apply(n,Ct(e))})),Object(O.a)((function(e){var n;return(n=t).calcWillOpen.apply(n,Ct(e))}))),g=t.animateTo$.pipe(Object(S.a)((function(){t.willChange=!0,t.fireEvent("prepare")})));i.tweenTranslateX$=Object(d.a)(p,g).pipe(Object(w.a)(l,e),Object(P.a)((function(e){var n=Tt(e,3),i=n[0],o=n[1],a=n[2],c="left"===t.side?1:-1,u=(i?a*c:0)-o,s=Math.ceil(200+.15*a);return Object(W.m)(U,o,u,s).pipe(Object(V.a)((function(){t.transitioned(i)})),Object(M.a)(r),Object(M.a)(t.$.side.pipe(X(1))),Object(j.a)())}))),l.pipe(Object(w.a)(e),Object(S.a)((function(e){var n;(n=t).updateDOM.apply(n,Ct(e));var r=Xt(t),i=r.translateX,o=r.opacity;t.fireEvent("move",{detail:{translateX:i,opacity:o},bubbles:!1})}))).subscribe(),Object(v.a)(t.scrimEl,"click").pipe(Object(S.a)((function(){return t.close()}))).subscribe(),n.pipe(Object(S.a)((function(e){t.scrimEl.style.display=e?"block":"none"}))).subscribe(),t.$.mouseEvents.pipe(Object(P.a)((function(t){return t?r.pipe(Object(w.a)(a)):y.a})),Object(I.a)((function(t){var e=Tt(t,2),n=e[0];return e[1]&&null!=n.event})),Object(S.a)((function(t){return Tt(t,1)[0].event.preventDefault()}))).subscribe(),t.fireEvent("init",{detail:t.opened}),t._initialized.resolve(Xt(t))},t.transitioned=function(e){t.opened=t.scrimClickable=e,t.willChange=!1,t.fireEvent("transitioned",{detail:e})},t}return e=a,(n=[{key:"getDrawerWidth",value:function(){var t=this,e=Y(this.contentEl).pipe(Object(S.a)((function(e){return t.fireEvent("content-width-change",{detail:e})}))),n=Y(this.peekEl).pipe(Object(S.a)((function(e){return t.fireEvent("peek-width-change",{detail:e})})));return Object(b.a)(e,n).pipe(Object(O.a)((function(t){var e=Tt(t,2);return e[0]-e[1]})),Object(j.a)())}},{key:"connectedCallback",value:function(){Pt(zt(a.prototype),"connectedCallback",this).call(this),this.$.opened=new g.a(this.opened),this.$.side=new g.a(this.side),this.$.persistent=new g.a(this.persistent),this.$.preventDefault=new g.a(this.noScroll),this.$.mouseEvents=new g.a(this.mouseEvents),this.scrimClickable=this.opened,this.animateTo$=new m.a,this.updater=mt.getUpdaterForPlatform(this),this.updateComplete.then(this.upgrade)}},{key:"render",value:function(){var t;return Object(r.d)(_t(),p({willChange:this.willChange?"opacity":"",pointerEvents:this.scrimClickable?"all":""}),this.mouseEvents&&this.grabbing&&!this.scrimClickable?Object(r.d)(kt()):null,l((xt(t={wrapper:!0,"full-height":!0},this.side,!0),xt(t,"grab",this.mouseEvents),xt(t,"grabbing",this.mouseEvents&&this.grabbing),t)),p({willChange:this.willChange?"transform":""}))}},{key:"open",value:function(){this.animateTo$.next(!0)}},{key:"close",value:function(){this.animateTo$.next(!1)}},{key:"toggle",value:function(){this.animateTo$.next(!this.opened)}},{key:"initialized",get:function(){return this._initialized}},{key:"histId",get:function(){return this.id||this.tagName}},{key:"hashId",get:function(){return"#".concat(this.histId,"--opened")}}])&&$t(e.prototype,n),i&&$t(e,i),a}(Object(W.b)(W.a,[nt,gt,ut]));
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendors~drawer"],{
+
+/***/ "./node_modules/@hydecorp/drawer/lib/calc.js":
+/*!***************************************************!*\
+  !*** ./node_modules/@hydecorp/drawer/lib/calc.js ***!
+  \***************************************************/
+/*! exports provided: CalcMixin */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CalcMixin", function() { return CalcMixin; });
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ "./node_modules/@hydecorp/drawer/lib/constants.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+ // Using shorthands for common functions
+
+var min = Math.min.bind(Math);
+var max = Math.max.bind(Math);
+var CalcMixin = /*#__PURE__*/function () {
+  function CalcMixin() {
+    _classCallCheck(this, CalcMixin);
+  }
+
+  _createClass(CalcMixin, [{
+    key: "calcIsInRange",
+    value: function calcIsInRange(_ref, opened) {
+      var clientX = _ref.clientX;
+
+      // console.log(this.range, this.align);
+      switch (this.side) {
+        case "left":
+          {
+            var _this$range = _slicedToArray(this.range, 2),
+                lower = _this$range[0],
+                upper = _this$range[1];
+
+            return clientX > lower && (opened || clientX < upper);
+          }
+
+        case "right":
+          {
+            var _upper = window.innerWidth - this.range[0];
+
+            var _lower = window.innerWidth - this.range[1];
+
+            return clientX < _upper && (opened || clientX > _lower);
+          }
+
+        default:
+          throw Error();
+      }
+    }
+  }, {
+    key: "calcIsSwipe",
+    value: function calcIsSwipe(_ref2, _ref3, translateX, drawerWidth, _) {
+      var startX = _ref2.clientX;
+      var endX = _ref3.clientX;
+      return endX !== startX || translateX > 0 && translateX < drawerWidth;
+    }
+  }, {
+    key: "calcWillOpen",
+    value: function calcWillOpen(_, __, translateX, drawerWidth, velocity) {
+      switch (this.side) {
+        case "left":
+          {
+            if (velocity > _constants__WEBPACK_IMPORTED_MODULE_0__["VELOCITY_THRESHOLD"]) return true;else if (velocity < -_constants__WEBPACK_IMPORTED_MODULE_0__["VELOCITY_THRESHOLD"]) return false;else if (translateX >= drawerWidth / 2) return true;else return false;
+          }
+
+        case "right":
+          {
+            if (-velocity > _constants__WEBPACK_IMPORTED_MODULE_0__["VELOCITY_THRESHOLD"]) return true;else if (-velocity < -_constants__WEBPACK_IMPORTED_MODULE_0__["VELOCITY_THRESHOLD"]) return false;else if (translateX <= -drawerWidth / 2) return true;else return false;
+          }
+
+        default:
+          throw Error();
+      }
+    }
+  }, {
+    key: "calcTranslateX",
+    value: function calcTranslateX(_ref4, _ref5, startTranslateX, drawerWidth) {
+      var moveX = _ref4.clientX;
+      var startX = _ref5.clientX;
+
+      switch (this.side) {
+        case "left":
+          {
+            var deltaX = moveX - startX;
+            var translateX = startTranslateX + deltaX;
+            return max(0, min(drawerWidth, translateX));
+          }
+
+        case "right":
+          {
+            var _deltaX = moveX - startX;
+
+            var _translateX = startTranslateX + _deltaX;
+
+            return min(0, max(-drawerWidth, _translateX));
+          }
+
+        default:
+          throw Error();
+      }
+    }
+  }]);
+
+  return CalcMixin;
+}();
+;
+
+/***/ }),
+
+/***/ "./node_modules/@hydecorp/drawer/lib/common.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/@hydecorp/drawer/lib/common.js ***!
+  \*****************************************************/
+/*! exports provided: applyMixins, subscribeWhen, filterWhen, tween, easeOutSine, observeWidth, rangeConverter, rangeHasChanged */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "easeOutSine", function() { return easeOutSine; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "observeWidth", function() { return observeWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rangeConverter", function() { return rangeConverter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rangeHasChanged", function() { return rangeHasChanged; });
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/dist/esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/dist/esm5/operators/index.js");
+/* harmony import */ var _hydecorp_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @hydecorp/component */ "./node_modules/@hydecorp/component/lib/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "applyMixins", function() { return _hydecorp_component__WEBPACK_IMPORTED_MODULE_2__["applyMixins"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "subscribeWhen", function() { return _hydecorp_component__WEBPACK_IMPORTED_MODULE_2__["subscribeWhen"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "filterWhen", function() { return _hydecorp_component__WEBPACK_IMPORTED_MODULE_2__["filterWhen"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "tween", function() { return _hydecorp_component__WEBPACK_IMPORTED_MODULE_2__["tween"]; });
+
+
+
+
+
+function easeOutSine(t, b, c, d) {
+  return c * Math.sin(t / d * (Math.PI / 2)) + b;
+}
+function observeWidth(el) {
+  // This component should have at least basic support without `ResizeObserver` support,
+  // so we pass a one-time measurement when it's missing. Obviously this won't update, so BYO polyfill.
+  var resize$ = "ResizeObserver" in window ? Object(_hydecorp_component__WEBPACK_IMPORTED_MODULE_2__["createResizeObservable"])(el) : Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["of"])({
+    contentRect: {
+      width: el.clientWidth
+    }
+  });
+  return resize$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (_ref) {
+    var width = _ref.contentRect.width;
+    return width;
+  }));
+}
+var rangeConverter = {
+  fromAttribute: function fromAttribute() {
+    var attr = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    return attr.replace(/[\[\]]/g, '').split(",").map(Number);
+  },
+  toAttribute: function toAttribute() {
+    var range = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+    return range.join(',');
+  }
+};
+function rangeHasChanged(curr) {
+  var prev = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+  return curr.length !== prev.length || curr.some(function (v, i) {
+    return v !== prev[i];
+  });
+}
+
+/***/ }),
+
+/***/ "./node_modules/@hydecorp/drawer/lib/constants.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@hydecorp/drawer/lib/constants.js ***!
+  \********************************************************/
+/*! exports provided: BASE_DURATION, WIDTH_CONTRIBUTION, VELOCITY_THRESHOLD */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BASE_DURATION", function() { return BASE_DURATION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WIDTH_CONTRIBUTION", function() { return WIDTH_CONTRIBUTION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VELOCITY_THRESHOLD", function() { return VELOCITY_THRESHOLD; });
+// The base duration of the fling animation.
+var BASE_DURATION = 200; // We adjust the duration of the animation using the width of the drawer.
+// There is no physics to this, but we know from testing that the animation starts to feel bad
+// when the drawer increases in size.
+// From testing we know that, if we increase the duration as a fraction of the drawer width,
+// the animation stays smooth across common display sizes.
+
+var WIDTH_CONTRIBUTION = 0.15; // Minimum velocity of the drawer (in px/ms) when releasing to make it fling to opened/closed state.
+
+var VELOCITY_THRESHOLD = 0.15;
+
+/***/ }),
+
+/***/ "./node_modules/@hydecorp/drawer/lib/index.js":
+/*!****************************************************!*\
+  !*** ./node_modules/@hydecorp/drawer/lib/index.js ***!
+  \****************************************************/
+/*! exports provided: HyDrawer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HyDrawer", function() { return HyDrawer; });
+/* harmony import */ var lit_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lit-element */ "./node_modules/lit-element/lit-element.js");
+/* harmony import */ var lit_html_directives_class_map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lit-html/directives/class-map */ "./node_modules/lit-html/directives/class-map.js");
+/* harmony import */ var lit_html_directives_style_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lit-html/directives/style-map */ "./node_modules/lit-html/directives/style-map.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/dist/esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/dist/esm5/operators/index.js");
+/* harmony import */ var _hydecorp_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @hydecorp/component */ "./node_modules/@hydecorp/component/lib/index.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./constants */ "./node_modules/@hydecorp/drawer/lib/constants.js");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./common */ "./node_modules/@hydecorp/drawer/lib/common.js");
+/* harmony import */ var _observables__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./observables */ "./node_modules/@hydecorp/drawer/lib/observables.js");
+/* harmony import */ var _calc__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./calc */ "./node_modules/@hydecorp/drawer/lib/calc.js");
+/* harmony import */ var _update__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./update */ "./node_modules/@hydecorp/drawer/lib/update.js");
+/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./styles */ "./node_modules/@hydecorp/drawer/lib/styles.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["<div class=\"grabbing-screen full-screen\"></div>"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n      <div class=\"peek full-height\"></div>\n      <div\n        class=\"scrim\"\n        style=", ">\n      </div>\n      ", "\n      <div\n        class=", "\n        style=", "\n      >\n        <div class=\"overflow\">\n          <slot></slot>\n        </div>\n      </div>\n    "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _get(target, property, receiver) { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get; } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(receiver); } return desc.value; }; } return _get(target, property, receiver || target); }
+
+function _superPropBase(object, property) { while (!Object.prototype.hasOwnProperty.call(object, property)) { object = _getPrototypeOf(object); if (object === null) break; } return object; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+  var c = arguments.length,
+      r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+      d;
+  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  }
+  return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 /**
  * Copyright (c) 2020 Florian Klampfer <https://qwtel.com/>
  *
@@ -44,4 +334,1000 @@ var u=function(){function t(e){!function(t,e){if(!(t instanceof e))throw new Typ
  *
  * @license
  * @nocompile
- */Nt.styles=St,Wt([Object(r.f)(".scrim")],Nt.prototype,"scrimEl",void 0),Wt([Object(r.f)(".wrapper")],Nt.prototype,"contentEl",void 0),Wt([Object(r.f)(".peek")],Nt.prototype,"peekEl",void 0),Wt([Object(r.e)({type:Boolean,reflect:!0})],Nt.prototype,"opened",void 0),Wt([Object(r.e)({type:String,reflect:!0})],Nt.prototype,"side",void 0),Wt([Object(r.e)({type:Boolean,reflect:!0})],Nt.prototype,"persistent",void 0),Wt([Object(r.e)({type:Number,reflect:!0})],Nt.prototype,"threshold",void 0),Wt([Object(r.e)({type:Boolean,reflect:!0})],Nt.prototype,"noScroll",void 0),Wt([Object(r.e)({type:Boolean,reflect:!0})],Nt.prototype,"mouseEvents",void 0),Wt([Object(r.e)({reflect:!0,converter:F,hasChanged:function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[];return t.length!==e.length||t.some((function(t,n){return t!==e[n]}))}})],Nt.prototype,"range",void 0),Wt([Object(r.e)()],Nt.prototype,"scrimClickable",void 0),Wt([Object(r.e)()],Nt.prototype,"grabbing",void 0),Wt([Object(r.e)()],Nt.prototype,"willChange",void 0),Wt([Object(r.e)()],Nt.prototype,"open",null),Wt([Object(r.e)()],Nt.prototype,"close",null),Wt([Object(r.e)()],Nt.prototype,"toggle",null),Nt=Wt([Object(r.c)("hy-drawer")],Nt)},358:function(t,e,n){"use strict";n.d(e,"a",(function(){return l}));var r=n(1),i=n(9),o=n(118),a=n(47),c=n(46),u={leading:!0,trailing:!1};!function(){function t(t,e,n){this.durationSelector=t,this.leading=e,this.trailing=n}t.prototype.call=function(t,e){return e.subscribe(new s(t,this.durationSelector,this.leading,this.trailing))}}();var s=function(t){function e(e,n,r,i){var o=t.call(this,e)||this;return o.destination=e,o.durationSelector=n,o._leading=r,o._trailing=i,o._sendValue=null,o._hasValue=!1,o}return Object(r.c)(e,t),e.prototype._next=function(t){this._hasValue=!0,this._sendValue=t,this._throttled||(this._leading?this.send():this.throttle(t))},e.prototype.send=function(){var t=this._hasValue,e=this._sendValue;t&&(this.destination.next(e),this.throttle(e)),this._hasValue=!1,this._sendValue=null},e.prototype.throttle=function(t){var e=this.tryDurationSelector(t);e&&this.add(this._throttled=Object(c.a)(this,e))},e.prototype.tryDurationSelector=function(t){try{return this.durationSelector(t)}catch(t){return this.destination.error(t),null}},e.prototype.throttlingDone=function(){var t=this._throttled,e=this._trailing;t&&t.unsubscribe(),this._throttled=null,e&&this.send()},e.prototype.notifyNext=function(t,e,n,r,i){this.throttlingDone()},e.prototype.notifyComplete=function(){this.throttlingDone()},e}(a.a);function l(t,e,n){return void 0===e&&(e=o.a),void 0===n&&(n=u),function(r){return r.lift(new f(t,e,!!n.leading,!!n.trailing))}}var f=function(){function t(t,e,n,r){this.duration=t,this.scheduler=e,this.leading=n,this.trailing=r}return t.prototype.call=function(t,e){return e.subscribe(new p(t,this.duration,this.scheduler,this.leading,this.trailing))},t}(),p=function(t){function e(e,n,r,i,o){var a=t.call(this,e)||this;return a.duration=n,a.scheduler=r,a.leading=i,a.trailing=o,a.throttled=null,a._hasTrailingValue=!1,a._trailingValue=null,a}return Object(r.c)(e,t),e.prototype._next=function(t){this.throttled?this.trailing&&(this._trailingValue=t,this._hasTrailingValue=!0):(this.add(this.throttled=this.scheduler.schedule(h,this.duration,{subscriber:this})),this.leading?this.destination.next(t):this.trailing&&(this._trailingValue=t,this._hasTrailingValue=!0))},e.prototype._complete=function(){this._hasTrailingValue?(this.destination.next(this._trailingValue),this.destination.complete()):this.destination.complete()},e.prototype.clearThrottle=function(){var t=this.throttled;t&&(this.trailing&&this._hasTrailingValue&&(this.destination.next(this._trailingValue),this._trailingValue=null,this._hasTrailingValue=!1),t.unsubscribe(),this.remove(t),this.throttled=null)},e}(i.a);function h(t){t.subscriber.clearThrottle()}}}]);
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var HyDrawer = /*#__PURE__*/function (_applyMixins) {
+  _inherits(HyDrawer, _applyMixins);
+
+  var _super = _createSuper(HyDrawer);
+
+  function HyDrawer() {
+    var _this;
+
+    _classCallCheck(this, HyDrawer);
+
+    _this = _super.apply(this, arguments);
+    _this.el = _assertThisInitialized(_this);
+    _this.opened = false;
+    _this.side = "left";
+    _this.persistent = false;
+    _this.threshold = 10;
+    _this.noScroll = false;
+    _this.mouseEvents = false; // @property({ type: Boolean, reflect: true }) hashChange: boolean = false;
+
+    _this.range = [0, 100];
+    _this.willChange = false;
+    _this._initialized = Object(_hydecorp_component__WEBPACK_IMPORTED_MODULE_5__["createResolvablePromise"])();
+    _this.$ = {};
+
+    _this.upgrade = function () {
+      var drawerWidth$ = _this.getDrawerWidth();
+
+      var active$ = _this.$.persistent.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (_) {
+        return !_;
+      }));
+
+      var start$ = _this.getStartObservable().pipe( // takeUntil(this.subjects.disconnect),
+      Object(_common__WEBPACK_IMPORTED_MODULE_7__["filterWhen"])(active$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["share"])());
+
+      var deferred = {};
+      var isScrimVisible$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["defer"])(function () {
+        return deferred.translateX$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (translateX) {
+          return translateX !== 0;
+        }));
+      });
+      var isInRange$ = start$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["withLatestFrom"])(isScrimVisible$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (args) {
+        var _this2;
+
+        return (_this2 = _this).calcIsInRange.apply(_this2, _toConsumableArray(args));
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(function (inRange) {
+        if (inRange) {
+          _this.willChange = true;
+
+          _this.fireEvent('prepare');
+        }
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["share"])());
+
+      var end$ = _this.getEndObservable().pipe( // takeUntil(this.subjects.disconnect),
+      Object(_common__WEBPACK_IMPORTED_MODULE_7__["filterWhen"])(active$, isInRange$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(function () {
+        if (_this.mouseEvents) _this.grabbing = false;
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["share"])());
+
+      var move$ = _this.getMoveObservable(start$, end$).pipe( // takeUntil(this.subjects.disconnect),
+      Object(_common__WEBPACK_IMPORTED_MODULE_7__["filterWhen"])(active$, isInRange$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["share"])());
+
+      var isSliding$ = _this.getIsSlidingObservable(move$, start$, end$).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(function (isSliding) {
+        _this.isSliding = isSliding;
+        if (isSliding && _this.mouseEvents) _this.grabbing = true; // if (isSliding) this.fireEvent('slidestart', { detail: this.opened });
+      }));
+
+      var translateX$ = deferred.translateX$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["defer"])(function () {
+        var jumpTranslateX$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["combineLatest"])(_this.$.opened, _this.$.side, drawerWidth$).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (_ref) {
+          var _ref2 = _slicedToArray(_ref, 3),
+              opened = _ref2[0],
+              side = _ref2[1],
+              drawerWidth = _ref2[2];
+
+          return !opened ? 0 : drawerWidth * (side === "left" ? 1 : -1);
+        }));
+        var moveTranslateX$ = move$.pipe(Object(_common__WEBPACK_IMPORTED_MODULE_7__["filterWhen"])(isSliding$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(function () {
+          return _this.scrimClickable = false;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(function (_ref3) {
+          var event = _ref3.event;
+          return _this.noScroll && event.preventDefault();
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["withLatestFrom"])(start$, deferred.startTranslateX$, drawerWidth$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (args) {
+          var _this3;
+
+          return (_this3 = _this).calcTranslateX.apply(_this3, _toConsumableArray(args));
+        }));
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["merge"])(deferred.tweenTranslateX$, jumpTranslateX$, moveTranslateX$);
+      }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["share"])());
+      deferred.startTranslateX$ = translateX$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["sample"])(start$));
+      var velocity$ = translateX$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["timestamp"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["pairwise"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["filter"])(function (_ref4) {
+        var _ref5 = _slicedToArray(_ref4, 2),
+            prevTime = _ref5[0].timestamp,
+            time = _ref5[1].timestamp;
+
+        return time - prevTime > 0;
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (_ref6) {
+        var _ref7 = _slicedToArray(_ref6, 2),
+            _ref7$ = _ref7[0],
+            prevX = _ref7$.value,
+            prevTime = _ref7$.timestamp,
+            _ref7$2 = _ref7[1],
+            x = _ref7$2.value,
+            time = _ref7$2.timestamp;
+
+        return (x - prevX) / (time - prevTime);
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["startWith"])(0));
+      var willOpen$ = end$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["withLatestFrom"])(start$, translateX$, drawerWidth$, velocity$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["filter"])(function (args) {
+        var _this4;
+
+        return (_this4 = _this).calcIsSwipe.apply(_this4, _toConsumableArray(args));
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (args) {
+        var _this5;
+
+        return (_this5 = _this).calcWillOpen.apply(_this5, _toConsumableArray(args));
+      }));
+
+      var animateTo$ = _this.animateTo$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(function () {
+        _this.willChange = true;
+
+        _this.fireEvent('prepare');
+      }));
+
+      deferred.tweenTranslateX$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["merge"])(willOpen$, animateTo$).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["withLatestFrom"])(translateX$, drawerWidth$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["switchMap"])(function (_ref8) {
+        var _ref9 = _slicedToArray(_ref8, 3),
+            willOpen = _ref9[0],
+            translateX = _ref9[1],
+            drawerWidth = _ref9[2];
+
+        var inv = _this.side === "left" ? 1 : -1;
+        var endTranslateX = willOpen ? drawerWidth * inv : 0;
+        var diffTranslateX = endTranslateX - translateX;
+        var duration = Math.ceil(_constants__WEBPACK_IMPORTED_MODULE_6__["BASE_DURATION"] + drawerWidth * _constants__WEBPACK_IMPORTED_MODULE_6__["WIDTH_CONTRIBUTION"]);
+        return Object(_common__WEBPACK_IMPORTED_MODULE_7__["tween"])(_common__WEBPACK_IMPORTED_MODULE_7__["easeOutSine"], translateX, diffTranslateX, duration).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["finalize"])(function () {
+          _this.transitioned(willOpen);
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["takeUntil"])(start$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["takeUntil"])(_this.$.side.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["skip"])(1))), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["share"])());
+      }));
+      translateX$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["withLatestFrom"])(drawerWidth$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(function (args) {
+        var _this6;
+
+        (_this6 = _this).updateDOM.apply(_this6, _toConsumableArray(args));
+
+        var _assertThisInitialize = _assertThisInitialized(_this),
+            translateX = _assertThisInitialize.translateX,
+            opacity = _assertThisInitialize.opacity;
+
+        _this.fireEvent('move', {
+          detail: {
+            translateX: translateX,
+            opacity: opacity
+          },
+          bubbles: false
+        });
+      })).subscribe();
+      Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["fromEvent"])(_this.scrimEl, "click").pipe( // takeUntil(this.subjects.disconnect),
+      Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(function () {
+        return _this.close();
+      })).subscribe();
+      active$.pipe( // takeUntil(this.subjects.disconnect),
+      Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(function (active) {
+        _this.scrimEl.style.display = active ? "block" : "none";
+      })).subscribe();
+
+      _this.$.mouseEvents.pipe( // takeUntil(this.subjects.disconnect),
+      Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["switchMap"])(function (mouseEvents) {
+        return mouseEvents ? start$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["withLatestFrom"])(isInRange$)) : rxjs__WEBPACK_IMPORTED_MODULE_3__["NEVER"];
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["filter"])(function (_ref10) {
+        var _ref11 = _slicedToArray(_ref10, 2),
+            coord = _ref11[0],
+            isInRange = _ref11[1];
+
+        return isInRange && coord.event != null;
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(function (_ref12) {
+        var _ref13 = _slicedToArray(_ref12, 1),
+            event = _ref13[0].event;
+
+        return event.preventDefault();
+      })).subscribe(); // fromEvent(window, 'hashchange').pipe(
+      //   // takeUntil(this.subjects.disconnect),
+      //   subscribeWhen(this.$.hashChange),
+      //   tap(() => {
+      //     const opened = location.hash === this.hashId;
+      //     if (!history.state && opened) {
+      //       history.replaceState({ [this.histId]: { backable: true } }, document.title)
+      //     }
+      //     // If the state doesn't match open/close the drawer
+      //     if (opened !== this.opened) this.animateTo$.next(opened);
+      //   }),
+      // ).subscribe();
+
+
+      _this.fireEvent("init", {
+        detail: _this.opened
+      });
+
+      _this._initialized.resolve(_assertThisInitialized(_this));
+    };
+
+    _this.transitioned = function (hasOpened) {
+      _this.opened = _this.scrimClickable = hasOpened;
+      _this.willChange = false; // if (this.hashChange) this.transitionedHash(hasOpened)
+
+      _this.fireEvent('transitioned', {
+        detail: hasOpened
+      });
+    };
+
+    return _this;
+  }
+
+  _createClass(HyDrawer, [{
+    key: "getDrawerWidth",
+    // HyDrawer
+    value: function getDrawerWidth() {
+      var _this7 = this;
+
+      var content$ = Object(_common__WEBPACK_IMPORTED_MODULE_7__["observeWidth"])(this.contentEl).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(function (px) {
+        return _this7.fireEvent('content-width-change', {
+          detail: px
+        });
+      }));
+      var peek$ = Object(_common__WEBPACK_IMPORTED_MODULE_7__["observeWidth"])(this.peekEl).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(function (px) {
+        return _this7.fireEvent('peek-width-change', {
+          detail: px
+        });
+      }));
+      return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["combineLatest"])(content$, peek$).pipe( // takeUntil(this.subjects.disconnect),
+      Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (_ref14) {
+        var _ref15 = _slicedToArray(_ref14, 2),
+            contentWidth = _ref15[0],
+            peekWidth = _ref15[1];
+
+        return contentWidth - peekWidth;
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["share"])());
+    } // private consolidateState() {
+    //   const hashOpened = location.hash === this.hashId;
+    //   const isReload = history.state && history.state[this.histId];
+    //   if (isReload) {
+    //     if (hashOpened !== this.opened) {
+    //       this.opened = hashOpened;
+    //     }
+    //   } else {
+    //     const url = new URL(location.href);
+    //     const newState = { ...history.state, [this.histId]: { backable: false } };
+    //     if (hashOpened && !this.opened) {
+    //       url.hash = '';
+    //       history.replaceState(newState, document.title, url.href);
+    //       url.hash = this.hashId;
+    //       history.pushState({ [this.histId]: { backable: true } }, document.title, url.href);
+    //       this.opened = true;
+    //     }
+    //     else if (!hashOpened && this.opened) {
+    //       history.replaceState(newState, document.title, url.href);
+    //       url.hash = this.hashId;
+    //       history.pushState({ [this.histId]: { backable: true } }, document.title, url.href);
+    //     }
+    //     else {
+    //       history.replaceState(newState, document.title, url.href);
+    //     }
+    //   }
+    // }
+
+  }, {
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      _get(_getPrototypeOf(HyDrawer.prototype), "connectedCallback", this).call(this); // if (this.hashChange) this.consolidateState()
+
+
+      this.$.opened = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](this.opened);
+      this.$.side = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](this.side);
+      this.$.persistent = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](this.persistent);
+      this.$.preventDefault = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](this.noScroll);
+      this.$.mouseEvents = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](this.mouseEvents); // this.$.hashChange = new BehaviorSubject(this.hashChange)
+
+      this.scrimClickable = this.opened;
+      this.animateTo$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
+      this.updater = _update__WEBPACK_IMPORTED_MODULE_10__["Updater"].getUpdaterForPlatform(this);
+      this.updateComplete.then(this.upgrade);
+    } // private transitionedHash(hasOpened: boolean) {
+    //   const hasClosed = !hasOpened;
+    //   const { backable } = history.state && history.state[this.histId] || { backable: false }
+    //   if (hasClosed && backable) {
+    //     history.back()
+    //   } 
+    //   if (hasOpened && location.hash !== this.hashId) {
+    //     location.hash = this.hashId;
+    //   }
+    // }
+
+  }, {
+    key: "render",
+    value: function render() {
+      var _classMap;
+
+      return Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["html"])(_templateObject(), Object(lit_html_directives_style_map__WEBPACK_IMPORTED_MODULE_2__["styleMap"])({
+        willChange: this.willChange ? 'opacity' : '',
+        pointerEvents: this.scrimClickable ? 'all' : ''
+      }), this.mouseEvents && this.grabbing && !this.scrimClickable ? Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["html"])(_templateObject2()) : null, Object(lit_html_directives_class_map__WEBPACK_IMPORTED_MODULE_1__["classMap"])((_classMap = {
+        wrapper: true,
+        'full-height': true
+      }, _defineProperty(_classMap, this.side, true), _defineProperty(_classMap, "grab", this.mouseEvents), _defineProperty(_classMap, "grabbing", this.mouseEvents && this.grabbing), _classMap)), Object(lit_html_directives_style_map__WEBPACK_IMPORTED_MODULE_2__["styleMap"])({
+        willChange: this.willChange ? 'transform' : ''
+      }));
+    }
+  }, {
+    key: "open",
+    value: function open() {
+      this.animateTo$.next(true);
+    }
+  }, {
+    key: "close",
+    value: function close() {
+      this.animateTo$.next(false);
+    }
+  }, {
+    key: "toggle",
+    value: function toggle() {
+      this.animateTo$.next(!this.opened);
+    }
+  }, {
+    key: "initialized",
+    get: function get() {
+      return this._initialized;
+    }
+  }, {
+    key: "histId",
+    get: function get() {
+      return this.id || this.tagName;
+    }
+  }, {
+    key: "hashId",
+    get: function get() {
+      return "#".concat(this.histId, "--opened");
+    }
+  }]);
+
+  return HyDrawer;
+}(Object(_common__WEBPACK_IMPORTED_MODULE_7__["applyMixins"])(_hydecorp_component__WEBPACK_IMPORTED_MODULE_5__["RxLitElement"], [_observables__WEBPACK_IMPORTED_MODULE_8__["ObservablesMixin"], _update__WEBPACK_IMPORTED_MODULE_10__["UpdateMixin"], _calc__WEBPACK_IMPORTED_MODULE_9__["CalcMixin"]]));
+
+HyDrawer.styles = _styles__WEBPACK_IMPORTED_MODULE_11__["styles"];
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["query"])('.scrim')], HyDrawer.prototype, "scrimEl", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["query"])('.wrapper')], HyDrawer.prototype, "contentEl", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["query"])('.peek')], HyDrawer.prototype, "peekEl", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])({
+  type: Boolean,
+  reflect: true
+})], HyDrawer.prototype, "opened", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])({
+  type: String,
+  reflect: true
+})], HyDrawer.prototype, "side", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])({
+  type: Boolean,
+  reflect: true
+})], HyDrawer.prototype, "persistent", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])({
+  type: Number,
+  reflect: true
+})], HyDrawer.prototype, "threshold", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])({
+  type: Boolean,
+  reflect: true
+})], HyDrawer.prototype, "noScroll", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])({
+  type: Boolean,
+  reflect: true
+})], HyDrawer.prototype, "mouseEvents", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])({
+  reflect: true,
+  converter: _common__WEBPACK_IMPORTED_MODULE_7__["rangeConverter"],
+  hasChanged: _common__WEBPACK_IMPORTED_MODULE_7__["rangeHasChanged"]
+})], HyDrawer.prototype, "range", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])()], HyDrawer.prototype, "scrimClickable", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])()], HyDrawer.prototype, "grabbing", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])()], HyDrawer.prototype, "willChange", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])()], HyDrawer.prototype, "open", null);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])()], HyDrawer.prototype, "close", null);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])()], HyDrawer.prototype, "toggle", null);
+
+HyDrawer = __decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["customElement"])('hy-drawer')], HyDrawer);
+
+
+/***/ }),
+
+/***/ "./node_modules/@hydecorp/drawer/lib/observables.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@hydecorp/drawer/lib/observables.js ***!
+  \**********************************************************/
+/*! exports provided: ObservablesMixin */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ObservablesMixin", function() { return ObservablesMixin; });
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/dist/esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/dist/esm5/operators/index.js");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./common */ "./node_modules/@hydecorp/drawer/lib/common.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+
+
+
+var abs = Math.abs.bind(Math);
+var ObservablesMixin = /*#__PURE__*/function () {
+  function ObservablesMixin() {
+    _classCallCheck(this, ObservablesMixin);
+  }
+
+  _createClass(ObservablesMixin, [{
+    key: "getStartObservable",
+    value: function getStartObservable() {
+      return Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["combineLatest"])(this.$.mouseEvents).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["switchMap"])(function (_ref) {
+        var _ref2 = _slicedToArray(_ref, 1),
+            mouseEvents = _ref2[0];
+
+        var touchstart$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(document, "touchstart", {
+          passive: true
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["filter"])(function (_ref3) {
+          var touches = _ref3.touches;
+          return touches.length === 1;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (_ref4) {
+          var touches = _ref4.touches;
+          return touches[0];
+        }));
+        var mousedown$ = !mouseEvents ? rxjs__WEBPACK_IMPORTED_MODULE_0__["NEVER"] : Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(document, "mousedown").pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (e) {
+          return e.event = e, e;
+        }));
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["merge"])(touchstart$, mousedown$);
+      }));
+    }
+  }, {
+    key: "getMoveObservable",
+    value: function getMoveObservable(start$, end$) {
+      return Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["combineLatest"])(this.$.mouseEvents, this.$.preventDefault).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["switchMap"])(function (_ref5) {
+        var _ref6 = _slicedToArray(_ref5, 2),
+            mouseEvents = _ref6[0],
+            preventDefault = _ref6[1];
+
+        var touchmove$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(document, "touchmove", {
+          passive: !preventDefault
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (e) {
+          return e.touches[0].event = e, e.touches[0];
+        }));
+        var mousemove$ = !mouseEvents ? rxjs__WEBPACK_IMPORTED_MODULE_0__["NEVER"] : Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(document, "mousemove", {
+          passive: !preventDefault
+        }).pipe(Object(_common__WEBPACK_IMPORTED_MODULE_2__["subscribeWhen"])(Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["merge"])(start$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["mapTo"])(true)), end$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["mapTo"])(false)))), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (e) {
+          return e.event = e, e;
+        }));
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["merge"])(touchmove$, mousemove$);
+      }));
+    }
+  }, {
+    key: "getEndObservable",
+    value: function getEndObservable() {
+      return Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["combineLatest"])(this.$.mouseEvents).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["switchMap"])(function (_ref7) {
+        var _ref8 = _slicedToArray(_ref7, 1),
+            mouseEvents = _ref8[0];
+
+        var touchend$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(document, "touchend", {
+          passive: true
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["filter"])(function (_ref9) {
+          var touches = _ref9.touches;
+          return touches.length === 0;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (event) {
+          return event.changedTouches[0];
+        }));
+        var mouseup$ = !mouseEvents ? rxjs__WEBPACK_IMPORTED_MODULE_0__["NEVER"] : Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(document, "mouseup", {
+          passive: true
+        });
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["merge"])(touchend$, mouseup$);
+      }));
+    }
+  }, {
+    key: "getIsSlidingObservable",
+    value: function getIsSlidingObservable(move$, start$, end$) {
+      return this.getIsSlidingObservableInner(move$, start$).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["take"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["startWith"])(undefined), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["repeatWhen"])(function () {
+        return end$;
+      }));
+    }
+  }, {
+    key: "getIsSlidingObservableInner",
+    value: function getIsSlidingObservableInner(move$, start$) {
+      var _this = this;
+
+      if (this.threshold) {
+        return move$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["withLatestFrom"])(start$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["skipWhile"])(function (_ref10) {
+          var _ref11 = _slicedToArray(_ref10, 2),
+              _ref11$ = _ref11[0],
+              clientX = _ref11$.clientX,
+              clientY = _ref11$.clientY,
+              _ref11$2 = _ref11[1],
+              startX = _ref11$2.clientX,
+              startY = _ref11$2.clientY;
+
+          return abs(startY - clientY) < _this.threshold && abs(startX - clientX) < _this.threshold;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (_ref12) {
+          var _ref13 = _slicedToArray(_ref12, 2),
+              _ref13$ = _ref13[0],
+              clientX = _ref13$.clientX,
+              clientY = _ref13$.clientY,
+              _ref13$2 = _ref13[1],
+              startX = _ref13$2.clientX,
+              startY = _ref13$2.clientY;
+
+          return abs(startX - clientX) >= abs(startY - clientY);
+        }));
+      } else {
+        return move$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["withLatestFrom"])(start$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (_ref14) {
+          var _ref15 = _slicedToArray(_ref14, 2),
+              _ref15$ = _ref15[0],
+              clientX = _ref15$.clientX,
+              clientY = _ref15$.clientY,
+              event = _ref15$.event,
+              _ref15$2 = _ref15[1],
+              startX = _ref15$2.clientX,
+              startY = _ref15$2.clientY;
+
+          var isSliding = abs(startX - clientX) >= abs(startY - clientY);
+          if (_this.noScroll && isSliding) event.preventDefault();
+          return isSliding;
+        }));
+      }
+    }
+  }]);
+
+  return ObservablesMixin;
+}();
+
+/***/ }),
+
+/***/ "./node_modules/@hydecorp/drawer/lib/styles.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/@hydecorp/drawer/lib/styles.js ***!
+  \*****************************************************/
+/*! exports provided: styles */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var lit_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lit-element */ "./node_modules/lit-element/lit-element.js");
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  @media screen {\n    :host {\n      touch-action: pan-x;\n    }\n\n    .full-screen {\n      position: fixed;\n      top: 0;\n      left: 0;\n      height: 100vh;\n      width: 100vw;\n    }\n\n    .full-height {\n      position: fixed;\n      top: 0;\n      height: 100vh;\n    }\n\n    .peek {\n      left: 0;\n      width: var(--hy-drawer-peek-width, 0px);\n      visibility: hidden;\n      z-index: calc(var(--hy-drawer-z-index, 100) - 1);\n    }\n\n    .scrim {\n      position: fixed;\n      top: 0;\n      left: 0;\n      height: 10vh;\n      width: 10vw;\n      transform: scale(10);\n      transform-origin: top left;\n      opacity: 0;\n      pointer-events: none;\n      background: var(--hy-drawer-scrim-background, rgba(0, 0, 0, 0.5));\n      z-index: var(--hy-drawer-z-index, 100);\n      -webkit-tap-highlight-color: transparent;\n    }\n\n    .range {\n      position: fixed;\n      top: 0;\n      height: 100vh;\n      z-index: calc(var(--hy-drawer-z-index, 100) + 1);\n    }\n\n    .grabbing-screen {\n      cursor: grabbing;\n      z-index: calc(var(--hy-drawer-z-index, 100) + 2);\n    }\n\n    .wrapper {\n      width: var(--hy-drawer-width, 300px);\n      background: var(--hy-drawer-background, inherit);\n      box-shadow: var(--hy-drawer-box-shadow, 0 0 15px rgba(0, 0, 0, 0.25));\n      z-index: calc(var(--hy-drawer-z-index, 100) + 3);\n      contain: strict;\n    }\n\n    .wrapper.left {\n      left:  calc(-1 * var(--hy-drawer-width, 300px) + var(--hy-drawer-peek-width, 0px));\n    }\n\n    .wrapper.right {\n      right:  calc(-1 * var(--hy-drawer-width, 300px) + var(--hy-drawer-peek-width, 0px));\n    }\n\n    .wrapper > .overflow {\n      position: absolute;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      left: 0;\n      overflow-x: hidden;\n      overflow-y: auto;\n      overscroll-behavior: contain;\n      -webkit-overflow-scrolling: touch;\n    }\n\n    .grab {\n      cursor: move;\n      cursor: grab;\n    }\n\n    .grabbing {\n      cursor: grabbing;\n    }\n  }\n\n  @media print {\n    .scrim {\n      display: none !important;\n    }\n\n    .wrapper {\n      transform: none !important;\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+var styles = Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["css"])(_templateObject());
+
+/***/ }),
+
+/***/ "./node_modules/@hydecorp/drawer/lib/update.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/@hydecorp/drawer/lib/update.js ***!
+  \*****************************************************/
+/*! exports provided: UpdateMixin, Updater, StyleUpdater, AttributeStyleMapUpdater */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdateMixin", function() { return UpdateMixin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Updater", function() { return Updater; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyleUpdater", function() { return StyleUpdater; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AttributeStyleMapUpdater", function() { return AttributeStyleMapUpdater; });
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var UpdateMixin = /*#__PURE__*/function () {
+  function UpdateMixin() {
+    _classCallCheck(this, UpdateMixin);
+  }
+
+  _createClass(UpdateMixin, [{
+    key: "updateDOM",
+    value: function updateDOM(translateX, drawerWidth) {
+      var inv = this.side === "left" ? 1 : -1;
+      var opacity = translateX / drawerWidth * inv || 0;
+      this.translateX = translateX;
+      this.opacity = opacity;
+      this.updater.updateDOM(translateX, opacity);
+    }
+  }]);
+
+  return UpdateMixin;
+}();
+var Updater = /*#__PURE__*/function () {
+  function Updater(parent) {
+    _classCallCheck(this, Updater);
+
+    this.parent = parent;
+  }
+
+  _createClass(Updater, [{
+    key: "contentEl",
+    get: function get() {
+      return this.parent.contentEl;
+    }
+  }, {
+    key: "scrimEl",
+    get: function get() {
+      return this.parent.scrimEl;
+    }
+  }], [{
+    key: "getUpdaterForPlatform",
+    value: function getUpdaterForPlatform(parent) {
+      var hasCSSOM = "attributeStyleMap" in Element.prototype && "CSS" in window && "number" in CSS;
+      return hasCSSOM ? new AttributeStyleMapUpdater(parent) : new StyleUpdater(parent);
+    }
+  }]);
+
+  return Updater;
+}();
+var StyleUpdater = /*#__PURE__*/function (_Updater) {
+  _inherits(StyleUpdater, _Updater);
+
+  var _super = _createSuper(StyleUpdater);
+
+  function StyleUpdater(parent) {
+    _classCallCheck(this, StyleUpdater);
+
+    return _super.call(this, parent);
+  }
+
+  _createClass(StyleUpdater, [{
+    key: "updateDOM",
+    value: function updateDOM(translateX, opacity) {
+      this.contentEl.style.transform = "translate(".concat(translateX, "px, 0px)");
+      this.scrimEl.style.opacity = "".concat(opacity);
+    }
+  }]);
+
+  return StyleUpdater;
+}(Updater);
+var AttributeStyleMapUpdater = /*#__PURE__*/function (_Updater2) {
+  _inherits(AttributeStyleMapUpdater, _Updater2);
+
+  var _super2 = _createSuper(AttributeStyleMapUpdater);
+
+  function AttributeStyleMapUpdater(parent) {
+    var _this;
+
+    _classCallCheck(this, AttributeStyleMapUpdater);
+
+    _this = _super2.call(this, parent); // @ts-ignore
+
+    _this.tvalue = new CSSTransformValue([new CSSTranslate(CSS.px(0), CSS.px(0))]); // @ts-ignore
+
+    _this.ovalue = CSS.number(1);
+    return _this;
+  }
+
+  _createClass(AttributeStyleMapUpdater, [{
+    key: "updateDOM",
+    value: function updateDOM(translateX, opacity) {
+      // @ts-ignore
+      this.tvalue[0].x.value = translateX; // @ts-ignore
+
+      this.ovalue.value = opacity; // @ts-ignore
+
+      this.contentEl.attributeStyleMap.set("transform", this.tvalue); // @ts-ignore
+
+      this.scrimEl.attributeStyleMap.set("opacity", this.ovalue);
+    }
+  }]);
+
+  return AttributeStyleMapUpdater;
+}(Updater);
+
+/***/ }),
+
+/***/ "./node_modules/lit-html/directives/class-map.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/lit-html/directives/class-map.js ***!
+  \*******************************************************/
+/*! exports provided: classMap */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "classMap", function() { return classMap; });
+/* harmony import */ var _lit_html_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lit-html.js */ "./node_modules/lit-html/lit-html.js");
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/**
+ * @license
+ * Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+ // IE11 doesn't support classList on SVG elements, so we emulate it with a Set
+
+var ClassList = /*#__PURE__*/function () {
+  function ClassList(element) {
+    _classCallCheck(this, ClassList);
+
+    this.classes = new Set();
+    this.changed = false;
+    this.element = element;
+    var classList = (element.getAttribute('class') || '').split(/\s+/);
+
+    var _iterator = _createForOfIteratorHelper(classList),
+        _step;
+
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var cls = _step.value;
+        this.classes.add(cls);
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
+  }
+
+  _createClass(ClassList, [{
+    key: "add",
+    value: function add(cls) {
+      this.classes.add(cls);
+      this.changed = true;
+    }
+  }, {
+    key: "remove",
+    value: function remove(cls) {
+      this.classes.delete(cls);
+      this.changed = true;
+    }
+  }, {
+    key: "commit",
+    value: function commit() {
+      if (this.changed) {
+        var classString = '';
+        this.classes.forEach(function (cls) {
+          return classString += cls + ' ';
+        });
+        this.element.setAttribute('class', classString);
+      }
+    }
+  }]);
+
+  return ClassList;
+}();
+/**
+ * Stores the ClassInfo object applied to a given AttributePart.
+ * Used to unset existing values when a new ClassInfo object is applied.
+ */
+
+
+var previousClassesCache = new WeakMap();
+/**
+ * A directive that applies CSS classes. This must be used in the `class`
+ * attribute and must be the only part used in the attribute. It takes each
+ * property in the `classInfo` argument and adds the property name to the
+ * element's `class` if the property value is truthy; if the property value is
+ * falsey, the property name is removed from the element's `class`. For example
+ * `{foo: bar}` applies the class `foo` if the value of `bar` is truthy.
+ * @param classInfo {ClassInfo}
+ */
+
+var classMap = Object(_lit_html_js__WEBPACK_IMPORTED_MODULE_0__["directive"])(function (classInfo) {
+  return function (part) {
+    if (!(part instanceof _lit_html_js__WEBPACK_IMPORTED_MODULE_0__["AttributePart"]) || part instanceof _lit_html_js__WEBPACK_IMPORTED_MODULE_0__["PropertyPart"] || part.committer.name !== 'class' || part.committer.parts.length > 1) {
+      throw new Error('The `classMap` directive must be used in the `class` attribute ' + 'and must be the only part in the attribute.');
+    }
+
+    var committer = part.committer;
+    var element = committer.element;
+    var previousClasses = previousClassesCache.get(part);
+
+    if (previousClasses === undefined) {
+      // Write static classes once
+      // Use setAttribute() because className isn't a string on SVG elements
+      element.setAttribute('class', committer.strings.join(' '));
+      previousClassesCache.set(part, previousClasses = new Set());
+    }
+
+    var classList = element.classList || new ClassList(element); // Remove old classes that no longer apply
+    // We use forEach() instead of for-of so that re don't require down-level
+    // iteration.
+
+    previousClasses.forEach(function (name) {
+      if (!(name in classInfo)) {
+        classList.remove(name);
+        previousClasses.delete(name);
+      }
+    }); // Add or remove classes based on their classMap value
+
+    for (var name in classInfo) {
+      var value = classInfo[name];
+
+      if (value != previousClasses.has(name)) {
+        // We explicitly want a loose truthy check of `value` because it seems
+        // more convenient that '' and 0 are skipped.
+        if (value) {
+          classList.add(name);
+          previousClasses.add(name);
+        } else {
+          classList.remove(name);
+          previousClasses.delete(name);
+        }
+      }
+    }
+
+    if (typeof classList.commit === 'function') {
+      classList.commit();
+    }
+  };
+});
+
+/***/ }),
+
+/***/ "./node_modules/lit-html/directives/style-map.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/lit-html/directives/style-map.js ***!
+  \*******************************************************/
+/*! exports provided: styleMap */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styleMap", function() { return styleMap; });
+/* harmony import */ var _lit_html_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lit-html.js */ "./node_modules/lit-html/lit-html.js");
+/**
+ * @license
+ * Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+
+/**
+ * Stores the StyleInfo object applied to a given AttributePart.
+ * Used to unset existing values when a new StyleInfo object is applied.
+ */
+
+var previousStylePropertyCache = new WeakMap();
+/**
+ * A directive that applies CSS properties to an element.
+ *
+ * `styleMap` can only be used in the `style` attribute and must be the only
+ * expression in the attribute. It takes the property names in the `styleInfo`
+ * object and adds the property values as CSS properties. Property names with
+ * dashes (`-`) are assumed to be valid CSS property names and set on the
+ * element's style object using `setProperty()`. Names without dashes are
+ * assumed to be camelCased JavaScript property names and set on the element's
+ * style object using property assignment, allowing the style object to
+ * translate JavaScript-style names to CSS property names.
+ *
+ * For example `styleMap({backgroundColor: 'red', 'border-top': '5px', '--size':
+ * '0'})` sets the `background-color`, `border-top` and `--size` properties.
+ *
+ * @param styleInfo {StyleInfo}
+ */
+
+var styleMap = Object(_lit_html_js__WEBPACK_IMPORTED_MODULE_0__["directive"])(function (styleInfo) {
+  return function (part) {
+    if (!(part instanceof _lit_html_js__WEBPACK_IMPORTED_MODULE_0__["AttributePart"]) || part instanceof _lit_html_js__WEBPACK_IMPORTED_MODULE_0__["PropertyPart"] || part.committer.name !== 'style' || part.committer.parts.length > 1) {
+      throw new Error('The `styleMap` directive must be used in the style attribute ' + 'and must be the only part in the attribute.');
+    }
+
+    var committer = part.committer;
+    var style = committer.element.style;
+    var previousStyleProperties = previousStylePropertyCache.get(part);
+
+    if (previousStyleProperties === undefined) {
+      // Write static styles once
+      style.cssText = committer.strings.join(' ');
+      previousStylePropertyCache.set(part, previousStyleProperties = new Set());
+    } // Remove old properties that no longer exist in styleInfo
+    // We use forEach() instead of for-of so that re don't require down-level
+    // iteration.
+
+
+    previousStyleProperties.forEach(function (name) {
+      if (!(name in styleInfo)) {
+        previousStyleProperties.delete(name);
+
+        if (name.indexOf('-') === -1) {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          style[name] = null;
+        } else {
+          style.removeProperty(name);
+        }
+      }
+    }); // Add or update properties
+
+    for (var name in styleInfo) {
+      previousStyleProperties.add(name);
+
+      if (name.indexOf('-') === -1) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        style[name] = styleInfo[name];
+      } else {
+        style.setProperty(name, styleInfo[name]);
+      }
+    }
+  };
+});
+
+/***/ })
+
+}]);
+//# sourceMappingURL=LEGACY-vendors~drawer-hydejack-9.0.4.js.map

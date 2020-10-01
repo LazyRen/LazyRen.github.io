@@ -1,14 +1,129 @@
-/*!
- *  __  __                __                                     __
- * /\ \/\ \              /\ \             __                    /\ \
- * \ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
- *  \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
- *   \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
- *    \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
- *     \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
- *                 /\___/                \ \____/
- *                 \/__/                  \/___/
- *
- * Powered by Hydejack v9.0.4 <https://hydejack.com/>
- */
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{308:function(t,n,e){"use strict";e.r(n);var r=e(300),o=e(325),i=e(31),c=e(151),u=e(327),s=e(148),a=e(299),l=e(328),f=e(324),b=e(329),h=e(1);function p(){for(var t=[],n=0;n<arguments.length;n++)t[n]=arguments[n];return function(n){return n.lift.call(o.a.apply(void 0,Object(h.e)([n],t)),void 0)}}var v,d=e(152),y=e(12);function j(t,n){return function(t){if(Array.isArray(t))return t}(t)||function(t,n){if("undefined"==typeof Symbol||!(Symbol.iterator in Object(t)))return;var e=[],r=!0,o=!1,i=void 0;try{for(var c,u=t[Symbol.iterator]();!(r=(c=u.next()).done)&&(e.push(c.value),!n||e.length!==n);r=!0);}catch(t){o=!0,i=t}finally{try{r||null==u.return||u.return()}finally{if(o)throw i}}return e}(t,n)||function(t,n){if(!t)return;if("string"==typeof t)return w(t,n);var e=Object.prototype.toString.call(t).slice(8,-1);"Object"===e&&t.constructor&&(e=t.constructor.name);if("Map"===e||"Set"===e)return Array.from(t);if("Arguments"===e||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(e))return w(t,n)}(t,n)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function w(t,n){(null==n||n>t.length)&&(n=t.length);for(var e=0,r=new Array(n);e<n;e++)r[e]=t[e];return r}function O(t,n,e,r,o,i,c){try{var u=t[i](c),s=u.value}catch(t){return void e(t)}u.done?n(s):Promise.resolve(s).then(r,o)}(v=regeneratorRuntime.mark((function t(){var n,e,h,v,w,O,_,m;return regeneratorRuntime.wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,y.u;case 2:if(n=document.getElementById("_navbar")){t.next=5;break}return t.abrupt("return");case 5:e=n.clientHeight,h=0,v=y.k?new CSSTransformValue([new CSSTranslate(CSS.px(0),CSS.px(0))]):null,w=function(){var t;return!(null===(t=document.activeElement)||void 0===t?void 0:t.classList.contains("nav-btn"))},O=Object(r.a)(window,"hashchange").pipe(Object(i.a)((function(t){return new URL(t.newURL).hash})),Object(c.a)((function(t){return""!==t&&"#_search-input"!==t})),Object(u.a)()),_=O.pipe(Object(s.a)((function(){return Object(r.a)(document,"scroll").pipe(Object(a.a)(50),Object(l.a)(!0),Object(f.a)(!1))})),Object(f.a)(!0)),m=Object(o.a)(Object(r.a)(n,"focus",{capture:!0}).pipe(Object(l.a)(2*e)),O.pipe(Object(l.a)(-2*e))),Object(r.a)(document,"scroll",{passive:!0}).pipe(Object(y.g)(_),Object(i.a)(y.i),Object(c.a)((function(t){return t>=0})),Object(b.a)(),Object(i.a)((function(t){var n=j(t,2);return n[0]-n[1]})),Object(c.a)(w),p(m),Object(d.a)((function(t){h+=t,h=Math.max(-e,Math.min(0,h)),y.k?(v[0].y.value=h,n.attributeStyleMap.set("transform",v)):n.style.transform="translateY(".concat(h,"px)")}))).subscribe();case 13:case"end":return t.stop()}}),t)})),function(){var t=this,n=arguments;return new Promise((function(e,r){var o=v.apply(t,n);function i(t){O(o,e,r,i,c,"next",t)}function c(t){O(o,e,r,i,c,"throw",t)}i(void 0)}))})()},313:function(t,n,e){"use strict";e.d(n,"b",(function(){return l})),e.d(n,"a",(function(){return f}));var r=e(1),o=e(5),i=e(9),c=e(14),u=e(315),s=function(t){function n(n,e){var r=t.call(this)||this;return r.subject=n,r.subscriber=e,r.closed=!1,r}return Object(r.c)(n,t),n.prototype.unsubscribe=function(){if(!this.closed){this.closed=!0;var t=this.subject,n=t.observers;if(this.subject=null,n&&0!==n.length&&!t.isStopped&&!t.closed){var e=n.indexOf(this.subscriber);-1!==e&&n.splice(e,1)}}},n}(c.a),a=e(63),l=function(t){function n(n){var e=t.call(this,n)||this;return e.destination=n,e}return Object(r.c)(n,t),n}(i.a),f=function(t){function n(){var n=t.call(this)||this;return n.observers=[],n.closed=!1,n.isStopped=!1,n.hasError=!1,n.thrownError=null,n}return Object(r.c)(n,t),n.prototype[a.a]=function(){return new l(this)},n.prototype.lift=function(t){var n=new b(this,this);return n.operator=t,n},n.prototype.next=function(t){if(this.closed)throw new u.a;if(!this.isStopped)for(var n=this.observers,e=n.length,r=n.slice(),o=0;o<e;o++)r[o].next(t)},n.prototype.error=function(t){if(this.closed)throw new u.a;this.hasError=!0,this.thrownError=t,this.isStopped=!0;for(var n=this.observers,e=n.length,r=n.slice(),o=0;o<e;o++)r[o].error(t);this.observers.length=0},n.prototype.complete=function(){if(this.closed)throw new u.a;this.isStopped=!0;for(var t=this.observers,n=t.length,e=t.slice(),r=0;r<n;r++)e[r].complete();this.observers.length=0},n.prototype.unsubscribe=function(){this.isStopped=!0,this.closed=!0,this.observers=null},n.prototype._trySubscribe=function(n){if(this.closed)throw new u.a;return t.prototype._trySubscribe.call(this,n)},n.prototype._subscribe=function(t){if(this.closed)throw new u.a;return this.hasError?(t.error(this.thrownError),c.a.EMPTY):this.isStopped?(t.complete(),c.a.EMPTY):(this.observers.push(t),new s(this,t))},n.prototype.asObservable=function(){var t=new o.a;return t.source=this,t},n.create=function(t,n){return new b(t,n)},n}(o.a),b=function(t){function n(n,e){var r=t.call(this)||this;return r.destination=n,r.source=e,r}return Object(r.c)(n,t),n.prototype.next=function(t){var n=this.destination;n&&n.next&&n.next(t)},n.prototype.error=function(t){var n=this.destination;n&&n.error&&this.destination.error(t)},n.prototype.complete=function(){var t=this.destination;t&&t.complete&&this.destination.complete()},n.prototype._subscribe=function(t){return this.source?this.source.subscribe(t):c.a.EMPTY},n}(f)},315:function(t,n,e){"use strict";e.d(n,"a",(function(){return r}));var r=function(){function t(){return Error.call(this),this.message="object unsubscribed",this.name="ObjectUnsubscribedError",this}return t.prototype=Object.create(Error.prototype),t}()},324:function(t,n,e){"use strict";e.d(n,"a",(function(){return i}));var r=e(116),o=e(113);function i(){for(var t=[],n=0;n<arguments.length;n++)t[n]=arguments[n];var e=t[t.length-1];return Object(o.a)(e)?(t.pop(),function(n){return Object(r.a)(t,n,e)}):function(n){return Object(r.a)(t,n)}}},325:function(t,n,e){"use strict";e.d(n,"a",(function(){return u}));var r=e(5),o=e(113),i=e(117),c=e(114);function u(){for(var t=[],n=0;n<arguments.length;n++)t[n]=arguments[n];var e=1/0,u=void 0,s=t[t.length-1];return Object(o.a)(s)?(u=t.pop(),t.length>1&&"number"==typeof t[t.length-1]&&(e=t.pop())):"number"==typeof s&&(e=t.pop()),!u&&1===t.length&&t[0]instanceof r.a?t[0]:Object(i.a)(e)(Object(c.a)(t,u))}},327:function(t,n,e){"use strict";e.d(n,"a",(function(){return j}));var r=e(1),o=e(313),i=e(5),c=e(9),u=e(14);function s(){return function(t){return t.lift(new l)}}var a,l=function(){function t(){}return t.prototype.call=function(t,n){n._refCount++;var e=new f(t,n),r=n.subscribe(e);return e.closed||(e.connection=n.connect()),r},t}(),f=function(t){function n(n,e){var r=t.call(this,n)||this;return r.connectable=e,r.connection=null,r}return Object(r.c)(n,t),n.prototype._unsubscribe=function(){var t=this.connectable;if(t){this.connectable=null;var n=t._refCount;if(n<=0)this.connection=null;else if(t._refCount=n-1,n>1)this.connection=null;else{var e=this.connection,r=t._connection;this.connection=null,!r||e&&r!==e||r.unsubscribe()}}else this.connection=null},n}(c.a),b=function(t){function n(n,e){var r=t.call(this)||this;return r.source=n,r.subjectFactory=e,r._refCount=0,r._isComplete=!1,r}return Object(r.c)(n,t),n.prototype._subscribe=function(t){return this.getSubject().subscribe(t)},n.prototype.getSubject=function(){var t=this._subject;return t&&!t.isStopped||(this._subject=this.subjectFactory()),this._subject},n.prototype.connect=function(){var t=this._connection;return t||(this._isComplete=!1,(t=this._connection=new u.a).add(this.source.subscribe(new p(this.getSubject(),this))),t.closed&&(this._connection=null,t=u.a.EMPTY)),t},n.prototype.refCount=function(){return s()(this)},n}(i.a),h={operator:{value:null},_refCount:{value:0,writable:!0},_subject:{value:null,writable:!0},_connection:{value:null,writable:!0},_subscribe:{value:(a=b.prototype)._subscribe},_isComplete:{value:a._isComplete,writable:!0},getSubject:{value:a.getSubject},connect:{value:a.connect},refCount:{value:a.refCount}},p=function(t){function n(n,e){var r=t.call(this,n)||this;return r.connectable=e,r}return Object(r.c)(n,t),n.prototype._error=function(n){this._unsubscribe(),t.prototype._error.call(this,n)},n.prototype._complete=function(){this.connectable._isComplete=!0,this._unsubscribe(),t.prototype._complete.call(this)},n.prototype._unsubscribe=function(){var t=this.connectable;if(t){this.connectable=null;var n=t._connection;t._refCount=0,t._subject=null,t._connection=null,n&&n.unsubscribe()}},n}(o.b),v=(function(){function t(t){this.connectable=t}t.prototype.call=function(t,n){var e=this.connectable;e._refCount++;var r=new v(t,e),o=n.subscribe(r);return r.closed||(r.connection=e.connect()),o}}(),function(t){function n(n,e){var r=t.call(this,n)||this;return r.connectable=e,r}return Object(r.c)(n,t),n.prototype._unsubscribe=function(){var t=this.connectable;if(t){this.connectable=null;var n=t._refCount;if(n<=0)this.connection=null;else if(t._refCount=n-1,n>1)this.connection=null;else{var e=this.connection,r=t._connection;this.connection=null,!r||e&&r!==e||r.unsubscribe()}}else this.connection=null},n}(c.a));var d=function(){function t(t,n){this.subjectFactory=t,this.selector=n}return t.prototype.call=function(t,n){var e=this.selector,r=this.subjectFactory(),o=e(r).subscribe(t);return o.add(n.subscribe(r)),o},t}();function y(){return new o.a}function j(){return function(t){return s()((n=y,function(t){var r;if(r="function"==typeof n?n:function(){return n},"function"==typeof e)return t.lift(new d(r,e));var o=Object.create(t,h);return o.source=t,o.subjectFactory=r,o})(t));var n,e}}},328:function(t,n,e){"use strict";e.d(n,"a",(function(){return i}));var r=e(1),o=e(9);function i(t){return function(n){return n.lift(new c(t))}}var c=function(){function t(t){this.value=t}return t.prototype.call=function(t,n){return n.subscribe(new u(t,this.value))},t}(),u=function(t){function n(n,e){var r=t.call(this,n)||this;return r.value=e,r}return Object(r.c)(n,t),n.prototype._next=function(t){this.destination.next(this.value)},n}(o.a)},329:function(t,n,e){"use strict";e.d(n,"a",(function(){return i}));var r=e(1),o=e(9);function i(){return function(t){return t.lift(new c)}}var c=function(){function t(){}return t.prototype.call=function(t,n){return n.subscribe(new u(t))},t}(),u=function(t){function n(n){var e=t.call(this,n)||this;return e.hasPrev=!1,e}return Object(r.c)(n,t),n.prototype._next=function(t){var n;this.hasPrev?n=[this.prev,t]:this.hasPrev=!0,this.prev=t,n&&this.destination.next(n)},n}(o.a)}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["navbar"],{
+
+/***/ "./_js/src/navbar.js":
+/*!***************************!*\
+  !*** ./_js/src/navbar.js ***!
+  \***************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/dist/esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/dist/esm5/operators/index.js");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./common */ "./_js/src/common.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+// Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+
+_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+  var navbarEl, height, offset, tv, checkNavbarInactive, hashchange$, notScrollIntoView$, jump$;
+  return regeneratorRuntime.wrap(function _callee$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return _common__WEBPACK_IMPORTED_MODULE_2__["stylesheetReady"];
+
+        case 2:
+          navbarEl = document.getElementById('_navbar');
+
+          if (navbarEl) {
+            _context.next = 5;
+            break;
+          }
+
+          return _context.abrupt("return");
+
+        case 5:
+          // FIXME: update when size changes
+          height = navbarEl.clientHeight;
+          offset = 0;
+          tv = _common__WEBPACK_IMPORTED_MODULE_2__["hasCSSOM"] ? new CSSTransformValue([new CSSTranslate(CSS.px(0), CSS.px(0))]) : null;
+
+          checkNavbarInactive = function checkNavbarInactive() {
+            var _document$activeEleme;
+
+            return !((_document$activeEleme = document.activeElement) === null || _document$activeEleme === void 0 ? void 0 : _document$activeEleme.classList.contains('nav-btn'));
+          };
+
+          hashchange$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(window, 'hashchange').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (e) {
+            return new URL(e.newURL).hash;
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["filter"])(function (hash) {
+            return hash !== '' && hash !== '#_search-input';
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["share"])()); // To disable the navbar while the "scroll into view" animation is active.
+          // Wait for 50ms after scrolling has stopped before unlocking the navbar.
+
+          notScrollIntoView$ = hashchange$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["switchMap"])(function () {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(document, 'scroll').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["debounceTime"])(50), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["mapTo"])(true), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["startWith"])(false));
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["startWith"])(true)); // Certain events should make the navbar "jump" to a new position.
+
+          jump$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["merge"])( // Focusing any navbar element should show the navbar to enable keyboard-only interaction.
+          Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(navbarEl, 'focus', {
+            capture: true
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["mapTo"])(2 * height)), // Scrolling to a certain headline should hide the navbar to prevent hiding it.
+          hashchange$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["mapTo"])(-2 * height)));
+          Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(document, 'scroll', {
+            passive: true
+          }).pipe(Object(_common__WEBPACK_IMPORTED_MODULE_2__["filterWhen"])(notScrollIntoView$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(_common__WEBPACK_IMPORTED_MODULE_2__["getScrollTop"]), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["filter"])(function (x) {
+            return x >= 0;
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["pairwise"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (_ref2) {
+            var _ref3 = _slicedToArray(_ref2, 2),
+                prev = _ref3[0],
+                curr = _ref3[1];
+
+            return prev - curr;
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["filter"])(checkNavbarInactive), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["merge"])(jump$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["tap"])(function (x) {
+            offset += x;
+            offset = Math.max(-height, Math.min(0, offset));
+
+            if (_common__WEBPACK_IMPORTED_MODULE_2__["hasCSSOM"]) {
+              tv[0].y.value = offset;
+              navbarEl.attributeStyleMap.set('transform', tv);
+            } else {
+              navbarEl.style.transform = "translateY(".concat(offset, "px)");
+            }
+          })).subscribe();
+
+        case 13:
+        case "end":
+          return _context.stop();
+      }
+    }
+  }, _callee);
+}))();
+
+/***/ })
+
+}]);
+//# sourceMappingURL=LEGACY-navbar-hydejack-9.0.4.js.map

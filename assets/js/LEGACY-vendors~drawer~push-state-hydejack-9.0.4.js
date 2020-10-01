@@ -1,57 +1,207 @@
-/*!
- *  __  __                __                                     __
- * /\ \/\ \              /\ \             __                    /\ \
- * \ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
- *  \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
- *   \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
- *    \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
- *     \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
- *                 /\___/                \ \____/
- *                 \/__/                  \/___/
- *
- * Powered by Hydejack v9.0.4 <https://hydejack.com/>
- */
-(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{309:function(t,e,n){"use strict";n.d(e,"g",(function(){return r.a})),n.d(e,"m",(function(){return r.c})),n.d(e,"a",(function(){return v})),n.d(e,"b",(function(){return b})),n.d(e,"e",(function(){return m.c})),n.d(e,"d",(function(){return m.b})),n.d(e,"l",(function(){return w.c})),n.d(e,"h",(function(){return w.b})),n.d(e,"c",(function(){return w.a})),n.d(e,"i",(function(){return S.b})),n.d(e,"j",(function(){return S.c})),n.d(e,"k",(function(){return S.d})),n.d(e,"f",(function(){return S.a}));var r=n(87),o=n(322),i=n(313);function u(t){return(u="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function c(t,e){var n;if("undefined"==typeof Symbol||null==t[Symbol.iterator]){if(Array.isArray(t)||(n=function(t,e){if(!t)return;if("string"==typeof t)return a(t,e);var n=Object.prototype.toString.call(t).slice(8,-1);"Object"===n&&t.constructor&&(n=t.constructor.name);if("Map"===n||"Set"===n)return Array.from(t);if("Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return a(t,e)}(t))||e&&t&&"number"==typeof t.length){n&&(t=n);var r=0,o=function(){};return{s:o,n:function(){return r>=t.length?{done:!0}:{done:!1,value:t[r++]}},e:function(t){throw t},f:o}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var i,u=!0,c=!1;return{s:function(){n=t[Symbol.iterator]()},n:function(){var t=n.next();return u=t.done,t},e:function(t){c=!0,i=t},f:function(){try{u||null==n.return||n.return()}finally{if(c)throw i}}}}function a(t,e){(null==e||e>t.length)&&(e=t.length);for(var n=0,r=new Array(e);n<e;n++)r[n]=t[n];return r}function s(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function f(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}function l(t,e,n){return(l="undefined"!=typeof Reflect&&Reflect.get?Reflect.get:function(t,e,n){var r=function(t,e){for(;!Object.prototype.hasOwnProperty.call(t,e)&&null!==(t=d(t)););return t}(t,e);if(r){var o=Object.getOwnPropertyDescriptor(r,e);return o.get?o.get.call(n):o.value}})(t,e,n||t)}function p(t,e){return(p=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t})(t,e)}function h(t){var e=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(t){return!1}}();return function(){var n,r=d(t);if(e){var o=d(this).constructor;n=Reflect.construct(r,arguments,o)}else n=r.apply(this,arguments);return y(this,n)}}function y(t,e){return!e||"object"!==u(e)&&"function"!=typeof e?function(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}(t):e}function d(t){return(d=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)})(t)}var v=function(t){!function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&p(t,e)}(u,t);var e,n,r,o=h(u);function u(){var t;return s(this,u),(t=o.apply(this,arguments)).$connected=new i.a,t}return e=u,(n=[{key:"connectedCallback",value:function(){l(d(u.prototype),"connectedCallback",this).call(this),this.$connected.next(!0)}},{key:"disconnectedCallback",value:function(){l(d(u.prototype),"disconnectedCallback",this).call(this),this.$connected.next(!1)}},{key:"firstUpdated",value:function(){this.firstUpdate=!0}},{key:"updated",value:function(t){if(!this.firstUpdate){var e,n=c(t.keys());try{for(n.s();!(e=n.n()).done;){var r=e.value;r in this.$&&this.$[r].next(this[r])}}catch(t){n.e(t)}finally{n.f()}}this.firstUpdate=!1}},{key:"fireEvent",value:function(t,e){this.dispatchEvent(new CustomEvent(t,e)),this.dispatchEvent(new CustomEvent("".concat(this.tagName.toLowerCase(),"-").concat(t),e))}}])&&f(e.prototype,n),r&&f(e,r),u}(o.a);function b(t,e){return e.forEach((function(e){Object.getOwnPropertyNames(e.prototype).forEach((function(n){t.prototype[n]=e.prototype[n]}))})),t}var m=n(115),w=n(86),S=n(67)},313:function(t,e,n){"use strict";n.d(e,"b",(function(){return f})),n.d(e,"a",(function(){return l}));var r=n(1),o=n(5),i=n(9),u=n(14),c=n(315),a=function(t){function e(e,n){var r=t.call(this)||this;return r.subject=e,r.subscriber=n,r.closed=!1,r}return Object(r.c)(e,t),e.prototype.unsubscribe=function(){if(!this.closed){this.closed=!0;var t=this.subject,e=t.observers;if(this.subject=null,e&&0!==e.length&&!t.isStopped&&!t.closed){var n=e.indexOf(this.subscriber);-1!==n&&e.splice(n,1)}}},e}(u.a),s=n(63),f=function(t){function e(e){var n=t.call(this,e)||this;return n.destination=e,n}return Object(r.c)(e,t),e}(i.a),l=function(t){function e(){var e=t.call(this)||this;return e.observers=[],e.closed=!1,e.isStopped=!1,e.hasError=!1,e.thrownError=null,e}return Object(r.c)(e,t),e.prototype[s.a]=function(){return new f(this)},e.prototype.lift=function(t){var e=new p(this,this);return e.operator=t,e},e.prototype.next=function(t){if(this.closed)throw new c.a;if(!this.isStopped)for(var e=this.observers,n=e.length,r=e.slice(),o=0;o<n;o++)r[o].next(t)},e.prototype.error=function(t){if(this.closed)throw new c.a;this.hasError=!0,this.thrownError=t,this.isStopped=!0;for(var e=this.observers,n=e.length,r=e.slice(),o=0;o<n;o++)r[o].error(t);this.observers.length=0},e.prototype.complete=function(){if(this.closed)throw new c.a;this.isStopped=!0;for(var t=this.observers,e=t.length,n=t.slice(),r=0;r<e;r++)n[r].complete();this.observers.length=0},e.prototype.unsubscribe=function(){this.isStopped=!0,this.closed=!0,this.observers=null},e.prototype._trySubscribe=function(e){if(this.closed)throw new c.a;return t.prototype._trySubscribe.call(this,e)},e.prototype._subscribe=function(t){if(this.closed)throw new c.a;return this.hasError?(t.error(this.thrownError),u.a.EMPTY):this.isStopped?(t.complete(),u.a.EMPTY):(this.observers.push(t),new a(this,t))},e.prototype.asObservable=function(){var t=new o.a;return t.source=this,t},e.create=function(t,e){return new p(t,e)},e}(o.a),p=function(t){function e(e,n){var r=t.call(this)||this;return r.destination=e,r.source=n,r}return Object(r.c)(e,t),e.prototype.next=function(t){var e=this.destination;e&&e.next&&e.next(t)},e.prototype.error=function(t){var e=this.destination;e&&e.error&&this.destination.error(t)},e.prototype.complete=function(){var t=this.destination;t&&t.complete&&this.destination.complete()},e.prototype._subscribe=function(t){return this.source?this.source.subscribe(t):u.a.EMPTY},e}(l)},315:function(t,e,n){"use strict";n.d(e,"a",(function(){return r}));var r=function(){function t(){return Error.call(this),this.message="object unsubscribed",this.name="ObjectUnsubscribedError",this}return t.prototype=Object.create(Error.prototype),t}()},322:function(t,e,n){"use strict";n.d(e,"c",(function(){return M})),n.d(e,"e",(function(){return q})),n.d(e,"f",(function(){return z})),n.d(e,"d",(function(){return l.f})),n.d(e,"b",(function(){return W})),n.d(e,"a",(function(){return et}));var r=n(314),o=n(312);function i(t,e){for(var n=t.element.content,r=t.parts,o=document.createTreeWalker(n,133,null,!1),i=c(r),u=r[i],a=-1,s=0,f=[],l=null;o.nextNode();){a++;var p=o.currentNode;for(p.previousSibling===l&&(l=null),e.has(p)&&(f.push(p),null===l&&(l=p)),null!==l&&s++;void 0!==u&&u.index===a;)u.index=null!==l?-1:u.index-s,u=r[i=c(r,i)]}f.forEach((function(t){return t.parentNode.removeChild(t)}))}var u=function(t){for(var e=11===t.nodeType?0:1,n=document.createTreeWalker(t,133,null,!1);n.nextNode();)e++;return e},c=function(t){for(var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:-1,n=e+1;n<t.length;n++){var r=t[n];if(Object(o.d)(r))return n}return-1};var a=n(321),s=n(317),f=n(320),l=n(310);function p(t){return(p="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}
-/**
- * @license
- * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at
- * http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at
- * http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at
- * http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at
- * http://polymer.github.io/PATENTS.txt
- */var h=function(t,e){return"".concat(t,"--").concat(e)},y=!0;void 0===window.ShadyCSS?y=!1:void 0===window.ShadyCSS.prepareTemplateDom&&(console.warn("Incompatible ShadyCSS version detected. Please update to at least @webcomponents/webcomponentsjs@2.0.2 and @webcomponents/shadycss@1.3.1."),y=!1);var d=function(t){return function(e){var n=h(e.type,t),r=s.a.get(n);void 0===r&&(r={stringsArray:new WeakMap,keyString:new Map},s.a.set(n,r));var i=r.stringsArray.get(e.strings);if(void 0!==i)return i;var u=e.strings.join(o.f);if(void 0===(i=r.keyString.get(u))){var c=e.getTemplateElement();y&&window.ShadyCSS.prepareTemplateDom(c,t),i=new o.a(e,c),r.keyString.set(u,i)}return r.stringsArray.set(e.strings,i),i}},v=["html","svg"],b=new Set,m=function(t,e,n){b.add(t);var r=n?n.element:document.createElement("template"),o=e.querySelectorAll("style"),a=o.length;if(0!==a){for(var f=document.createElement("style"),l=0;l<a;l++){var p=o[l];p.parentNode.removeChild(p),f.textContent+=p.textContent}!function(t){v.forEach((function(e){var n=s.a.get(h(e,t));void 0!==n&&n.keyString.forEach((function(t){var e=t.element.content,n=new Set;Array.from(e.querySelectorAll("style")).forEach((function(t){n.add(t)})),i(t,n)}))}))}(t);var y=r.content;n?function(t,e){var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null,r=t.element.content,o=t.parts;if(null!=n)for(var i=document.createTreeWalker(r,133,null,!1),a=c(o),s=0,f=-1;i.nextNode();){f++;var l=i.currentNode;for(l===n&&(s=u(e),n.parentNode.insertBefore(e,n));-1!==a&&o[a].index===f;){if(s>0){for(;-1!==a;)o[a].index+=s,a=c(o,a);return}a=c(o,a)}}else r.appendChild(e)}(n,f,y.firstChild):y.insertBefore(f,y.firstChild),window.ShadyCSS.prepareTemplateStyles(r,t);var d=y.querySelector("style");if(window.ShadyCSS.nativeShadow&&null!==d)e.insertBefore(d.cloneNode(!0),e.firstChild);else if(n){y.insertBefore(f,y.firstChild);var m=new Set;m.add(f),i(n,m)}}else window.ShadyCSS.prepareTemplateStyles(r,t)};function w(t){return function(t){if(Array.isArray(t))return _(t)}(t)||function(t){if("undefined"!=typeof Symbol&&Symbol.iterator in Object(t))return Array.from(t)}(t)||S(t)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function S(t,e){if(t){if("string"==typeof t)return _(t,e);var n=Object.prototype.toString.call(t).slice(8,-1);return"Object"===n&&t.constructor&&(n=t.constructor.name),"Map"===n||"Set"===n?Array.from(t):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?_(t,e):void 0}}function _(t,e){(null==e||e>t.length)&&(e=t.length);for(var n=0,r=new Array(e);n<e;n++)r[n]=t[n];return r}function g(t){return(g="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function P(t,e,n,r,o,i,u){try{var c=t[i](u),a=c.value}catch(t){return void n(t)}c.done?e(a):Promise.resolve(a).then(r,o)}function O(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}function j(t,e){return!e||"object"!==g(e)&&"function"!=typeof e?function(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}(t):e}function k(t){var e="function"==typeof Map?new Map:void 0;return(k=function(t){if(null===t||(n=t,-1===Function.toString.call(n).indexOf("[native code]")))return t;var n;if("function"!=typeof t)throw new TypeError("Super expression must either be null or a function");if(void 0!==e){if(e.has(t))return e.get(t);e.set(t,r)}function r(){return C(t,arguments,R(this).constructor)}return r.prototype=Object.create(t.prototype,{constructor:{value:r,enumerable:!1,writable:!0,configurable:!0}}),x(r,t)})(t)}function C(t,e,n){return(C=E()?Reflect.construct:function(t,e,n){var r=[null];r.push.apply(r,e);var o=new(Function.bind.apply(t,r));return n&&x(o,n.prototype),o}).apply(null,arguments)}function E(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(t){return!1}}function x(t,e){return(x=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t})(t,e)}function R(t){return(R=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)})(t)}
-/**
- * @license
- * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at
- * http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at
- * http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at
- * http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at
- * http://polymer.github.io/PATENTS.txt
- */window.JSCompiler_renameProperty=function(t,e){return t};var A={toAttribute:function(t,e){switch(e){case Boolean:return t?"":null;case Object:case Array:return null==t?t:JSON.stringify(t)}return t},fromAttribute:function(t,e){switch(e){case Boolean:return null!==t;case Number:return null===t?null:Number(t);case Object:case Array:return JSON.parse(t)}return t}},T=function(t,e){return e!==t&&(e==e||t==t)},U={attribute:!0,type:String,converter:A,reflect:!1,hasChanged:T},N=function(t){!function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&x(t,e)}(s,t);var e,n,r,o,i,u,c,a=(e=s,n=E(),function(){var t,r=R(e);if(n){var o=R(this).constructor;t=Reflect.construct(r,arguments,o)}else t=r.apply(this,arguments);return j(this,t)});function s(){var t;return function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,s),(t=a.call(this))._updateState=0,t._instanceProperties=void 0,t._updatePromise=new Promise((function(e){return t._enableUpdatingResolver=e})),t._changedProperties=new Map,t._reflectingProperties=void 0,t.initialize(),t}return r=s,o=[{key:"initialize",value:function(){this._saveInstanceProperties(),this._requestUpdate()}},{key:"_saveInstanceProperties",value:function(){var t=this;this.constructor._classProperties.forEach((function(e,n){if(t.hasOwnProperty(n)){var r=t[n];delete t[n],t._instanceProperties||(t._instanceProperties=new Map),t._instanceProperties.set(n,r)}}))}},{key:"_applyInstanceProperties",value:function(){var t=this;this._instanceProperties.forEach((function(e,n){return t[n]=e})),this._instanceProperties=void 0}},{key:"connectedCallback",value:function(){this.enableUpdating()}},{key:"enableUpdating",value:function(){void 0!==this._enableUpdatingResolver&&(this._enableUpdatingResolver(),this._enableUpdatingResolver=void 0)}},{key:"disconnectedCallback",value:function(){}},{key:"attributeChangedCallback",value:function(t,e,n){e!==n&&this._attributeToProperty(t,n)}},{key:"_propertyToAttribute",value:function(t,e){var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:U,r=this.constructor,o=r._attributeNameForProperty(t,n);if(void 0!==o){var i=r._propertyValueToAttribute(e,n);if(void 0===i)return;this._updateState=8|this._updateState,null==i?this.removeAttribute(o):this.setAttribute(o,i),this._updateState=-9&this._updateState}}},{key:"_attributeToProperty",value:function(t,e){if(!(8&this._updateState)){var n=this.constructor,r=n._attributeToPropertyMap.get(t);if(void 0!==r){var o=n.getPropertyOptions(r);this._updateState=16|this._updateState,this[r]=n._propertyValueFromAttribute(e,o),this._updateState=-17&this._updateState}}}},{key:"_requestUpdate",value:function(t,e){var n=!0;if(void 0!==t){var r=this.constructor,o=r.getPropertyOptions(t);r._valueHasChanged(this[t],e,o.hasChanged)?(this._changedProperties.has(t)||this._changedProperties.set(t,e),!0!==o.reflect||16&this._updateState||(void 0===this._reflectingProperties&&(this._reflectingProperties=new Map),this._reflectingProperties.set(t,o))):n=!1}!this._hasRequestedUpdate&&n&&(this._updatePromise=this._enqueueUpdate())}},{key:"requestUpdate",value:function(t,e){return this._requestUpdate(t,e),this.updateComplete}},{key:"_enqueueUpdate",value:(u=regeneratorRuntime.mark((function t(){var e;return regeneratorRuntime.wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return this._updateState=4|this._updateState,t.prev=1,t.next=4,this._updatePromise;case 4:t.next=8;break;case 6:t.prev=6,t.t0=t.catch(1);case 8:if(null==(e=this.performUpdate())){t.next=12;break}return t.next=12,e;case 12:return t.abrupt("return",!this._hasRequestedUpdate);case 13:case"end":return t.stop()}}),t,this,[[1,6]])})),c=function(){var t=this,e=arguments;return new Promise((function(n,r){var o=u.apply(t,e);function i(t){P(o,n,r,i,c,"next",t)}function c(t){P(o,n,r,i,c,"throw",t)}i(void 0)}))},function(){return c.apply(this,arguments)})},{key:"performUpdate",value:function(){this._instanceProperties&&this._applyInstanceProperties();var t=!1,e=this._changedProperties;try{(t=this.shouldUpdate(e))?this.update(e):this._markUpdated()}catch(e){throw t=!1,this._markUpdated(),e}t&&(1&this._updateState||(this._updateState=1|this._updateState,this.firstUpdated(e)),this.updated(e))}},{key:"_markUpdated",value:function(){this._changedProperties=new Map,this._updateState=-5&this._updateState}},{key:"_getUpdateComplete",value:function(){return this._updatePromise}},{key:"shouldUpdate",value:function(t){return!0}},{key:"update",value:function(t){var e=this;void 0!==this._reflectingProperties&&this._reflectingProperties.size>0&&(this._reflectingProperties.forEach((function(t,n){return e._propertyToAttribute(n,e[n],t)})),this._reflectingProperties=void 0),this._markUpdated()}},{key:"updated",value:function(t){}},{key:"firstUpdated",value:function(t){}},{key:"_hasRequestedUpdate",get:function(){return 4&this._updateState}},{key:"hasUpdated",get:function(){return 1&this._updateState}},{key:"updateComplete",get:function(){return this._getUpdateComplete()}}],i=[{key:"_ensureClassProperties",value:function(){var t=this;if(!this.hasOwnProperty(JSCompiler_renameProperty("_classProperties",this))){this._classProperties=new Map;var e=Object.getPrototypeOf(this)._classProperties;void 0!==e&&e.forEach((function(e,n){return t._classProperties.set(n,e)}))}}},{key:"createProperty",value:function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:U;if(this._ensureClassProperties(),this._classProperties.set(t,e),!e.noAccessor&&!this.prototype.hasOwnProperty(t)){var n="symbol"===g(t)?Symbol():"__".concat(t),r=this.getPropertyDescriptor(t,n,e);void 0!==r&&Object.defineProperty(this.prototype,t,r)}}},{key:"getPropertyDescriptor",value:function(t,e,n){return{get:function(){return this[e]},set:function(n){var r=this[t];this[e]=n,this._requestUpdate(t,r)},configurable:!0,enumerable:!0}}},{key:"getPropertyOptions",value:function(t){return this._classProperties&&this._classProperties.get(t)||U}},{key:"finalize",value:function(){var t=Object.getPrototypeOf(this);if(t.hasOwnProperty("finalized")||t.finalize(),this.finalized=!0,this._ensureClassProperties(),this._attributeToPropertyMap=new Map,this.hasOwnProperty(JSCompiler_renameProperty("properties",this))){var e,n=this.properties,r=function(t,e){var n;if("undefined"==typeof Symbol||null==t[Symbol.iterator]){if(Array.isArray(t)||(n=S(t))||e&&t&&"number"==typeof t.length){n&&(t=n);var r=0,o=function(){};return{s:o,n:function(){return r>=t.length?{done:!0}:{done:!1,value:t[r++]}},e:function(t){throw t},f:o}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var i,u=!0,c=!1;return{s:function(){n=t[Symbol.iterator]()},n:function(){var t=n.next();return u=t.done,t},e:function(t){c=!0,i=t},f:function(){try{u||null==n.return||n.return()}finally{if(c)throw i}}}}([].concat(w(Object.getOwnPropertyNames(n)),w("function"==typeof Object.getOwnPropertySymbols?Object.getOwnPropertySymbols(n):[])));try{for(r.s();!(e=r.n()).done;){var o=e.value;this.createProperty(o,n[o])}}catch(t){r.e(t)}finally{r.f()}}}},{key:"_attributeNameForProperty",value:function(t,e){var n=e.attribute;return!1===n?void 0:"string"==typeof n?n:"string"==typeof t?t.toLowerCase():void 0}},{key:"_valueHasChanged",value:function(t,e){var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:T;return n(t,e)}},{key:"_propertyValueFromAttribute",value:function(t,e){var n=e.type,r=e.converter||A,o="function"==typeof r?r:r.fromAttribute;return o?o(t,n):t}},{key:"_propertyValueToAttribute",value:function(t,e){if(void 0!==e.reflect){var n=e.type,r=e.converter;return(r&&r.toAttribute||A.toAttribute)(t,n)}}},{key:"observedAttributes",get:function(){var t=this;this.finalize();var e=[];return this._classProperties.forEach((function(n,r){var o=t._attributeNameForProperty(r,n);void 0!==o&&(t._attributeToPropertyMap.set(o,r),e.push(o))})),e}}],o&&O(r.prototype,o),i&&O(r,i),s}(k(HTMLElement));N.finalized=!0;
-/**
- * @license
- * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at
- * http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at
- * http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at
- * http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at
- * http://polymer.github.io/PATENTS.txt
- */
-var M=function(t){return function(e){return"function"==typeof e?function(t,e){return window.customElements.define(t,e),e}(t,e):function(t,e){return{kind:e.kind,elements:e.elements,finisher:function(e){window.customElements.define(t,e)}}}(t,e)}};function q(t){return function(e,n){return void 0!==n?function(t,e,n){e.constructor.createProperty(n,t)}(t,e,n):function(t,e){return"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object.assign(Object.assign({},e),{finisher:function(n){n.createProperty(e.key,t)}}):{kind:"field",key:Symbol(),placement:"own",descriptor:{},initializer:function(){"function"==typeof e.initializer&&(this[e.key]=e.initializer.call(this))},finisher:function(n){n.createProperty(e.key,t)}}}(t,e)}}function z(t){return function(e,n){var r={get:function(){return this.renderRoot.querySelector(t)},enumerable:!0,configurable:!0};return void 0!==n?D(r,e,n):F(r,e)}}var D=function(t,e,n){Object.defineProperty(e,n,t)},F=function(t,e){return{kind:"method",placement:"prototype",key:e.key,descriptor:t}};function I(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendors~drawer~push-state"],{
+
+/***/ "./node_modules/@hydecorp/component/lib/element.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@hydecorp/component/lib/element.js ***!
+  \*********************************************************/
+/*! exports provided: RxLitElement, applyMixins */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RxLitElement", function() { return RxLitElement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyMixins", function() { return applyMixins; });
+/* harmony import */ var lit_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lit-element */ "./node_modules/lit-element/lit-element.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/dist/esm5/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _get(target, property, receiver) { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get; } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(receiver); } return desc.value; }; } return _get(target, property, receiver || target); }
+
+function _superPropBase(object, property) { while (!Object.prototype.hasOwnProperty.call(object, property)) { object = _getPrototypeOf(object); if (object === null) break; } return object; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var RxLitElement = /*#__PURE__*/function (_LitElement) {
+  _inherits(RxLitElement, _LitElement);
+
+  var _super = _createSuper(RxLitElement);
+
+  function RxLitElement() {
+    var _this;
+
+    _classCallCheck(this, RxLitElement);
+
+    _this = _super.apply(this, arguments);
+    _this.$connected = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
+    return _this;
+  }
+
+  _createClass(RxLitElement, [{
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      _get(_getPrototypeOf(RxLitElement.prototype), "connectedCallback", this).call(this);
+
+      this.$connected.next(true);
+    }
+  }, {
+    key: "disconnectedCallback",
+    value: function disconnectedCallback() {
+      _get(_getPrototypeOf(RxLitElement.prototype), "disconnectedCallback", this).call(this);
+
+      this.$connected.next(false);
+    }
+  }, {
+    key: "firstUpdated",
+    value: function firstUpdated() {
+      this.firstUpdate = true;
+    }
+  }, {
+    key: "updated",
+    value: function updated(changedProperties) {
+      if (!this.firstUpdate) {
+        var _iterator = _createForOfIteratorHelper(changedProperties.keys()),
+            _step;
+
+        try {
+          for (_iterator.s(); !(_step = _iterator.n()).done;) {
+            var prop = _step.value;
+            if (prop in this.$) this.$[prop].next(this[prop]);
+          }
+        } catch (err) {
+          _iterator.e(err);
+        } finally {
+          _iterator.f();
+        }
+      }
+
+      this.firstUpdate = false;
+    }
+  }, {
+    key: "fireEvent",
+    value: function fireEvent(name, eventInitDict) {
+      this.dispatchEvent(new CustomEvent(name, eventInitDict));
+      this.dispatchEvent(new CustomEvent("".concat(this.tagName.toLowerCase(), "-").concat(name), eventInitDict));
+    }
+  }]);
+
+  return RxLitElement;
+}(lit_element__WEBPACK_IMPORTED_MODULE_0__["LitElement"]);
+function applyMixins(derivedCtor, baseCtors) {
+  baseCtors.forEach(function (baseCtor) {
+    Object.getOwnPropertyNames(baseCtor.prototype).forEach(function (name) {
+      derivedCtor.prototype[name] = baseCtor.prototype[name];
+    });
+  });
+  return derivedCtor;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@hydecorp/component/lib/index.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@hydecorp/component/lib/index.js ***!
+  \*******************************************************/
+/*! exports provided: fetchRx, fromMediaQuery, tween, RxLitElement, applyMixins, createResizeObservable, createMutationObservable, createIntersectionObservable, subscribeWhen, unsubscribeWhen, filterWhen, bufferDebounceTime, getScrollHeight, getScrollLeft, getScrollTop, matches, matchesAncestors, fragmentFromString, createResolvablePromise */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _creators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./creators */ "./node_modules/@hydecorp/component/lib/creators.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "fetchRx", function() { return _creators__WEBPACK_IMPORTED_MODULE_0__["fetchRx"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "fromMediaQuery", function() { return _creators__WEBPACK_IMPORTED_MODULE_0__["fromMediaQuery"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "tween", function() { return _creators__WEBPACK_IMPORTED_MODULE_0__["tween"]; });
+
+/* harmony import */ var _element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./element */ "./node_modules/@hydecorp/component/lib/element.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "RxLitElement", function() { return _element__WEBPACK_IMPORTED_MODULE_1__["RxLitElement"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "applyMixins", function() { return _element__WEBPACK_IMPORTED_MODULE_1__["applyMixins"]; });
+
+/* harmony import */ var _observers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./observers */ "./node_modules/@hydecorp/component/lib/observers.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createResizeObservable", function() { return _observers__WEBPACK_IMPORTED_MODULE_2__["createResizeObservable"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createMutationObservable", function() { return _observers__WEBPACK_IMPORTED_MODULE_2__["createMutationObservable"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createIntersectionObservable", function() { return _observers__WEBPACK_IMPORTED_MODULE_2__["createIntersectionObservable"]; });
+
+/* harmony import */ var _operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./operators */ "./node_modules/@hydecorp/component/lib/operators.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "subscribeWhen", function() { return _operators__WEBPACK_IMPORTED_MODULE_3__["subscribeWhen"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "unsubscribeWhen", function() { return _operators__WEBPACK_IMPORTED_MODULE_3__["unsubscribeWhen"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "filterWhen", function() { return _operators__WEBPACK_IMPORTED_MODULE_3__["filterWhen"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "bufferDebounceTime", function() { return _operators__WEBPACK_IMPORTED_MODULE_3__["bufferDebounceTime"]; });
+
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./util */ "./node_modules/@hydecorp/component/lib/util.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getScrollHeight", function() { return _util__WEBPACK_IMPORTED_MODULE_4__["getScrollHeight"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getScrollLeft", function() { return _util__WEBPACK_IMPORTED_MODULE_4__["getScrollLeft"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getScrollTop", function() { return _util__WEBPACK_IMPORTED_MODULE_4__["getScrollTop"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "matches", function() { return _util__WEBPACK_IMPORTED_MODULE_4__["matches"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "matchesAncestors", function() { return _util__WEBPACK_IMPORTED_MODULE_4__["matchesAncestors"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "fragmentFromString", function() { return _util__WEBPACK_IMPORTED_MODULE_4__["fragmentFromString"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createResolvablePromise", function() { return _util__WEBPACK_IMPORTED_MODULE_4__["createResolvablePromise"]; });
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/lit-element/lib/css-tag.js":
+/*!*************************************************!*\
+  !*** ./node_modules/lit-element/lib/css-tag.js ***!
+  \*************************************************/
+/*! exports provided: supportsAdoptingStyleSheets, CSSResult, unsafeCSS, css */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "supportsAdoptingStyleSheets", function() { return supportsAdoptingStyleSheets; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CSSResult", function() { return CSSResult; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unsafeCSS", function() { return unsafeCSS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "css", function() { return css; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 /**
 @license
 Copyright (c) 2019 The Polymer Project Authors. All rights reserved.
@@ -62,7 +212,110 @@ found at http://polymer.github.io/CONTRIBUTORS.txt Code distributed by Google as
 part of the polymer project is also subject to an additional IP rights grant
 found at http://polymer.github.io/PATENTS.txt
 */
-var V="adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,J=Symbol(),$=function(){function t(e,n){if(function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),n!==J)throw new Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=e}var e,n,r;return e=t,(n=[{key:"toString",value:function(){return this.cssText}},{key:"styleSheet",get:function(){return void 0===this._styleSheet&&(V?(this._styleSheet=new CSSStyleSheet,this._styleSheet.replaceSync(this.cssText)):this._styleSheet=null),this._styleSheet}}])&&I(e.prototype,n),r&&I(e,r),t}(),B=function(t){if(t instanceof $)return t.cssText;if("number"==typeof t)return t;throw new Error("Value passed to 'css' function must be a 'css' function result: ".concat(t,". Use 'unsafeCSS' to pass non-literal values, but\n            take care to ensure page security."))},W=function(t){for(var e=arguments.length,n=new Array(e>1?e-1:0),r=1;r<e;r++)n[r-1]=arguments[r];var o=n.reduce((function(e,n,r){return e+B(n)+t[r+1]}),t[0]);return new $(o,J)};function Y(t){return(Y="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function H(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function K(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}function L(t,e,n){return(L="undefined"!=typeof Reflect&&Reflect.get?Reflect.get:function(t,e,n){var r=function(t,e){for(;!Object.prototype.hasOwnProperty.call(t,e)&&null!==(t=Z(t)););return t}(t,e);if(r){var o=Object.getOwnPropertyDescriptor(r,e);return o.get?o.get.call(n):o.value}})(t,e,n||t)}function G(t,e){return(G=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t})(t,e)}function Q(t){var e=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(t){return!1}}();return function(){var n,r=Z(t);if(e){var o=Z(this).constructor;n=Reflect.construct(r,arguments,o)}else n=r.apply(this,arguments);return X(this,n)}}function X(t,e){return!e||"object"!==Y(e)&&"function"!=typeof e?function(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}(t):e}function Z(t){return(Z=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)})(t)}
+var supportsAdoptingStyleSheets = 'adoptedStyleSheets' in Document.prototype && 'replace' in CSSStyleSheet.prototype;
+var constructionToken = Symbol();
+var CSSResult = /*#__PURE__*/function () {
+  function CSSResult(cssText, safeToken) {
+    _classCallCheck(this, CSSResult);
+
+    if (safeToken !== constructionToken) {
+      throw new Error('CSSResult is not constructable. Use `unsafeCSS` or `css` instead.');
+    }
+
+    this.cssText = cssText;
+  } // Note, this is a getter so that it's lazy. In practice, this means
+  // stylesheets are not created until the first element instance is made.
+
+
+  _createClass(CSSResult, [{
+    key: "toString",
+    value: function toString() {
+      return this.cssText;
+    }
+  }, {
+    key: "styleSheet",
+    get: function get() {
+      if (this._styleSheet === undefined) {
+        // Note, if `adoptedStyleSheets` is supported then we assume CSSStyleSheet
+        // is constructable.
+        if (supportsAdoptingStyleSheets) {
+          this._styleSheet = new CSSStyleSheet();
+
+          this._styleSheet.replaceSync(this.cssText);
+        } else {
+          this._styleSheet = null;
+        }
+      }
+
+      return this._styleSheet;
+    }
+  }]);
+
+  return CSSResult;
+}();
+/**
+ * Wrap a value for interpolation in a css tagged template literal.
+ *
+ * This is unsafe because untrusted CSS text can be used to phone home
+ * or exfiltrate data to an attacker controlled site. Take care to only use
+ * this with trusted input.
+ */
+
+var unsafeCSS = function unsafeCSS(value) {
+  return new CSSResult(String(value), constructionToken);
+};
+
+var textFromCSSResult = function textFromCSSResult(value) {
+  if (value instanceof CSSResult) {
+    return value.cssText;
+  } else if (typeof value === 'number') {
+    return value;
+  } else {
+    throw new Error("Value passed to 'css' function must be a 'css' function result: ".concat(value, ". Use 'unsafeCSS' to pass non-literal values, but\n            take care to ensure page security."));
+  }
+};
+/**
+ * Template tag which which can be used with LitElement's `style` property to
+ * set element styles. For security reasons, only literal string values may be
+ * used. To incorporate non-literal values `unsafeCSS` may be used inside a
+ * template string part.
+ */
+
+
+var css = function css(strings) {
+  for (var _len = arguments.length, values = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    values[_key - 1] = arguments[_key];
+  }
+
+  var cssText = values.reduce(function (acc, v, idx) {
+    return acc + textFromCSSResult(v) + strings[idx + 1];
+  }, strings[0]);
+  return new CSSResult(cssText, constructionToken);
+};
+
+/***/ }),
+
+/***/ "./node_modules/lit-element/lib/decorators.js":
+/*!****************************************************!*\
+  !*** ./node_modules/lit-element/lib/decorators.js ***!
+  \****************************************************/
+/*! exports provided: customElement, property, internalProperty, query, queryAsync, queryAll, eventOptions, queryAssignedNodes */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "customElement", function() { return customElement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "property", function() { return property; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "internalProperty", function() { return internalProperty; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "query", function() { return query; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "queryAsync", function() { return queryAsync; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "queryAll", function() { return queryAll; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "eventOptions", function() { return eventOptions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "queryAssignedNodes", function() { return queryAssignedNodes; });
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 /**
  * @license
  * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
@@ -75,4 +328,2157 @@ var V="adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.proto
  * Code distributed by Google as part of the polymer project is also
  * subject to an additional IP rights grant found at
  * http://polymer.github.io/PATENTS.txt
- */(window.litElementVersions||(window.litElementVersions=[])).push("2.3.1");var tt={},et=function(t){!function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&G(t,e)}(i,t);var e,n,r,o=Q(i);function i(){return H(this,i),o.apply(this,arguments)}return e=i,r=[{key:"getStyles",value:function(){return this.styles}},{key:"_getUniqueStyles",value:function(){if(!this.hasOwnProperty(JSCompiler_renameProperty("_styles",this))){var t=this.getStyles();if(void 0===t)this._styles=[];else if(Array.isArray(t)){var e=function t(e,n){return e.reduceRight((function(e,n){return Array.isArray(n)?t(n,e):(e.add(n),e)}),n)}(t,new Set),n=[];e.forEach((function(t){return n.unshift(t)})),this._styles=n}else this._styles=[t]}}}],(n=[{key:"initialize",value:function(){L(Z(i.prototype),"initialize",this).call(this),this.constructor._getUniqueStyles(),this.renderRoot=this.createRenderRoot(),window.ShadowRoot&&this.renderRoot instanceof window.ShadowRoot&&this.adoptStyles()}},{key:"createRenderRoot",value:function(){return this.attachShadow({mode:"open"})}},{key:"adoptStyles",value:function(){var t=this.constructor._styles;0!==t.length&&(void 0===window.ShadyCSS||window.ShadyCSS.nativeShadow?V?this.renderRoot.adoptedStyleSheets=t.map((function(t){return t.styleSheet})):this._needsShimAdoptedStyleSheets=!0:window.ShadyCSS.ScopingShim.prepareAdoptedCssText(t.map((function(t){return t.cssText})),this.localName))}},{key:"connectedCallback",value:function(){L(Z(i.prototype),"connectedCallback",this).call(this),this.hasUpdated&&void 0!==window.ShadyCSS&&window.ShadyCSS.styleElement(this)}},{key:"update",value:function(t){var e=this,n=this.render();L(Z(i.prototype),"update",this).call(this,t),n!==tt&&this.constructor.render(n,this.renderRoot,{scopeName:this.localName,eventContext:this}),this._needsShimAdoptedStyleSheets&&(this._needsShimAdoptedStyleSheets=!1,this.constructor._styles.forEach((function(t){var n=document.createElement("style");n.textContent=t.cssText,e.renderRoot.appendChild(n)})))}},{key:"render",value:function(){return tt}}])&&K(e.prototype,n),r&&K(e,r),i}(N);et.finalized=!0,et.render=function(t,e,n){if(!n||"object"!==p(n)||!n.scopeName)throw new Error("The `scopeName` option is required.");var o=n.scopeName,i=a.a.has(e),u=y&&11===e.nodeType&&!!e.host,c=u&&!b.has(o),s=c?document.createDocumentFragment():e;if(Object(a.b)(t,s,Object.assign({templateFactory:d(o)},n)),c){var l=a.a.get(s);a.a.delete(s);var h=l.value instanceof f.a?l.value.template:void 0;m(o,s,h),Object(r.b)(e,e.firstChild),e.appendChild(s),a.a.set(e,l)}!i&&u&&window.ShadyCSS.styleElement(e.host)}},324:function(t,e,n){"use strict";n.d(e,"a",(function(){return i}));var r=n(116),o=n(113);function i(){for(var t=[],e=0;e<arguments.length;e++)t[e]=arguments[e];var n=t[t.length-1];return Object(o.a)(n)?(t.pop(),function(e){return Object(r.a)(t,e,n)}):function(e){return Object(r.a)(t,e)}}},325:function(t,e,n){"use strict";n.d(e,"a",(function(){return c}));var r=n(5),o=n(113),i=n(117),u=n(114);function c(){for(var t=[],e=0;e<arguments.length;e++)t[e]=arguments[e];var n=1/0,c=void 0,a=t[t.length-1];return Object(o.a)(a)?(c=t.pop(),t.length>1&&"number"==typeof t[t.length-1]&&(n=t.pop())):"number"==typeof a&&(n=t.pop()),!c&&1===t.length&&t[0]instanceof r.a?t[0]:Object(i.a)(n)(Object(u.a)(t,c))}},326:function(t,e,n){"use strict";n.d(e,"a",(function(){return o})),n.d(e,"b",(function(){return i}));var r=n(5),o=new r.a((function(t){return t.complete()}));function i(t){return t?function(t){return new r.a((function(e){return t.schedule((function(){return e.complete()}))}))}(t):o}},327:function(t,e,n){"use strict";n.d(e,"a",(function(){return m}));var r=n(1),o=n(313),i=n(5),u=n(9),c=n(14);function a(){return function(t){return t.lift(new f)}}var s,f=function(){function t(){}return t.prototype.call=function(t,e){e._refCount++;var n=new l(t,e),r=e.subscribe(n);return n.closed||(n.connection=e.connect()),r},t}(),l=function(t){function e(e,n){var r=t.call(this,e)||this;return r.connectable=n,r.connection=null,r}return Object(r.c)(e,t),e.prototype._unsubscribe=function(){var t=this.connectable;if(t){this.connectable=null;var e=t._refCount;if(e<=0)this.connection=null;else if(t._refCount=e-1,e>1)this.connection=null;else{var n=this.connection,r=t._connection;this.connection=null,!r||n&&r!==n||r.unsubscribe()}}else this.connection=null},e}(u.a),p=function(t){function e(e,n){var r=t.call(this)||this;return r.source=e,r.subjectFactory=n,r._refCount=0,r._isComplete=!1,r}return Object(r.c)(e,t),e.prototype._subscribe=function(t){return this.getSubject().subscribe(t)},e.prototype.getSubject=function(){var t=this._subject;return t&&!t.isStopped||(this._subject=this.subjectFactory()),this._subject},e.prototype.connect=function(){var t=this._connection;return t||(this._isComplete=!1,(t=this._connection=new c.a).add(this.source.subscribe(new y(this.getSubject(),this))),t.closed&&(this._connection=null,t=c.a.EMPTY)),t},e.prototype.refCount=function(){return a()(this)},e}(i.a),h={operator:{value:null},_refCount:{value:0,writable:!0},_subject:{value:null,writable:!0},_connection:{value:null,writable:!0},_subscribe:{value:(s=p.prototype)._subscribe},_isComplete:{value:s._isComplete,writable:!0},getSubject:{value:s.getSubject},connect:{value:s.connect},refCount:{value:s.refCount}},y=function(t){function e(e,n){var r=t.call(this,e)||this;return r.connectable=n,r}return Object(r.c)(e,t),e.prototype._error=function(e){this._unsubscribe(),t.prototype._error.call(this,e)},e.prototype._complete=function(){this.connectable._isComplete=!0,this._unsubscribe(),t.prototype._complete.call(this)},e.prototype._unsubscribe=function(){var t=this.connectable;if(t){this.connectable=null;var e=t._connection;t._refCount=0,t._subject=null,t._connection=null,e&&e.unsubscribe()}},e}(o.b),d=(function(){function t(t){this.connectable=t}t.prototype.call=function(t,e){var n=this.connectable;n._refCount++;var r=new d(t,n),o=e.subscribe(r);return r.closed||(r.connection=n.connect()),o}}(),function(t){function e(e,n){var r=t.call(this,e)||this;return r.connectable=n,r}return Object(r.c)(e,t),e.prototype._unsubscribe=function(){var t=this.connectable;if(t){this.connectable=null;var e=t._refCount;if(e<=0)this.connection=null;else if(t._refCount=e-1,e>1)this.connection=null;else{var n=this.connection,r=t._connection;this.connection=null,!r||n&&r!==n||r.unsubscribe()}}else this.connection=null},e}(u.a));var v=function(){function t(t,e){this.subjectFactory=t,this.selector=e}return t.prototype.call=function(t,e){var n=this.selector,r=this.subjectFactory(),o=n(r).subscribe(t);return o.add(e.subscribe(r)),o},t}();function b(){return new o.a}function m(){return function(t){return a()((e=b,function(t){var r;if(r="function"==typeof e?e:function(){return e},"function"==typeof n)return t.lift(new v(r,n));var o=Object.create(t,h);return o.source=t,o.subjectFactory=r,o})(t));var e,n}}},328:function(t,e,n){"use strict";n.d(e,"a",(function(){return i}));var r=n(1),o=n(9);function i(t){return function(e){return e.lift(new u(t))}}var u=function(){function t(t){this.value=t}return t.prototype.call=function(t,e){return e.subscribe(new c(t,this.value))},t}(),c=function(t){function e(e,n){var r=t.call(this,e)||this;return r.value=n,r}return Object(r.c)(e,t),e.prototype._next=function(t){this.destination.next(this.value)},e}(o.a)},329:function(t,e,n){"use strict";n.d(e,"a",(function(){return i}));var r=n(1),o=n(9);function i(){return function(t){return t.lift(new u)}}var u=function(){function t(){}return t.prototype.call=function(t,e){return e.subscribe(new c(t))},t}(),c=function(t){function e(e){var n=t.call(this,e)||this;return n.hasPrev=!1,n}return Object(r.c)(e,t),e.prototype._next=function(t){var e;this.hasPrev?e=[this.prev,t]:this.hasPrev=!0,this.prev=t,e&&this.destination.next(e)},e}(o.a)},335:function(t,e,n){"use strict";function r(t){return function(e){return e.lift(new o(t))}}n.d(e,"a",(function(){return r}));var o=function(){function t(t){this.callback=t}return t.prototype.call=function(t,e){var n=e.subscribe(t);return n.add(this.callback),n},t}()},349:function(t,e,n){"use strict";n.d(e,"a",(function(){return i}));var r=n(1),o=n(9);function i(t,e){return function(n){return n.lift(new u(t,e))}}var u=function(){function t(t,e){this.compare=t,this.keySelector=e}return t.prototype.call=function(t,e){return e.subscribe(new c(t,this.compare,this.keySelector))},t}(),c=function(t){function e(e,n,r){var o=t.call(this,e)||this;return o.keySelector=r,o.hasKey=!1,"function"==typeof n&&(o.compare=n),o}return Object(r.c)(e,t),e.prototype.compare=function(t,e){return t===e},e.prototype._next=function(t){var e;try{var n=this.keySelector;e=n?n(t):t}catch(t){return this.destination.error(t)}var r=!1;if(this.hasKey)try{r=(0,this.compare)(this.key,e)}catch(t){return this.destination.error(t)}else this.hasKey=!0;r||(this.key=e,this.destination.next(t))},e}(o.a)},350:function(t,e,n){"use strict";n.d(e,"a",(function(){return i}));var r=n(5),o=n(79);function i(t){return new r.a((function(e){var n;try{n=t()}catch(t){return void e.error(t)}return Object(o.a)(n).subscribe(e)}))}},351:function(t,e,n){"use strict";n.d(e,"a",(function(){return u}));var r=n(1),o=n(47),i=n(46);function u(t){return function(e){return e.lift(new c(t))}}var c=function(){function t(t){this.notifier=t}return t.prototype.call=function(t,e){var n=new a(t),r=Object(i.a)(n,this.notifier);return r&&!n.seenValue?(n.add(r),e.subscribe(n)):n},t}(),a=function(t){function e(e){var n=t.call(this,e)||this;return n.seenValue=!1,n}return Object(r.c)(e,t),e.prototype.notifyNext=function(t,e,n,r,o){this.seenValue=!0,this.complete()},e.prototype.notifyComplete=function(){},e}(o.a)},352:function(t,e,n){"use strict";n.d(e,"a",(function(){return u}));var r=n(1),o=n(313),i=n(315),u=function(t){function e(e){var n=t.call(this)||this;return n._value=e,n}return Object(r.c)(e,t),Object.defineProperty(e.prototype,"value",{get:function(){return this.getValue()},enumerable:!1,configurable:!0}),e.prototype._subscribe=function(e){var n=t.prototype._subscribe.call(this,e);return n&&!n.closed&&e.next(this._value),n},e.prototype.getValue=function(){if(this.hasError)throw this.thrownError;if(this.closed)throw new i.a;return this._value},e.prototype.next=function(e){t.prototype.next.call(this,this._value=e)},e}(o.a)},357:function(t,e,n){"use strict";n.d(e,"a",(function(){return c}));var r=n(1),o=n(9),i=function(){function t(){return Error.call(this),this.message="argument out of range",this.name="ArgumentOutOfRangeError",this}return t.prototype=Object.create(Error.prototype),t}(),u=n(326);function c(t){if(isNaN(t))throw new TypeError("'count' is not a number");if(t<0)throw new i;return function(e){return 0===t?u.a:e.lift(new a(t))}}var a=function(){function t(t){this.count=t}return t.prototype.call=function(t,e){return e.subscribe(new s(t,this.count))},t}(),s=function(t){function e(e,n){var r=t.call(this,e)||this;return r.count=n,r._valueCount=0,r}return Object(r.c)(e,t),e.prototype._next=function(t){var e=this.count,n=++this._valueCount;n<=e&&(this.destination.next(t),n===e&&(this.destination.complete(),this.unsubscribe()))},e}(o.a)}}]);
+ */
+var legacyCustomElement = function legacyCustomElement(tagName, clazz) {
+  window.customElements.define(tagName, clazz); // Cast as any because TS doesn't recognize the return type as being a
+  // subtype of the decorated class when clazz is typed as
+  // `Constructor<HTMLElement>` for some reason.
+  // `Constructor<HTMLElement>` is helpful to make sure the decorator is
+  // applied to elements however.
+  // tslint:disable-next-line:no-any
+
+  return clazz;
+};
+
+var standardCustomElement = function standardCustomElement(tagName, descriptor) {
+  var kind = descriptor.kind,
+      elements = descriptor.elements;
+  return {
+    kind: kind,
+    elements: elements,
+    // This callback is called once the class is otherwise fully defined
+    finisher: function finisher(clazz) {
+      window.customElements.define(tagName, clazz);
+    }
+  };
+};
+/**
+ * Class decorator factory that defines the decorated class as a custom element.
+ *
+ * ```
+ * @customElement('my-element')
+ * class MyElement {
+ *   render() {
+ *     return html``;
+ *   }
+ * }
+ * ```
+ *
+ * @param tagName The name of the custom element to define.
+ */
+
+
+var customElement = function customElement(tagName) {
+  return function (classOrDescriptor) {
+    return typeof classOrDescriptor === 'function' ? legacyCustomElement(tagName, classOrDescriptor) : standardCustomElement(tagName, classOrDescriptor);
+  };
+};
+
+var standardProperty = function standardProperty(options, element) {
+  // When decorating an accessor, pass it through and add property metadata.
+  // Note, the `hasOwnProperty` check in `createProperty` ensures we don't
+  // stomp over the user's accessor.
+  if (element.kind === 'method' && element.descriptor && !('value' in element.descriptor)) {
+    return Object.assign(Object.assign({}, element), {
+      finisher: function finisher(clazz) {
+        clazz.createProperty(element.key, options);
+      }
+    });
+  } else {
+    // createProperty() takes care of defining the property, but we still
+    // must return some kind of descriptor, so return a descriptor for an
+    // unused prototype field. The finisher calls createProperty().
+    return {
+      kind: 'field',
+      key: Symbol(),
+      placement: 'own',
+      descriptor: {},
+      // When @babel/plugin-proposal-decorators implements initializers,
+      // do this instead of the initializer below. See:
+      // https://github.com/babel/babel/issues/9260 extras: [
+      //   {
+      //     kind: 'initializer',
+      //     placement: 'own',
+      //     initializer: descriptor.initializer,
+      //   }
+      // ],
+      initializer: function initializer() {
+        if (typeof element.initializer === 'function') {
+          this[element.key] = element.initializer.call(this);
+        }
+      },
+      finisher: function finisher(clazz) {
+        clazz.createProperty(element.key, options);
+      }
+    };
+  }
+};
+
+var legacyProperty = function legacyProperty(options, proto, name) {
+  proto.constructor.createProperty(name, options);
+};
+/**
+ * A property decorator which creates a LitElement property which reflects a
+ * corresponding attribute value. A `PropertyDeclaration` may optionally be
+ * supplied to configure property features.
+ *
+ * This decorator should only be used for public fields. Private or protected
+ * fields should use the internalProperty decorator.
+ *
+ * @example
+ *
+ *     class MyElement {
+ *       @property({ type: Boolean })
+ *       clicked = false;
+ *     }
+ *
+ * @ExportDecoratedItems
+ */
+
+
+function property(options) {
+  // tslint:disable-next-line:no-any decorator
+  return function (protoOrDescriptor, name) {
+    return name !== undefined ? legacyProperty(options, protoOrDescriptor, name) : standardProperty(options, protoOrDescriptor);
+  };
+}
+/**
+ * Declares a private or protected property that still triggers updates to the
+ * element when it changes.
+ *
+ * Properties declared this way must not be used from HTML or HTML templating
+ * systems, they're solely for properties internal to the element. These
+ * properties may be renamed by optimization tools like closure compiler.
+ */
+
+function internalProperty(options) {
+  return property({
+    attribute: false,
+    hasChanged: options === null || options === void 0 ? void 0 : options.hasChanged
+  });
+}
+/**
+ * A property decorator that converts a class property into a getter that
+ * executes a querySelector on the element's renderRoot.
+ *
+ * @param selector A DOMString containing one or more selectors to match.
+ *
+ * See: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
+ *
+ * @example
+ *
+ *     class MyElement {
+ *       @query('#first')
+ *       first;
+ *
+ *       render() {
+ *         return html`
+ *           <div id="first"></div>
+ *           <div id="second"></div>
+ *         `;
+ *       }
+ *     }
+ *
+ */
+
+function query(selector) {
+  return function (protoOrDescriptor, // tslint:disable-next-line:no-any decorator
+  name) {
+    var descriptor = {
+      get: function get() {
+        return this.renderRoot.querySelector(selector);
+      },
+      enumerable: true,
+      configurable: true
+    };
+    return name !== undefined ? legacyQuery(descriptor, protoOrDescriptor, name) : standardQuery(descriptor, protoOrDescriptor);
+  };
+} // Note, in the future, we may extend this decorator to support the use case
+// where the queried element may need to do work to become ready to interact
+// with (e.g. load some implementation code). If so, we might elect to
+// add a second argument defining a function that can be run to make the
+// queried element loaded/updated/ready.
+
+/**
+ * A property decorator that converts a class property into a getter that
+ * returns a promise that resolves to the result of a querySelector on the
+ * element's renderRoot done after the element's `updateComplete` promise
+ * resolves. When the queried property may change with element state, this
+ * decorator can be used instead of requiring users to await the
+ * `updateComplete` before accessing the property.
+ *
+ * @param selector A DOMString containing one or more selectors to match.
+ *
+ * See: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
+ *
+ * @example
+ *
+ *     class MyElement {
+ *       @queryAsync('#first')
+ *       first;
+ *
+ *       render() {
+ *         return html`
+ *           <div id="first"></div>
+ *           <div id="second"></div>
+ *         `;
+ *       }
+ *     }
+ *
+ *     // external usage
+ *     async doSomethingWithFirst() {
+ *      (await aMyElement.first).doSomething();
+ *     }
+ */
+
+function queryAsync(selector) {
+  return function (protoOrDescriptor, // tslint:disable-next-line:no-any decorator
+  name) {
+    var descriptor = {
+      get: function get() {
+        var _this = this;
+
+        return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+          return regeneratorRuntime.wrap(function _callee$(_context) {
+            while (1) {
+              switch (_context.prev = _context.next) {
+                case 0:
+                  _context.next = 2;
+                  return _this.updateComplete;
+
+                case 2:
+                  return _context.abrupt("return", _this.renderRoot.querySelector(selector));
+
+                case 3:
+                case "end":
+                  return _context.stop();
+              }
+            }
+          }, _callee);
+        }))();
+      },
+      enumerable: true,
+      configurable: true
+    };
+    return name !== undefined ? legacyQuery(descriptor, protoOrDescriptor, name) : standardQuery(descriptor, protoOrDescriptor);
+  };
+}
+/**
+ * A property decorator that converts a class property into a getter
+ * that executes a querySelectorAll on the element's renderRoot.
+ *
+ * @param selector A DOMString containing one or more selectors to match.
+ *
+ * See:
+ * https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
+ *
+ * @example
+ *
+ *     class MyElement {
+ *       @queryAll('div')
+ *       divs;
+ *
+ *       render() {
+ *         return html`
+ *           <div id="first"></div>
+ *           <div id="second"></div>
+ *         `;
+ *       }
+ *     }
+ */
+
+function queryAll(selector) {
+  return function (protoOrDescriptor, // tslint:disable-next-line:no-any decorator
+  name) {
+    var descriptor = {
+      get: function get() {
+        return this.renderRoot.querySelectorAll(selector);
+      },
+      enumerable: true,
+      configurable: true
+    };
+    return name !== undefined ? legacyQuery(descriptor, protoOrDescriptor, name) : standardQuery(descriptor, protoOrDescriptor);
+  };
+}
+
+var legacyQuery = function legacyQuery(descriptor, proto, name) {
+  Object.defineProperty(proto, name, descriptor);
+};
+
+var standardQuery = function standardQuery(descriptor, element) {
+  return {
+    kind: 'method',
+    placement: 'prototype',
+    key: element.key,
+    descriptor: descriptor
+  };
+};
+
+var standardEventOptions = function standardEventOptions(options, element) {
+  return Object.assign(Object.assign({}, element), {
+    finisher: function finisher(clazz) {
+      Object.assign(clazz.prototype[element.key], options);
+    }
+  });
+};
+
+var legacyEventOptions = // tslint:disable-next-line:no-any legacy decorator
+function legacyEventOptions(options, proto, name) {
+  Object.assign(proto[name], options);
+};
+/**
+ * Adds event listener options to a method used as an event listener in a
+ * lit-html template.
+ *
+ * @param options An object that specifies event listener options as accepted by
+ * `EventTarget#addEventListener` and `EventTarget#removeEventListener`.
+ *
+ * Current browsers support the `capture`, `passive`, and `once` options. See:
+ * https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Parameters
+ *
+ * @example
+ *
+ *     class MyElement {
+ *       clicked = false;
+ *
+ *       render() {
+ *         return html`
+ *           <div @click=${this._onClick}`>
+ *             <button></button>
+ *           </div>
+ *         `;
+ *       }
+ *
+ *       @eventOptions({capture: true})
+ *       _onClick(e) {
+ *         this.clicked = true;
+ *       }
+ *     }
+ */
+
+
+function eventOptions(options) {
+  // Return value typed as any to prevent TypeScript from complaining that
+  // standard decorator function signature does not match TypeScript decorator
+  // signature
+  // TODO(kschaaf): unclear why it was only failing on this decorator and not
+  // the others
+  return function (protoOrDescriptor, name) {
+    return name !== undefined ? legacyEventOptions(options, protoOrDescriptor, name) : standardEventOptions(options, protoOrDescriptor);
+  };
+}
+/**
+ * A property decorator that converts a class property into a getter that
+ * returns the `assignedNodes` of the given named `slot`. Note, the type of
+ * this property should be annotated as `NodeListOf<HTMLElement>`.
+ *
+ */
+
+function queryAssignedNodes() {
+  var slotName = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+  var flatten = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  return function (protoOrDescriptor, // tslint:disable-next-line:no-any decorator
+  name) {
+    var descriptor = {
+      get: function get() {
+        var selector = "slot".concat(slotName ? "[name=".concat(slotName, "]") : '');
+        var slot = this.renderRoot.querySelector(selector);
+        return slot && slot.assignedNodes({
+          flatten: flatten
+        });
+      },
+      enumerable: true,
+      configurable: true
+    };
+    return name !== undefined ? legacyQuery(descriptor, protoOrDescriptor, name) : standardQuery(descriptor, protoOrDescriptor);
+  };
+}
+
+/***/ }),
+
+/***/ "./node_modules/lit-element/lib/updating-element.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/lit-element/lib/updating-element.js ***!
+  \**********************************************************/
+/*! exports provided: defaultConverter, notEqual, UpdatingElement */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "defaultConverter", function() { return defaultConverter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "notEqual", function() { return notEqual; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdatingElement", function() { return UpdatingElement; });
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
+
+function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct; } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+var _a;
+/**
+ * When using Closure Compiler, JSCompiler_renameProperty(property, object) is
+ * replaced at compile time by the munged name for object[property]. We cannot
+ * alias this function, so we have to use a small shim that has the same
+ * behavior when not compiling.
+ */
+
+
+window.JSCompiler_renameProperty = function (prop, _obj) {
+  return prop;
+};
+
+var defaultConverter = {
+  toAttribute: function toAttribute(value, type) {
+    switch (type) {
+      case Boolean:
+        return value ? '' : null;
+
+      case Object:
+      case Array:
+        // if the value is `null` or `undefined` pass this through
+        // to allow removing/no change behavior.
+        return value == null ? value : JSON.stringify(value);
+    }
+
+    return value;
+  },
+  fromAttribute: function fromAttribute(value, type) {
+    switch (type) {
+      case Boolean:
+        return value !== null;
+
+      case Number:
+        return value === null ? null : Number(value);
+
+      case Object:
+      case Array:
+        return JSON.parse(value);
+    }
+
+    return value;
+  }
+};
+/**
+ * Change function that returns true if `value` is different from `oldValue`.
+ * This method is used as the default for a property's `hasChanged` function.
+ */
+
+var notEqual = function notEqual(value, old) {
+  // This ensures (old==NaN, value==NaN) always returns false
+  return old !== value && (old === old || value === value);
+};
+var defaultPropertyDeclaration = {
+  attribute: true,
+  type: String,
+  converter: defaultConverter,
+  reflect: false,
+  hasChanged: notEqual
+};
+var STATE_HAS_UPDATED = 1;
+var STATE_UPDATE_REQUESTED = 1 << 2;
+var STATE_IS_REFLECTING_TO_ATTRIBUTE = 1 << 3;
+var STATE_IS_REFLECTING_TO_PROPERTY = 1 << 4;
+/**
+ * The Closure JS Compiler doesn't currently have good support for static
+ * property semantics where "this" is dynamic (e.g.
+ * https://github.com/google/closure-compiler/issues/3177 and others) so we use
+ * this hack to bypass any rewriting by the compiler.
+ */
+
+var finalized = 'finalized';
+/**
+ * Base element class which manages element properties and attributes. When
+ * properties change, the `update` method is asynchronously called. This method
+ * should be supplied by subclassers to render updates as desired.
+ */
+
+var UpdatingElement = /*#__PURE__*/function (_HTMLElement) {
+  _inherits(UpdatingElement, _HTMLElement);
+
+  var _super = _createSuper(UpdatingElement);
+
+  function UpdatingElement() {
+    var _this;
+
+    _classCallCheck(this, UpdatingElement);
+
+    _this = _super.call(this);
+    _this._updateState = 0;
+    _this._instanceProperties = undefined; // Initialize to an unresolved Promise so we can make sure the element has
+    // connected before first update.
+
+    _this._updatePromise = new Promise(function (res) {
+      return _this._enableUpdatingResolver = res;
+    });
+    /**
+     * Map with keys for any properties that have changed since the last
+     * update cycle with previous values.
+     */
+
+    _this._changedProperties = new Map();
+    /**
+     * Map with keys of properties that should be reflected when updated.
+     */
+
+    _this._reflectingProperties = undefined;
+
+    _this.initialize();
+
+    return _this;
+  }
+  /**
+   * Returns a list of attributes corresponding to the registered properties.
+   * @nocollapse
+   */
+
+
+  _createClass(UpdatingElement, [{
+    key: "initialize",
+
+    /**
+     * Performs element initialization. By default captures any pre-set values for
+     * registered properties.
+     */
+    value: function initialize() {
+      this._saveInstanceProperties(); // ensures first update will be caught by an early access of
+      // `updateComplete`
+
+
+      this._requestUpdate();
+    }
+    /**
+     * Fixes any properties set on the instance before upgrade time.
+     * Otherwise these would shadow the accessor and break these properties.
+     * The properties are stored in a Map which is played back after the
+     * constructor runs. Note, on very old versions of Safari (<=9) or Chrome
+     * (<=41), properties created for native platform properties like (`id` or
+     * `name`) may not have default values set in the element constructor. On
+     * these browsers native properties appear on instances and therefore their
+     * default value will overwrite any element default (e.g. if the element sets
+     * this.id = 'id' in the constructor, the 'id' will become '' since this is
+     * the native platform default).
+     */
+
+  }, {
+    key: "_saveInstanceProperties",
+    value: function _saveInstanceProperties() {
+      var _this2 = this;
+
+      // Use forEach so this works even if for/of loops are compiled to for loops
+      // expecting arrays
+      this.constructor._classProperties.forEach(function (_v, p) {
+        if (_this2.hasOwnProperty(p)) {
+          var value = _this2[p];
+          delete _this2[p];
+
+          if (!_this2._instanceProperties) {
+            _this2._instanceProperties = new Map();
+          }
+
+          _this2._instanceProperties.set(p, value);
+        }
+      });
+    }
+    /**
+     * Applies previously saved instance properties.
+     */
+
+  }, {
+    key: "_applyInstanceProperties",
+    value: function _applyInstanceProperties() {
+      var _this3 = this;
+
+      // Use forEach so this works even if for/of loops are compiled to for loops
+      // expecting arrays
+      // tslint:disable-next-line:no-any
+      this._instanceProperties.forEach(function (v, p) {
+        return _this3[p] = v;
+      });
+
+      this._instanceProperties = undefined;
+    }
+  }, {
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      // Ensure first connection completes an update. Updates cannot complete
+      // before connection.
+      this.enableUpdating();
+    }
+  }, {
+    key: "enableUpdating",
+    value: function enableUpdating() {
+      if (this._enableUpdatingResolver !== undefined) {
+        this._enableUpdatingResolver();
+
+        this._enableUpdatingResolver = undefined;
+      }
+    }
+    /**
+     * Allows for `super.disconnectedCallback()` in extensions while
+     * reserving the possibility of making non-breaking feature additions
+     * when disconnecting at some point in the future.
+     */
+
+  }, {
+    key: "disconnectedCallback",
+    value: function disconnectedCallback() {}
+    /**
+     * Synchronizes property values when attributes change.
+     */
+
+  }, {
+    key: "attributeChangedCallback",
+    value: function attributeChangedCallback(name, old, value) {
+      if (old !== value) {
+        this._attributeToProperty(name, value);
+      }
+    }
+  }, {
+    key: "_propertyToAttribute",
+    value: function _propertyToAttribute(name, value) {
+      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : defaultPropertyDeclaration;
+      var ctor = this.constructor;
+
+      var attr = ctor._attributeNameForProperty(name, options);
+
+      if (attr !== undefined) {
+        var attrValue = ctor._propertyValueToAttribute(value, options); // an undefined value does not change the attribute.
+
+
+        if (attrValue === undefined) {
+          return;
+        } // Track if the property is being reflected to avoid
+        // setting the property again via `attributeChangedCallback`. Note:
+        // 1. this takes advantage of the fact that the callback is synchronous.
+        // 2. will behave incorrectly if multiple attributes are in the reaction
+        // stack at time of calling. However, since we process attributes
+        // in `update` this should not be possible (or an extreme corner case
+        // that we'd like to discover).
+        // mark state reflecting
+
+
+        this._updateState = this._updateState | STATE_IS_REFLECTING_TO_ATTRIBUTE;
+
+        if (attrValue == null) {
+          this.removeAttribute(attr);
+        } else {
+          this.setAttribute(attr, attrValue);
+        } // mark state not reflecting
+
+
+        this._updateState = this._updateState & ~STATE_IS_REFLECTING_TO_ATTRIBUTE;
+      }
+    }
+  }, {
+    key: "_attributeToProperty",
+    value: function _attributeToProperty(name, value) {
+      // Use tracking info to avoid deserializing attribute value if it was
+      // just set from a property setter.
+      if (this._updateState & STATE_IS_REFLECTING_TO_ATTRIBUTE) {
+        return;
+      }
+
+      var ctor = this.constructor; // Note, hint this as an `AttributeMap` so closure clearly understands
+      // the type; it has issues with tracking types through statics
+      // tslint:disable-next-line:no-unnecessary-type-assertion
+
+      var propName = ctor._attributeToPropertyMap.get(name);
+
+      if (propName !== undefined) {
+        var options = ctor.getPropertyOptions(propName); // mark state reflecting
+
+        this._updateState = this._updateState | STATE_IS_REFLECTING_TO_PROPERTY;
+        this[propName] = // tslint:disable-next-line:no-any
+        ctor._propertyValueFromAttribute(value, options); // mark state not reflecting
+
+        this._updateState = this._updateState & ~STATE_IS_REFLECTING_TO_PROPERTY;
+      }
+    }
+    /**
+     * This private version of `requestUpdate` does not access or return the
+     * `updateComplete` promise. This promise can be overridden and is therefore
+     * not free to access.
+     */
+
+  }, {
+    key: "_requestUpdate",
+    value: function _requestUpdate(name, oldValue) {
+      var shouldRequestUpdate = true; // If we have a property key, perform property update steps.
+
+      if (name !== undefined) {
+        var ctor = this.constructor;
+        var options = ctor.getPropertyOptions(name);
+
+        if (ctor._valueHasChanged(this[name], oldValue, options.hasChanged)) {
+          if (!this._changedProperties.has(name)) {
+            this._changedProperties.set(name, oldValue);
+          } // Add to reflecting properties set.
+          // Note, it's important that every change has a chance to add the
+          // property to `_reflectingProperties`. This ensures setting
+          // attribute + property reflects correctly.
+
+
+          if (options.reflect === true && !(this._updateState & STATE_IS_REFLECTING_TO_PROPERTY)) {
+            if (this._reflectingProperties === undefined) {
+              this._reflectingProperties = new Map();
+            }
+
+            this._reflectingProperties.set(name, options);
+          }
+        } else {
+          // Abort the request if the property should not be considered changed.
+          shouldRequestUpdate = false;
+        }
+      }
+
+      if (!this._hasRequestedUpdate && shouldRequestUpdate) {
+        this._updatePromise = this._enqueueUpdate();
+      }
+    }
+    /**
+     * Requests an update which is processed asynchronously. This should
+     * be called when an element should update based on some state not triggered
+     * by setting a property. In this case, pass no arguments. It should also be
+     * called when manually implementing a property setter. In this case, pass the
+     * property `name` and `oldValue` to ensure that any configured property
+     * options are honored. Returns the `updateComplete` Promise which is resolved
+     * when the update completes.
+     *
+     * @param name {PropertyKey} (optional) name of requesting property
+     * @param oldValue {any} (optional) old value of requesting property
+     * @returns {Promise} A Promise that is resolved when the update completes.
+     */
+
+  }, {
+    key: "requestUpdate",
+    value: function requestUpdate(name, oldValue) {
+      this._requestUpdate(name, oldValue);
+
+      return this.updateComplete;
+    }
+    /**
+     * Sets up the element to asynchronously update.
+     */
+
+  }, {
+    key: "_enqueueUpdate",
+    value: function () {
+      var _enqueueUpdate2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+        var result;
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                this._updateState = this._updateState | STATE_UPDATE_REQUESTED;
+                _context.prev = 1;
+                _context.next = 4;
+                return this._updatePromise;
+
+              case 4:
+                _context.next = 8;
+                break;
+
+              case 6:
+                _context.prev = 6;
+                _context.t0 = _context["catch"](1);
+
+              case 8:
+                result = this.performUpdate(); // If `performUpdate` returns a Promise, we await it. This is done to
+                // enable coordinating updates with a scheduler. Note, the result is
+                // checked to avoid delaying an additional microtask unless we need to.
+
+                if (!(result != null)) {
+                  _context.next = 12;
+                  break;
+                }
+
+                _context.next = 12;
+                return result;
+
+              case 12:
+                return _context.abrupt("return", !this._hasRequestedUpdate);
+
+              case 13:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this, [[1, 6]]);
+      }));
+
+      function _enqueueUpdate() {
+        return _enqueueUpdate2.apply(this, arguments);
+      }
+
+      return _enqueueUpdate;
+    }()
+  }, {
+    key: "performUpdate",
+
+    /**
+     * Performs an element update. Note, if an exception is thrown during the
+     * update, `firstUpdated` and `updated` will not be called.
+     *
+     * You can override this method to change the timing of updates. If this
+     * method is overridden, `super.performUpdate()` must be called.
+     *
+     * For instance, to schedule updates to occur just before the next frame:
+     *
+     * ```
+     * protected async performUpdate(): Promise<unknown> {
+     *   await new Promise((resolve) => requestAnimationFrame(() => resolve()));
+     *   super.performUpdate();
+     * }
+     * ```
+     */
+    value: function performUpdate() {
+      // Mixin instance properties once, if they exist.
+      if (this._instanceProperties) {
+        this._applyInstanceProperties();
+      }
+
+      var shouldUpdate = false;
+      var changedProperties = this._changedProperties;
+
+      try {
+        shouldUpdate = this.shouldUpdate(changedProperties);
+
+        if (shouldUpdate) {
+          this.update(changedProperties);
+        } else {
+          this._markUpdated();
+        }
+      } catch (e) {
+        // Prevent `firstUpdated` and `updated` from running when there's an
+        // update exception.
+        shouldUpdate = false; // Ensure element can accept additional updates after an exception.
+
+        this._markUpdated();
+
+        throw e;
+      }
+
+      if (shouldUpdate) {
+        if (!(this._updateState & STATE_HAS_UPDATED)) {
+          this._updateState = this._updateState | STATE_HAS_UPDATED;
+          this.firstUpdated(changedProperties);
+        }
+
+        this.updated(changedProperties);
+      }
+    }
+  }, {
+    key: "_markUpdated",
+    value: function _markUpdated() {
+      this._changedProperties = new Map();
+      this._updateState = this._updateState & ~STATE_UPDATE_REQUESTED;
+    }
+    /**
+     * Returns a Promise that resolves when the element has completed updating.
+     * The Promise value is a boolean that is `true` if the element completed the
+     * update without triggering another update. The Promise result is `false` if
+     * a property was set inside `updated()`. If the Promise is rejected, an
+     * exception was thrown during the update.
+     *
+     * To await additional asynchronous work, override the `_getUpdateComplete`
+     * method. For example, it is sometimes useful to await a rendered element
+     * before fulfilling this Promise. To do this, first await
+     * `super._getUpdateComplete()`, then any subsequent state.
+     *
+     * @returns {Promise} The Promise returns a boolean that indicates if the
+     * update resolved without triggering another update.
+     */
+
+  }, {
+    key: "_getUpdateComplete",
+
+    /**
+     * Override point for the `updateComplete` promise.
+     *
+     * It is not safe to override the `updateComplete` getter directly due to a
+     * limitation in TypeScript which means it is not possible to call a
+     * superclass getter (e.g. `super.updateComplete.then(...)`) when the target
+     * language is ES5 (https://github.com/microsoft/TypeScript/issues/338).
+     * This method should be overridden instead. For example:
+     *
+     *   class MyElement extends LitElement {
+     *     async _getUpdateComplete() {
+     *       await super._getUpdateComplete();
+     *       await this._myChild.updateComplete;
+     *     }
+     *   }
+     */
+    value: function _getUpdateComplete() {
+      return this._updatePromise;
+    }
+    /**
+     * Controls whether or not `update` should be called when the element requests
+     * an update. By default, this method always returns `true`, but this can be
+     * customized to control when to update.
+     *
+     * @param _changedProperties Map of changed properties with old values
+     */
+
+  }, {
+    key: "shouldUpdate",
+    value: function shouldUpdate(_changedProperties) {
+      return true;
+    }
+    /**
+     * Updates the element. This method reflects property values to attributes.
+     * It can be overridden to render and keep updated element DOM.
+     * Setting properties inside this method will *not* trigger
+     * another update.
+     *
+     * @param _changedProperties Map of changed properties with old values
+     */
+
+  }, {
+    key: "update",
+    value: function update(_changedProperties) {
+      var _this4 = this;
+
+      if (this._reflectingProperties !== undefined && this._reflectingProperties.size > 0) {
+        // Use forEach so this works even if for/of loops are compiled to for
+        // loops expecting arrays
+        this._reflectingProperties.forEach(function (v, k) {
+          return _this4._propertyToAttribute(k, _this4[k], v);
+        });
+
+        this._reflectingProperties = undefined;
+      }
+
+      this._markUpdated();
+    }
+    /**
+     * Invoked whenever the element is updated. Implement to perform
+     * post-updating tasks via DOM APIs, for example, focusing an element.
+     *
+     * Setting properties inside this method will trigger the element to update
+     * again after this update cycle completes.
+     *
+     * @param _changedProperties Map of changed properties with old values
+     */
+
+  }, {
+    key: "updated",
+    value: function updated(_changedProperties) {}
+    /**
+     * Invoked when the element is first updated. Implement to perform one time
+     * work on the element after update.
+     *
+     * Setting properties inside this method will trigger the element to update
+     * again after this update cycle completes.
+     *
+     * @param _changedProperties Map of changed properties with old values
+     */
+
+  }, {
+    key: "firstUpdated",
+    value: function firstUpdated(_changedProperties) {}
+  }, {
+    key: "_hasRequestedUpdate",
+    get: function get() {
+      return this._updateState & STATE_UPDATE_REQUESTED;
+    }
+  }, {
+    key: "hasUpdated",
+    get: function get() {
+      return this._updateState & STATE_HAS_UPDATED;
+    }
+  }, {
+    key: "updateComplete",
+    get: function get() {
+      return this._getUpdateComplete();
+    }
+  }], [{
+    key: "_ensureClassProperties",
+
+    /**
+     * Ensures the private `_classProperties` property metadata is created.
+     * In addition to `finalize` this is also called in `createProperty` to
+     * ensure the `@property` decorator can add property metadata.
+     */
+
+    /** @nocollapse */
+    value: function _ensureClassProperties() {
+      var _this5 = this;
+
+      // ensure private storage for property declarations.
+      if (!this.hasOwnProperty(JSCompiler_renameProperty('_classProperties', this))) {
+        this._classProperties = new Map(); // NOTE: Workaround IE11 not supporting Map constructor argument.
+
+        var superProperties = Object.getPrototypeOf(this)._classProperties;
+
+        if (superProperties !== undefined) {
+          superProperties.forEach(function (v, k) {
+            return _this5._classProperties.set(k, v);
+          });
+        }
+      }
+    }
+    /**
+     * Creates a property accessor on the element prototype if one does not exist
+     * and stores a PropertyDeclaration for the property with the given options.
+     * The property setter calls the property's `hasChanged` property option
+     * or uses a strict identity check to determine whether or not to request
+     * an update.
+     *
+     * This method may be overridden to customize properties; however,
+     * when doing so, it's important to call `super.createProperty` to ensure
+     * the property is setup correctly. This method calls
+     * `getPropertyDescriptor` internally to get a descriptor to install.
+     * To customize what properties do when they are get or set, override
+     * `getPropertyDescriptor`. To customize the options for a property,
+     * implement `createProperty` like this:
+     *
+     * static createProperty(name, options) {
+     *   options = Object.assign(options, {myOption: true});
+     *   super.createProperty(name, options);
+     * }
+     *
+     * @nocollapse
+     */
+
+  }, {
+    key: "createProperty",
+    value: function createProperty(name) {
+      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultPropertyDeclaration;
+
+      // Note, since this can be called by the `@property` decorator which
+      // is called before `finalize`, we ensure storage exists for property
+      // metadata.
+      this._ensureClassProperties();
+
+      this._classProperties.set(name, options); // Do not generate an accessor if the prototype already has one, since
+      // it would be lost otherwise and that would never be the user's intention;
+      // Instead, we expect users to call `requestUpdate` themselves from
+      // user-defined accessors. Note that if the super has an accessor we will
+      // still overwrite it
+
+
+      if (options.noAccessor || this.prototype.hasOwnProperty(name)) {
+        return;
+      }
+
+      var key = _typeof(name) === 'symbol' ? Symbol() : "__".concat(name);
+      var descriptor = this.getPropertyDescriptor(name, key, options);
+
+      if (descriptor !== undefined) {
+        Object.defineProperty(this.prototype, name, descriptor);
+      }
+    }
+    /**
+     * Returns a property descriptor to be defined on the given named property.
+     * If no descriptor is returned, the property will not become an accessor.
+     * For example,
+     *
+     *   class MyElement extends LitElement {
+     *     static getPropertyDescriptor(name, key, options) {
+     *       const defaultDescriptor =
+     *           super.getPropertyDescriptor(name, key, options);
+     *       const setter = defaultDescriptor.set;
+     *       return {
+     *         get: defaultDescriptor.get,
+     *         set(value) {
+     *           setter.call(this, value);
+     *           // custom action.
+     *         },
+     *         configurable: true,
+     *         enumerable: true
+     *       }
+     *     }
+     *   }
+     *
+     * @nocollapse
+     */
+
+  }, {
+    key: "getPropertyDescriptor",
+    value: function getPropertyDescriptor(name, key, _options) {
+      return {
+        // tslint:disable-next-line:no-any no symbol in index
+        get: function get() {
+          return this[key];
+        },
+        set: function set(value) {
+          var oldValue = this[name];
+          this[key] = value;
+
+          this._requestUpdate(name, oldValue);
+        },
+        configurable: true,
+        enumerable: true
+      };
+    }
+    /**
+     * Returns the property options associated with the given property.
+     * These options are defined with a PropertyDeclaration via the `properties`
+     * object or the `@property` decorator and are registered in
+     * `createProperty(...)`.
+     *
+     * Note, this method should be considered "final" and not overridden. To
+     * customize the options for a given property, override `createProperty`.
+     *
+     * @nocollapse
+     * @final
+     */
+
+  }, {
+    key: "getPropertyOptions",
+    value: function getPropertyOptions(name) {
+      return this._classProperties && this._classProperties.get(name) || defaultPropertyDeclaration;
+    }
+    /**
+     * Creates property accessors for registered properties and ensures
+     * any superclasses are also finalized.
+     * @nocollapse
+     */
+
+  }, {
+    key: "finalize",
+    value: function finalize() {
+      // finalize any superclasses
+      var superCtor = Object.getPrototypeOf(this);
+
+      if (!superCtor.hasOwnProperty(finalized)) {
+        superCtor.finalize();
+      }
+
+      this[finalized] = true;
+
+      this._ensureClassProperties(); // initialize Map populated in observedAttributes
+
+
+      this._attributeToPropertyMap = new Map(); // make any properties
+      // Note, only process "own" properties since this element will inherit
+      // any properties defined on the superClass, and finalization ensures
+      // the entire prototype chain is finalized.
+
+      if (this.hasOwnProperty(JSCompiler_renameProperty('properties', this))) {
+        var props = this.properties; // support symbols in properties (IE11 does not support this)
+
+        var propKeys = [].concat(_toConsumableArray(Object.getOwnPropertyNames(props)), _toConsumableArray(typeof Object.getOwnPropertySymbols === 'function' ? Object.getOwnPropertySymbols(props) : [])); // This for/of is ok because propKeys is an array
+
+        var _iterator = _createForOfIteratorHelper(propKeys),
+            _step;
+
+        try {
+          for (_iterator.s(); !(_step = _iterator.n()).done;) {
+            var p = _step.value;
+            // note, use of `any` is due to TypeSript lack of support for symbol in
+            // index types
+            // tslint:disable-next-line:no-any no symbol in index
+            this.createProperty(p, props[p]);
+          }
+        } catch (err) {
+          _iterator.e(err);
+        } finally {
+          _iterator.f();
+        }
+      }
+    }
+    /**
+     * Returns the property name for the given attribute `name`.
+     * @nocollapse
+     */
+
+  }, {
+    key: "_attributeNameForProperty",
+    value: function _attributeNameForProperty(name, options) {
+      var attribute = options.attribute;
+      return attribute === false ? undefined : typeof attribute === 'string' ? attribute : typeof name === 'string' ? name.toLowerCase() : undefined;
+    }
+    /**
+     * Returns true if a property should request an update.
+     * Called when a property value is set and uses the `hasChanged`
+     * option for the property if present or a strict identity check.
+     * @nocollapse
+     */
+
+  }, {
+    key: "_valueHasChanged",
+    value: function _valueHasChanged(value, old) {
+      var hasChanged = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : notEqual;
+      return hasChanged(value, old);
+    }
+    /**
+     * Returns the property value for the given attribute value.
+     * Called via the `attributeChangedCallback` and uses the property's
+     * `converter` or `converter.fromAttribute` property option.
+     * @nocollapse
+     */
+
+  }, {
+    key: "_propertyValueFromAttribute",
+    value: function _propertyValueFromAttribute(value, options) {
+      var type = options.type;
+      var converter = options.converter || defaultConverter;
+      var fromAttribute = typeof converter === 'function' ? converter : converter.fromAttribute;
+      return fromAttribute ? fromAttribute(value, type) : value;
+    }
+    /**
+     * Returns the attribute value for the given property value. If this
+     * returns undefined, the property will *not* be reflected to an attribute.
+     * If this returns null, the attribute will be removed, otherwise the
+     * attribute will be set to the value.
+     * This uses the property's `reflect` and `type.toAttribute` property options.
+     * @nocollapse
+     */
+
+  }, {
+    key: "_propertyValueToAttribute",
+    value: function _propertyValueToAttribute(value, options) {
+      if (options.reflect === undefined) {
+        return;
+      }
+
+      var type = options.type;
+      var converter = options.converter;
+      var toAttribute = converter && converter.toAttribute || defaultConverter.toAttribute;
+      return toAttribute(value, type);
+    }
+  }, {
+    key: "observedAttributes",
+    get: function get() {
+      var _this6 = this;
+
+      // note: piggy backing on this to ensure we're finalized.
+      this.finalize();
+      var attributes = []; // Use forEach so this works even if for/of loops are compiled to for loops
+      // expecting arrays
+
+      this._classProperties.forEach(function (v, p) {
+        var attr = _this6._attributeNameForProperty(p, v);
+
+        if (attr !== undefined) {
+          _this6._attributeToPropertyMap.set(attr, p);
+
+          attributes.push(attr);
+        }
+      });
+
+      return attributes;
+    }
+  }]);
+
+  return UpdatingElement;
+}( /*#__PURE__*/_wrapNativeSuper(HTMLElement));
+_a = finalized;
+/**
+ * Marks class as having finished creating properties.
+ */
+
+UpdatingElement[_a] = true;
+
+/***/ }),
+
+/***/ "./node_modules/lit-element/lit-element.js":
+/*!*************************************************!*\
+  !*** ./node_modules/lit-element/lit-element.js ***!
+  \*************************************************/
+/*! exports provided: defaultConverter, notEqual, UpdatingElement, customElement, property, internalProperty, query, queryAsync, queryAll, eventOptions, queryAssignedNodes, html, svg, TemplateResult, SVGTemplateResult, supportsAdoptingStyleSheets, CSSResult, unsafeCSS, css, LitElement */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LitElement", function() { return LitElement; });
+/* harmony import */ var lit_html_lib_shady_render_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lit-html/lib/shady-render.js */ "./node_modules/lit-html/lib/shady-render.js");
+/* harmony import */ var _lib_updating_element_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/updating-element.js */ "./node_modules/lit-element/lib/updating-element.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "defaultConverter", function() { return _lib_updating_element_js__WEBPACK_IMPORTED_MODULE_1__["defaultConverter"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "notEqual", function() { return _lib_updating_element_js__WEBPACK_IMPORTED_MODULE_1__["notEqual"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "UpdatingElement", function() { return _lib_updating_element_js__WEBPACK_IMPORTED_MODULE_1__["UpdatingElement"]; });
+
+/* harmony import */ var _lib_decorators_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib/decorators.js */ "./node_modules/lit-element/lib/decorators.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "customElement", function() { return _lib_decorators_js__WEBPACK_IMPORTED_MODULE_2__["customElement"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "property", function() { return _lib_decorators_js__WEBPACK_IMPORTED_MODULE_2__["property"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "internalProperty", function() { return _lib_decorators_js__WEBPACK_IMPORTED_MODULE_2__["internalProperty"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "query", function() { return _lib_decorators_js__WEBPACK_IMPORTED_MODULE_2__["query"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "queryAsync", function() { return _lib_decorators_js__WEBPACK_IMPORTED_MODULE_2__["queryAsync"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "queryAll", function() { return _lib_decorators_js__WEBPACK_IMPORTED_MODULE_2__["queryAll"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "eventOptions", function() { return _lib_decorators_js__WEBPACK_IMPORTED_MODULE_2__["eventOptions"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "queryAssignedNodes", function() { return _lib_decorators_js__WEBPACK_IMPORTED_MODULE_2__["queryAssignedNodes"]; });
+
+/* harmony import */ var lit_html_lit_html_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lit-html/lit-html.js */ "./node_modules/lit-html/lit-html.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "html", function() { return lit_html_lit_html_js__WEBPACK_IMPORTED_MODULE_3__["html"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "svg", function() { return lit_html_lit_html_js__WEBPACK_IMPORTED_MODULE_3__["svg"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TemplateResult", function() { return lit_html_lit_html_js__WEBPACK_IMPORTED_MODULE_3__["TemplateResult"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SVGTemplateResult", function() { return lit_html_lit_html_js__WEBPACK_IMPORTED_MODULE_3__["SVGTemplateResult"]; });
+
+/* harmony import */ var _lib_css_tag_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./lib/css-tag.js */ "./node_modules/lit-element/lib/css-tag.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "supportsAdoptingStyleSheets", function() { return _lib_css_tag_js__WEBPACK_IMPORTED_MODULE_4__["supportsAdoptingStyleSheets"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CSSResult", function() { return _lib_css_tag_js__WEBPACK_IMPORTED_MODULE_4__["CSSResult"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "unsafeCSS", function() { return _lib_css_tag_js__WEBPACK_IMPORTED_MODULE_4__["unsafeCSS"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "css", function() { return _lib_css_tag_js__WEBPACK_IMPORTED_MODULE_4__["css"]; });
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _get(target, property, receiver) { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get; } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(receiver); } return desc.value; }; } return _get(target, property, receiver || target); }
+
+function _superPropBase(object, property) { while (!Object.prototype.hasOwnProperty.call(object, property)) { object = _getPrototypeOf(object); if (object === null) break; } return object; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+
+
+
+
+
+
+ // IMPORTANT: do not change the property name or the assignment expression.
+// This line will be used in regexes to search for LitElement usage.
+// TODO(justinfagnani): inject version number at build time
+
+(window['litElementVersions'] || (window['litElementVersions'] = [])).push('2.3.1');
+/**
+ * Sentinal value used to avoid calling lit-html's render function when
+ * subclasses do not implement `render`
+ */
+
+var renderNotImplemented = {};
+var LitElement = /*#__PURE__*/function (_UpdatingElement) {
+  _inherits(LitElement, _UpdatingElement);
+
+  var _super = _createSuper(LitElement);
+
+  function LitElement() {
+    _classCallCheck(this, LitElement);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(LitElement, [{
+    key: "initialize",
+
+    /**
+     * Performs element initialization. By default this calls `createRenderRoot`
+     * to create the element `renderRoot` node and captures any pre-set values for
+     * registered properties.
+     */
+    value: function initialize() {
+      _get(_getPrototypeOf(LitElement.prototype), "initialize", this).call(this);
+
+      this.constructor._getUniqueStyles();
+
+      this.renderRoot = this.createRenderRoot(); // Note, if renderRoot is not a shadowRoot, styles would/could apply to the
+      // element's getRootNode(). While this could be done, we're choosing not to
+      // support this now since it would require different logic around de-duping.
+
+      if (window.ShadowRoot && this.renderRoot instanceof window.ShadowRoot) {
+        this.adoptStyles();
+      }
+    }
+    /**
+     * Returns the node into which the element should render and by default
+     * creates and returns an open shadowRoot. Implement to customize where the
+     * element's DOM is rendered. For example, to render into the element's
+     * childNodes, return `this`.
+     * @returns {Element|DocumentFragment} Returns a node into which to render.
+     */
+
+  }, {
+    key: "createRenderRoot",
+    value: function createRenderRoot() {
+      return this.attachShadow({
+        mode: 'open'
+      });
+    }
+    /**
+     * Applies styling to the element shadowRoot using the `static get styles`
+     * property. Styling will apply using `shadowRoot.adoptedStyleSheets` where
+     * available and will fallback otherwise. When Shadow DOM is polyfilled,
+     * ShadyCSS scopes styles and adds them to the document. When Shadow DOM
+     * is available but `adoptedStyleSheets` is not, styles are appended to the
+     * end of the `shadowRoot` to [mimic spec
+     * behavior](https://wicg.github.io/construct-stylesheets/#using-constructed-stylesheets).
+     */
+
+  }, {
+    key: "adoptStyles",
+    value: function adoptStyles() {
+      var styles = this.constructor._styles;
+
+      if (styles.length === 0) {
+        return;
+      } // There are three separate cases here based on Shadow DOM support.
+      // (1) shadowRoot polyfilled: use ShadyCSS
+      // (2) shadowRoot.adoptedStyleSheets available: use it.
+      // (3) shadowRoot.adoptedStyleSheets polyfilled: append styles after
+      // rendering
+
+
+      if (window.ShadyCSS !== undefined && !window.ShadyCSS.nativeShadow) {
+        window.ShadyCSS.ScopingShim.prepareAdoptedCssText(styles.map(function (s) {
+          return s.cssText;
+        }), this.localName);
+      } else if (_lib_css_tag_js__WEBPACK_IMPORTED_MODULE_4__["supportsAdoptingStyleSheets"]) {
+        this.renderRoot.adoptedStyleSheets = styles.map(function (s) {
+          return s.styleSheet;
+        });
+      } else {
+        // This must be done after rendering so the actual style insertion is done
+        // in `update`.
+        this._needsShimAdoptedStyleSheets = true;
+      }
+    }
+  }, {
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      _get(_getPrototypeOf(LitElement.prototype), "connectedCallback", this).call(this); // Note, first update/render handles styleElement so we only call this if
+      // connected after first update.
+
+
+      if (this.hasUpdated && window.ShadyCSS !== undefined) {
+        window.ShadyCSS.styleElement(this);
+      }
+    }
+    /**
+     * Updates the element. This method reflects property values to attributes
+     * and calls `render` to render DOM via lit-html. Setting properties inside
+     * this method will *not* trigger another update.
+     * @param _changedProperties Map of changed properties with old values
+     */
+
+  }, {
+    key: "update",
+    value: function update(changedProperties) {
+      var _this = this;
+
+      // Setting properties in `render` should not trigger an update. Since
+      // updates are allowed after super.update, it's important to call `render`
+      // before that.
+      var templateResult = this.render();
+
+      _get(_getPrototypeOf(LitElement.prototype), "update", this).call(this, changedProperties); // If render is not implemented by the component, don't call lit-html render
+
+
+      if (templateResult !== renderNotImplemented) {
+        this.constructor.render(templateResult, this.renderRoot, {
+          scopeName: this.localName,
+          eventContext: this
+        });
+      } // When native Shadow DOM is used but adoptedStyles are not supported,
+      // insert styling after rendering to ensure adoptedStyles have highest
+      // priority.
+
+
+      if (this._needsShimAdoptedStyleSheets) {
+        this._needsShimAdoptedStyleSheets = false;
+
+        this.constructor._styles.forEach(function (s) {
+          var style = document.createElement('style');
+          style.textContent = s.cssText;
+
+          _this.renderRoot.appendChild(style);
+        });
+      }
+    }
+    /**
+     * Invoked on each update to perform rendering tasks. This method may return
+     * any value renderable by lit-html's NodePart - typically a TemplateResult.
+     * Setting properties inside this method will *not* trigger the element to
+     * update.
+     */
+
+  }, {
+    key: "render",
+    value: function render() {
+      return renderNotImplemented;
+    }
+  }], [{
+    key: "getStyles",
+
+    /**
+     * Return the array of styles to apply to the element.
+     * Override this method to integrate into a style management system.
+     *
+     * @nocollapse
+     */
+    value: function getStyles() {
+      return this.styles;
+    }
+    /** @nocollapse */
+
+  }, {
+    key: "_getUniqueStyles",
+    value: function _getUniqueStyles() {
+      // Only gather styles once per class
+      if (this.hasOwnProperty(JSCompiler_renameProperty('_styles', this))) {
+        return;
+      } // Take care not to call `this.getStyles()` multiple times since this
+      // generates new CSSResults each time.
+      // TODO(sorvell): Since we do not cache CSSResults by input, any
+      // shared styles will generate new stylesheet objects, which is wasteful.
+      // This should be addressed when a browser ships constructable
+      // stylesheets.
+
+
+      var userStyles = this.getStyles();
+
+      if (userStyles === undefined) {
+        this._styles = [];
+      } else if (Array.isArray(userStyles)) {
+        // De-duplicate styles preserving the _last_ instance in the set.
+        // This is a performance optimization to avoid duplicated styles that can
+        // occur especially when composing via subclassing.
+        // The last item is kept to try to preserve the cascade order with the
+        // assumption that it's most important that last added styles override
+        // previous styles.
+        var addStyles = function addStyles(styles, set) {
+          return styles.reduceRight(function (set, s) {
+            return (// Note: On IE set.add() does not return the set
+              Array.isArray(s) ? addStyles(s, set) : (set.add(s), set)
+            );
+          }, set);
+        }; // Array.from does not work on Set in IE, otherwise return
+        // Array.from(addStyles(userStyles, new Set<CSSResult>())).reverse()
+
+
+        var set = addStyles(userStyles, new Set());
+        var styles = [];
+        set.forEach(function (v) {
+          return styles.unshift(v);
+        });
+        this._styles = styles;
+      } else {
+        this._styles = [userStyles];
+      }
+    }
+  }]);
+
+  return LitElement;
+}(_lib_updating_element_js__WEBPACK_IMPORTED_MODULE_1__["UpdatingElement"]);
+/**
+ * Ensure this class is marked as `finalized` as an optimization ensuring
+ * it will not needlessly try to `finalize`.
+ *
+ * Note this property name is a string to prevent breaking Closure JS Compiler
+ * optimizations. See updating-element.ts for more information.
+ */
+
+LitElement['finalized'] = true;
+/**
+ * Render method used to render the value to the element's DOM.
+ * @param result The value to render.
+ * @param container Node into which to render.
+ * @param options Element name.
+ * @nocollapse
+ */
+
+LitElement.render = lit_html_lib_shady_render_js__WEBPACK_IMPORTED_MODULE_0__["render"];
+
+/***/ }),
+
+/***/ "./node_modules/lit-html/lib/modify-template.js":
+/*!******************************************************!*\
+  !*** ./node_modules/lit-html/lib/modify-template.js ***!
+  \******************************************************/
+/*! exports provided: removeNodesFromTemplate, insertNodeIntoTemplate */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeNodesFromTemplate", function() { return removeNodesFromTemplate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "insertNodeIntoTemplate", function() { return insertNodeIntoTemplate; });
+/* harmony import */ var _template_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./template.js */ "./node_modules/lit-html/lib/template.js");
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+
+var walkerNodeFilter = 133
+/* NodeFilter.SHOW_{ELEMENT|COMMENT|TEXT} */
+;
+/**
+ * Removes the list of nodes from a Template safely. In addition to removing
+ * nodes from the Template, the Template part indices are updated to match
+ * the mutated Template DOM.
+ *
+ * As the template is walked the removal state is tracked and
+ * part indices are adjusted as needed.
+ *
+ * div
+ *   div#1 (remove) <-- start removing (removing node is div#1)
+ *     div
+ *       div#2 (remove)  <-- continue removing (removing node is still div#1)
+ *         div
+ * div <-- stop removing since previous sibling is the removing node (div#1,
+ * removed 4 nodes)
+ */
+
+function removeNodesFromTemplate(template, nodesToRemove) {
+  var content = template.element.content,
+      parts = template.parts;
+  var walker = document.createTreeWalker(content, walkerNodeFilter, null, false);
+  var partIndex = nextActiveIndexInTemplateParts(parts);
+  var part = parts[partIndex];
+  var nodeIndex = -1;
+  var removeCount = 0;
+  var nodesToRemoveInTemplate = [];
+  var currentRemovingNode = null;
+
+  while (walker.nextNode()) {
+    nodeIndex++;
+    var node = walker.currentNode; // End removal if stepped past the removing node
+
+    if (node.previousSibling === currentRemovingNode) {
+      currentRemovingNode = null;
+    } // A node to remove was found in the template
+
+
+    if (nodesToRemove.has(node)) {
+      nodesToRemoveInTemplate.push(node); // Track node we're removing
+
+      if (currentRemovingNode === null) {
+        currentRemovingNode = node;
+      }
+    } // When removing, increment count by which to adjust subsequent part indices
+
+
+    if (currentRemovingNode !== null) {
+      removeCount++;
+    }
+
+    while (part !== undefined && part.index === nodeIndex) {
+      // If part is in a removed node deactivate it by setting index to -1 or
+      // adjust the index as needed.
+      part.index = currentRemovingNode !== null ? -1 : part.index - removeCount; // go to the next active part.
+
+      partIndex = nextActiveIndexInTemplateParts(parts, partIndex);
+      part = parts[partIndex];
+    }
+  }
+
+  nodesToRemoveInTemplate.forEach(function (n) {
+    return n.parentNode.removeChild(n);
+  });
+}
+
+var countNodes = function countNodes(node) {
+  var count = node.nodeType === 11
+  /* Node.DOCUMENT_FRAGMENT_NODE */
+  ? 0 : 1;
+  var walker = document.createTreeWalker(node, walkerNodeFilter, null, false);
+
+  while (walker.nextNode()) {
+    count++;
+  }
+
+  return count;
+};
+
+var nextActiveIndexInTemplateParts = function nextActiveIndexInTemplateParts(parts) {
+  var startIndex = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : -1;
+
+  for (var i = startIndex + 1; i < parts.length; i++) {
+    var part = parts[i];
+
+    if (Object(_template_js__WEBPACK_IMPORTED_MODULE_0__["isTemplatePartActive"])(part)) {
+      return i;
+    }
+  }
+
+  return -1;
+};
+/**
+ * Inserts the given node into the Template, optionally before the given
+ * refNode. In addition to inserting the node into the Template, the Template
+ * part indices are updated to match the mutated Template DOM.
+ */
+
+
+function insertNodeIntoTemplate(template, node) {
+  var refNode = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+  var content = template.element.content,
+      parts = template.parts; // If there's no refNode, then put node at end of template.
+  // No part indices need to be shifted in this case.
+
+  if (refNode === null || refNode === undefined) {
+    content.appendChild(node);
+    return;
+  }
+
+  var walker = document.createTreeWalker(content, walkerNodeFilter, null, false);
+  var partIndex = nextActiveIndexInTemplateParts(parts);
+  var insertCount = 0;
+  var walkerIndex = -1;
+
+  while (walker.nextNode()) {
+    walkerIndex++;
+    var walkerNode = walker.currentNode;
+
+    if (walkerNode === refNode) {
+      insertCount = countNodes(node);
+      refNode.parentNode.insertBefore(node, refNode);
+    }
+
+    while (partIndex !== -1 && parts[partIndex].index === walkerIndex) {
+      // If we've inserted the node, simply adjust all subsequent parts
+      if (insertCount > 0) {
+        while (partIndex !== -1) {
+          parts[partIndex].index += insertCount;
+          partIndex = nextActiveIndexInTemplateParts(parts, partIndex);
+        }
+
+        return;
+      }
+
+      partIndex = nextActiveIndexInTemplateParts(parts, partIndex);
+    }
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/lit-html/lib/shady-render.js":
+/*!***************************************************!*\
+  !*** ./node_modules/lit-html/lib/shady-render.js ***!
+  \***************************************************/
+/*! exports provided: html, svg, TemplateResult, shadyTemplateFactory, render */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "shadyTemplateFactory", function() { return shadyTemplateFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony import */ var _dom_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dom.js */ "./node_modules/lit-html/lib/dom.js");
+/* harmony import */ var _modify_template_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modify-template.js */ "./node_modules/lit-html/lib/modify-template.js");
+/* harmony import */ var _render_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./render.js */ "./node_modules/lit-html/lib/render.js");
+/* harmony import */ var _template_factory_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./template-factory.js */ "./node_modules/lit-html/lib/template-factory.js");
+/* harmony import */ var _template_instance_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./template-instance.js */ "./node_modules/lit-html/lib/template-instance.js");
+/* harmony import */ var _template_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./template.js */ "./node_modules/lit-html/lib/template.js");
+/* harmony import */ var _lit_html_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lit-html.js */ "./node_modules/lit-html/lit-html.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "html", function() { return _lit_html_js__WEBPACK_IMPORTED_MODULE_6__["html"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "svg", function() { return _lit_html_js__WEBPACK_IMPORTED_MODULE_6__["svg"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TemplateResult", function() { return _lit_html_js__WEBPACK_IMPORTED_MODULE_6__["TemplateResult"]; });
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+
+/**
+ * Module to add shady DOM/shady CSS polyfill support to lit-html template
+ * rendering. See the [[render]] method for details.
+ *
+ * @packageDocumentation
+ */
+
+/**
+ * Do not remove this comment; it keeps typedoc from misplacing the module
+ * docs.
+ */
+
+
+
+
+
+
+ // Get a key to lookup in `templateCaches`.
+
+var getTemplateCacheKey = function getTemplateCacheKey(type, scopeName) {
+  return "".concat(type, "--").concat(scopeName);
+};
+
+var compatibleShadyCSSVersion = true;
+
+if (typeof window.ShadyCSS === 'undefined') {
+  compatibleShadyCSSVersion = false;
+} else if (typeof window.ShadyCSS.prepareTemplateDom === 'undefined') {
+  console.warn("Incompatible ShadyCSS version detected. " + "Please update to at least @webcomponents/webcomponentsjs@2.0.2 and " + "@webcomponents/shadycss@1.3.1.");
+  compatibleShadyCSSVersion = false;
+}
+/**
+ * Template factory which scopes template DOM using ShadyCSS.
+ * @param scopeName {string}
+ */
+
+
+var shadyTemplateFactory = function shadyTemplateFactory(scopeName) {
+  return function (result) {
+    var cacheKey = getTemplateCacheKey(result.type, scopeName);
+    var templateCache = _template_factory_js__WEBPACK_IMPORTED_MODULE_3__["templateCaches"].get(cacheKey);
+
+    if (templateCache === undefined) {
+      templateCache = {
+        stringsArray: new WeakMap(),
+        keyString: new Map()
+      };
+      _template_factory_js__WEBPACK_IMPORTED_MODULE_3__["templateCaches"].set(cacheKey, templateCache);
+    }
+
+    var template = templateCache.stringsArray.get(result.strings);
+
+    if (template !== undefined) {
+      return template;
+    }
+
+    var key = result.strings.join(_template_js__WEBPACK_IMPORTED_MODULE_5__["marker"]);
+    template = templateCache.keyString.get(key);
+
+    if (template === undefined) {
+      var element = result.getTemplateElement();
+
+      if (compatibleShadyCSSVersion) {
+        window.ShadyCSS.prepareTemplateDom(element, scopeName);
+      }
+
+      template = new _template_js__WEBPACK_IMPORTED_MODULE_5__["Template"](result, element);
+      templateCache.keyString.set(key, template);
+    }
+
+    templateCache.stringsArray.set(result.strings, template);
+    return template;
+  };
+};
+var TEMPLATE_TYPES = ['html', 'svg'];
+/**
+ * Removes all style elements from Templates for the given scopeName.
+ */
+
+var removeStylesFromLitTemplates = function removeStylesFromLitTemplates(scopeName) {
+  TEMPLATE_TYPES.forEach(function (type) {
+    var templates = _template_factory_js__WEBPACK_IMPORTED_MODULE_3__["templateCaches"].get(getTemplateCacheKey(type, scopeName));
+
+    if (templates !== undefined) {
+      templates.keyString.forEach(function (template) {
+        var content = template.element.content; // IE 11 doesn't support the iterable param Set constructor
+
+        var styles = new Set();
+        Array.from(content.querySelectorAll('style')).forEach(function (s) {
+          styles.add(s);
+        });
+        Object(_modify_template_js__WEBPACK_IMPORTED_MODULE_1__["removeNodesFromTemplate"])(template, styles);
+      });
+    }
+  });
+};
+
+var shadyRenderSet = new Set();
+/**
+ * For the given scope name, ensures that ShadyCSS style scoping is performed.
+ * This is done just once per scope name so the fragment and template cannot
+ * be modified.
+ * (1) extracts styles from the rendered fragment and hands them to ShadyCSS
+ * to be scoped and appended to the document
+ * (2) removes style elements from all lit-html Templates for this scope name.
+ *
+ * Note, <style> elements can only be placed into templates for the
+ * initial rendering of the scope. If <style> elements are included in templates
+ * dynamically rendered to the scope (after the first scope render), they will
+ * not be scoped and the <style> will be left in the template and rendered
+ * output.
+ */
+
+var prepareTemplateStyles = function prepareTemplateStyles(scopeName, renderedDOM, template) {
+  shadyRenderSet.add(scopeName); // If `renderedDOM` is stamped from a Template, then we need to edit that
+  // Template's underlying template element. Otherwise, we create one here
+  // to give to ShadyCSS, which still requires one while scoping.
+
+  var templateElement = !!template ? template.element : document.createElement('template'); // Move styles out of rendered DOM and store.
+
+  var styles = renderedDOM.querySelectorAll('style');
+  var length = styles.length; // If there are no styles, skip unnecessary work
+
+  if (length === 0) {
+    // Ensure prepareTemplateStyles is called to support adding
+    // styles via `prepareAdoptedCssText` since that requires that
+    // `prepareTemplateStyles` is called.
+    //
+    // ShadyCSS will only update styles containing @apply in the template
+    // given to `prepareTemplateStyles`. If no lit Template was given,
+    // ShadyCSS will not be able to update uses of @apply in any relevant
+    // template. However, this is not a problem because we only create the
+    // template for the purpose of supporting `prepareAdoptedCssText`,
+    // which doesn't support @apply at all.
+    window.ShadyCSS.prepareTemplateStyles(templateElement, scopeName);
+    return;
+  }
+
+  var condensedStyle = document.createElement('style'); // Collect styles into a single style. This helps us make sure ShadyCSS
+  // manipulations will not prevent us from being able to fix up template
+  // part indices.
+  // NOTE: collecting styles is inefficient for browsers but ShadyCSS
+  // currently does this anyway. When it does not, this should be changed.
+
+  for (var i = 0; i < length; i++) {
+    var _style = styles[i];
+
+    _style.parentNode.removeChild(_style);
+
+    condensedStyle.textContent += _style.textContent;
+  } // Remove styles from nested templates in this scope.
+
+
+  removeStylesFromLitTemplates(scopeName); // And then put the condensed style into the "root" template passed in as
+  // `template`.
+
+  var content = templateElement.content;
+
+  if (!!template) {
+    Object(_modify_template_js__WEBPACK_IMPORTED_MODULE_1__["insertNodeIntoTemplate"])(template, condensedStyle, content.firstChild);
+  } else {
+    content.insertBefore(condensedStyle, content.firstChild);
+  } // Note, it's important that ShadyCSS gets the template that `lit-html`
+  // will actually render so that it can update the style inside when
+  // needed (e.g. @apply native Shadow DOM case).
+
+
+  window.ShadyCSS.prepareTemplateStyles(templateElement, scopeName);
+  var style = content.querySelector('style');
+
+  if (window.ShadyCSS.nativeShadow && style !== null) {
+    // When in native Shadow DOM, ensure the style created by ShadyCSS is
+    // included in initially rendered output (`renderedDOM`).
+    renderedDOM.insertBefore(style.cloneNode(true), renderedDOM.firstChild);
+  } else if (!!template) {
+    // When no style is left in the template, parts will be broken as a
+    // result. To fix this, we put back the style node ShadyCSS removed
+    // and then tell lit to remove that node from the template.
+    // There can be no style in the template in 2 cases (1) when Shady DOM
+    // is in use, ShadyCSS removes all styles, (2) when native Shadow DOM
+    // is in use ShadyCSS removes the style if it contains no content.
+    // NOTE, ShadyCSS creates its own style so we can safely add/remove
+    // `condensedStyle` here.
+    content.insertBefore(condensedStyle, content.firstChild);
+    var removes = new Set();
+    removes.add(condensedStyle);
+    Object(_modify_template_js__WEBPACK_IMPORTED_MODULE_1__["removeNodesFromTemplate"])(template, removes);
+  }
+};
+/**
+ * Extension to the standard `render` method which supports rendering
+ * to ShadowRoots when the ShadyDOM (https://github.com/webcomponents/shadydom)
+ * and ShadyCSS (https://github.com/webcomponents/shadycss) polyfills are used
+ * or when the webcomponentsjs
+ * (https://github.com/webcomponents/webcomponentsjs) polyfill is used.
+ *
+ * Adds a `scopeName` option which is used to scope element DOM and stylesheets
+ * when native ShadowDOM is unavailable. The `scopeName` will be added to
+ * the class attribute of all rendered DOM. In addition, any style elements will
+ * be automatically re-written with this `scopeName` selector and moved out
+ * of the rendered DOM and into the document `<head>`.
+ *
+ * It is common to use this render method in conjunction with a custom element
+ * which renders a shadowRoot. When this is done, typically the element's
+ * `localName` should be used as the `scopeName`.
+ *
+ * In addition to DOM scoping, ShadyCSS also supports a basic shim for css
+ * custom properties (needed only on older browsers like IE11) and a shim for
+ * a deprecated feature called `@apply` that supports applying a set of css
+ * custom properties to a given location.
+ *
+ * Usage considerations:
+ *
+ * * Part values in `<style>` elements are only applied the first time a given
+ * `scopeName` renders. Subsequent changes to parts in style elements will have
+ * no effect. Because of this, parts in style elements should only be used for
+ * values that will never change, for example parts that set scope-wide theme
+ * values or parts which render shared style elements.
+ *
+ * * Note, due to a limitation of the ShadyDOM polyfill, rendering in a
+ * custom element's `constructor` is not supported. Instead rendering should
+ * either done asynchronously, for example at microtask timing (for example
+ * `Promise.resolve()`), or be deferred until the first time the element's
+ * `connectedCallback` runs.
+ *
+ * Usage considerations when using shimmed custom properties or `@apply`:
+ *
+ * * Whenever any dynamic changes are made which affect
+ * css custom properties, `ShadyCSS.styleElement(element)` must be called
+ * to update the element. There are two cases when this is needed:
+ * (1) the element is connected to a new parent, (2) a class is added to the
+ * element that causes it to match different custom properties.
+ * To address the first case when rendering a custom element, `styleElement`
+ * should be called in the element's `connectedCallback`.
+ *
+ * * Shimmed custom properties may only be defined either for an entire
+ * shadowRoot (for example, in a `:host` rule) or via a rule that directly
+ * matches an element with a shadowRoot. In other words, instead of flowing from
+ * parent to child as do native css custom properties, shimmed custom properties
+ * flow only from shadowRoots to nested shadowRoots.
+ *
+ * * When using `@apply` mixing css shorthand property names with
+ * non-shorthand names (for example `border` and `border-width`) is not
+ * supported.
+ */
+
+
+var render = function render(result, container, options) {
+  if (!options || _typeof(options) !== 'object' || !options.scopeName) {
+    throw new Error('The `scopeName` option is required.');
+  }
+
+  var scopeName = options.scopeName;
+  var hasRendered = _render_js__WEBPACK_IMPORTED_MODULE_2__["parts"].has(container);
+  var needsScoping = compatibleShadyCSSVersion && container.nodeType === 11
+  /* Node.DOCUMENT_FRAGMENT_NODE */
+  && !!container.host; // Handle first render to a scope specially...
+
+  var firstScopeRender = needsScoping && !shadyRenderSet.has(scopeName); // On first scope render, render into a fragment; this cannot be a single
+  // fragment that is reused since nested renders can occur synchronously.
+
+  var renderContainer = firstScopeRender ? document.createDocumentFragment() : container;
+  Object(_render_js__WEBPACK_IMPORTED_MODULE_2__["render"])(result, renderContainer, Object.assign({
+    templateFactory: shadyTemplateFactory(scopeName)
+  }, options)); // When performing first scope render,
+  // (1) We've rendered into a fragment so that there's a chance to
+  // `prepareTemplateStyles` before sub-elements hit the DOM
+  // (which might cause them to render based on a common pattern of
+  // rendering in a custom element's `connectedCallback`);
+  // (2) Scope the template with ShadyCSS one time only for this scope.
+  // (3) Render the fragment into the container and make sure the
+  // container knows its `part` is the one we just rendered. This ensures
+  // DOM will be re-used on subsequent renders.
+
+  if (firstScopeRender) {
+    var part = _render_js__WEBPACK_IMPORTED_MODULE_2__["parts"].get(renderContainer);
+    _render_js__WEBPACK_IMPORTED_MODULE_2__["parts"].delete(renderContainer); // ShadyCSS might have style sheets (e.g. from `prepareAdoptedCssText`)
+    // that should apply to `renderContainer` even if the rendered value is
+    // not a TemplateInstance. However, it will only insert scoped styles
+    // into the document if `prepareTemplateStyles` has already been called
+    // for the given scope name.
+
+    var template = part.value instanceof _template_instance_js__WEBPACK_IMPORTED_MODULE_4__["TemplateInstance"] ? part.value.template : undefined;
+    prepareTemplateStyles(scopeName, renderContainer, template);
+    Object(_dom_js__WEBPACK_IMPORTED_MODULE_0__["removeNodes"])(container, container.firstChild);
+    container.appendChild(renderContainer);
+    _render_js__WEBPACK_IMPORTED_MODULE_2__["parts"].set(container, part);
+  } // After elements have hit the DOM, update styling if this is the
+  // initial render to this container.
+  // This is needed whenever dynamic changes are made so it would be
+  // safest to do every render; however, this would regress performance
+  // so we leave it up to the user to call `ShadyCSS.styleElement`
+  // for dynamic changes.
+
+
+  if (!hasRendered && needsScoping) {
+    window.ShadyCSS.styleElement(container.host);
+  }
+};
+
+/***/ })
+
+}]);
+//# sourceMappingURL=LEGACY-vendors~drawer~push-state-hydejack-9.0.4.js.map

@@ -1,14 +1,275 @@
-/*!
- *  __  __                __                                     __
- * /\ \/\ \              /\ \             __                    /\ \
- * \ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
- *  \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
- *   \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
- *    \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
- *     \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
- *                 /\___/                \ \____/
- *                 \/__/                  \/___/
- *
- * Powered by Hydejack v9.0.4 <https://hydejack.com/>
- */
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{303:function(e,t,n){"use strict";n.r(t);var r,i=n(149),a=n(325),o=n(300),c=n(334),u=n(148),l=n(324),s=n(31),d=n(349),p=n(152),b=n(150),f=n(151),y=n(358),m=n(12);function h(e,t){return function(e){if(Array.isArray(e))return e}(e)||function(e,t){if("undefined"==typeof Symbol||!(Symbol.iterator in Object(e)))return;var n=[],r=!0,i=!1,a=void 0;try{for(var o,c=e[Symbol.iterator]();!(r=(o=c.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{r||null==c.return||c.return()}finally{if(i)throw a}}return n}(e,t)||w(e,t)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function v(e){return function(e){if(Array.isArray(e))return O(e)}(e)||function(e){if("undefined"!=typeof Symbol&&Symbol.iterator in Object(e))return Array.from(e)}(e)||w(e)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function w(e,t){if(e){if("string"==typeof e)return O(e,t);var n=Object.prototype.toString.call(e).slice(8,-1);return"Object"===n&&e.constructor&&(n=e.constructor.name),"Map"===n||"Set"===n?Array.from(e):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?O(e,t):void 0}}function O(e,t){(null==t||t>e.length)&&(t=e.length);for(var n=0,r=new Array(t);n<t;n++)r[n]=e[n];return r}function j(e,t,n,r,i,a,o){try{var c=e[a](o),u=c.value}catch(e){return void n(e)}c.done?t(u):Promise.resolve(u).then(r,i)}(r=regeneratorRuntime.mark((function e(){var t,r,w,O,j,g,S,E,A,C,x,k,I,L,_,B,M,P,T,R,q,z,D,J;return regeneratorRuntime.wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return g=function(){var e,t=document.getElementById("_swipe");null==t||null===(e=t.parentNode)||void 0===e||e.removeChild(t)},j=function(e){var t=document.getElementById("_hrefSwipeSVG");if(t){var n,r=document.createElement("img");r.id="_swipe",r.src=t.href,r.alt="Swipe image",r.addEventListener("click",(function(){return e.close()})),null===(n=document.getElementById("_sidebar"))||void 0===n||n.appendChild(r)}},O=function(e,t){return t>=r?[0,e]:m.p?[35,150]:[0,150]},e.next=5,Promise.all([].concat(v("customElements"in window?[]:[Promise.all([n.e(18),n.e(19)]).then(n.bind(null,336)).then((function(){return Promise.all([n.e(16),n.e(9)]).then(n.bind(null,341))}))]),v("ResizeObserver"in window?[]:[n.e(7).then(n.bind(null,345))])));case 5:return e.next=7,m.v;case 7:return e.next=9,m.u;case 9:if(r=2,w=function(e){return function(t){return e.pipe(Object(u.a)((function(e){return e?t:i.a})))}},S=function(){return window.matchMedia(m.b).matches?3:window.matchMedia(m.a).matches?r:1},E=document.getElementById("_drawer"),A=document.getElementById("_sidebar"),C=null==A?void 0:A.querySelector(".sidebar-sticky"),E&&A&&C){e.next=19;break}return e.abrupt("return");case 19:return null===(t=document.getElementById("_menu"))||void 0===t||t.addEventListener("click",(function(e){e.preventDefault(),e.stopPropagation(),E.toggle()})),A.querySelectorAll('a[href^="/"]').forEach((function(e){return e.addEventListener("click",(function(){return E.close()}))})),m.q&&E.setAttribute("threshold","0"),m.o||E.setAttribute("mouseevents",""),x=m.k?[new CSSTransformValue([new CSSTranslate(CSS.px(0),CSS.px(0))]),CSS.number(1)]:[null,null],k=h(x,2),I=k[0],L=k[1],_=function(e,t,n){var i=n*e,a=t>=r?1:1-e;m.k?(I[0].x.value=i,L.value=a,A.attributeStyleMap.set("transform",I),C.attributeStyleMap.set("opacity",L)):(A.style.transform="translateX(".concat(i,"px)"),C.style.opacity=a)},B=Object(a.a)(Object(m.h)(window.matchMedia(m.a)),Object(m.h)(window.matchMedia(m.b))).pipe(Object(l.a)({}),Object(s.a)(S)),M=Object(o.a)(E,"peek-width-change").pipe(Object(s.a)((function(e){return e.detail}))),P=Object(o.a)(window,"resize",{passive:!0}).pipe(Object(l.a)({}),Object(s.a)(m.j)),T=Object(c.a)(M,P).pipe(Object(s.a)((function(e){var t=h(e,2),n=t[0];return t[1]/2-n/2}))),R=Object(a.a)(T.pipe(Object(s.a)((function(){return void 0!==E.opacity?1-E.opacity:z?0:1}))),Object(o.a)(E,"hy-drawer-move").pipe(Object(s.a)((function(e){return 1-e.detail.opacity})))),E.addEventListener("hy-drawer-prepare",(function(){A.style.willChange="transform",C.style.willChange="opacity"})),E.addEventListener("hy-drawer-transitioned",(function(){A.style.willChange="",C.style.willChange=""})),q=Object(m.i)(),(z=E.classList.contains("cover")&&q<=0&&!(history.state&&history.state.closedOnce))||(history.state||history.replaceState({},document.title),history.state.closedOnce=!0,E.removeAttribute("opened")),D=Object(o.a)(E,"hy-drawer-transitioned").pipe(Object(s.a)((function(e){return e.detail})),Object(d.a)(),Object(p.a)((function(e){e||(g(),history.state||history.replaceState({},document.title),history.state.closedOnce=!0)})),Object(l.a)(z)),J=z?null:E.getBoundingClientRect().height,E.addEventListener("hy-drawer-init",(function(){E.classList.add("loaded"),j(E),J&&q>=J&&window.scrollTo(0,q-J)}),{once:!0}),e.next=40,Promise.resolve().then(n.bind(null,348));case 40:window._drawer=E,R.pipe(Object(b.a)(B,T),Object(p.a)((function(e){return _.apply(void 0,v(e))}))).subscribe(),M.pipe(Object(b.a)(B),Object(s.a)((function(e){return O.apply(void 0,v(e))})),Object(p.a)((function(e){E.range=e}))).subscribe(),Object(o.a)(document,"wheel",{passive:!1}).pipe(w(D),Object(f.a)((function(e){return e.deltaY>0})),Object(p.a)((function(e){E.translateX>0&&e.preventDefault()})),Object(y.a)(500),Object(p.a)((function(){return E.close()}))).subscribe();case 44:case"end":return e.stop()}}),e)})),function(){var e=this,t=arguments;return new Promise((function(n,i){var a=r.apply(e,t);function o(e){j(a,n,i,o,c,"next",e)}function c(e){j(a,n,i,o,c,"throw",e)}o(void 0)}))})()}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["drawer"],{
+
+/***/ "./_js/src/drawer.js":
+/*!***************************!*\
+  !*** ./_js/src/drawer.js ***!
+  \***************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/dist/esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/dist/esm5/operators/index.js");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./common */ "./_js/src/common.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+// Copyright (c) 2019 Florian Klampfer <https://qwtel.com/>
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+
+_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+  var _document$getElementB2;
+
+  var MOBILE, DESKTOP, LARGE_DESKTOP, subscribeWhen, getRange, setupIcon, removeIcon, detectSize, drawerEl, sidebarEl, contentEl, _ref2, _ref3, tValue, oValue, updateSidebar, size$, peekWidth$, viewWidth$, distance$, t$, scrollTop, opened, opened$, drawerHeight;
+
+  return regeneratorRuntime.wrap(function _callee$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          removeIcon = function _removeIcon() {
+            var _svg$parentNode;
+
+            var svg = document.getElementById('_swipe');
+            svg === null || svg === void 0 ? void 0 : (_svg$parentNode = svg.parentNode) === null || _svg$parentNode === void 0 ? void 0 : _svg$parentNode.removeChild(svg);
+          };
+
+          setupIcon = function _setupIcon(drawerEl) {
+            var img = document.getElementById('_hrefSwipeSVG');
+
+            if (img) {
+              var _document$getElementB;
+
+              var svg = document.createElement('img');
+              svg.id = '_swipe';
+              svg.src = img.href;
+              svg.alt = 'Swipe image';
+              svg.addEventListener('click', function () {
+                return drawerEl.close();
+              });
+              (_document$getElementB = document.getElementById('_sidebar')) === null || _document$getElementB === void 0 ? void 0 : _document$getElementB.appendChild(svg);
+            }
+          };
+
+          getRange = function _getRange(drawerWidth, size) {
+            if (size >= DESKTOP) return [0, drawerWidth];
+            if (_common__WEBPACK_IMPORTED_MODULE_2__["isMobileSafari"]) return [35, 150];
+            return [0, 150];
+          };
+
+          _context.next = 5;
+          return Promise.all([].concat(_toConsumableArray('customElements' in window ? [] : [Promise.all(/*! import() | webcomponents */[__webpack_require__.e("vendors~webcomponents"), __webpack_require__.e("webcomponents")]).then(__webpack_require__.bind(null, /*! ./polyfills/webcomponents */ "./_js/src/polyfills/webcomponents.js")).then(function () {
+            return Promise.all(/*! import() | shadydom */[__webpack_require__.e("vendors~shadydom"), __webpack_require__.e("shadydom")]).then(__webpack_require__.bind(null, /*! ./polyfills/shadydom */ "./_js/src/polyfills/shadydom.js"));
+          })]), _toConsumableArray('ResizeObserver' in window ? [] : [Promise.all(/*! import() | resize-observer */[__webpack_require__.e("vendors~resize-observer"), __webpack_require__.e("resize-observer")]).then(__webpack_require__.bind(null, /*! ./polyfills/resize-observer */ "./_js/src/polyfills/resize-observer.js"))])));
+
+        case 5:
+          _context.next = 7;
+          return _common__WEBPACK_IMPORTED_MODULE_2__["webComponentsReady"];
+
+        case 7:
+          _context.next = 9;
+          return _common__WEBPACK_IMPORTED_MODULE_2__["stylesheetReady"];
+
+        case 9:
+          MOBILE = 1;
+          DESKTOP = 2;
+          LARGE_DESKTOP = 3;
+
+          subscribeWhen = function subscribeWhen(p$) {
+            return function (source) {
+              if ( true && !p$) throw Error();
+              return p$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["switchMap"])(function (p) {
+                return p ? source : rxjs__WEBPACK_IMPORTED_MODULE_0__["NEVER"];
+              }));
+            };
+          }; // Determines the range from which to draw the drawer in pixels, counted from the left edge.
+          // It depends on the browser, e.g. Safari has a native gesture when sliding form the side,
+          // so we ignore the first 35 pixels (roughly the range for the native gesture),
+          // to avoid triggering both gestures.
+
+
+          detectSize = function detectSize() {
+            return window.matchMedia(_common__WEBPACK_IMPORTED_MODULE_2__["BREAK_POINT_DYNAMIC"]).matches ? LARGE_DESKTOP : window.matchMedia(_common__WEBPACK_IMPORTED_MODULE_2__["BREAK_POINT_3"]).matches ? DESKTOP : MOBILE;
+          }; // First we get hold of some DOM elements.
+
+
+          drawerEl = document.getElementById('_drawer');
+          sidebarEl = document.getElementById('_sidebar');
+          contentEl = sidebarEl === null || sidebarEl === void 0 ? void 0 : sidebarEl.querySelector('.sidebar-sticky');
+
+          if (!(!drawerEl || !sidebarEl || !contentEl)) {
+            _context.next = 19;
+            break;
+          }
+
+          return _context.abrupt("return");
+
+        case 19:
+          (_document$getElementB2 = document.getElementById('_menu')) === null || _document$getElementB2 === void 0 ? void 0 : _document$getElementB2.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            drawerEl.toggle();
+          });
+          sidebarEl.querySelectorAll('a[href^="/"]:not(.external)').forEach(function (el) {
+            return el.addEventListener('click', function () {
+              return drawerEl.close();
+            });
+          });
+          if (_common__WEBPACK_IMPORTED_MODULE_2__["isSafari"]) drawerEl.setAttribute('threshold', '0');
+          if (!_common__WEBPACK_IMPORTED_MODULE_2__["isMobile"]) drawerEl.setAttribute('mouseevents', '');
+          _ref2 = _common__WEBPACK_IMPORTED_MODULE_2__["hasCSSOM"] ? [new CSSTransformValue([new CSSTranslate(CSS.px(0), CSS.px(0))]), CSS.number(1)] : [null, null], _ref3 = _slicedToArray(_ref2, 2), tValue = _ref3[0], oValue = _ref3[1];
+
+          updateSidebar = function updateSidebar(t, size, distance) {
+            var value = distance * t;
+            var opacity = size >= DESKTOP ? 1 : 1 - t;
+
+            if (_common__WEBPACK_IMPORTED_MODULE_2__["hasCSSOM"]) {
+              tValue[0].x.value = value;
+              oValue.value = opacity;
+              sidebarEl.attributeStyleMap.set('transform', tValue);
+              contentEl.attributeStyleMap.set('opacity', oValue);
+            } else {
+              sidebarEl.style.transform = "translateX(".concat(value, "px)");
+              contentEl.style.opacity = opacity;
+            }
+          }; // A flag for the 3 major viewport sizes we support
+
+
+          size$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["merge"])(Object(_common__WEBPACK_IMPORTED_MODULE_2__["fromMediaQuery"])(window.matchMedia(_common__WEBPACK_IMPORTED_MODULE_2__["BREAK_POINT_3"])), Object(_common__WEBPACK_IMPORTED_MODULE_2__["fromMediaQuery"])(window.matchMedia(_common__WEBPACK_IMPORTED_MODULE_2__["BREAK_POINT_DYNAMIC"]))).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["startWith"])({}), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(detectSize)); // An observable keeping track of the drawer (peek) width.
+
+          peekWidth$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(drawerEl, 'peek-width-change').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (e) {
+            return e.detail;
+          })); // An observable keeping track the viewport width
+
+          viewWidth$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(window, 'resize', {
+            passive: true
+          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["startWith"])({}), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(_common__WEBPACK_IMPORTED_MODULE_2__["getViewWidth"])); // An observable keeping track of the distance between
+          // the middle point of the screen and the middle point of the drawer.
+
+          distance$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["combineLatest"])(peekWidth$, viewWidth$).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (_ref4) {
+            var _ref5 = _slicedToArray(_ref4, 2),
+                drawerWidth = _ref5[0],
+                viewWidth = _ref5[1];
+
+            return viewWidth / 2 - drawerWidth / 2;
+          }));
+          t$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["merge"])(distance$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function () {
+            return drawerEl.opacity !== undefined ? 1 - drawerEl.opacity : opened ? 0 : 1;
+          })), Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(drawerEl, 'hy-drawer-move').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (_ref6) {
+            var opacity = _ref6.detail.opacity;
+            return 1 - opacity;
+          })));
+          drawerEl.addEventListener('hy-drawer-prepare', function () {
+            sidebarEl.style.willChange = 'transform';
+            contentEl.style.willChange = 'opacity';
+          });
+          drawerEl.addEventListener('hy-drawer-transitioned', function () {
+            sidebarEl.style.willChange = '';
+            contentEl.style.willChange = '';
+          }); // Save scroll position before the drawer gets initialized.
+
+          scrollTop = Object(_common__WEBPACK_IMPORTED_MODULE_2__["getScrollTop"])(); // Start the drawer in `opened` state when the cover class is present,
+          // and the user hasn't started scrolling already.
+
+          opened = drawerEl.classList.contains('cover') && scrollTop <= 0 && !(history.state && history.state.closedOnce);
+
+          if (!opened) {
+            if (!history.state) history.replaceState({}, document.title);
+            history.state.closedOnce = true;
+            drawerEl.removeAttribute('opened');
+          }
+
+          opened$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(drawerEl, 'hy-drawer-transitioned').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (e) {
+            return e.detail;
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["distinctUntilChanged"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["tap"])(function (opened) {
+            if (!opened) {
+              removeIcon();
+              if (!history.state) history.replaceState({}, document.title);
+              history.state.closedOnce = true;
+            }
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["startWith"])(opened)); // We need the height of the drawer in case we need to reset the scroll position
+
+          drawerHeight = opened ? null : drawerEl.getBoundingClientRect().height;
+          drawerEl.addEventListener('hy-drawer-init', function () {
+            drawerEl.classList.add('loaded');
+            setupIcon(drawerEl);
+
+            if (drawerHeight && scrollTop >= drawerHeight) {
+              window.scrollTo(0, scrollTop - drawerHeight);
+            }
+          }, {
+            once: true
+          });
+          _context.next = 40;
+          return Promise.resolve(/*! import() eager */).then(__webpack_require__.bind(null, /*! @hydecorp/drawer */ "./node_modules/@hydecorp/drawer/lib/index.js"));
+
+        case 40:
+          window._drawer = drawerEl;
+          t$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["withLatestFrom"])(size$, distance$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["tap"])(function (args) {
+            return updateSidebar.apply(void 0, _toConsumableArray(args));
+          })).subscribe(); // Keeping the drawer updated.
+
+          peekWidth$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["withLatestFrom"])(size$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (args) {
+            return getRange.apply(void 0, _toConsumableArray(args));
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["tap"])(function (range) {
+            drawerEl.range = range;
+          })).subscribe(); // Hacky way of letting the cover page close when scrolling
+
+          Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(document, 'wheel', {
+            passive: false
+          }).pipe(subscribeWhen(opened$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["filter"])(function (e) {
+            return e.deltaY > 0;
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["tap"])(function (e) {
+            if (drawerEl.translateX > 0) e.preventDefault();
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["throttleTime"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["tap"])(function () {
+            return drawerEl.close();
+          })).subscribe();
+
+        case 44:
+        case "end":
+          return _context.stop();
+      }
+    }
+  }, _callee);
+}))();
+
+/***/ })
+
+}]);
+//# sourceMappingURL=LEGACY-drawer-hydejack-9.0.4.js.map

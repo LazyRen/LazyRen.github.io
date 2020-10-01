@@ -1,31 +1,255 @@
-/*!
- *  __  __                __                                     __
- * /\ \/\ \              /\ \             __                    /\ \
- * \ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
- *  \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
- *   \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
- *    \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
- *     \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
- *                 /\___/                \ \____/
- *                 \/__/                  \/___/
- *
- * Powered by Hydejack v9.0.4 <https://hydejack.com/>
- */
-(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{190:function(t,e,i){"use strict";i.d(e,"a",(function(){return h}));var n=i(0),r=i(75),s=i(43),a=i(26),o=i(25),c=i(76),l={};function h(){for(var t=[],e=0;e<arguments.length;e++)t[e]=arguments[e];var i=void 0,n=void 0;return Object(r.a)(t[t.length-1])&&(n=t.pop()),"function"==typeof t[t.length-1]&&(i=t.pop()),1===t.length&&Object(s.a)(t[0])&&(t=t[0]),Object(c.a)(t,n).lift(new u(i))}var u=function(){function t(t){this.resultSelector=t}return t.prototype.call=function(t,e){return e.subscribe(new p(t,this.resultSelector))},t}(),p=function(t){function e(e,i){var n=t.call(this,e)||this;return n.resultSelector=i,n.active=0,n.values=[],n.observables=[],n}return Object(n.c)(e,t),e.prototype._next=function(t){this.values.push(l),this.observables.push(t)},e.prototype._complete=function(){var t=this.observables,e=t.length;if(0===e)this.destination.complete();else{this.active=e,this.toRespond=e;for(var i=0;i<e;i++){var n=t[i];this.add(Object(o.a)(this,n,n,i))}}},e.prototype.notifyComplete=function(t){0==(this.active-=1)&&this.destination.complete()},e.prototype.notifyNext=function(t,e,i,n,r){var s=this.values,a=s[i],o=this.toRespond?a===l?--this.toRespond:this.toRespond:0;s[i]=e,0===o&&(this.resultSelector?this._tryResultSelector(s):this.destination.next(s.slice()))},e.prototype._tryResultSelector=function(t){var e;try{e=this.resultSelector.apply(this,t)}catch(t){return void this.destination.error(t)}this.destination.next(e)},e}(a.a)},204:function(t,e,i){"use strict";i.r(e),i.d(e,"HyDrawer",(function(){return ot}));var n=i(178),r=i(166);
-/**
- * @license
- * Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at
- * http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at
- * http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at
- * http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at
- * http://polymer.github.io/PATENTS.txt
- */
-class s{constructor(t){this.classes=new Set,this.changed=!1,this.element=t;var e=(t.getAttribute("class")||"").split(/\s+/);for(var i of e)this.classes.add(i)}add(t){this.classes.add(t),this.changed=!0}remove(t){this.classes.delete(t),this.changed=!0}commit(){if(this.changed){var t="";this.classes.forEach(e=>t+=e+" "),this.element.setAttribute("class",t)}}}var a=new WeakMap,o=Object(r.e)(t=>e=>{if(!(e instanceof r.a)||e instanceof r.c||"class"!==e.committer.name||e.committer.parts.length>1)throw new Error("The `classMap` directive must be used in the `class` attribute and must be the only part in the attribute.");var{committer:i}=e,{element:n}=i,o=a.get(e);void 0===o&&(n.setAttribute("class",i.strings.join(" ")),a.set(e,o=new Set));var c=n.classList||new s(n);for(var l in o.forEach(e=>{e in t||(c.remove(e),o.delete(e))}),t){var h=t[l];h!=o.has(l)&&(h?(c.add(l),o.add(l)):(c.remove(l),o.delete(l)))}"function"==typeof c.commit&&c.commit()}),c=new WeakMap,l=Object(r.e)(t=>e=>{if(!(e instanceof r.a)||e instanceof r.c||"style"!==e.committer.name||e.committer.parts.length>1)throw new Error("The `styleMap` directive must be used in the style attribute and must be the only part in the attribute.");var{committer:i}=e,{style:n}=i.element,s=c.get(e);for(var a in void 0===s&&(n.cssText=i.strings.join(" "),c.set(e,s=new Set)),s.forEach(e=>{e in t||(s.delete(e),-1===e.indexOf("-")?n[e]=null:n.removeProperty(e))}),t)s.add(a),-1===a.indexOf("-")?n[a]=t[a]:n.setProperty(a,t[a])}),h=i(206),u=i(190),p=i(181),b=i(156),d=i(96),v=i(208),f=i(169),g=i(17),O=i(183),j=i(97),m=i(99),y=i(0),w=i(26),x=i(25);var S=function(){function t(t){this.notifier=t}return t.prototype.call=function(t,e){var i=new _(t),n=e.subscribe(i);return n.add(Object(x.a)(i,this.notifier)),n},t}(),_=function(t){function e(){var e=null!==t&&t.apply(this,arguments)||this;return e.hasValue=!1,e}return Object(y.c)(e,t),e.prototype._next=function(t){this.value=t,this.hasValue=!0},e.prototype.notifyNext=function(t,e,i,n,r){this.emitValue()},e.prototype.notifyComplete=function(){this.emitValue()},e.prototype.emitValue=function(){this.hasValue&&(this.hasValue=!1,this.destination.next(this.value))},e}(w.a);var E=i(185),k=i(98),C=i(180),T=i(95),V=i(191),$=i(207),M=i(2);var X=function(){function t(t){this.total=t}return t.prototype.call=function(t,e){return e.subscribe(new D(t,this.total))},t}(),D=function(t){function e(e,i){var n=t.call(this,e)||this;return n.total=i,n.count=0,n}return Object(y.c)(e,t),e.prototype._next=function(t){++this.count>this.total&&this.destination.next(t)},e}(M.a),I=i(165),z=i(39);function R(t,e,i,n){return i*Math.sin(t/n*(Math.PI/2))+e}function P(t){return("ResizeObserver"in window?Object(I.e)(t):Object(z.a)({contentRect:{width:t.clientWidth}})).pipe(Object(g.a)(t=>{var{contentRect:{width:e}}=t;return e}))}var B={fromAttribute(){return(arguments.length>0&&void 0!==arguments[0]?arguments[0]:"").replace(/[\[\]]/g,"").split(",").map(Number)},toAttribute(){return(arguments.length>0&&void 0!==arguments[0]?arguments[0]:[]).join(",")}};var W=i(184),A=i(213);var N=function(){function t(t){this.notifier=t}return t.prototype.call=function(t,e){return e.subscribe(new Y(t,this.notifier,e))},t}(),Y=function(t){function e(e,i,n){var r=t.call(this,e)||this;return r.notifier=i,r.source=n,r.notifications=null,r.retries=null,r.retriesSubscription=null,r.sourceIsBeingSubscribedTo=!0,r}return Object(y.c)(e,t),e.prototype.notifyNext=function(t,e,i,n,r){this.sourceIsBeingSubscribedTo=!0,this.source.subscribe(this)},e.prototype.notifyComplete=function(e){if(!1===this.sourceIsBeingSubscribedTo)return t.prototype.complete.call(this)},e.prototype.complete=function(){if(this.sourceIsBeingSubscribedTo=!1,!this.isStopped){if(this.retries||this.subscribeToRetries(),!this.retriesSubscription||this.retriesSubscription.closed)return t.prototype.complete.call(this);this._unsubscribeAndRecycle(),this.notifications.next()}},e.prototype._unsubscribe=function(){var t=this.notifications,e=this.retriesSubscription;t&&(t.unsubscribe(),this.notifications=null),e&&(e.unsubscribe(),this.retriesSubscription=null),this.retries=null},e.prototype._unsubscribeAndRecycle=function(){var e=this._unsubscribe;return this._unsubscribe=null,t.prototype._unsubscribeAndRecycle.call(this),this._unsubscribe=e,this},e.prototype.subscribeToRetries=function(){var e;this.notifications=new f.a;try{e=(0,this.notifier)(this.notifications)}catch(e){return t.prototype.complete.call(this)}this.retries=e,this.retriesSubscription=Object(x.a)(this,e)},e}(w.a);var F=function(){function t(t){this.predicate=t}return t.prototype.call=function(t,e){return e.subscribe(new J(t,this.predicate))},t}(),J=function(t){function e(e,i){var n=t.call(this,e)||this;return n.predicate=i,n.skipping=!0,n.index=0,n}return Object(y.c)(e,t),e.prototype._next=function(t){var e=this.destination;this.skipping&&this.tryCallPredicate(t),this.skipping||e.next(t)},e.prototype.tryCallPredicate=function(t){try{var e=this.predicate(t,this.index++);this.skipping=Boolean(e)}catch(t){this.destination.error(t)}},e}(M.a),U=Math.abs.bind(Math);class H{getStartObservable(){return Object(u.a)(this.$.mouseEvents).pipe(Object(T.a)(t=>{var[e]=t,i=Object(b.a)(document,"touchstart",{passive:!0}).pipe(Object(k.a)(t=>{var{touches:e}=t;return 1===e.length}),Object(g.a)(t=>{var{touches:e}=t;return e[0]})),n=e?Object(b.a)(document,"mousedown").pipe(Object(g.a)(t=>(t.event=t,t))):d.a;return Object(p.a)(i,n)}))}getMoveObservable(t,e){return Object(u.a)(this.$.mouseEvents,this.$.preventDefault).pipe(Object(T.a)(i=>{var[n,r]=i,s=Object(b.a)(document,"touchmove",{passive:!r}).pipe(Object(g.a)(t=>(t.touches[0].event=t,t.touches[0]))),a=n?Object(b.a)(document,"mousemove",{passive:!r}).pipe(Object(I.l)(Object(p.a)(t.pipe(Object(W.a)(!0)),e.pipe(Object(W.a)(!1)))),Object(g.a)(t=>(t.event=t,t))):d.a;return Object(p.a)(s,a)}))}getEndObservable(){return Object(u.a)(this.$.mouseEvents).pipe(Object(T.a)(t=>{var[e]=t,i=Object(b.a)(document,"touchend",{passive:!0}).pipe(Object(k.a)(t=>{var{touches:e}=t;return 0===e.length}),Object(g.a)(t=>t.changedTouches[0])),n=e?Object(b.a)(document,"mouseup",{passive:!0}):d.a;return Object(p.a)(i,n)}))}getIsSlidingObservable(t,e,i){return this.getIsSlidingObservableInner(t,e).pipe(Object(A.a)(1),Object(C.a)(void 0),(n=()=>i,function(t){return t.lift(new N(n))}));var n}getIsSlidingObservableInner(t,e){return this.threshold?t.pipe(Object(j.a)(e),(i=t=>{var[{clientX:e,clientY:i},{clientX:n,clientY:r}]=t;return U(r-i)<this.threshold&&U(n-e)<this.threshold},function(t){return t.lift(new F(i))}),Object(g.a)(t=>{var[{clientX:e,clientY:i},{clientX:n,clientY:r}]=t;return U(n-e)>=U(r-i)})):t.pipe(Object(j.a)(e),Object(g.a)(t=>{var[{clientX:e,clientY:i,event:n},{clientX:r,clientY:s}]=t,a=U(r-e)>=U(s-i);return this.noScroll&&a&&n.preventDefault(),a}));var i}}var L=Math.min.bind(Math),q=Math.max.bind(Math);class G{calcIsInRange(t,e){var{clientX:i}=t;switch(this.side){case"left":var[n,r]=this.range;return i>n&&(e||i<r);case"right":var s=window.innerWidth-this.range[0],a=window.innerWidth-this.range[1];return i<s&&(e||i>a);default:throw Error()}}calcIsSwipe(t,e,i,n,r){var{clientX:s}=t,{clientX:a}=e;return a!==s||i>0&&i<n}calcWillOpen(t,e,i,n,r){switch(this.side){case"left":return r>.15||!(r<-.15)&&i>=n/2;case"right":return-r>.15||!(-r<-.15)&&i<=-n/2;default:throw Error()}}calcTranslateX(t,e,i,n){var{clientX:r}=t,{clientX:s}=e;switch(this.side){case"left":return q(0,L(n,i+(r-s)));case"right":return L(0,q(-n,i+(r-s)));default:throw Error()}}}class K{updateDOM(t,e){var i=t/e*("left"===this.side?1:-1)||0;this.translateX=t,this.opacity=i,this.updater.updateDOM(t,i)}}class Q{constructor(t){this.parent=t}static getUpdaterForPlatform(t){return"attributeStyleMap"in Element.prototype&&"CSS"in window&&"number"in CSS?new tt(t):new Z(t)}get contentEl(){return this.parent.contentEl}get scrimEl(){return this.parent.scrimEl}}class Z extends Q{constructor(t){super(t)}updateDOM(t,e){this.contentEl.style.transform="translate(".concat(t,"px, 0px)"),this.scrimEl.style.opacity="".concat(e)}}class tt extends Q{constructor(t){super(t),this.tvalue=new CSSTransformValue([new CSSTranslate(CSS.px(0),CSS.px(0))]),this.ovalue=CSS.number(1)}updateDOM(t,e){this.tvalue[0].x.value=t,this.ovalue.value=e,this.contentEl.attributeStyleMap.set("transform",this.tvalue),this.scrimEl.attributeStyleMap.set("opacity",this.ovalue)}}function et(){var t=function(t,e){e||(e=t.slice(0));return Object.freeze(Object.defineProperties(t,{raw:{value:Object.freeze(e)}}))}(["\n  @media screen {\n    :host {\n      touch-action: pan-x;\n    }\n\n    .full-screen {\n      position: fixed;\n      top: 0;\n      left: 0;\n      height: 100vh;\n      width: 100vw;\n    }\n\n    .full-height {\n      position: fixed;\n      top: 0;\n      height: 100vh;\n    }\n\n    .peek {\n      left: 0;\n      width: var(--hy-drawer-peek-width, 0px);\n      visibility: hidden;\n      z-index: calc(var(--hy-drawer-z-index, 100) - 1);\n    }\n\n    .scrim {\n      position: fixed;\n      top: 0;\n      left: 0;\n      height: 10vh;\n      width: 10vw;\n      transform: scale(10);\n      transform-origin: top left;\n      opacity: 0;\n      pointer-events: none;\n      background: var(--hy-drawer-scrim-background, rgba(0, 0, 0, 0.5));\n      z-index: var(--hy-drawer-z-index, 100);\n      -webkit-tap-highlight-color: transparent;\n    }\n\n    .range {\n      position: fixed;\n      top: 0;\n      height: 100vh;\n      z-index: calc(var(--hy-drawer-z-index, 100) + 1);\n    }\n\n    .grabbing-screen {\n      cursor: grabbing;\n      z-index: calc(var(--hy-drawer-z-index, 100) + 2);\n    }\n\n    .wrapper {\n      width: var(--hy-drawer-width, 300px);\n      background: var(--hy-drawer-background, inherit);\n      box-shadow: var(--hy-drawer-box-shadow, 0 0 15px rgba(0, 0, 0, 0.25));\n      z-index: calc(var(--hy-drawer-z-index, 100) + 3);\n      contain: strict;\n    }\n\n    .wrapper.left {\n      left:  calc(-1 * var(--hy-drawer-width, 300px) + var(--hy-drawer-peek-width, 0px));\n    }\n\n    .wrapper.right {\n      right:  calc(-1 * var(--hy-drawer-width, 300px) + var(--hy-drawer-peek-width, 0px));\n    }\n\n    .wrapper > .overflow {\n      position: absolute;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      left: 0;\n      overflow-x: hidden;\n      overflow-y: auto;\n      overscroll-behavior: contain;\n      -webkit-overflow-scrolling: touch;\n    }\n\n    .grab {\n      cursor: move;\n      cursor: grab;\n    }\n\n    .grabbing {\n      cursor: grabbing;\n    }\n  }\n\n  @media print {\n    .scrim {\n      display: none !important;\n    }\n\n    .wrapper {\n      transform: none !important;\n    }\n  }\n"]);return et=function(){return t},t}var it=Object(n.b)(et());function nt(){var t=st(['<div class="grabbing-screen full-screen"></div>']);return nt=function(){return t},t}function rt(){var t=st(['\n      <div class="peek full-height"></div>\n      <div\n        class="scrim"\n        style=',">\n      </div>\n      ","\n      <div\n        class=","\n        style=",'\n      >\n        <div class="overflow">\n          <slot></slot>\n        </div>\n      </div>\n    ']);return rt=function(){return t},t}function st(t,e){return e||(e=t.slice(0)),Object.freeze(Object.defineProperties(t,{raw:{value:Object.freeze(e)}}))}var at=function(t,e,i,n){var r,s=arguments.length,a=s<3?e:null===n?n=Object.getOwnPropertyDescriptor(e,i):n;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)a=Reflect.decorate(t,e,i,n);else for(var o=t.length-1;o>=0;o--)(r=t[o])&&(a=(s<3?r(a):s>3?r(e,i,a):r(e,i))||a);return s>3&&a&&Object.defineProperty(e,i,a),a},ot=class extends(Object(I.b)(I.a,[H,K,G])){constructor(){super(...arguments),this.el=this,this.opened=!1,this.side="left",this.persistent=!1,this.threshold=10,this.noScroll=!1,this.mouseEvents=!1,this.range=[0,100],this.willChange=!1,this._initialized=Object(I.f)(),this.$={},this.upgrade=()=>{var t,e=this.getDrawerWidth(),i=this.$.persistent.pipe(Object(g.a)(t=>!t)),n=this.getStartObservable().pipe(Object(I.h)(i),Object(O.a)()),r={},s=Object(h.a)(()=>r.translateX$.pipe(Object(g.a)(t=>0!==t))),a=n.pipe(Object(j.a)(s),Object(g.a)(t=>this.calcIsInRange(...t)),Object(m.a)(t=>{t&&(this.willChange=!0,this.fireEvent("prepare"))}),Object(O.a)()),o=this.getEndObservable().pipe(Object(I.h)(i,a),Object(m.a)(()=>{this.mouseEvents&&(this.grabbing=!1)}),Object(O.a)()),c=this.getMoveObservable(n,o).pipe(Object(I.h)(i,a),Object(O.a)()),l=this.getIsSlidingObservable(c,n,o).pipe(Object(m.a)(t=>{this.isSliding=t,t&&this.mouseEvents&&(this.grabbing=!0)})),v=r.translateX$=Object(h.a)(()=>{var t=Object(u.a)(this.$.opened,this.$.side,e).pipe(Object(g.a)(t=>{var[e,i,n]=t;return e?n*("left"===i?1:-1):0})),i=c.pipe(Object(I.h)(l),Object(m.a)(()=>this.scrimClickable=!1),Object(m.a)(t=>{var{event:e}=t;return this.noScroll&&e.preventDefault()}),Object(j.a)(n,r.startTranslateX$,e),Object(g.a)(t=>this.calcTranslateX(...t)));return Object(p.a)(r.tweenTranslateX$,t,i)}).pipe(Object(O.a)());r.startTranslateX$=v.pipe((t=n,function(e){return e.lift(new S(t))}));var f,y=v.pipe((void 0===f&&(f=Date),Object(g.a)((function(t){return{value:t,timestamp:f.now()}}))),Object(E.a)(),Object(k.a)(t=>{var[{timestamp:e},{timestamp:i}]=t;return i-e>0}),Object(g.a)(t=>{var[{value:e,timestamp:i},{value:n,timestamp:r}]=t;return(n-e)/(r-i)}),Object(C.a)(0)),w=o.pipe(Object(j.a)(n,v,e,y),Object(k.a)(t=>this.calcIsSwipe(...t)),Object(g.a)(t=>this.calcWillOpen(...t))),x=this.animateTo$.pipe(Object(m.a)(()=>{this.willChange=!0,this.fireEvent("prepare")}));r.tweenTranslateX$=Object(p.a)(w,x).pipe(Object(j.a)(v,e),Object(T.a)(t=>{var e,[i,r,s]=t,a="left"===this.side?1:-1,o=(i?s*a:0)-r,c=Math.ceil(200+.15*s);return Object(I.m)(R,r,o,c).pipe(Object(V.a)(()=>{this.transitioned(i)}),Object($.a)(n),Object($.a)(this.$.side.pipe((e=1,function(t){return t.lift(new X(e))}))),Object(O.a)())})),v.pipe(Object(j.a)(e),Object(m.a)(t=>{this.updateDOM(...t);var{translateX:e,opacity:i}=this;this.fireEvent("move",{detail:{translateX:e,opacity:i},bubbles:!1})})).subscribe(),Object(b.a)(this.scrimEl,"click").pipe(Object(m.a)(()=>this.close())).subscribe(),i.pipe(Object(m.a)(t=>{this.scrimEl.style.display=t?"block":"none"})).subscribe(),this.$.mouseEvents.pipe(Object(T.a)(t=>t?n.pipe(Object(j.a)(a)):d.a),Object(k.a)(t=>{var[e,i]=t;return i&&null!=e.event}),Object(m.a)(t=>{var[{event:e}]=t;return e.preventDefault()})).subscribe(),this.fireEvent("init",{detail:this.opened}),this._initialized.resolve(this)},this.transitioned=t=>{this.opened=this.scrimClickable=t,this.willChange=!1,this.fireEvent("transitioned",{detail:t})}}get initialized(){return this._initialized}get histId(){return this.id||this.tagName}get hashId(){return"#".concat(this.histId,"--opened")}getDrawerWidth(){var t=P(this.contentEl).pipe(Object(m.a)(t=>this.fireEvent("content-width-change",{detail:t}))),e=P(this.peekEl).pipe(Object(m.a)(t=>this.fireEvent("peek-width-change",{detail:t})));return Object(u.a)(t,e).pipe(Object(g.a)(t=>{var[e,i]=t;return e-i}),Object(O.a)())}connectedCallback(){super.connectedCallback(),this.$.opened=new v.a(this.opened),this.$.side=new v.a(this.side),this.$.persistent=new v.a(this.persistent),this.$.preventDefault=new v.a(this.noScroll),this.$.mouseEvents=new v.a(this.mouseEvents),this.scrimClickable=this.opened,this.animateTo$=new f.a,this.updater=Q.getUpdaterForPlatform(this),this.updateComplete.then(this.upgrade)}render(){return Object(n.d)(rt(),l({willChange:this.willChange?"opacity":"",pointerEvents:this.scrimClickable?"all":""}),this.mouseEvents&&this.grabbing&&!this.scrimClickable?Object(n.d)(nt()):null,o({wrapper:!0,"full-height":!0,[this.side]:!0,grab:this.mouseEvents,grabbing:this.mouseEvents&&this.grabbing}),l({willChange:this.willChange?"transform":""}))}open(){this.animateTo$.next(!0)}close(){this.animateTo$.next(!1)}toggle(){this.animateTo$.next(!this.opened)}};
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendors~drawer"],{
+
+/***/ "./node_modules/@hydecorp/drawer/lib/calc.js":
+/*!***************************************************!*\
+  !*** ./node_modules/@hydecorp/drawer/lib/calc.js ***!
+  \***************************************************/
+/*! exports provided: CalcMixin */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CalcMixin", function() { return CalcMixin; });
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ "./node_modules/@hydecorp/drawer/lib/constants.js");
+ // Using shorthands for common functions
+
+var min = Math.min.bind(Math);
+var max = Math.max.bind(Math);
+class CalcMixin {
+  calcIsInRange(_ref, opened) {
+    var {
+      clientX
+    } = _ref;
+
+    // console.log(this.range, this.align);
+    switch (this.side) {
+      case "left":
+        {
+          var [lower, upper] = this.range;
+          return clientX > lower && (opened || clientX < upper);
+        }
+
+      case "right":
+        {
+          var _upper = window.innerWidth - this.range[0];
+
+          var _lower = window.innerWidth - this.range[1];
+
+          return clientX < _upper && (opened || clientX > _lower);
+        }
+
+      default:
+        throw Error();
+    }
+  }
+
+  calcIsSwipe(_ref2, _ref3, translateX, drawerWidth, _) {
+    var {
+      clientX: startX
+    } = _ref2;
+    var {
+      clientX: endX
+    } = _ref3;
+    return endX !== startX || translateX > 0 && translateX < drawerWidth;
+  }
+
+  calcWillOpen(_, __, translateX, drawerWidth, velocity) {
+    switch (this.side) {
+      case "left":
+        {
+          if (velocity > _constants__WEBPACK_IMPORTED_MODULE_0__["VELOCITY_THRESHOLD"]) return true;else if (velocity < -_constants__WEBPACK_IMPORTED_MODULE_0__["VELOCITY_THRESHOLD"]) return false;else if (translateX >= drawerWidth / 2) return true;else return false;
+        }
+
+      case "right":
+        {
+          if (-velocity > _constants__WEBPACK_IMPORTED_MODULE_0__["VELOCITY_THRESHOLD"]) return true;else if (-velocity < -_constants__WEBPACK_IMPORTED_MODULE_0__["VELOCITY_THRESHOLD"]) return false;else if (translateX <= -drawerWidth / 2) return true;else return false;
+        }
+
+      default:
+        throw Error();
+    }
+  }
+
+  calcTranslateX(_ref4, _ref5, startTranslateX, drawerWidth) {
+    var {
+      clientX: moveX
+    } = _ref4;
+    var {
+      clientX: startX
+    } = _ref5;
+
+    switch (this.side) {
+      case "left":
+        {
+          var deltaX = moveX - startX;
+          var translateX = startTranslateX + deltaX;
+          return max(0, min(drawerWidth, translateX));
+        }
+
+      case "right":
+        {
+          var _deltaX = moveX - startX;
+
+          var _translateX = startTranslateX + _deltaX;
+
+          return min(0, max(-drawerWidth, _translateX));
+        }
+
+      default:
+        throw Error();
+    }
+  }
+
+}
+;
+
+/***/ }),
+
+/***/ "./node_modules/@hydecorp/drawer/lib/common.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/@hydecorp/drawer/lib/common.js ***!
+  \*****************************************************/
+/*! exports provided: applyMixins, subscribeWhen, filterWhen, tween, easeOutSine, observeWidth, rangeConverter, rangeHasChanged */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "easeOutSine", function() { return easeOutSine; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "observeWidth", function() { return observeWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rangeConverter", function() { return rangeConverter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rangeHasChanged", function() { return rangeHasChanged; });
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/dist/esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/dist/esm5/operators/index.js");
+/* harmony import */ var _hydecorp_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @hydecorp/component */ "./node_modules/@hydecorp/component/lib/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "applyMixins", function() { return _hydecorp_component__WEBPACK_IMPORTED_MODULE_2__["applyMixins"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "subscribeWhen", function() { return _hydecorp_component__WEBPACK_IMPORTED_MODULE_2__["subscribeWhen"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "filterWhen", function() { return _hydecorp_component__WEBPACK_IMPORTED_MODULE_2__["filterWhen"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "tween", function() { return _hydecorp_component__WEBPACK_IMPORTED_MODULE_2__["tween"]; });
+
+
+
+
+
+function easeOutSine(t, b, c, d) {
+  return c * Math.sin(t / d * (Math.PI / 2)) + b;
+}
+function observeWidth(el) {
+  // This component should have at least basic support without `ResizeObserver` support,
+  // so we pass a one-time measurement when it's missing. Obviously this won't update, so BYO polyfill.
+  var resize$ = "ResizeObserver" in window ? Object(_hydecorp_component__WEBPACK_IMPORTED_MODULE_2__["createResizeObservable"])(el) : Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["of"])({
+    contentRect: {
+      width: el.clientWidth
+    }
+  });
+  return resize$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])((_ref) => {
+    var {
+      contentRect: {
+        width
+      }
+    } = _ref;
+    return width;
+  }));
+}
+var rangeConverter = {
+  fromAttribute() {
+    var attr = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    return attr.replace(/[\[\]]/g, '').split(",").map(Number);
+  },
+
+  toAttribute() {
+    var range = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+    return range.join(',');
+  }
+
+};
+function rangeHasChanged(curr) {
+  var prev = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+  return curr.length !== prev.length || curr.some((v, i) => v !== prev[i]);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@hydecorp/drawer/lib/constants.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@hydecorp/drawer/lib/constants.js ***!
+  \********************************************************/
+/*! exports provided: BASE_DURATION, WIDTH_CONTRIBUTION, VELOCITY_THRESHOLD */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BASE_DURATION", function() { return BASE_DURATION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WIDTH_CONTRIBUTION", function() { return WIDTH_CONTRIBUTION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VELOCITY_THRESHOLD", function() { return VELOCITY_THRESHOLD; });
+// The base duration of the fling animation.
+var BASE_DURATION = 200; // We adjust the duration of the animation using the width of the drawer.
+// There is no physics to this, but we know from testing that the animation starts to feel bad
+// when the drawer increases in size.
+// From testing we know that, if we increase the duration as a fraction of the drawer width,
+// the animation stays smooth across common display sizes.
+
+var WIDTH_CONTRIBUTION = 0.15; // Minimum velocity of the drawer (in px/ms) when releasing to make it fling to opened/closed state.
+
+var VELOCITY_THRESHOLD = 0.15;
+
+/***/ }),
+
+/***/ "./node_modules/@hydecorp/drawer/lib/index.js":
+/*!****************************************************!*\
+  !*** ./node_modules/@hydecorp/drawer/lib/index.js ***!
+  \****************************************************/
+/*! exports provided: HyDrawer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HyDrawer", function() { return HyDrawer; });
+/* harmony import */ var lit_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lit-element */ "./node_modules/lit-element/lit-element.js");
+/* harmony import */ var lit_html_directives_class_map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lit-html/directives/class-map */ "./node_modules/lit-html/directives/class-map.js");
+/* harmony import */ var lit_html_directives_style_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lit-html/directives/style-map */ "./node_modules/lit-html/directives/style-map.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/dist/esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/dist/esm5/operators/index.js");
+/* harmony import */ var _hydecorp_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @hydecorp/component */ "./node_modules/@hydecorp/component/lib/index.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./constants */ "./node_modules/@hydecorp/drawer/lib/constants.js");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./common */ "./node_modules/@hydecorp/drawer/lib/common.js");
+/* harmony import */ var _observables__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./observables */ "./node_modules/@hydecorp/drawer/lib/observables.js");
+/* harmony import */ var _calc__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./calc */ "./node_modules/@hydecorp/drawer/lib/calc.js");
+/* harmony import */ var _update__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./update */ "./node_modules/@hydecorp/drawer/lib/update.js");
+/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./styles */ "./node_modules/@hydecorp/drawer/lib/styles.js");
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["<div class=\"grabbing-screen full-screen\"></div>"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n      <div class=\"peek full-height\"></div>\n      <div\n        class=\"scrim\"\n        style=", ">\n      </div>\n      ", "\n      <div\n        class=", "\n        style=", "\n      >\n        <div class=\"overflow\">\n          <slot></slot>\n        </div>\n      </div>\n    "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+  var c = arguments.length,
+      r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+      d;
+  if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  }
+  return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 /**
  * Copyright (c) 2020 Florian Klampfer <https://qwtel.com/>
  *
@@ -44,4 +268,783 @@ class s{constructor(t){this.classes=new Set,this.changed=!1,this.element=t;var e
  *
  * @license
  * @nocompile
- */ot.styles=it,at([Object(n.f)(".scrim")],ot.prototype,"scrimEl",void 0),at([Object(n.f)(".wrapper")],ot.prototype,"contentEl",void 0),at([Object(n.f)(".peek")],ot.prototype,"peekEl",void 0),at([Object(n.e)({type:Boolean,reflect:!0})],ot.prototype,"opened",void 0),at([Object(n.e)({type:String,reflect:!0})],ot.prototype,"side",void 0),at([Object(n.e)({type:Boolean,reflect:!0})],ot.prototype,"persistent",void 0),at([Object(n.e)({type:Number,reflect:!0})],ot.prototype,"threshold",void 0),at([Object(n.e)({type:Boolean,reflect:!0})],ot.prototype,"noScroll",void 0),at([Object(n.e)({type:Boolean,reflect:!0})],ot.prototype,"mouseEvents",void 0),at([Object(n.e)({reflect:!0,converter:B,hasChanged:function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[];return t.length!==e.length||t.some((t,i)=>t!==e[i])}})],ot.prototype,"range",void 0),at([Object(n.e)()],ot.prototype,"scrimClickable",void 0),at([Object(n.e)()],ot.prototype,"grabbing",void 0),at([Object(n.e)()],ot.prototype,"willChange",void 0),at([Object(n.e)()],ot.prototype,"open",null),at([Object(n.e)()],ot.prototype,"close",null),at([Object(n.e)()],ot.prototype,"toggle",null),ot=at([Object(n.c)("hy-drawer")],ot)},214:function(t,e,i){"use strict";i.d(e,"a",(function(){return h}));var n=i(0),r=i(2),s=i(80),a=i(26),o=i(25),c={leading:!0,trailing:!1};!function(){function t(t,e,i){this.durationSelector=t,this.leading=e,this.trailing=i}t.prototype.call=function(t,e){return e.subscribe(new l(t,this.durationSelector,this.leading,this.trailing))}}();var l=function(t){function e(e,i,n,r){var s=t.call(this,e)||this;return s.destination=e,s.durationSelector=i,s._leading=n,s._trailing=r,s._sendValue=null,s._hasValue=!1,s}return Object(n.c)(e,t),e.prototype._next=function(t){this._hasValue=!0,this._sendValue=t,this._throttled||(this._leading?this.send():this.throttle(t))},e.prototype.send=function(){var t=this._hasValue,e=this._sendValue;t&&(this.destination.next(e),this.throttle(e)),this._hasValue=!1,this._sendValue=null},e.prototype.throttle=function(t){var e=this.tryDurationSelector(t);e&&this.add(this._throttled=Object(o.a)(this,e))},e.prototype.tryDurationSelector=function(t){try{return this.durationSelector(t)}catch(t){return this.destination.error(t),null}},e.prototype.throttlingDone=function(){var t=this._throttled,e=this._trailing;t&&t.unsubscribe(),this._throttled=null,e&&this.send()},e.prototype.notifyNext=function(t,e,i,n,r){this.throttlingDone()},e.prototype.notifyComplete=function(){this.throttlingDone()},e}(a.a);function h(t,e,i){return void 0===e&&(e=s.a),void 0===i&&(i=c),function(n){return n.lift(new u(t,e,!!i.leading,!!i.trailing))}}var u=function(){function t(t,e,i,n){this.duration=t,this.scheduler=e,this.leading=i,this.trailing=n}return t.prototype.call=function(t,e){return e.subscribe(new p(t,this.duration,this.scheduler,this.leading,this.trailing))},t}(),p=function(t){function e(e,i,n,r,s){var a=t.call(this,e)||this;return a.duration=i,a.scheduler=n,a.leading=r,a.trailing=s,a.throttled=null,a._hasTrailingValue=!1,a._trailingValue=null,a}return Object(n.c)(e,t),e.prototype._next=function(t){this.throttled?this.trailing&&(this._trailingValue=t,this._hasTrailingValue=!0):(this.add(this.throttled=this.scheduler.schedule(b,this.duration,{subscriber:this})),this.leading?this.destination.next(t):this.trailing&&(this._trailingValue=t,this._hasTrailingValue=!0))},e.prototype._complete=function(){this._hasTrailingValue?(this.destination.next(this._trailingValue),this.destination.complete()):this.destination.complete()},e.prototype.clearThrottle=function(){var t=this.throttled;t&&(this.trailing&&this._hasTrailingValue&&(this.destination.next(this._trailingValue),this._trailingValue=null,this._hasTrailingValue=!1),t.unsubscribe(),this.remove(t),this.throttled=null)},e}(r.a);function b(t){t.subscriber.clearThrottle()}}}]);
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var HyDrawer = class HyDrawer extends Object(_common__WEBPACK_IMPORTED_MODULE_7__["applyMixins"])(_hydecorp_component__WEBPACK_IMPORTED_MODULE_5__["RxLitElement"], [_observables__WEBPACK_IMPORTED_MODULE_8__["ObservablesMixin"], _update__WEBPACK_IMPORTED_MODULE_10__["UpdateMixin"], _calc__WEBPACK_IMPORTED_MODULE_9__["CalcMixin"]]) {
+  constructor() {
+    super(...arguments);
+    this.el = this;
+    this.opened = false;
+    this.side = "left";
+    this.persistent = false;
+    this.threshold = 10;
+    this.noScroll = false;
+    this.mouseEvents = false; // @property({ type: Boolean, reflect: true }) hashChange: boolean = false;
+
+    this.range = [0, 100];
+    this.willChange = false;
+    this._initialized = Object(_hydecorp_component__WEBPACK_IMPORTED_MODULE_5__["createResolvablePromise"])();
+    this.$ = {};
+
+    this.upgrade = () => {
+      var drawerWidth$ = this.getDrawerWidth();
+      var active$ = this.$.persistent.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(_ => !_));
+      var start$ = this.getStartObservable().pipe( // takeUntil(this.subjects.disconnect),
+      Object(_common__WEBPACK_IMPORTED_MODULE_7__["filterWhen"])(active$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["share"])());
+      var deferred = {};
+      var isScrimVisible$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["defer"])(() => {
+        return deferred.translateX$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(translateX => translateX !== 0));
+      });
+      var isInRange$ = start$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["withLatestFrom"])(isScrimVisible$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(args => this.calcIsInRange(...args)), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(inRange => {
+        if (inRange) {
+          this.willChange = true;
+          this.fireEvent('prepare');
+        }
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["share"])());
+      var end$ = this.getEndObservable().pipe( // takeUntil(this.subjects.disconnect),
+      Object(_common__WEBPACK_IMPORTED_MODULE_7__["filterWhen"])(active$, isInRange$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(() => {
+        if (this.mouseEvents) this.grabbing = false;
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["share"])());
+      var move$ = this.getMoveObservable(start$, end$).pipe( // takeUntil(this.subjects.disconnect),
+      Object(_common__WEBPACK_IMPORTED_MODULE_7__["filterWhen"])(active$, isInRange$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["share"])());
+      var isSliding$ = this.getIsSlidingObservable(move$, start$, end$).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(isSliding => {
+        this.isSliding = isSliding;
+        if (isSliding && this.mouseEvents) this.grabbing = true; // if (isSliding) this.fireEvent('slidestart', { detail: this.opened });
+      }));
+      var translateX$ = deferred.translateX$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["defer"])(() => {
+        var jumpTranslateX$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["combineLatest"])(this.$.opened, this.$.side, drawerWidth$).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])((_ref) => {
+          var [opened, side, drawerWidth] = _ref;
+          return !opened ? 0 : drawerWidth * (side === "left" ? 1 : -1);
+        }));
+        var moveTranslateX$ = move$.pipe(Object(_common__WEBPACK_IMPORTED_MODULE_7__["filterWhen"])(isSliding$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(() => this.scrimClickable = false), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])((_ref2) => {
+          var {
+            event
+          } = _ref2;
+          return this.noScroll && event.preventDefault();
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["withLatestFrom"])(start$, deferred.startTranslateX$, drawerWidth$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(args => this.calcTranslateX(...args)));
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["merge"])(deferred.tweenTranslateX$, jumpTranslateX$, moveTranslateX$);
+      }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["share"])());
+      deferred.startTranslateX$ = translateX$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["sample"])(start$));
+      var velocity$ = translateX$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["timestamp"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["pairwise"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["filter"])((_ref3) => {
+        var [{
+          timestamp: prevTime
+        }, {
+          timestamp: time
+        }] = _ref3;
+        return time - prevTime > 0;
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])((_ref4) => {
+        var [{
+          value: prevX,
+          timestamp: prevTime
+        }, {
+          value: x,
+          timestamp: time
+        }] = _ref4;
+        return (x - prevX) / (time - prevTime);
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["startWith"])(0));
+      var willOpen$ = end$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["withLatestFrom"])(start$, translateX$, drawerWidth$, velocity$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["filter"])(args => this.calcIsSwipe(...args)), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(args => this.calcWillOpen(...args)));
+      var animateTo$ = this.animateTo$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(() => {
+        this.willChange = true;
+        this.fireEvent('prepare');
+      }));
+      deferred.tweenTranslateX$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["merge"])(willOpen$, animateTo$).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["withLatestFrom"])(translateX$, drawerWidth$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["switchMap"])((_ref5) => {
+        var [willOpen, translateX, drawerWidth] = _ref5;
+        var inv = this.side === "left" ? 1 : -1;
+        var endTranslateX = willOpen ? drawerWidth * inv : 0;
+        var diffTranslateX = endTranslateX - translateX;
+        var duration = Math.ceil(_constants__WEBPACK_IMPORTED_MODULE_6__["BASE_DURATION"] + drawerWidth * _constants__WEBPACK_IMPORTED_MODULE_6__["WIDTH_CONTRIBUTION"]);
+        return Object(_common__WEBPACK_IMPORTED_MODULE_7__["tween"])(_common__WEBPACK_IMPORTED_MODULE_7__["easeOutSine"], translateX, diffTranslateX, duration).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["finalize"])(() => {
+          this.transitioned(willOpen);
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["takeUntil"])(start$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["takeUntil"])(this.$.side.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["skip"])(1))), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["share"])());
+      }));
+      translateX$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["withLatestFrom"])(drawerWidth$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(args => {
+        this.updateDOM(...args);
+        var {
+          translateX,
+          opacity
+        } = this;
+        this.fireEvent('move', {
+          detail: {
+            translateX,
+            opacity
+          },
+          bubbles: false
+        });
+      })).subscribe();
+      Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["fromEvent"])(this.scrimEl, "click").pipe( // takeUntil(this.subjects.disconnect),
+      Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(() => this.close())).subscribe();
+      active$.pipe( // takeUntil(this.subjects.disconnect),
+      Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(active => {
+        this.scrimEl.style.display = active ? "block" : "none";
+      })).subscribe();
+      this.$.mouseEvents.pipe( // takeUntil(this.subjects.disconnect),
+      Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["switchMap"])(mouseEvents => {
+        return mouseEvents ? start$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["withLatestFrom"])(isInRange$)) : rxjs__WEBPACK_IMPORTED_MODULE_3__["NEVER"];
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["filter"])((_ref6) => {
+        var [coord, isInRange] = _ref6;
+        return isInRange && coord.event != null;
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])((_ref7) => {
+        var [{
+          event
+        }] = _ref7;
+        return event.preventDefault();
+      })).subscribe(); // fromEvent(window, 'hashchange').pipe(
+      //   // takeUntil(this.subjects.disconnect),
+      //   subscribeWhen(this.$.hashChange),
+      //   tap(() => {
+      //     const opened = location.hash === this.hashId;
+      //     if (!history.state && opened) {
+      //       history.replaceState({ [this.histId]: { backable: true } }, document.title)
+      //     }
+      //     // If the state doesn't match open/close the drawer
+      //     if (opened !== this.opened) this.animateTo$.next(opened);
+      //   }),
+      // ).subscribe();
+
+      this.fireEvent("init", {
+        detail: this.opened
+      });
+
+      this._initialized.resolve(this);
+    };
+
+    this.transitioned = hasOpened => {
+      this.opened = this.scrimClickable = hasOpened;
+      this.willChange = false; // if (this.hashChange) this.transitionedHash(hasOpened)
+
+      this.fireEvent('transitioned', {
+        detail: hasOpened
+      });
+    };
+  }
+
+  get initialized() {
+    return this._initialized;
+  }
+
+  get histId() {
+    return this.id || this.tagName;
+  }
+
+  get hashId() {
+    return "#".concat(this.histId, "--opened");
+  } // HyDrawer
+
+
+  getDrawerWidth() {
+    var content$ = Object(_common__WEBPACK_IMPORTED_MODULE_7__["observeWidth"])(this.contentEl).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(px => this.fireEvent('content-width-change', {
+      detail: px
+    })));
+    var peek$ = Object(_common__WEBPACK_IMPORTED_MODULE_7__["observeWidth"])(this.peekEl).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(px => this.fireEvent('peek-width-change', {
+      detail: px
+    })));
+    return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["combineLatest"])(content$, peek$).pipe( // takeUntil(this.subjects.disconnect),
+    Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])((_ref8) => {
+      var [contentWidth, peekWidth] = _ref8;
+      return contentWidth - peekWidth;
+    }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["share"])());
+  } // private consolidateState() {
+  //   const hashOpened = location.hash === this.hashId;
+  //   const isReload = history.state && history.state[this.histId];
+  //   if (isReload) {
+  //     if (hashOpened !== this.opened) {
+  //       this.opened = hashOpened;
+  //     }
+  //   } else {
+  //     const url = new URL(location.href);
+  //     const newState = { ...history.state, [this.histId]: { backable: false } };
+  //     if (hashOpened && !this.opened) {
+  //       url.hash = '';
+  //       history.replaceState(newState, document.title, url.href);
+  //       url.hash = this.hashId;
+  //       history.pushState({ [this.histId]: { backable: true } }, document.title, url.href);
+  //       this.opened = true;
+  //     }
+  //     else if (!hashOpened && this.opened) {
+  //       history.replaceState(newState, document.title, url.href);
+  //       url.hash = this.hashId;
+  //       history.pushState({ [this.histId]: { backable: true } }, document.title, url.href);
+  //     }
+  //     else {
+  //       history.replaceState(newState, document.title, url.href);
+  //     }
+  //   }
+  // }
+
+
+  connectedCallback() {
+    super.connectedCallback(); // if (this.hashChange) this.consolidateState()
+
+    this.$.opened = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](this.opened);
+    this.$.side = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](this.side);
+    this.$.persistent = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](this.persistent);
+    this.$.preventDefault = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](this.noScroll);
+    this.$.mouseEvents = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](this.mouseEvents); // this.$.hashChange = new BehaviorSubject(this.hashChange)
+
+    this.scrimClickable = this.opened;
+    this.animateTo$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
+    this.updater = _update__WEBPACK_IMPORTED_MODULE_10__["Updater"].getUpdaterForPlatform(this);
+    this.updateComplete.then(this.upgrade);
+  } // private transitionedHash(hasOpened: boolean) {
+  //   const hasClosed = !hasOpened;
+  //   const { backable } = history.state && history.state[this.histId] || { backable: false }
+  //   if (hasClosed && backable) {
+  //     history.back()
+  //   } 
+  //   if (hasOpened && location.hash !== this.hashId) {
+  //     location.hash = this.hashId;
+  //   }
+  // }
+
+
+  render() {
+    return Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["html"])(_templateObject(), Object(lit_html_directives_style_map__WEBPACK_IMPORTED_MODULE_2__["styleMap"])({
+      willChange: this.willChange ? 'opacity' : '',
+      pointerEvents: this.scrimClickable ? 'all' : ''
+    }), this.mouseEvents && this.grabbing && !this.scrimClickable ? Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["html"])(_templateObject2()) : null, Object(lit_html_directives_class_map__WEBPACK_IMPORTED_MODULE_1__["classMap"])({
+      wrapper: true,
+      'full-height': true,
+      [this.side]: true,
+      grab: this.mouseEvents,
+      grabbing: this.mouseEvents && this.grabbing
+    }), Object(lit_html_directives_style_map__WEBPACK_IMPORTED_MODULE_2__["styleMap"])({
+      willChange: this.willChange ? 'transform' : ''
+    }));
+  }
+
+  open() {
+    this.animateTo$.next(true);
+  }
+
+  close() {
+    this.animateTo$.next(false);
+  }
+
+  toggle() {
+    this.animateTo$.next(!this.opened);
+  }
+
+};
+HyDrawer.styles = _styles__WEBPACK_IMPORTED_MODULE_11__["styles"];
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["query"])('.scrim')], HyDrawer.prototype, "scrimEl", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["query"])('.wrapper')], HyDrawer.prototype, "contentEl", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["query"])('.peek')], HyDrawer.prototype, "peekEl", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])({
+  type: Boolean,
+  reflect: true
+})], HyDrawer.prototype, "opened", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])({
+  type: String,
+  reflect: true
+})], HyDrawer.prototype, "side", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])({
+  type: Boolean,
+  reflect: true
+})], HyDrawer.prototype, "persistent", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])({
+  type: Number,
+  reflect: true
+})], HyDrawer.prototype, "threshold", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])({
+  type: Boolean,
+  reflect: true
+})], HyDrawer.prototype, "noScroll", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])({
+  type: Boolean,
+  reflect: true
+})], HyDrawer.prototype, "mouseEvents", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])({
+  reflect: true,
+  converter: _common__WEBPACK_IMPORTED_MODULE_7__["rangeConverter"],
+  hasChanged: _common__WEBPACK_IMPORTED_MODULE_7__["rangeHasChanged"]
+})], HyDrawer.prototype, "range", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])()], HyDrawer.prototype, "scrimClickable", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])()], HyDrawer.prototype, "grabbing", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])()], HyDrawer.prototype, "willChange", void 0);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])()], HyDrawer.prototype, "open", null);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])()], HyDrawer.prototype, "close", null);
+
+__decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["property"])()], HyDrawer.prototype, "toggle", null);
+
+HyDrawer = __decorate([Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["customElement"])('hy-drawer')], HyDrawer);
+
+
+/***/ }),
+
+/***/ "./node_modules/@hydecorp/drawer/lib/observables.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@hydecorp/drawer/lib/observables.js ***!
+  \**********************************************************/
+/*! exports provided: ObservablesMixin */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ObservablesMixin", function() { return ObservablesMixin; });
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/dist/esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/dist/esm5/operators/index.js");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./common */ "./node_modules/@hydecorp/drawer/lib/common.js");
+
+
+
+var abs = Math.abs.bind(Math);
+class ObservablesMixin {
+  getStartObservable() {
+    return Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["combineLatest"])(this.$.mouseEvents).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["switchMap"])((_ref) => {
+      var [mouseEvents] = _ref;
+      var touchstart$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(document, "touchstart", {
+        passive: true
+      }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["filter"])((_ref2) => {
+        var {
+          touches
+        } = _ref2;
+        return touches.length === 1;
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])((_ref3) => {
+        var {
+          touches
+        } = _ref3;
+        return touches[0];
+      }));
+      var mousedown$ = !mouseEvents ? rxjs__WEBPACK_IMPORTED_MODULE_0__["NEVER"] : Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(document, "mousedown").pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(e => (e.event = e, e)));
+      return Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["merge"])(touchstart$, mousedown$);
+    }));
+  }
+
+  getMoveObservable(start$, end$) {
+    return Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["combineLatest"])(this.$.mouseEvents, this.$.preventDefault).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["switchMap"])((_ref4) => {
+      var [mouseEvents, preventDefault] = _ref4;
+      var touchmove$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(document, "touchmove", {
+        passive: !preventDefault
+      }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(e => (e.touches[0].event = e, e.touches[0])));
+      var mousemove$ = !mouseEvents ? rxjs__WEBPACK_IMPORTED_MODULE_0__["NEVER"] : Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(document, "mousemove", {
+        passive: !preventDefault
+      }).pipe(Object(_common__WEBPACK_IMPORTED_MODULE_2__["subscribeWhen"])(Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["merge"])(start$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["mapTo"])(true)), end$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["mapTo"])(false)))), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(e => (e.event = e, e)));
+      return Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["merge"])(touchmove$, mousemove$);
+    }));
+  }
+
+  getEndObservable() {
+    return Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["combineLatest"])(this.$.mouseEvents).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["switchMap"])((_ref5) => {
+      var [mouseEvents] = _ref5;
+      var touchend$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(document, "touchend", {
+        passive: true
+      }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["filter"])((_ref6) => {
+        var {
+          touches
+        } = _ref6;
+        return touches.length === 0;
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(event => event.changedTouches[0]));
+      var mouseup$ = !mouseEvents ? rxjs__WEBPACK_IMPORTED_MODULE_0__["NEVER"] : Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(document, "mouseup", {
+        passive: true
+      });
+      return Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["merge"])(touchend$, mouseup$);
+    }));
+  }
+
+  getIsSlidingObservable(move$, start$, end$) {
+    return this.getIsSlidingObservableInner(move$, start$).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["take"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["startWith"])(undefined), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["repeatWhen"])(() => end$));
+  }
+
+  getIsSlidingObservableInner(move$, start$) {
+    if (this.threshold) {
+      return move$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["withLatestFrom"])(start$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["skipWhile"])((_ref7) => {
+        var [{
+          clientX,
+          clientY
+        }, {
+          clientX: startX,
+          clientY: startY
+        }] = _ref7;
+        return abs(startY - clientY) < this.threshold && abs(startX - clientX) < this.threshold;
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])((_ref8) => {
+        var [{
+          clientX,
+          clientY
+        }, {
+          clientX: startX,
+          clientY: startY
+        }] = _ref8;
+        return abs(startX - clientX) >= abs(startY - clientY);
+      }));
+    } else {
+      return move$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["withLatestFrom"])(start$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])((_ref9) => {
+        var [{
+          clientX,
+          clientY,
+          event
+        }, {
+          clientX: startX,
+          clientY: startY
+        }] = _ref9;
+        var isSliding = abs(startX - clientX) >= abs(startY - clientY);
+        if (this.noScroll && isSliding) event.preventDefault();
+        return isSliding;
+      }));
+    }
+  }
+
+}
+
+/***/ }),
+
+/***/ "./node_modules/@hydecorp/drawer/lib/styles.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/@hydecorp/drawer/lib/styles.js ***!
+  \*****************************************************/
+/*! exports provided: styles */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var lit_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lit-element */ "./node_modules/lit-element/lit-element.js");
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  @media screen {\n    :host {\n      touch-action: pan-x;\n    }\n\n    .full-screen {\n      position: fixed;\n      top: 0;\n      left: 0;\n      height: 100vh;\n      width: 100vw;\n    }\n\n    .full-height {\n      position: fixed;\n      top: 0;\n      height: 100vh;\n    }\n\n    .peek {\n      left: 0;\n      width: var(--hy-drawer-peek-width, 0px);\n      visibility: hidden;\n      z-index: calc(var(--hy-drawer-z-index, 100) - 1);\n    }\n\n    .scrim {\n      position: fixed;\n      top: 0;\n      left: 0;\n      height: 10vh;\n      width: 10vw;\n      transform: scale(10);\n      transform-origin: top left;\n      opacity: 0;\n      pointer-events: none;\n      background: var(--hy-drawer-scrim-background, rgba(0, 0, 0, 0.5));\n      z-index: var(--hy-drawer-z-index, 100);\n      -webkit-tap-highlight-color: transparent;\n    }\n\n    .range {\n      position: fixed;\n      top: 0;\n      height: 100vh;\n      z-index: calc(var(--hy-drawer-z-index, 100) + 1);\n    }\n\n    .grabbing-screen {\n      cursor: grabbing;\n      z-index: calc(var(--hy-drawer-z-index, 100) + 2);\n    }\n\n    .wrapper {\n      width: var(--hy-drawer-width, 300px);\n      background: var(--hy-drawer-background, inherit);\n      box-shadow: var(--hy-drawer-box-shadow, 0 0 15px rgba(0, 0, 0, 0.25));\n      z-index: calc(var(--hy-drawer-z-index, 100) + 3);\n      contain: strict;\n    }\n\n    .wrapper.left {\n      left:  calc(-1 * var(--hy-drawer-width, 300px) + var(--hy-drawer-peek-width, 0px));\n    }\n\n    .wrapper.right {\n      right:  calc(-1 * var(--hy-drawer-width, 300px) + var(--hy-drawer-peek-width, 0px));\n    }\n\n    .wrapper > .overflow {\n      position: absolute;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      left: 0;\n      overflow-x: hidden;\n      overflow-y: auto;\n      overscroll-behavior: contain;\n      -webkit-overflow-scrolling: touch;\n    }\n\n    .grab {\n      cursor: move;\n      cursor: grab;\n    }\n\n    .grabbing {\n      cursor: grabbing;\n    }\n  }\n\n  @media print {\n    .scrim {\n      display: none !important;\n    }\n\n    .wrapper {\n      transform: none !important;\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+var styles = Object(lit_element__WEBPACK_IMPORTED_MODULE_0__["css"])(_templateObject());
+
+/***/ }),
+
+/***/ "./node_modules/@hydecorp/drawer/lib/update.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/@hydecorp/drawer/lib/update.js ***!
+  \*****************************************************/
+/*! exports provided: UpdateMixin, Updater, StyleUpdater, AttributeStyleMapUpdater */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdateMixin", function() { return UpdateMixin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Updater", function() { return Updater; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyleUpdater", function() { return StyleUpdater; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AttributeStyleMapUpdater", function() { return AttributeStyleMapUpdater; });
+class UpdateMixin {
+  updateDOM(translateX, drawerWidth) {
+    var inv = this.side === "left" ? 1 : -1;
+    var opacity = translateX / drawerWidth * inv || 0;
+    this.translateX = translateX;
+    this.opacity = opacity;
+    this.updater.updateDOM(translateX, opacity);
+  }
+
+}
+class Updater {
+  constructor(parent) {
+    this.parent = parent;
+  }
+
+  static getUpdaterForPlatform(parent) {
+    var hasCSSOM = "attributeStyleMap" in Element.prototype && "CSS" in window && "number" in CSS;
+    return hasCSSOM ? new AttributeStyleMapUpdater(parent) : new StyleUpdater(parent);
+  }
+
+  get contentEl() {
+    return this.parent.contentEl;
+  }
+
+  get scrimEl() {
+    return this.parent.scrimEl;
+  }
+
+}
+class StyleUpdater extends Updater {
+  constructor(parent) {
+    super(parent);
+  }
+
+  updateDOM(translateX, opacity) {
+    this.contentEl.style.transform = "translate(".concat(translateX, "px, 0px)");
+    this.scrimEl.style.opacity = "".concat(opacity);
+  }
+
+}
+class AttributeStyleMapUpdater extends Updater {
+  constructor(parent) {
+    super(parent); // @ts-ignore
+
+    this.tvalue = new CSSTransformValue([new CSSTranslate(CSS.px(0), CSS.px(0))]); // @ts-ignore
+
+    this.ovalue = CSS.number(1);
+  }
+
+  updateDOM(translateX, opacity) {
+    // @ts-ignore
+    this.tvalue[0].x.value = translateX; // @ts-ignore
+
+    this.ovalue.value = opacity; // @ts-ignore
+
+    this.contentEl.attributeStyleMap.set("transform", this.tvalue); // @ts-ignore
+
+    this.scrimEl.attributeStyleMap.set("opacity", this.ovalue);
+  }
+
+}
+
+/***/ }),
+
+/***/ "./node_modules/lit-html/directives/class-map.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/lit-html/directives/class-map.js ***!
+  \*******************************************************/
+/*! exports provided: classMap */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "classMap", function() { return classMap; });
+/* harmony import */ var _lit_html_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lit-html.js */ "./node_modules/lit-html/lit-html.js");
+/**
+ * @license
+ * Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+ // IE11 doesn't support classList on SVG elements, so we emulate it with a Set
+
+class ClassList {
+  constructor(element) {
+    this.classes = new Set();
+    this.changed = false;
+    this.element = element;
+    var classList = (element.getAttribute('class') || '').split(/\s+/);
+
+    for (var cls of classList) {
+      this.classes.add(cls);
+    }
+  }
+
+  add(cls) {
+    this.classes.add(cls);
+    this.changed = true;
+  }
+
+  remove(cls) {
+    this.classes.delete(cls);
+    this.changed = true;
+  }
+
+  commit() {
+    if (this.changed) {
+      var classString = '';
+      this.classes.forEach(cls => classString += cls + ' ');
+      this.element.setAttribute('class', classString);
+    }
+  }
+
+}
+/**
+ * Stores the ClassInfo object applied to a given AttributePart.
+ * Used to unset existing values when a new ClassInfo object is applied.
+ */
+
+
+var previousClassesCache = new WeakMap();
+/**
+ * A directive that applies CSS classes. This must be used in the `class`
+ * attribute and must be the only part used in the attribute. It takes each
+ * property in the `classInfo` argument and adds the property name to the
+ * element's `class` if the property value is truthy; if the property value is
+ * falsey, the property name is removed from the element's `class`. For example
+ * `{foo: bar}` applies the class `foo` if the value of `bar` is truthy.
+ * @param classInfo {ClassInfo}
+ */
+
+var classMap = Object(_lit_html_js__WEBPACK_IMPORTED_MODULE_0__["directive"])(classInfo => part => {
+  if (!(part instanceof _lit_html_js__WEBPACK_IMPORTED_MODULE_0__["AttributePart"]) || part instanceof _lit_html_js__WEBPACK_IMPORTED_MODULE_0__["PropertyPart"] || part.committer.name !== 'class' || part.committer.parts.length > 1) {
+    throw new Error('The `classMap` directive must be used in the `class` attribute ' + 'and must be the only part in the attribute.');
+  }
+
+  var {
+    committer
+  } = part;
+  var {
+    element
+  } = committer;
+  var previousClasses = previousClassesCache.get(part);
+
+  if (previousClasses === undefined) {
+    // Write static classes once
+    // Use setAttribute() because className isn't a string on SVG elements
+    element.setAttribute('class', committer.strings.join(' '));
+    previousClassesCache.set(part, previousClasses = new Set());
+  }
+
+  var classList = element.classList || new ClassList(element); // Remove old classes that no longer apply
+  // We use forEach() instead of for-of so that re don't require down-level
+  // iteration.
+
+  previousClasses.forEach(name => {
+    if (!(name in classInfo)) {
+      classList.remove(name);
+      previousClasses.delete(name);
+    }
+  }); // Add or remove classes based on their classMap value
+
+  for (var name in classInfo) {
+    var value = classInfo[name];
+
+    if (value != previousClasses.has(name)) {
+      // We explicitly want a loose truthy check of `value` because it seems
+      // more convenient that '' and 0 are skipped.
+      if (value) {
+        classList.add(name);
+        previousClasses.add(name);
+      } else {
+        classList.remove(name);
+        previousClasses.delete(name);
+      }
+    }
+  }
+
+  if (typeof classList.commit === 'function') {
+    classList.commit();
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/lit-html/directives/style-map.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/lit-html/directives/style-map.js ***!
+  \*******************************************************/
+/*! exports provided: styleMap */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styleMap", function() { return styleMap; });
+/* harmony import */ var _lit_html_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lit-html.js */ "./node_modules/lit-html/lit-html.js");
+/**
+ * @license
+ * Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+
+/**
+ * Stores the StyleInfo object applied to a given AttributePart.
+ * Used to unset existing values when a new StyleInfo object is applied.
+ */
+
+var previousStylePropertyCache = new WeakMap();
+/**
+ * A directive that applies CSS properties to an element.
+ *
+ * `styleMap` can only be used in the `style` attribute and must be the only
+ * expression in the attribute. It takes the property names in the `styleInfo`
+ * object and adds the property values as CSS properties. Property names with
+ * dashes (`-`) are assumed to be valid CSS property names and set on the
+ * element's style object using `setProperty()`. Names without dashes are
+ * assumed to be camelCased JavaScript property names and set on the element's
+ * style object using property assignment, allowing the style object to
+ * translate JavaScript-style names to CSS property names.
+ *
+ * For example `styleMap({backgroundColor: 'red', 'border-top': '5px', '--size':
+ * '0'})` sets the `background-color`, `border-top` and `--size` properties.
+ *
+ * @param styleInfo {StyleInfo}
+ */
+
+var styleMap = Object(_lit_html_js__WEBPACK_IMPORTED_MODULE_0__["directive"])(styleInfo => part => {
+  if (!(part instanceof _lit_html_js__WEBPACK_IMPORTED_MODULE_0__["AttributePart"]) || part instanceof _lit_html_js__WEBPACK_IMPORTED_MODULE_0__["PropertyPart"] || part.committer.name !== 'style' || part.committer.parts.length > 1) {
+    throw new Error('The `styleMap` directive must be used in the style attribute ' + 'and must be the only part in the attribute.');
+  }
+
+  var {
+    committer
+  } = part;
+  var {
+    style
+  } = committer.element;
+  var previousStyleProperties = previousStylePropertyCache.get(part);
+
+  if (previousStyleProperties === undefined) {
+    // Write static styles once
+    style.cssText = committer.strings.join(' ');
+    previousStylePropertyCache.set(part, previousStyleProperties = new Set());
+  } // Remove old properties that no longer exist in styleInfo
+  // We use forEach() instead of for-of so that re don't require down-level
+  // iteration.
+
+
+  previousStyleProperties.forEach(name => {
+    if (!(name in styleInfo)) {
+      previousStyleProperties.delete(name);
+
+      if (name.indexOf('-') === -1) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        style[name] = null;
+      } else {
+        style.removeProperty(name);
+      }
+    }
+  }); // Add or update properties
+
+  for (var name in styleInfo) {
+    previousStyleProperties.add(name);
+
+    if (name.indexOf('-') === -1) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      style[name] = styleInfo[name];
+    } else {
+      style.setProperty(name, styleInfo[name]);
+    }
+  }
+});
+
+/***/ })
+
+}]);
+//# sourceMappingURL=vendors~drawer-hydejack-9.0.4.js.map

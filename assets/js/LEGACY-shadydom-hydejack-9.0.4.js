@@ -1,14 +1,21 @@
-/*!
- *  __  __                __                                     __
- * /\ \/\ \              /\ \             __                    /\ \
- * \ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
- *  \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
- *   \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
- *    \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
- *     \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
- *                 /\___/                \ \____/
- *                 \/__/                  \/___/
- *
- * Powered by Hydejack v9.0.4 <https://hydejack.com/>
- */
-(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{341:function(n,w,o){"use strict";o.r(w);o(342),o(346)}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["shadydom"],{
+
+/***/ "./_js/src/polyfills/shadydom.js":
+/*!***************************************!*\
+  !*** ./_js/src/polyfills/shadydom.js ***!
+  \***************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _webcomponents_shadydom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @webcomponents/shadydom */ "./node_modules/@webcomponents/shadydom/shadydom.min.js");
+/* harmony import */ var _webcomponents_shadydom__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_webcomponents_shadydom__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _webcomponents_shadycss_entrypoints_scoping_shim__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @webcomponents/shadycss/entrypoints/scoping-shim */ "./node_modules/@webcomponents/shadycss/entrypoints/scoping-shim.js");
+
+
+
+/***/ })
+
+}]);
+//# sourceMappingURL=LEGACY-shadydom-hydejack-9.0.4.js.map
