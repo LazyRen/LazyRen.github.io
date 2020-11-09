@@ -41,14 +41,14 @@ keywords:              []
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                  https://graph.facebook.com/100007955266112/picture?type=large
+logo:                  /assets/img/seattle.png
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
   name:                DaeIn Lee
   email:               daein0lee@gmail.com
-  picture:  /assets/img/seattle.png
+  picture:             /assets/img/seattle.png
   social:
     linkedin:        daein-lee-3b6ba9139
     github:          lazyren

@@ -1,7 +1,7 @@
 basics:
   name: "DaeIn Lee"
   label: "Software Engineer"
-  picture: "https://graph.facebook.com/100007955266112/picture?type=large"
+  picture: /assets/img/seattle.png
   email: "daein0lee@gmail.com"
   phone: "(82) 010-3026-3127"
   website: "https://lazyren.github.io/"
