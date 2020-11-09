@@ -1,28 +1,14 @@
 GIT
-  remote: https://github.com/benbalter/jekyll-default-layout
-  revision: 11054b8af659382223d9afe0a26f1627869a6abb
-  specs:
-    jekyll-default-layout (0.1.4)
-      jekyll (>= 3.0, < 5.0)
-
-GIT
   remote: https://github.com/hydecorp/jekyll-include-cache
   revision: 2168263a7c88101f92557e6fe015a276267d8274
   specs:
     jekyll-include-cache (0.2.0)
       jekyll (>= 3.7, < 5.0)
 
-GIT
-  remote: https://github.com/hydecorp/jekyll-seo-tag
-  revision: 6135021410981d2d76878568e9c21cf363882bfe
-  specs:
-    jekyll-seo-tag (2.6.1)
-      jekyll (>= 3.3, < 5.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.0.3.3)
+    activesupport (6.0.3.4)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
@@ -38,7 +24,7 @@ GEM
     commonmarker (0.17.13)
       ruby-enum (~> 0.5)
     concurrent-ruby (1.1.7)
-    dnsruby (1.61.4)
+    dnsruby (1.61.5)
       simpleidn (~> 0.1)
     em-websocket (0.5.2)
       eventmachine (>= 0.12.9)
@@ -47,19 +33,20 @@ GEM
       ffi (>= 1.3.0)
     eventmachine (1.2.7)
     execjs (2.7.0)
-    faraday (1.0.1)
+    faraday (1.1.0)
       multipart-post (>= 1.2, < 3)
+      ruby2_keywords
     ffi (1.13.1)
     forwardable-extended (2.6.0)
     gemoji (3.0.1)
-    github-pages (208)
+    github-pages (209)
       github-pages-health-check (= 1.16.1)
       jekyll (= 3.9.0)
       jekyll-avatar (= 0.7.0)
       jekyll-coffeescript (= 1.1.1)
       jekyll-commonmark-ghpages (= 0.1.6)
       jekyll-default-layout (= 0.1.4)
-      jekyll-feed (= 0.15.0)
+      jekyll-feed (= 0.15.1)
       jekyll-gist (= 1.5.0)
       jekyll-github-metadata (= 2.13.0)
       jekyll-mentions (= 1.6.0)
@@ -135,7 +122,9 @@ GEM
       rouge (>= 2.0, < 4.0)
     jekyll-compose (0.12.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-feed (0.15.0)
+    jekyll-default-layout (0.1.4)
+      jekyll (~> 3.0)
+    jekyll-feed (0.15.1)
       jekyll (>= 3.7, < 5.0)
     jekyll-gist (1.5.0)
       octokit (~> 4.2)
@@ -164,6 +153,8 @@ GEM
       rubyzip (>= 1.3.0, < 3.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
+    jekyll-seo-tag (2.6.1)
+      jekyll (>= 3.3, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-swiss (1.0.0)
@@ -233,7 +224,7 @@ GEM
     multipart-post (2.1.1)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
-    octokit (4.18.0)
+    octokit (4.19.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.16.2)
@@ -248,6 +239,7 @@ GEM
     rouge (3.23.0)
     ruby-enum (0.8.0)
       i18n
+    ruby2_keywords (0.0.2)
     rubyzip (2.3.0)
     safe_yaml (1.0.5)
     sass (3.7.4)
@@ -265,21 +257,22 @@ GEM
     thread_safe (0.3.6)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
-    tzinfo (1.2.7)
+    tzinfo (1.2.8)
       thread_safe (~> 0.1)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7)
     unicode-display_width (1.7.0)
-    zeitwerk (2.4.0)
+    zeitwerk (2.4.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   github-pages
+  jekyll
   jekyll-compose
-  jekyll-default-layout!
+  jekyll-default-layout
   jekyll-feed
   jekyll-include-cache!
   jekyll-last-modified-at
@@ -288,11 +281,11 @@ DEPENDENCIES
   jekyll-readme-index
   jekyll-redirect-from
   jekyll-relative-links
-  jekyll-seo-tag!
+  jekyll-seo-tag
   jekyll-sitemap
   jekyll-titles-from-headings
-  kramdown (>= 2.3.0)
-  rake (>= 12.3.3)
+  kramdown
+  rake
 
 BUNDLED WITH
    2.1.4
