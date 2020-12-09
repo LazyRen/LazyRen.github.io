@@ -61,27 +61,27 @@ int n;
 
 int main()
 {
- vi inp;
+  vi inp;
 
- scanf("%d", &n);
- for (int i = 0; i < n; i++) {
-  int tmp;
-  scanf("%d", &tmp);
-  inp.push_back(tmp);
- }
-
-    // 첫 대소 비교를 위해 -1 원소 하나를 가지고 시작
- vi ans (1, -1);
- for (int num : inp) {
-  if (ans.back() < num) {
-   ans.push_back(num);
-        } else {
-   auto it = lower_bound(ans.begin(), ans.end(), num);
-   *it = num;
+  scanf("%d", &n);
+  for (int i = 0; i < n; i++) {
+    int tmp;
+    scanf("%d", &tmp);
+    inp.push_back(tmp);
   }
- }
 
- printf("%lu\n", ans.size()-1);
+  // 첫 대소 비교를 위해 -1 원소 하나를 가지고 시작
+  vi ans (1, -1);
+  for (int num : inp) {
+    if (ans.back() < num) {
+      ans.push_back(num);
+    } else {
+      auto it = lower_bound(ans.begin(), ans.end(), num);
+      *it = num;
+    }
+  }
+
+  printf("%lu\n", ans.size()-1);
 }
 
 ```
