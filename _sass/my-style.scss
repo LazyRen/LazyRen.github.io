@@ -88,12 +88,12 @@ a.sidebar-nav-subitem {
 }
 
 input[type="checkbox"]{
-  position: absolute;
-  left: -9999px;
+  display: none;
 }
 
 input[type="checkbox"] ~ ul{
   height: 0;
+  transition: transform .2s ease-out;
   transform: scaleY(0);
 }
 
