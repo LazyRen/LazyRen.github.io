@@ -18,7 +18,6 @@ Hydejack 테마를 이용하여 포스트를 작성할때 참고할 syntax 입�
 ### update
 
 ```shell
-bundle install
 bundle update
 
 bundle exec jekyll serve
