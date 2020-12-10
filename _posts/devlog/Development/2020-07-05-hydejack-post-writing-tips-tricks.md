@@ -78,9 +78,25 @@ You can add large text.
 {:.lead}
 ```
 
+### Changing image size
+
+You can change image size by adding css style to the paragraph after the image:
+
+Example:
+
+![Half-width image](https://placehold.it/800x100){: width="400" height="50"}
+
+Markdown:
+
+```markdown
+![Half-width image](https://placehold.it/800x100){: width="400" height="50"}
+```
+
 ### Adding image captions
 
 You can add captions to large images by adding the `figcaption` class to the paragraph after the image:
+
+Example:
 
 ![Full-width image](https://placehold.it/800x100){:.lead width="800" height="100" loading="lazy"}
 
