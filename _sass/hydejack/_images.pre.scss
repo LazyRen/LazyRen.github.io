@@ -17,11 +17,9 @@
   overflow: hidden; // inline
   img {
     margin: 0; // inline
-    // width: 100%; // inline
-    // height: 100%; // inline
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover; // link
+    width: 100%; // inline
+    height: 100%; // inline
+    object-fit: contain; // link
     object-position: center; // link
     background-color: var(--gray-bg); // inline
   }
