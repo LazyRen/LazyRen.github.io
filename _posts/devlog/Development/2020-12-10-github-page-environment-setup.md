@@ -21,6 +21,8 @@ ERROR:  While executing gem ... (Gem::FilePermissionError)
 시스템 ruby는 /var/lib/gems 폴더 내에 gem install을 실행하려 하는데 기본적으로 해당 폴더 쓰기 권한이 유저에게 없기 때문에
 rbenv를 통해 ruby를 다시 설치하는 과정이 필요합니다.
 
+<!--more-->
+
 ## rbenv & ruby 설치하기
 
 ![ruby gem](/assets/img/2020-12-10/rubygems.svg){: width="20" height="20"}
