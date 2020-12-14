@@ -1,5 +1,6 @@
 ---
 layout: tag-list
+type: tag
 title: Bw Tree
 slug: bwtree
 category: devlog

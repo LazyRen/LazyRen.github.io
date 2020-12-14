@@ -1,5 +1,6 @@
 ---
 layout: list
+type: category
 title: Review
 slug: review
 menu: true

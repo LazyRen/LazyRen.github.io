@@ -1,5 +1,6 @@
 ---
 layout: tag-list
+type: tag
 title: Translation
 slug: translation
 category: devlog

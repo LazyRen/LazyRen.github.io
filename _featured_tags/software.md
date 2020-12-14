@@ -1,5 +1,6 @@
 ---
 layout: tag-list
+type: tag
 title: Software
 slug: software
 category: review

@@ -40,19 +40,18 @@
   padding-top: 5%;
 }
 
-a.sidebar-nav-item {
+.sidebar-nav-item {
   width:100%;
   font-weight: normal;
-  display: block;
   padding: .25rem 0;
 }
 
-a.sidebar-nav-subitem {
+.sidebar-nav-subitem {
+  @extend .f4;
   font-weight: normal;
-  display: block;
+  display: inline-block;
   line-height: 1.75;
   padding: .25rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .list-wrapper {
