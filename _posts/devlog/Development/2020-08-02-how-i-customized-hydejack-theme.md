@@ -8,9 +8,9 @@ image:
   path: /assets/img/2020-08-02/showcase.png
 ---
 
-Thanks to [@qwtel](https://qwtel.com/), I'm on the [showcase](https://hydejack.com/showcase/) of Hydejack's official site!<br>
+Thanks to [@qwtel](https://qwtel.com/), I'm on the [showcase](https://hydejack.com/showcase/) of Hydejack's official blog!<br>
 
-I had a plan to write a post about what I customized, but thanks to his kind email, and posting on to the showcase, I've decided to write a post in English.
+I had a plan to write a post about how I customized my blog, but thanks to his kind email, and posting on to the showcase, I've decided to write a post in English. So many others can check & apply to their github pages.
 
 <!--more-->
 
@@ -21,33 +21,39 @@ I had a plan to write a post about what I customized, but thanks to his kind ema
 
 First, you should check [Hydejack's documentations](https://hydejack.com/docs/) to install & proceed.<br>
 If you wants to use free version, use [Hydejack-starter-kit](https://github.com/hydecorp/hydejack-starter-kit/tree/gh-pages).<br>
-Clone or download it. Note that it's branch is gh-pages. Not the master branch.
+Clone or download it. Note that linked branch is gh-pages. Not the master branch in order to use it as github pages.
 
 ## Customization
 
 Hydejack theme provides `_sass/my-*.scss` files for a customization.<br>
 It's very helpful if you wish to change css of your homepage.<br>
-It overrides any default css provided by other files.
+It overrides any default css provided by other files.<br>
+[Jekyll Liquid](https://jekyllrb.com/docs/liquid/) doc is also a good start place for the beginner.
 
 ### Adding Submenu to the Sidebar
 
+Sidebar & category/tag has been modified as of 2020/12/15.<br>
+I'm updating this post to reflect those changes I've made.
+{:.note}
+
 ![Sidebar](/assets/img/2020-08-02/sidebar.png)
 
-In this post, I'll post how to add submenu to the sidebar.<br>
+In this section, I'll guide you how to add a submenu to the sidebar navigation.<br>
 There is few files you need to edit/add for this.<br>
-You may wish to check [commit history](https://github.com/LazyRen/LazyRen.github.io/commit/89aa07da3b9e9081b933f61c24a42b765b6d30cd)
+You may wish to check [commit history](https://github.com/LazyRen/LazyRen.github.io/commit/89aa07da3b9e9081b933f61c24a42b765b6d30cd), [and](https://github.com/LazyRen/LazyRen.github.io/commit/6d54aa8507b7595169214d61639ccb2fb5c2a4f6) [these](https://github.com/LazyRen/LazyRen.github.io/commit/69871512f1407d1b2892f621b69059b3b4c2bab2) for the updated method. (as of 2020/12/15)
 
 ```default
-_sass/my-style.scss
-_includes/body/nav.html
-_layouts/tag-list.html
-_featured_categories/*.md
-_featured_tags/*.md
+/_sass/my-style.scss
+/_includes/body/nav.html
+/_includes/body/sidebar-sticky.html
+/_layouts/tag-list.html
+/_featured_categories/*.md
+/_featured_tags/*.md
 ```
 
 #### my-style.scss
 
-Add below code to the _sass/my-style.scss file, so it can display submenu properly.<br>
+Add below code to the [_sass/my-style.scss file](https://github.com/LazyRen/LazyRen.github.io/blob/master/_sass/my-style.scss), so it can display submenu properly.<br>
 
 ```css
 // Sidebar Modification
@@ -60,21 +66,19 @@ Add below code to the _sass/my-style.scss file, so it can display submenu proper
   position: absolute;
   height: 95%;
   padding-top: 5%;
+  opacity: 1 !important; // to prevent ugly FOUC
 }
 
 a.sidebar-nav-item {
   width:100%;
-  font-weight: normal;
-  display: block;
   padding: .25rem 0;
 }
 
 a.sidebar-nav-subitem {
-  font-weight: normal;
-  display: block;
-  line-height: 1.75;
+  @extend .f4;
+  width:100%;
+  display: inline-block;
   padding: .25rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .list-wrapper {
@@ -110,12 +114,12 @@ a.sidebar-nav-subitem {
 }
 
 input[type="checkbox"]{
-  position: absolute;
-  left: -9999px;
+  display: none;
 }
 
 input[type="checkbox"] ~ ul{
   height: 0;
+  transition: transform .2s ease-out;
   transform: scaleY(0);
 }
 
@@ -132,133 +136,122 @@ input[type="checkbox"]:checked ~ ul{
 
 ![git diff](/assets/img/2020-08-02/nav_html.png)
 
-my-style.scss was to properly show submenu.<br>
-Changes in this file is to actually print submenu(tags) in sidebar.
+Change made in `my-style.scss` was to properly show submenu.<br>
+Changes in [this file](https://github.com/LazyRen/LazyRen.github.io/blob/master/_includes/body/nav.html) is to actually print submenu(tags) to the sidebar.
 
-```html
-<span class="sr-only">{{ site.data.strings.navigation | default:"Navigation" }}{{ site.data.strings.colon | default:":" }}</span>
-<ul>
-  {% if site.menu %}
-    {% for node in site.menu %}
-      {% assign url = node.url | default: node.href %}
-      <li>
-        <a
-          {% if forloop.first %}id="_navigation"{% endif %}
-          href="{% include smart-url.txt url=url %}"
-          class="sidebar-nav-item{% if page.url contains url %} active{% endif %}"
-          {% if node.rel %}rel="{{ node.rel }}"{% endif %}
-        >
-          {{ node.name | default:node.title }}
-        </a>
-      </li>
-    {% endfor %}
-  {% else %}
-    {% assign pages = site.pages %}
-    {% assign documents = site.documents %}
-    {% assign subpages = pages | concat: documents | where: "menu", false | where: "submenu", true | sort: "order" %}
-    {% assign nodes = pages | concat: documents | where: "menu", true | sort: "order" %}
+##### Line by line explanation
 
-    {% for node in nodes %}
+```ruby
+{% raw %}
+{% assign nodes = site.pages | concat: site.documents | where: "sidebar", true | sort: "order" %}
+{% assign tag_nodes = nodes | where: "type", "tag" %}
+{% for node in nodes %}
+  {% unless node.redirect_to %}
+    {% if node.type != "tag" %}
+      {% assign subnodes = tag_nodes | where_exp: "item", "item.category == node.slug" %}
       {% assign count = count | plus: 1 %}
-      {% unless node.redirect_to %}
-        <li>
+      <li>
+        {% if subnodes != empty %}
           <input type="checkbox" id="list-item-{{ count }}" />
-          <div class="list-wrapper">
-          <a
-            {% if forloop.first %}id="_navigation"{% endif %}
-            href="{{ node.url | relative_url }}"
-            class="sidebar-nav-item{% if page.url contains node.url %} active{% endif %}"
-            {% if node.rel %}rel="{{ node.rel }}"{% endif %}
-            >
-            {{ node.title }}
-          </a>
-          {% if node.submenu %}<label class="folder" for="list-item-{{ count }}">▾</label>{% endif %}
-          </div>
-          <ul class="list-body">
-            {% for subnode in subpages %}
-            {% if subnode.category == node.slug %}
-            <li>
-              <a class="sidebar-nav-subitem{% if page.url == subnode.url %} active{% endif %}" href="{{ subnode.url | relative_url }}">{{ subnode.title }}</a>
-            </li>
-            {% endif %}
-            {% endfor %}
-          </ul>
-        </li>
-      {% else %}
-        <li>
-          <a href="{{ node.redirect_to }}" class="sidebar-nav-item external" >{{ node.title }}</a>
-        </li>
-      {% endunless %}
-    {% endfor %}
-  {% endif %}
-</ul>
+        {% endif %}
+        <div class="list-wrapper">
+          <a {% if forloop.first %}id="_navigation"{% endif %} href="{{ node.url | relative_url }}" class="sidebar-nav-item" {% if node.rel %}rel="{{ node.rel }}"{% endif %} >{{ node.title }}</a>
+          {% if subnodes != empty %}
+            <label class="folder" for="list-item-{{ count }}">▾</label>
+          {% endif %}
+        </div>
+        {% for subnode in subnodes %}
+          {% if forloop.first %}<ul class="list-body">{% endif %}
+              <li>
+                <a class="sidebar-nav-subitem" href="{{ subnode.url | relative_url }}">{{ subnode.title }}</a>
+              </li>
+          {% if forloop.last %}</ul>{% endif %}
+        {% endfor %}
+      </li>
+    {% endif %}
+  {% else %}
+    <li>
+      <a href="{{ node.redirect_to }}" class="sidebar-nav-item external">{{ node.title }}</a>
+    </li>
+  {% endunless %}
+{% endfor %}
+{% endraw %}
 ```
+
+Above is the actual code that I've added. I'll try my best to explain in detail for each code segment.
+
+```ruby
+{% raw %}
+{% assign nodes = site.pages | concat: site.documents | where: "sidebar", true | sort: "order" %}
+{% assign tag_nodes = nodes | where: "type", "tag" %}
+{% endraw %}
+```
+
+`nodes`: From all the site pages & documents, take pages that has been mareked as `sidebar: true`. For me, In addition to the categories & tags, I've also added such property to [about.md](https://github.com/LazyRen/LazyRen.github.io/blob/master/about.md) & [tags.md](https://github.com/LazyRen/LazyRen.github.io/blob/master/tags.md).<br>
+`tag_nodes`: From what we've collected, filter tags only.(We've set the sidebar & tag property in `*.md` file)
+
+```ruby
+{% raw %}
+{% for node in nodes %}
+  {% unless node.redirect_to %}
+    {% if node.type != "tag" %}
+      {% assign subnodes = tag_nodes | where_exp: "item", "item.category == node.slug" %}
+      {% assign count = count | plus: 1 %}
+      <li>
+        {% if subnodes != empty %}
+          <input type="checkbox" id="list-item-{{ count }}" />
+        {% endif %}
+        <div class="list-wrapper">
+          <a {% if forloop.first %}id="_navigation"{% endif %} href="{{ node.url | relative_url }}" class="sidebar-nav-item" {% if node.rel %}rel="{{ node.rel }}"{% endif %} >{{ node.title }}</a>
+          {% if subnodes != empty %}
+            <label class="folder" for="list-item-{{ count }}">▾</label>
+          {% endif %}
+        </div>
+        {% for subnode in subnodes %}
+          {% if forloop.first %}<ul class="list-body">{% endif %}
+              <li>
+                <a class="sidebar-nav-subitem" href="{{ subnode.url | relative_url }}">{{ subnode.title }}</a>
+              </li>
+          {% if forloop.last %}</ul>{% endif %}
+        {% endfor %}
+      </li>
+    {% endif %}
+  {% else %}
+    <li>
+      <a href="{{ node.redirect_to }}" class="sidebar-nav-item external">{{ node.title }}</a>
+    </li>
+  {% endunless %}
+{% endfor %}
+{% endraw %}
+```
+
+While iterating nodes, create menu for those that aren't `tag` type.(Because `tag` type will be shown only as a submenu.)<br>
+`subnodes`: list of pages that have same `category` as a current `node.slug`. the property of `sidebar` is already filtered previously.<br>
+We create checkbox & label *iff* `subnodes` list is not empty. And create list of subnodes below.
+
+#### sidebar-sticky.html
+
+To prevent FOUC(flash of unstyled content), addition to the modification of [scss file](#my-stylescss) add `style="opacity:0"` to the sidebar-sticky class [like this](https://github.com/LazyRen/LazyRen.github.io/blob/master/_includes/body/sidebar-sticky.html) (line 1).<br>
+This does not prevent FOUC totally, but at least it prevents user from seeing ugly checkbox at the first visit.<br>
+If anyone have better solution, **please** inform me. I'd be very happy to hear it.
 
 #### tag-list.html
 
-Adding this file to_layouts folder will enable using `layout: tag-list` for the featured_tags.<br>
-
-```html
----
-# Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-layout: base
----
-
-{% assign posts = site.tags[page.slug] %}
-
-{% if page.title.size > 0 %}
-  <header>
-    <h1 class="page-title">{{ page.title }}</h1>
-    {% include components/message.html text=page.description hide=page.hide_description %}
-  </header>
-  <hr class="sr-only"/>
-{% endif %}
-
-{{ content }}
-
-{% assign date_formats  = site.data.strings.date_formats               %}
-{% assign list_group_by = date_formats.list_group_by | default:"%Y"    %}
-{% assign list_entry    = date_formats.list_entry    | default:"%d %b" %}
-
-{% for post in posts %}
-  {% assign currentdate = post.date | date:list_group_by %}
-  {% if currentdate != date %}
-    {% unless forloop.first %}</ul>{% endunless %}
-    <h2 id="{{ list_group_by | slugify }}-{{ currentdate | slugify }}" class="hr">{{ currentdate }}</h2>
-    <ul class="related-posts">
-    {% assign date = currentdate %}
-  {% endif %}
-  {% include components/post-list-item.html post=post format=list_entry %}
-  {% if forloop.last %}</ul>{% endif %}
-{% endfor %}
-```
+Adding [this file](https://github.com/LazyRen/LazyRen.github.io/blob/master/_layouts/tag-list.html) to `_layouts` folder will enable using `layout: tag-list` for the featured_tags.<br>
 
 #### _featured_categories/*.md
 
 Category is used as a main menu for the sidebar.<br>
-Nothing specially added from the default one.<br>
+Note that `type` property has been added to indicate it is `category`.<br>
+`sidebar` property is also added, set it to `true` if you wish to see category from the sidebar.
 
 ```markdown
 ---
 layout: list
+type: category
 title: Devlog
 slug: devlog
-menu: true
-submenu: true
+sidebar: true
 order: 2
 description: >
   Anything about Development
@@ -268,28 +261,55 @@ description: >
 #### _featured_tags/*.md
 
 add *.md file into the `_featured_tags` folder.<br>
-If you wish to print inthe sidebar as a submenu, set `category` to the desired one.<br>
-`menu: false`, `submenu: true`. If you don't want it to be seen, just change option to `submenu: false`.<br>
-If you don't like how menu & submenu option works. Set as you desire from `nav.html`.
-
-```html
-// nav.html
-{% assign subpages = pages | concat: documents | where: "menu", false | where: "submenu", true | sort: "order" %}
-```
+Set `type` property as a `tag`.
+If you wish to see tag from the sidebar, set `sidebar` property to `true`.<br>
 
 ```markdown
 ---
 layout: tag-list
-title: Blog
-slug: blog
+type: tag
+title: Algorithm
+slug: algorithm
 category: devlog
-menu: false
-submenu: false
-order: 9
+sidebar: true
+order: 1
 description: >
-   Posts about blogging / jekyll theme.
+   Algorithm study / Problem solutions
 ---
 ```
+
+### Creating Tag Cloud/List Page
+
+Since many tags are not listed on the sidebar, I've always wanted to have a page where I can see all categories & tags I've used for the posts.<br>
+You only need to create two files to have a such page.
+
+```default
+/tags.md
+/_layouts/tags.html
+```
+
+#### tags.md
+
+```markdown
+---
+layout: tags
+title: Tags
+permalink: /tags/
+sidebar: true
+order: 4
+description: >
+  List of all categories & tags of blog.
+---
+```
+
+Create [tags.md](https://github.com/LazyRen/LazyRen.github.io/blob/master/tags.md) file in the root folder.<br>
+It will be displayed in sidebar, so set `sidebar` accordingly, and we must create new layout [tags](#tagshtml).
+
+#### tags.html
+
+[tags.html](https://github.com/LazyRen/LazyRen.github.io/blob/master/_layouts/tags.html) should be located in `_layouts` folder.<br>
+It finds all categories & tags from the site & list them like `list` or `tag-list` style (they are layout that you will see when you click category or tag).<br>
+`type` property is also used in here, so make sure you've added property to the `*.md` files.
 
 ## Conclusion
 
