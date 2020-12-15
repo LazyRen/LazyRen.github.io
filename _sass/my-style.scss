@@ -38,19 +38,18 @@
   position: absolute;
   height: 95%;
   padding-top: 5%;
+  opacity: 1 !important;
 }
 
 .sidebar-nav-item {
   width:100%;
-  font-weight: normal;
   padding: .25rem 0;
 }
 
 .sidebar-nav-subitem {
   @extend .f4;
-  font-weight: normal;
+  width:100%;
   display: inline-block;
-  line-height: 1.75;
   padding: .25rem 0;
 }
 

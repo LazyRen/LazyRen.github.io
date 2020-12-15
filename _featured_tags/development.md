@@ -4,8 +4,7 @@ type: tag
 title: Development
 slug: development
 category: devlog
-menu: false
-submenu: true
+sidebar: true
 order: 4
 description: >
    Development Tips & Settings

@@ -4,8 +4,7 @@ type: tag
 title: Coding Interview
 slug: coding-interview
 category: devlog
-menu: false
-submenu: false
+sidebar: false
 description: >
    Self-study for coding interview preparation.
 ---

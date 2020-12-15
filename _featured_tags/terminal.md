@@ -4,8 +4,7 @@ type: tag
 title: Terminal
 slug: terminal
 category: devlog
-menu: false
-submenu: false
+sidebar: false
 description: >
    Terminal related articles
 ---

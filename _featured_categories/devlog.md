@@ -3,8 +3,7 @@ layout: list
 type: category
 title: Devlog
 slug: devlog
-menu: true
-submenu: true
+sidebar: true
 order: 2
 description: >
   Anything about Development

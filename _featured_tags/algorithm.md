@@ -4,8 +4,7 @@ type: tag
 title: Algorithm
 slug: algorithm
 category: devlog
-menu: false
-submenu: true
+sidebar: true
 order: 1
 description: >
    Algorithm study / Problem solutions

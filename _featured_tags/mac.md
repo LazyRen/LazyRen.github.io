@@ -4,8 +4,7 @@ type: tag
 title: Mac
 slug: mac
 category: devlog
-menu: false
-submenu: false
+sidebar: false
 description: >
    Mac related articles
 ---

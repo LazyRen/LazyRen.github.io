@@ -15,38 +15,32 @@
       </li>
     {% endfor %}
   {% else %}
-    {% assign pages = site.pages %}
-    {% assign documents = site.documents %}
-    {% assign nodes = pages | concat: documents | where: "menu", true | sort: "order" %}
-    {% assign subnodes = pages | concat: documents | where: "menu", false | where: "submenu", true | sort: "order" %}
-
+    {% assign nodes = site.pages | concat: site.documents | where: "sidebar", true | sort: "order" %}
+    {% assign tag_nodes = nodes | where: "type", "tag" %}
     {% for node in nodes %}
-      {% assign count = count | plus: 1 %}
       {% unless node.redirect_to %}
-        <li>
-          <input type="checkbox" id="list-item-{{ count }}" />
-          <div class="list-wrapper">
-          <a
-            {% if forloop.first %}id="_navigation"{% endif %}
-            href="{{ node.url | relative_url }}"
-            class="sidebar-nav-item"
-            {% if node.rel %}rel="{{ node.rel }}"{% endif %}
-            >
-            {{ node.title }}
-          </a>
-          {% if node.submenu %}<label class="folder" for="list-item-{{ count }}">▾</label>{% endif %}
-          </div>
-          <ul class="list-body">
-            {% for subnode in subnodes %}
-            {% if subnode.category == node.slug %}
-            <li>
-              <a class="sidebar-nav-subitem{% if page.url == subnode.url %} active{% endif %}"
-                href="{{ subnode.url | relative_url }}">{{ subnode.title }}</a>
-            </li>
+        {% if node.type != "tag" %}
+          {% assign subnodes = tag_nodes | where_exp: "item", "item.category == node.slug" %}
+          {% assign count = count | plus: 1 %}
+          <li>
+            {% if subnodes != empty %}
+              <input type="checkbox" id="list-item-{{ count }}" />
             {% endif %}
+            <div class="list-wrapper">
+              <a {% if forloop.first %}id="_navigation"{% endif %} href="{{ node.url | relative_url }}" class="sidebar-nav-item" {% if node.rel %}rel="{{ node.rel }}"{% endif %} >{{ node.title }}</a>
+              {% if subnodes != empty %}
+                <label class="folder" for="list-item-{{ count }}">▾</label>
+              {% endif %}
+            </div>
+            {% for subnode in subnodes %}
+              {% if forloop.first %}<ul class="list-body">{% endif %}
+                  <li>
+                    <a class="sidebar-nav-subitem" href="{{ subnode.url | relative_url }}">{{ subnode.title }}</a>
+                  </li>
+              {% if forloop.last %}</ul>{% endif %}
             {% endfor %}
-          </ul>
-        </li>
+          </li>
+        {% endif %}
       {% else %}
         <li>
           <a href="{{ node.redirect_to }}" class="sidebar-nav-item external">{{ node.title }}</a>

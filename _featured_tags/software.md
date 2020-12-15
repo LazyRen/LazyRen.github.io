@@ -4,9 +4,7 @@ type: tag
 title: Software
 slug: software
 category: review
-menu: false
-submenu: false
-order: 2
+sidebar: false
 description: >
    Software reviews
 ---

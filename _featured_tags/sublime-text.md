@@ -4,8 +4,7 @@ type: tag
 title: Sublime Text
 slug: sublime-text
 category: devlog
-menu: false
-submenu: false
+sidebar: false
 description: >
    Sublime Text related articles.
 ---

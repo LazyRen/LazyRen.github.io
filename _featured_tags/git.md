@@ -4,8 +4,7 @@ type: tag
 title: Git
 slug: git
 category: devlog
-menu: false
-submenu: false
+sidebar: false
 description: >
    Any article related to Git.
 ---
