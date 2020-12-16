@@ -2,3 +2,77 @@
 .sidebar a {
   text-shadow: rgba(0, 0, 0, 0.25) 0.1rem 0.1rem 0.15rem;
 }
+
+// Sidebar Modification
+
+.sidebar {
+  text-align: center;
+}
+
+.sidebar-sticky {
+  position: absolute;
+  height: 95%;
+  padding-top: 5%;
+}
+
+.sidebar-nav-item {
+  width:100%;
+  padding: .25rem 0;
+}
+
+.sidebar-nav-subitem {
+  @extend .f4;
+  width:100%;
+  display: inline-block;
+  padding: .25rem 0;
+}
+
+.list-wrapper {
+  text-align: left;
+  display: flex;
+}
+
+.list-body {
+  text-align: left;
+  margin: 4px;
+}
+
+.sidebar-about {
+  > a.sidebar-title {
+    &::after {
+      width: 9rem;
+    }
+  }
+}
+
+// Submenu Insertion
+
+.folder {
+  color: #fff;
+  font-size: x-large;
+  position: absolute;
+  cursor: pointer;
+  right: 30px;
+}
+
+.folder:hover {
+  color: #4FB1BA;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+
+input[type="checkbox"] ~ ul{
+  height: 0;
+  transition: transform .2s ease-out;
+  transform: scaleY(0);
+}
+
+input[type="checkbox"]:checked ~ ul{
+  list-style: none;
+  height: 100%;
+  transform-origin: top;
+  transition: transform .2s ease-out;
+  transform: scaleY(1);
+}
