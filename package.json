@@ -1,0 +1,84 @@
+{
+  "name": "hydejack",
+  "version": "9.0.5",
+  "description": "The best Jekyll theme by a mile",
+  "scripts": {
+    "clean": "rm -f assets/js/hydejack-*.js",
+    "test": "exit 0",
+    "format": "prettier --write \"_js/src/**/*.js\"",
+    "build": "npm run build:js & npm run build:css & npm run build:scripts & wait",
+    "build:js": "webpack --mode production",
+    "build:js:stats": "webpack --mode production --progress --colors --json > stats.json",
+    "build:css": ".scripts/build-css.js",
+    "build:scripts": " for f in $(find _includes/scripts -type f ! -name '*.min.js'); do g=${f%.js}; uglifyjs $f -c -m > $g.min.js; done",
+    "watch": "npm run watch:js & npm run watch:css",
+    "watch:js": "webpack --watch --mode development --progress --colors",
+    "watch:css": "npm run build:css && onchange '_sass/**/*.scss' -e '_sass/**/__*/*' -- npm run build:css '{{changed}}'",
+    "serve": "bundle exec jekyll serve --port=$npm_package_config_port --host=0.0.0.0",
+    "dev": "npm run watch & npm run serve",
+    "preversion": "npm run preversion:js && npm run preversion:css",
+    "preversion:js": "sed -i '' 's:/assets/js/\\*hydejack-\\*:#<removed/js>:' .gitignore",
+    "preversion:css": "sed -i '' 's:/_sass/\\*/__\\*__/\\*:#<removed/css>:' .gitignore",
+    "version": ".scripts/version.js && npm run format && npm run build && git add .",
+    "postversion": "(npm run postversion:js && npm run postversion:css) && git add . && git ci -m 'Restore pre-version .gitignore' && npm run postversion:tagfix",
+    "postversion:tagfix": "git tag -s pro/v$npm_package_version HEAD^1 -m '$npm_package_version' && git tag -d v$npm_package_version",
+    "postversion:js": "sed -i '' 's:#<removed/js>:/assets/js/*hydejack-*:' .gitignore && git rm --cached assets/js/*hydejack-*",
+    "postversion:css": "sed -i '' 's:#<removed/css>:/_sass/*/__*__/*:' .gitignore && git rm --cached _sass/*/__*__/*"
+  },
+  "config": {
+    "port": 4000
+  },
+  "author": "Florian Klampfer <mail@qwtel.com> (https://qwtel.com/)",
+  "license": "GPL-3.0",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "dedent": "^0.7.0",
+    "json2yaml": "^1.1.0",
+    "null-loader": "^4.0.0",
+    "onchange": "^7.0.2",
+    "prettier": "^2.0.5",
+    "re-template-tag": "^2.0.1",
+    "uglifyjs": "^2.4.11",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.0.9",
+    "yargs": "^15.4.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.10.4",
+    "@hydecorp/component": "^1.0.0-alpha.3",
+    "@hydecorp/drawer": "^1.0.0-alpha.6",
+    "@hydecorp/push-state": "^1.0.0-alpha.8",
+    "@juggle/resize-observer": "^3.2.0",
+    "@webcomponents/custom-elements": "^1.4.1",
+    "@webcomponents/shadycss": "^1.10.0",
+    "@webcomponents/shadydom": "^1.7.3",
+    "@webcomponents/template": "^1.4.2",
+    "@webcomponents/url": "^0.7.5",
+    "@webcomponents/webcomponents-platform": "^1.0.1",
+    "@webcomponents/webcomponentsjs": "^2.4.3",
+    "abortcontroller-polyfill": "^1.4.0",
+    "core-js": "^2.6.11",
+    "create-element-x": "^1.1.1",
+    "dom4": "^2.1.5",
+    "intersection-observer": "^0.10.0",
+    "lit-html": "^1.2.1",
+    "rxjs": "^7.0.0-beta.2",
+    "web-animations-js": "^2.3.2",
+    "whatwg-fetch": "^3.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qwtel/hydejack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qwtel/hydejack/issues"
+  },
+  "homepage": "https://hydejack.com/",
+  "engines": {
+    "node": ">=11"
+  }
+}
