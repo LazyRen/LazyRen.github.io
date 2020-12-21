@@ -141,7 +141,7 @@ Changes in [this file](https://github.com/LazyRen/LazyRen.github.io/blob/master/
 
 ##### Line by line explanation
 
-```ruby
+```html
 {% raw %}
 {% assign nodes = site.pages | concat: site.documents | where: "sidebar", true | sort: "order" %}
 {% assign tag_nodes = nodes | where: "type", "tag" %}
@@ -180,7 +180,7 @@ Changes in [this file](https://github.com/LazyRen/LazyRen.github.io/blob/master/
 
 Above is the actual code that I've added. I'll try my best to explain in detail for each code segment.
 
-```ruby
+```html
 {% raw %}
 {% assign nodes = site.pages | concat: site.documents | where: "sidebar", true | sort: "order" %}
 {% assign tag_nodes = nodes | where: "type", "tag" %}
@@ -190,7 +190,7 @@ Above is the actual code that I've added. I'll try my best to explain in detail 
 `nodes`: From all the site pages & documents, take pages that has been mareked as `sidebar: true`. For me, In addition to the categories & tags, I've also added such property to [about.md](https://github.com/LazyRen/LazyRen.github.io/blob/master/about.md) & [tags.md](https://github.com/LazyRen/LazyRen.github.io/blob/master/tags.md).<br>
 `tag_nodes`: From what we've collected, filter tags only.(We've set the sidebar & tag property in `*.md` file)
 
-```ruby
+```html
 {% raw %}
 {% for node in nodes %}
   {% unless node.redirect_to %}
@@ -310,6 +310,99 @@ It will be displayed in sidebar, so set `sidebar` accordingly, and we must creat
 [tags.html](https://github.com/LazyRen/LazyRen.github.io/blob/master/_layouts/tags.html) should be located in `_layouts` folder.<br>
 It finds all categories & tags from the site & list them like `list` or `tag-list` style (they are layout that you will see when you click category or tag).<br>
 `type` property is also used in here, so make sure you've added property to the `*.md` files.
+
+### Use [Utterances](https://utteranc.es/) as a comment plugin
+
+It's not hard to setup [utterances](https://github.com/utterance/utterances).<br>
+First of all, you should install [utterances app](https://github.com/apps/utterances) to the blog repository.
+Since we are gonna migrate from disqus, proper changes must be made to `my-comments.html` & `links-static.html`.<br>
+
+```default
+/_config.yml
+/_includes/my-comments.html
+/_includes/head/links-static.html
+```
+
+#### _config.yml
+
+If you followed [instructions from utterances](https://utteranc.es/), you will end up with simple javascript code like below.
+
+```javascript
+<script src="https://utteranc.es/client.js"
+        repo="[ENTER REPO HERE]"
+        issue-term="pathname"
+        label="comments"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+```
+
+There is two choices, you can simply copy this code to the `my-comments.html`, but why not use `_config.yml` so it can be more configurable in the future?
+
+```yaml
+# Set which comment system to use
+comments:
+  # 'disqus' or 'utterances' are available
+  provider:            utterances
+
+# You must install utterances github app before use.(https://github.com/apps/utterances)
+# Make sure all variables are set properly. Check below link for detail.
+# https://utteranc.es/
+utterances:
+  repo:                "LazyRen/LazyRen.github.io"
+  issue-term:          "pathname"
+  label:               "Comments"
+  theme:               "dark-blue"
+```
+
+Insert above variables somewhere in `_config.yml`.<br>
+In my case, I've putted in `# 3rd Party Integrations` where original `disqus` variable was located.<br>
+`site.comments.provide` will be used in `my-comments.html` & `links-static.html` to set up comment section of the post.
+
+You may have different values based on your option choices.
+
+#### my-comments.html
+
+Choose the right comment provider's code to insert based on the `site.comments.provider`.(that we've mentioned in `_config.yml`).
+
+disqus's code will remain as-is, we only need to add utterances's code so it can parse values from `_config.yml`. If you don't want to use `_config.yml`, you may just copy & hard-code script from [utterances](https://utteranc.es/).
+
+```html
+{% raw %}
+{% assign provider = site.comments.provider | default:"disqus" %}
+{% if provider == "disqus" %}
+  {% assign disqus = site.disqus | default:site.disqus_shortname %}
+  {% if disqus %}
+    <!-- original disqus codes -->
+  {% endif %}
+{% elsif provider == "utterances" %}
+  {% assign utterances = site.utterances %}
+  {% if utterances.repo %}
+    <script src="https://utteranc.es/client.js"
+            repo=        {{ utterances.repo }}
+            issue-term=  {{ utterances.issue-term }}
+            label=       {{ utterances.label }}
+            theme=       {{ utterances.theme }}
+            crossorigin= "anonymous"
+            async>
+    </script>
+  {% endif %}
+{% endif %}
+{% endraw %}
+```
+
+#### links-static.html
+
+You don't want to link disqus if you are not using it. Wrap linking line with proper if statement.
+
+```html
+{% raw %}
+{% if site.comments.provider == "disqus" and site.disqus %}
+  <link rel="dns-prefetch" href="https://{{ disqus }}.disqus.com" id="_hrefDisqus">
+{% endif %}
+{% endraw %}
+```
 
 ## Conclusion
 
