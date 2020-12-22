@@ -3,7 +3,7 @@ layout: post
 title: "How I customized Hydejack Theme"
 subtitle: "How I customized Hydejack Theme"
 category: devlog
-tags: development blog
+tags: blog github-pages jekyll
 image:
   path: /assets/img/2020-08-02/showcase.png
 ---
@@ -139,7 +139,7 @@ input[type="checkbox"]:checked ~ ul{
 Change made in `my-style.scss` was to properly show submenu.<br>
 Changes in [this file](https://github.com/LazyRen/LazyRen.github.io/blob/master/_includes/body/nav.html) is to actually print submenu(tags) to the sidebar.
 
-##### Line by line explanation
+##### Code explanation
 
 ```html
 {% raw %}
@@ -280,8 +280,9 @@ description: >
 
 ### Creating Tag Cloud/List Page
 
-Since many tags are not listed on the sidebar, I've always wanted to have a page where I can see all categories & tags I've used for the posts.<br>
-You only need to create two files to have a such page.
+![tag list](/assets/img/2020-12-21/tag_list.png)
+
+Since many tags are not listed on the sidebar, I've always wanted to have a page where I can see all categories & tags I've used for the posts. And visitor may click on it to navigate related posts. To implement tag list, you only need to create two files to have a such page.
 
 ```default
 /tags.md
@@ -317,6 +318,8 @@ It's not hard to setup [utterances](https://github.com/utterance/utterances).<br
 First of all, you should install [utterances app](https://github.com/apps/utterances) to the blog repository.
 Since we are gonna migrate from disqus, proper changes must be made to `my-comments.html` & `links-static.html`.<br>
 
+3 files to be modified. (check [related commit](https://github.com/LazyRen/LazyRen.github.io/commit/8dcf03700c7f3d0f581b27a6fcf2e8a4d8396340))
+
 ```default
 /_config.yml
 /_includes/my-comments.html
@@ -339,6 +342,9 @@ If you followed [instructions from utterances](https://utteranc.es/), you will e
 ```
 
 There is two choices, you can simply copy this code to the `my-comments.html`, but why not use `_config.yml` so it can be more configurable in the future?
+
+My recommendation for the theme is, `github-light` for the light mode, `dark-blue` for the dark mode.
+{.note}
 
 ```yaml
 # Set which comment system to use
@@ -404,8 +410,100 @@ You don't want to link disqus if you are not using it. Wrap linking line with pr
 {% endraw %}
 ```
 
+### Add claps for each posts
+
+When I revisted the [hydejack's offical site](https://hydejack.com/showcase/lazyren/), I noticed little [clapping button](https://help.medium.com/hc/en-us/articles/115011350967-Claps) that set at the end of the post. It seems good idea to have light-cost (compare to commenting) way to communicate with visitors. So I gave some research on it and finally made it as below.
+
+![applause button](/assets/img/2020-12-21/post_end.png)
+
+[@qwtel](https://github.com/qwtelhttps://github.com/qwtel), the author of this jekyll theme provides a nice [applause button service](https://getclaps.dev/), but unfortunatelly, $5 per month is too expensive to pay for this small blog.
+
+So I ended up with [applause](https://applause-button.com/). Which is free, ([donation](https://opencollective.com/applause-button) for a good service is always an option.) and easy-to-install.(not 100% true, if you ask me. I couldn't find good guideline on how to customize it.)
+
+Basically, I will add applause button for each-and-every post. Unless author specifically set it otherwise.<br>
+
+4 files to be modified. (check [related commit](https://github.com/LazyRen/LazyRen.github.io/commit/346f496d80243fcfbd0f24b47daa10078efe954f))
+
+```default
+/_config.yml
+/_includes/head/links-static.html
+/_layouts/post.html
+_sass/my-style.scss
+```
+
+#### _config.yml
+
+It's not really necessary, but I just wanted to avoid inserting `applause_button: true` to each and every posts' frontmatter.
+If you have a post that doesn't need applause button, insert `applause_button: false` to the frontmatter of that post.
+
+```yaml
+defaults:
+  # You can use the following to enable comments on all posts.
+  - scope:
+      type:            posts
+    values:
+      # https://applause-button.com/
+      applause_button:       true
+```
+
+#### links-static.html
+
+Jekyll needs js & css files ready. So here it is.
+
+```html
+{% raw %}
+{% if page.applause_button %}
+  <link rel="stylesheet" href="https://unpkg.com/applause-button/dist/applause-button.css">
+  <script src="https://unpkg.com/applause-button/dist/applause-button.js"></script>
+{% endif %}
+{% endraw %}
+```
+
+#### post.html
+
+Applause button(if enabled) seats between contents and post-nodes such as author / comments.<br>
+If Applause button is disabled, make sure to prints origina dingbat. I've used site's accent_color (which you can change from `_config.yml`), but feel free to choose the best color for your blog.
+
+Make sure to put proper `url` for the applause button. If there is more than one applause button is one post...<br>
+I don't know to be honest. Please share your ideas for this.
+{.note}
+
+```html
+{% raw %}
+{% if page.applause_button %}
+  <applause-button
+    color={{ site.accent_color | default:'rgb(79,177,186)' }}
+    url={{ site.url }}{{ page.url }} >
+  </applause-button>
+{% else %}
+  <hr class="dingbat related" />
+{% endif %}
+{% endraw %}
+```
+
+#### my-style.scss
+
+* Change size
+* Make button centered
+* Number has same color as applause button
+
+```css
+// applause-button
+
+applause-button {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+
+  .count-container {
+    color: inherit;
+  }
+}
+```
+
 ## Conclusion
 
-I'm not an expert in web development. Adding simple submenu was pretty challenging & time consuming job for me.<br>
-You may find some odd parts, if you have any suggestions for the improvment please don't hesitate to contact me.<br>
+This post orignally started with sidebar modification only. But now it has become a huge post. I might divide this post into smaller ones.
+I'm not an expert in web development. Adding simple submenu was pretty challenging & time consuming job for me. But taking some time to dig around, I've learned one or two things about how jekyll is working, and web programming.<br>it's pretty fun!<br>
+You may find some odd parts, need help implementing features, or you have any suggestions for the improvment please don't hesitate to contact me.<br>
 I'd be very delightful to have any comments.<br>
