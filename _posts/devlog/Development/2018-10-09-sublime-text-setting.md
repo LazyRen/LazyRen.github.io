@@ -134,4 +134,4 @@ import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe0
 
 ## Build System Setting
 
-기존에 작성하였던 [포스트](https://lazyren.github.io/devlog/sublime-build-and-execute.html)를 참고하도록 합니다.
+기존에 작성하였던 [포스트](/devlog/sublime-build-and-execute)를 참고하도록 합니다.
