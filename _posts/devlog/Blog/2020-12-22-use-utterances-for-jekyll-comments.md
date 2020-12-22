@@ -8,11 +8,19 @@ image:
   path: /assets/img/2020-12-21/utterances.png
 ---
 
+Disqus is somewhat default comments plugin for the Hydejack and most of the static site. But I had some issues with Disqus, so I looked elsewhere to find new comments plugin.
+
+1. Disqus loads slowly.<br>
+2. link within comment is **broken**.<br>
+   The most important reason I chose to move on. Disqus automatically adds prefix starting with `disq.us/url?`, the problem is.... `disq.us` is not responding so the link gets lost.
+
+`Utterances` uses github issues to save & display comments. So you have to give proper permission to the github-bot. But once you set things up correctly, it works very smoothly and fast. Only downside I've encountered so far is that it requires user to login to the github in order to write comments, and there is no default `reply` function. (All though you can mimic reply using `>` & `@`...)
+
+<!--more-->
+
 It's not hard to setup [utterances](https://github.com/utterance/utterances).<br>
 First of all, you should install [utterances app](https://github.com/apps/utterances) to the blog repository.
 Since we are gonna migrate from disqus, proper changes must be made to `my-comments.html` & `links-static.html`.<br>
-
-<!--more-->
 
 3 files to be modified. (check [related commit](https://github.com/LazyRen/LazyRen.github.io/commit/8dcf03700c7f3d0f581b27a6fcf2e8a4d8396340))
 
