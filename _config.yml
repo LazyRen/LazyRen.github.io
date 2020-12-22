@@ -141,7 +141,7 @@ defaults:
     values:
       sitemap:         false
 
-  # # You can use the following to enable comments on all posts.
+  # You can use the following to enable comments on all posts.
   - scope:
       type:            posts
     values:

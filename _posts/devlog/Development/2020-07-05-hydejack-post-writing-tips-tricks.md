@@ -3,7 +3,7 @@ layout: post
 title: "Hydejack Post Writing Tips & Tricks"
 subtitle: "Hydejack Post Writing Tips & Tricks"
 category: devlog
-tags: development blog
+tags: blog
 ---
 
 Hydejack 테마를 이용하여 포스트를 작성할때 참고할 syntax 입니다.

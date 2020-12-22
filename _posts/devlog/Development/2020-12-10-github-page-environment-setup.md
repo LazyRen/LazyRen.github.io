@@ -3,7 +3,7 @@ layout: post
 title: "깃헙 페이지 리눅스(우분투) 개발 환경 세팅하기"
 subtitle: "Github Page Linux(Ubuntu) Environment Setup"
 category: devlog
-tags: development blog
+tags: blog development github-pages jekyll
 image:
   path: /assets/img/2020-12-10/github_page_jekyll.png
 ---
