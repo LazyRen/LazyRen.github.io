@@ -26,6 +26,9 @@ There is few files you need to edit/add for this.<br>
 /_featured_tags/*.md
 ```
 
+* this unordered seed list will be replaced by the toc
+{:toc}
+
 ## my-inline.scss
 
 Add below code to the [_sass/my-inline.scss file](https://github.com/LazyRen/LazyRen.github.io/blob/master/_sass/my-inline.scss), so it can display submenu properly.<br>

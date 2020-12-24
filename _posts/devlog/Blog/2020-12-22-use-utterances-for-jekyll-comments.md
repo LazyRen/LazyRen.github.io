@@ -30,6 +30,9 @@ Since we are gonna migrate from disqus, proper changes must be made to `my-comme
 /_includes/head/links-static.html
 ```
 
+* this unordered seed list will be replaced by the toc
+{:toc}
+
 ## _config.yml
 
 If you followed [instructions from utterances](https://utteranc.es/), you will end up with simple javascript code like below.

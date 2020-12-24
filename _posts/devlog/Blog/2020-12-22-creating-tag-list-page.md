@@ -17,6 +17,9 @@ Since many tags are not listed on the sidebar, I've always wanted to have a page
 /_layouts/tags.html
 ```
 
+* this unordered seed list will be replaced by the toc
+{:toc}
+
 ## tags.md
 
 ```markdown

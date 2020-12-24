@@ -27,6 +27,9 @@ Basically, I will add applause button for each-and-every post. Unless author spe
 _sass/my-style.scss
 ```
 
+* this unordered seed list will be replaced by the toc
+{:toc}
+
 ## _config.yml
 
 It's not really necessary, but I just wanted to avoid inserting `applause_button: true` to each and every posts' frontmatter.
