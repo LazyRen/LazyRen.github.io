@@ -48,10 +48,14 @@ If you followed [instructions from utterances](https://utteranc.es/), you will e
 </script>
 ```
 
-There is two choices, you can simply copy this code to the `my-comments.html`, but why not use `_config.yml` so it can be more configurable in the future?
-
 My recommendation for the theme is, `github-light` for the light mode, `dark-blue` for the dark mode.
-{.note}
+{:.note}
+
+There is two choices,
+1. Hard coding: you can simply copy this code to the `my-comments.html`.
+2. You can use `_config.yml` so it can be more configurable.
+
+I'll go with the second choice. Either way, you have to put `comments: provider:` to the `_config.yml`.
 
 ```yaml
 # Set which comment system to use
