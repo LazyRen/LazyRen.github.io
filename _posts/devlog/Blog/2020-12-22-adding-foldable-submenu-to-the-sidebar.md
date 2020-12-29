@@ -86,11 +86,11 @@ used `scss` file has been changed to `my-inline.scss` from `my-style.scss` to pr
 // Submenu Insertion
 
 .folder {
+  text-align: right;
+  width: 100%;
   color: #fff;
   font-size: large;
-  position: absolute;
   cursor: pointer;
-  right: 30px;
 }
 
 .folder:hover {
