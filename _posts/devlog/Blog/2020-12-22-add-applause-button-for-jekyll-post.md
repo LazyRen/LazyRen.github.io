@@ -8,7 +8,8 @@ image:
   path: /assets/img/2020-12-21/post_end.png
 ---
 
-When I revisted the [hydejack's offical site](https://hydejack.com/showcase/lazyren/), I noticed little [clapping button](https://help.medium.com/hc/en-us/articles/115011350967-Claps) that set at the end of the post. It seems good idea to have light-cost (compare to commenting) way to communicate with visitors. So I gave some research on it and finally made it as above.
+When I revisted the [hydejack's offical site](https://hydejack.com/showcase/lazyren/), I noticed little [clapping button](https://help.medium.com/hc/en-us/articles/115011350967-Claps) that set at the end of the post.<br>
+It seems good idea to have light-cost (compare to commenting) way to communicate with visitors. So I gave some research on it and finally made it as above.
 
 <!--more-->
 
@@ -63,8 +64,8 @@ Jekyll needs js & css files ready. So here it is.
 Applause button(if enabled) seats between contents and post-nodes such as author / comments.<br>
 If Applause button is disabled, make sure to prints origina dingbat. I've used site's accent_color (which you can change from `_config.yml`), but feel free to choose the best color for your blog.
 
-Make sure to put proper `url` for the applause button. If there is more than one applause button is one post...<br>
-I don't know to be honest. Please share your ideas for this.
+Make sure to put proper `url` for the applause button. If there is more than one applause button in one post...<br>
+Sorry, I don't know to be honest. Please share your ideas for this.
 {.note}
 
 ```html
