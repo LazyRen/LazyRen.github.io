@@ -11,10 +11,10 @@ tags: development translation git
 
 <!--more-->
 
-* this unordered seed list will be replaced by the toc
+1. this ordered seed list will be replaced by the toc
 {:toc}
 
-## 1. 저장소 미러링하기
+## 저장소 미러링하기
 
 1. 터미널을 엽니다.
 
@@ -32,11 +32,10 @@ tags: development translation git
     ```
 
 4. 1번과정에서 클론된 저장소를 지웁니다.(선택)
-<br/>
 
 대부분의 경우 위의 방법으로 mirror-clone이 가능하지만, 깃헙의 정책상 크기가 100MB를 넘어가는 파일이 커밋된 적이 단 한번이라도 있을경우 오류가 발생하여 push가 불가능하게 됩니다.
 
-## 2. 100MB를 넘어가는 크기의 파일을 지닌 저장소 미러링하기
+## 100MB를 넘어가는 크기의 파일을 지닌 저장소 미러링하기
 
 1. [git lfs](https://git-lfs.github.com/)와 [BFG Repo Cleaner](https://rtyley.github.io/bfg-repo-cleaner/)를 설치합니다.
 
@@ -68,4 +67,6 @@ tags: development translation git
 
 6. 1번과정에서 클론된 저장소를 지웁니다.(선택)
 
-* 출처: [GitHub Help](https://help.github.com/articles/duplicating-a-repository/), [stack overflow](https://stackoverflow.com/questions/37986291/how-to-import-git-repositories-with-large-files)
+* [GitHub Help](https://help.github.com/articles/duplicating-a-repository/)
+* [stack overflow](https://stackoverflow.com/questions/37986291/how-to-import-git-repositories-with-large-files)
+{:.note title="출처"}
