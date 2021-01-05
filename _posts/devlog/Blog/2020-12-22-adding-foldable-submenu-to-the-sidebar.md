@@ -34,7 +34,7 @@ There is few files you need to edit/add for this.<br>
 Add below code to the [_sass/my-inline.scss file](https://github.com/LazyRen/LazyRen.github.io/blob/master/_sass/my-inline.scss), so it can display submenu properly.<br>
 
 used `scss` file has been changed to `my-inline.scss` from `my-style.scss` to prevent FOUC as much as possible. `Sidebar-sticky` still moves up and down at the first time tho...
-{.note}
+{:.note}
 
 ```css
 // Sidebar Modification
@@ -126,7 +126,7 @@ Changes in [this file](https://github.com/LazyRen/LazyRen.github.io/blob/master/
 
 ### Code explanation
 
-```html
+```liquid
 {% raw %}
 {% assign nodes = site.pages | concat: site.documents | where: "sidebar", true | sort: "order" %}
 {% assign tag_nodes = nodes | where: "type", "tag" %}
@@ -165,7 +165,7 @@ Changes in [this file](https://github.com/LazyRen/LazyRen.github.io/blob/master/
 
 Above is the actual code that I've added. I'll try my best to explain in detail for each code segment.
 
-```html
+```liquid
 {% raw %}
 {% assign nodes = site.pages | concat: site.documents | where: "sidebar", true | sort: "order" %}
 {% assign tag_nodes = nodes | where: "type", "tag" %}
@@ -175,7 +175,7 @@ Above is the actual code that I've added. I'll try my best to explain in detail 
 `nodes`: From all the site pages & documents, take pages that has been mareked as `sidebar: true`. For me, In addition to the categories & tags, I've also added such property to [about.md](https://github.com/LazyRen/LazyRen.github.io/blob/master/about.md) & [tags.md](https://github.com/LazyRen/LazyRen.github.io/blob/master/tags.md).<br>
 `tag_nodes`: From what we've collected, filter tags only.(We've set the sidebar & tag property in `*.md` file)
 
-```html
+```liquid
 {% raw %}
 {% for node in nodes %}
   {% unless node.redirect_to %}
