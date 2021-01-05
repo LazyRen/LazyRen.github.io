@@ -15,12 +15,11 @@ Hydejack 테마를 이용하여 포스트를 작성할때 참고할 syntax 입�
 
 ## Build
 
-### update
-
 ```shell
 bundle update
 
-bundle exec jekyll serve
+bundle exec jekyll serve --livereload
+# livereload option enables auto reload of browser when file has been modified.
 ```
 
 ## Writing
