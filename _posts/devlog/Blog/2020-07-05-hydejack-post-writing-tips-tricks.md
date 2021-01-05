@@ -62,6 +62,33 @@ A custom label.
 A custom label.
 {:.note title="Attention"}
 
+### Expand/Collapse
+
+You can add expand/collapse contents with [simple HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details).<br>
+`<div markdown="1">` allows to use markdown features within.
+
+Example:
+
+<details>
+<summary>Expand/Collapse Button</summary>
+<div markdown="1">
+**Hello World!**<br>
+emphasised by *markdown*.
+</div>
+</details>
+<br>
+Markdown:
+
+```markdown
+<details>
+<summary>Expand/Collapse Button</summary>
+<div markdown="1">
+**Hello World!**<br>
+emphasised by *markdown*.
+</div>
+</details>
+```
+
 ### Adding large text
 
 You can add large text by adding the `lead` class to the paragraph.
