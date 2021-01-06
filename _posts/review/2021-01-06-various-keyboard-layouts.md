@@ -39,9 +39,10 @@ R1~R4 까지 와 1x1부터 1x6.25까지 각각의 숫자가 무엇을 의미하�
 
 #### 프로파일
 
-![OEM Profile](/assets/img/2021-01-06/oem_profile.jpg){: width="32%"}
-![SA Profile](/assets/img/2021-01-06/sa_profile.jpg){: width="30%"}
-![Cherry Profile](/assets/img/2021-01-06/cherry_profile.jpg){: width="36%"}
+![OEM Profile](/assets/img/2021-01-06/oem_profile.jpg){: width="33%"}
+![SA Profile](/assets/img/2021-01-06/sa_profile.jpg){: width="33%"}
+![Cherry Profile](/assets/img/2021-01-06/cherry_profile.jpg){: width="33%"}
+{: style="background-color: white;"}
 
 위 3개의 프로파일은 가장 대표적인 키캡 프로파일들로 키보드에 장착했을때 가운데가 오목해지도록 인체공학적으로 설계되어있습니다. (스텝 스컬쳐2(Step Sculpture2)라고 부릅니다.)<br>
 키캡마다 부르는 방식이 다른데... 위에 적힌 배열과 달리 [dev/tty](https://drop.com/buy/drop-matt3o-devtty-custom-keycap-set#imagecarousel)나 [GMK Carbon](https://drop.com/buy/gmk-carbon-custom-keycap-set#imagecarousel) 키캡을 보시면 최상단 펑션열이 R0, 최하단이 R4 혹은 R5라고 적혀있습니다. (프로파일 그림에서는 좌측이 R0, 우측이 R4가 됩니다.)<br>
