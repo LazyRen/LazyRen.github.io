@@ -39,9 +39,9 @@ R1~R4 까지 와 1x1부터 1x6.25까지 각각의 숫자가 무엇을 의미하�
 
 #### 프로파일
 
-![OEM Profile](/assets/img/2021-01-06/oem_profile.jpg){: width="33%"}
-![SA Profile](/assets/img/2021-01-06/sa_profile.jpg){: width="30.5%"}
-![Cherry Profile](/assets/img/2021-01-06/cherry_profile.jpg){: width="35.5%"}
+![OEM Profile](/assets/img/2021-01-06/oem_profile.jpg){: width="32%"}
+![SA Profile](/assets/img/2021-01-06/sa_profile.jpg){: width="30%"}
+![Cherry Profile](/assets/img/2021-01-06/cherry_profile.jpg){: width="36%"}
 
 위 3개의 프로파일은 가장 대표적인 키캡 프로파일들로 키보드에 장착했을때 가운데가 오목해지도록 인체공학적으로 설계되어있습니다. (스텝 스컬쳐2(Step Sculpture2)라고 부릅니다.)<br>
 키캡마다 부르는 방식이 다른데... 위에 적힌 배열과 달리 [dev/tty](https://drop.com/buy/drop-matt3o-devtty-custom-keycap-set#imagecarousel)나 [GMK Carbon](https://drop.com/buy/gmk-carbon-custom-keycap-set#imagecarousel) 키캡을 보시면 최상단 펑션열이 R0, 최하단이 R4 혹은 R5라고 적혀있습니다. (프로파일 그림에서는 좌측이 R0, 우측이 R4가 됩니다.)<br>
@@ -49,7 +49,7 @@ R1~R4 까지 와 1x1부터 1x6.25까지 각각의 숫자가 무엇을 의미하�
 
 #### 키캡 크기
 
-![1u Size](/assets/img/2021-01-06/1u_keycap_size.png)
+![1u Size](/assets/img/2021-01-06/1u_keycap_size.png){: .centered}
 
 알파열의 일반 키 1x1에서부터 최하단 모디키 1x1.25, 우 쉬프트 1x2.75 등은 키캡의 크기를 나타내는 방법입니다.<br>
 가장 기본이 되는 크기를 **1u(unit)**이라고 합니다. 일반 문자열의 키보드 크기인데요, 스위치를 중심으로 *19.05mm*이며 실제 키캡은 *18mm*로 키캡 사이에 공백이 존재합니다.
@@ -63,7 +63,7 @@ R1~R4 까지 와 1x1부터 1x6.25까지 각각의 숫자가 무엇을 의미하�
 
 ### 풀배열 / 100%
 
-![ANSI](/assets/img/2021-01-06/ansi.jpg)
+![ANSI](/assets/img/2021-01-06/ansi.jpg){: .centered}
 
 ANSI(American National Standards Institute) 스탠다드 키보드
 {:.figcaption}
@@ -77,7 +77,7 @@ ANSI(American National Standards Institute) 스탠다드 키보드
 
 ### 텐키리스 / 80%
 
-![Winkeyless](/assets/img/2021-01-06/80_winkeyless.jpg)
+![Winkeyless](/assets/img/2021-01-06/80_winkeyless.jpg){: .centered}
 
 윈키리스(84키) 키보드
 {:.figcaption}
@@ -96,7 +96,7 @@ ANSI(American National Standards Institute) 스탠다드 키보드
 
 #### 75%
 
-![Duck Octagon](/assets/img/2021-01-06/75_duck_octagon.jpg)
+![Duck Octagon](/assets/img/2021-01-06/75_duck_octagon.jpg){: .centered}
 
 Duck Octagon(84키)
 {:.figcaption}
@@ -113,7 +113,7 @@ Duck Octagon(84키)
 
 #### 65%
 
-![FC 660M](/assets/img/2021-01-06/65_fc660m.jpg)
+![FC 660M](/assets/img/2021-01-06/65_fc660m.jpg){: .centered}
 
 Leopold FC660M(66키)
 {:.figcaption}
@@ -121,7 +121,7 @@ Leopold FC660M(66키)
 좌슆과 우슆의 길이가 동일한 2.25u입니다. 오른쪽 모디키(윈도우) 하나도 크기가 1u으로 변경되었습니다.<br>
 이를 통해 어떻게든 방향키를 낑겨넣은 모습이 인상적입니다.
 
-![Varmilo VA68M](/assets/img/2021-01-06/65_varmilo_va68m.jpg)
+![Varmilo VA68M](/assets/img/2021-01-06/65_varmilo_va68m.jpg){: .centered}
 
 Varmil VA68M(68키)
 {:.figcaption}
@@ -129,7 +129,7 @@ Varmil VA68M(68키)
 최대한 표준 키캡 크기들을 준수하면서 사이즈를 줄인 모습입니다. 우 컨트롤 키와 방향키 사이의 작은 여백이 아쉽습니다.
 ~~차라리 키캡 구해서 660M을 쓰고 말지~~
 
-![Whitefox Vanilla](/assets/img/2021-01-06/65_whitefox_vanilla.jpg)
+![Whitefox Vanilla](/assets/img/2021-01-06/65_whitefox_vanilla.jpg){: .centered}
 
 Whitefox Vanilla(68키)
 {:.figcaption}
@@ -137,14 +137,14 @@ Whitefox Vanilla(68키)
 75% 배열(84키)에서 최상단 펑션열이 빠졌습니다.<br>
 마음에 드는 배열이지만 75%와 마찬가지로 맞는 키캡 구하기가 힘들다는 단점 또한 그대로입니다.
 
-![Whitefox Aria](/assets/img/2021-01-06/65_whitefox_aria.jpg)
+![Whitefox Aria](/assets/img/2021-01-06/65_whitefox_aria.jpg){: .centered}
 
 Whitefox Aria(67키)
 {:.figcaption}
 
 바로 위의 배열에서 1u * 3 모디키들만 일반 1.25u 크기의 2개의 모디키로 변경된 버전입니다.
 
-![Rama M65-A](/assets/img/2021-01-06/65_rama_m65_a.jpg)
+![Rama M65-A](/assets/img/2021-01-06/65_rama_m65_a.jpg){: .centered}
 
 Rama M65-A
 {:.figcaption}
@@ -155,7 +155,7 @@ Rama M65-A
 
 #### 60%
 
-![Happy Hacking Keyboard](/assets/img/2021-01-06/60_hhkb.jpg)
+![Happy Hacking Keyboard](/assets/img/2021-01-06/60_hhkb.jpg){: .centered}
 
 HHKB(Happy Hacking KeyBoard)
 {:.figcaption}
@@ -164,7 +164,7 @@ HHKB(Happy Hacking KeyBoard)
 방향키 없이 1.75u 크기의 우 쉬프트 옆에 fn키가 붙어있습니다. 하단 또한 1u크기의 alt가 눈에 띄네요.
 하단 모디열에서 3개의 키가 사라지고 크기도 줄어 특유의 여백을 남겨놓았습니다. ~~HHKB 각인시켜야하거든요.~~
 
-![Filco Minila](/assets/img/2021-01-06/60_filco_minila.jpg)
+![Filco Minila](/assets/img/2021-01-06/60_filco_minila.jpg){: .centered}
 
 Filco Minila
 {:.figcaption}
