@@ -18,8 +18,12 @@ Hydejack 테마를 이용하여 포스트를 작성할때 참고할 syntax 입�
 ```shell
 bundle update
 
-bundle exec jekyll serve --livereload
 # livereload option enables auto reload of browser when file has been modified.
+bundle exec jekyll serve --livereload
+
+# if 'bundle exec' fails with ruby >= 3.0.0;
+# https://github.com/jekyll/jekyll/issues/8523#issuecomment-751409319
+bundle add webrick
 ```
 
 ## Writing
