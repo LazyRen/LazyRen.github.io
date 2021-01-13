@@ -53,3 +53,5 @@ gem 'tzinfo-data' if Gem.win_platform?
 
 gem 'rake'
 gem 'kramdown'
+
+gem "webrick", "~> 1.7"
