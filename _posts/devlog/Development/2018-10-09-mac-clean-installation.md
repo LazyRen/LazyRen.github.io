@@ -116,8 +116,14 @@ Mac osX은 매년 메이저 업데이트가 진행되며 올해에도 9월 25일
     Automatically rearrange Spaces based on most recent use: False<br>
   * Language & Region<br>
     Set English as Primary(place it on the top)<br>
+  * Accessibility<br>
+    * Mouse & Trackpad<br>
+      Trackpad Options...<br>
+      **Enable dragging with drag lock** 설정시 드래그 도중 손을 떼어도 드래그가 해체되지 않습니다.<br>
   * Security & Privacy - General<br>
     Show a message when the screen is locked : True<br>
+  * Bluetooth<br>
+    Show Bluetooth in menu bar : True<br>
   * Keyboard<br>
     * Keyboard<br>
       Touch Bar shows F1, F2, etc. Keys<br>
@@ -136,14 +142,12 @@ Mac osX은 매년 메이저 업데이트가 진행되며 올해에도 9월 25일
     * More Gestures<br>
       Swipe between full-screen apps : three fingers<br>
       Mission Control : four fingers<br>
-  * Bluetooth<br>
-    Show Bluetooth in menu bar : True<br>
   * Sharing<br>
     Change Computer Name as desire.<br>
-  * Accessibility<br>
-    * Mouse & Trackpad<br>
-      Trackpad Options...<br>
-      **Enable dragging with drag lock** 설정시 드래그 도중 손을 떼어도 드래그가 해체되지 않습니다.<br>
+  * Battery<br>
+    * Power Adapter<br>
+      // For the clamshell mode<br>
+      Prevent computer from sleeping automatically when the display is off : Enable<br>
 
 ## 백업 자료 복구
 
@@ -198,7 +202,7 @@ Mac osX은 매년 메이저 업데이트가 진행되며 올해에도 9월 25일
 * Microsoft To Do
   맥용 마이크로소프트 공식 To Do 앱이 나왔습니다. 이후 폰/패드/크롬을 포함하여 모두 Wunderlist에서 To Do로 갈아탔습니다. 매우 만족하며 사용중인 앱.
 
-  끝까지 캘린더 서포트를 안해줘서 `Timeblocks`라는 앱으로 갈아탔습니다. 맥을 사용안한지 오래되서 맥용 앱이 존재하는지는 모르겠네요. `SAP`에 입사하면 다시 맥을 사용하게 될테니 찾아봐야겠습니다.
+  끝까지 캘린더 서포트를 안해줘서 `Timeblocks`라는 앱으로 갈아탔습니다. 근데 또 이직하고 나니 MS Teams/Outlook 위주로 사용해서 병행해서 사용중입니다.
   {:.note title="미래로부터의 메시지"}
 
 * Clear
@@ -261,13 +265,18 @@ Mac osX은 매년 메이저 업데이트가 진행되며 올해에도 9월 25일
 
   ![BTT-4](/assets/img/2018-10-09/Screen Shot 2018-10-09 at 4.19.53 PM.png)
 
-* [Bartender 3](https://www.macbartender.com/)
+* [Bartender](https://www.macbartender.com/)
 
   많은 프로그램을 다운받고 사용하다보면 맥의 상단 메뉴바가 엄청나게 더러워짐을 확인할 수 있습니다. Bartender는 필요없는 메뉴 아이콘을 숨기거나, 토글 할 수 있게 해줍니다.
 
   ![Bartender Show](/assets/img/2018-10-09/Screen Shot 2018-10-09 at 4.17.52 PM.png)
 
   ![Bartender Hide](/assets/img/2018-10-09/Screen Shot 2018-10-09 at 4.18.00 PM.png)
+
+* [SwitchResX](https://www.madrau.com)
+
+  맥북은 의외로 디스플레이 설정을 기본적으로 만질 수 있는게 많지 않습니다. 기껏해야 기본 해상도 몇개 중에서 선택할 수 있는 옵션을 줄 뿐이죠.<br>
+  외부 모니터나 기본 디스플레이의 해상도 / refresh rates를 원하는 대로 변경할 수 있도록 하는 프로그램입니다. 특히나 외부 모니터를 사용할때 좋습니다.
 
 * [iStat Menus](https://bjango.com/mac/istatmenus/)
 
@@ -285,7 +294,7 @@ Mac osX은 매년 메이저 업데이트가 진행되며 올해에도 9월 25일
 
   Trackpad 의 스크롤 방향은 매우 직관적입니다. 하지만 맥북에 마우스를 연결하게 되면 휠 방향이 평소 윈도우에서 사용하던 때와 반대로 됩니다. 이러한 상황을 해결하기 위한 앱으로, Trackpad, Mouse 각각의 휠 방향 지정을 따로 해줄 수 있습니다. 단점이라면 가끔 가다가 설정이 풀린다는 것인데, 설정을 해제했다가 다시 해주면 해결됩니다.
 
-* [BeardedSpiceForKorean](https://pilotmoon.com/scrollreverser/)
+* [BeardedSpice](http://beardedspice.github.io)
 
   touch bar의 멀티미디어 키나 추가 세팅한 단축키를 이용해 모든 멀티 미디어(iTunes는 물론이고 Genie, 멜론, Youtube...)를 컨트롤 할 수 있게 해주는 훌륭한 프로그램입니다. Safari/Chrome 사용시 처음에 한해 [애플이벤트의 자바스크립트 허용](https://github.com/beardedspice/beardedspice/wiki/Won't-work-issue-after-Chrome-Update-(68.0.3440.75-and-later))을 해줘야합니다.
 
@@ -344,25 +353,16 @@ passwd root
 
   * [zsh 관련 플러그인 설치](https://subicura.com/2017/11/22/mac-os-development-environment-setup.html)
 
-    자동완성 플러그인 [zsh-completion](https://github.com/zsh-users/zsh-completions), [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions), 하이라이팅 플러그인 [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+    * 자동완성 플러그인 [zsh-completion](https://github.com/zsh-users/zsh-completions), [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+    * 하이라이팅 플러그인 [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
+  * [git aliases 추가](https://gist.github.com/LazyRen/89e3faaf518c137530d6d80ed5a9773a)
+
+  * 기타 `~/.zshrc` 추가
 
     ```shell
-    brew install zsh-completions zsh-syntax-highlighting zsh-autosuggestions autojump
-
-    echo 'fpath=(/usr/local/share/zsh-completions $fpath)' >> ~/.zshrc
-    echo 'source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >> ~/.zshrc
-    echo 'source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc
-    echo '[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh' >> ~/.zshrc
-    source ~/.zshrc
-    ```
-
-  * 기타 ```~/.zshrc``` 변경 내용
-
-    ```shell
-    plugins=(
-      git
-      fzf
-    )
+    DISABLE_UPDATE_PROMPT="true"
+    DISABLE_AUTO_TITLE="true"
 
     # You may need to manually set your language environment
     export LANG=en_US.UTF-8
@@ -398,13 +398,7 @@ passwd root
 
     alias convmvnfc='convmv -r -f utf8 -t utf8 --nfc --notest .'
     alias zshrc='code ~/.zshrc'
-    alias diff='diff -ibE'
-    alias gs='git status'
-    alias gcm='git commit -m'
-    alias gp='git push'
-    alias gpl='git pull'
-    alias undo-commit='reset --soft HEAD~1'
-    alias clean-merged='!git branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d'
+    alias diff='diff -ibE'\
     alias rmout='find . -type f -name \"*.out\" -delete'
     ```
 
@@ -441,6 +435,8 @@ passwd root
   ```shell
   ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
   ```
+
+* [JetBrains Mono](https://www.jetbrains.com/ko-kr/lp/mono/) 설치
 
 ## Sublime Text 환경 설정
 
