@@ -438,6 +438,11 @@ passwd root
 
 * [JetBrains Mono](https://www.jetbrains.com/ko-kr/lp/mono/) 설치
 
+  ```shell
+  brew tap homebrew/cask-fonts
+  brew install --cask font-jetbrains-mono
+  ```
+
 ## Sublime Text 환경 설정
 
 서브라임 텍스트 설정은 그 자체만으로 하나의 포스트를 적어야 할 분량이 나오기 때문에 [다른 포스트](/devlog/sublime-text-setting)에서 다루기로 하겠습니다.
