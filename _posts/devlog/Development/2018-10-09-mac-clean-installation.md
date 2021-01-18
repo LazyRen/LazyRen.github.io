@@ -413,10 +413,11 @@ passwd root
   # Python3 설치
   brew install python3
 
-  # 코딩용 폰트 Source Code Pro 설치
+  # 코딩용 폰트 설치
   brew tap homebrew/cask-fonts
-  brew cask install font-source-code-pro
-  brew cask install font-source-code-pro-for-powerline
+  brew install --cask font-jetbrains-mono
+  brew install --cask font-source-code-pro
+  brew install --cask font-source-code-pro-for-powerline
 
   # Terminal 앱 Hyper 설치
   brew cask install hyper
@@ -454,13 +455,6 @@ module.exports = {
 
   ```shell
   ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
-  ```
-
-* [JetBrains Mono](https://www.jetbrains.com/ko-kr/lp/mono/) 설치
-
-  ```shell
-  brew tap homebrew/cask-fonts
-  brew install --cask font-jetbrains-mono
   ```
 
 ## Sublime Text 환경 설정
