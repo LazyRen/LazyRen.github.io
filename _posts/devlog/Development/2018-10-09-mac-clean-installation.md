@@ -426,6 +426,26 @@ passwd root
   # convmv -r -f utf8 -t utf8 --nfc --notest .
   ```
 
+* Hyper Config
+
+```js
+module.exports = {
+  config: {
+    fontSize: 14,
+    fontFamily: '"JetBrains Mono", D2Coding, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    hyperline: {
+      plugins: [ "ip", "cpu", "memory", "network" ]
+    },
+    alwaysOnTop: { default: false }
+  },
+  modifierKeys: { altIsMeta: true },
+
+  // `hyper-one-dark` / `hyper-one-dark-vivid` / `hyperterm-atom-dark`
+  plugins: ["hyper-one-dark-vivid", "hyper-font-ligatures", "hyperline" , "hyper-pane", "hyper-quit", "hyper-search", "hypercwd", "hyper-drop-file", "hyper-always-on-top"]
+}
+
+```
+
 * [기본 맥 터미널 용 테마 다운로드/설치](https://github.com/lysyi3m/macos-terminal-themes)
 
   터미널 설정(cmd + ,)에서 원하는 프로파일을 default로 설정
