@@ -28,6 +28,7 @@ Since we are gonna migrate from disqus, proper changes must be made to `my-comme
 /_config.yml
 /_includes/my-comments.html
 /_includes/head/links-static.html
+/_sass/my-style.scss
 ```
 
 * this unordered seed list will be replaced by the toc
@@ -52,6 +53,7 @@ My recommendation for the theme is, `github-light` for the light mode, `dark-blu
 {:.note}
 
 There is two choices,
+
 1. Hard coding: you can simply copy this code to the `my-comments.html`.
 2. You can use `_config.yml` so it can be more configurable.
 
@@ -119,4 +121,14 @@ You don't want to link disqus if you are not using it. Wrap linking line with pr
   <link rel="dns-prefetch" href="https://{{ disqus }}.disqus.com" id="_hrefDisqus">
 {% endif %}
 {% endraw %}
+```
+
+## my-style.scss
+
+To [adjust size of utterances](https://github.com/utterance/utterances/issues/160) to fit into the blog content-width, insert below code into `_sass/my-style.scss`.
+
+```css
+.utterances {
+  max-width: 100%;
+}
 ```
