@@ -13,8 +13,8 @@ make sure that your blog is **NOT** located on **Windows Filesystem**!
 
 ## TL;DR
 
-[WSL2 is very slow in Windows filesystem](https://github.com/microsoft/WSL/issues/4197).(`/mnt/c`)<br>
-Clone your blog repo to the Linux filesystem(starting with `~/`).<br>
+[WSL2 is very slow in Windows filesystem](https://github.com/microsoft/WSL/issues/4197) (`/mnt/c`).<br>
+Clone your blog repo to the Linux filesystem (starting with `~/`).<br>
 [Access Linux filesystem](https://devblogs.microsoft.com/commandline/whats-new-for-wsl-in-windows-10-version-1903/) via explorer with path like below.
 
 ```default
