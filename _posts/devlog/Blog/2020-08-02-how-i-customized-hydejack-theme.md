@@ -64,7 +64,7 @@ Check [this post](/devlog/creating-tag-list-page) for more info.
 
 ## Use [Utterances](https://utteranc.es/) as a comment plugin
 
-![Utterances](/assets/img/2020-08-02/sidebar.png)
+![Utterances](/assets/img/2020-12-21/utterances.png)
 
 It's not hard to setup [utterances](https://github.com/utterance/utterances).<br>
 First of all, you should install [utterances app](https://github.com/apps/utterances) to the blog repository.
@@ -102,6 +102,7 @@ Check [this post](/devlog/add-applause-button-for-jekyll-post) for more info.
 ## Conclusion
 
 This post orignally started with sidebar modification only. But now it has become a huge post. I might divide this post into smaller ones.
-I'm not an expert in web development. Adding simple submenu was pretty challenging & time consuming job for me. But taking some time to dig around, I've learned one or two things about how jekyll is working, and web programming.<br>it's pretty fun!<br>
+I'm not an expert in web development. Adding simple submenu was pretty challenging & time consuming job for me. But taking some time to dig around, I've learned one or two things about how jekyll is working, and web programming.<br>
+it's pretty fun!<br>
 You may find some odd parts, need help implementing features, or you have any suggestions for the improvment please don't hesitate to contact me.<br>
 I'd be very delightful to have any comments.<br>
