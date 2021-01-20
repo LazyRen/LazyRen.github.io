@@ -122,14 +122,36 @@ image:
 * 창 위치 조절<br>
     창을 어디다가 위치 시킬지 결정하는 옵션입니다.<br>
     개인적으로는 21:9의 경우 왼쪽, 16:9는 중앙 정렬을 시켜 사용하고 있습니다.<br>
-    지금 보이는 옵션은 21:9로 실행하고 있는 Apex Legend 이기 때문에 왼쪽 정렬이 선택되어 있습니다.
 * 창 사이즈 직접 설정<br>
     보통 비율 유지로 두면 되지만, 로스트아크와 같이 특정 프로그램들은 문제가 발생하는 경우가 있습니다.<br>
     이 경우 임의 크기 선택 후 가로 / 세로를 공란으로 두면 됩니다.
 
+## 게임별 설정 방법
+
+### Lost Ark
+
+1. 로스트 아크 설정 파일(`C:\Program Files (x86)\Smilegate\Games\LOSTARK\EFGame\Config\UserOption.xml`)로 해상도 변경<br>
+    (게임 내에서 원하는 해상도가 있을 경우 스킵하셔도 됩니다.)
+
+    ```xml
+    <!-- C:\Program Files (x86)\Smilegate\Games\LOSTARK\EFGame\Config\UserOption.xml -->
+    <CurrentResolutionData>
+        <ResolutionX>3440</ResolutionX>
+        <ResolutionY>1440</ResolutionY>
+        <FullScreen>0</FullScreen>
+        <Borderless>0</Borderless>
+    </CurrentResolutionData>
+    ```
+
+2. 테두리 없는 창모드 - 제거<br>
+    창 사이즈 직접 설정 - 임의 크기: UserOption에서 지정한 해상도 기입<br>
+    진정제 [v]<br>
+    마우스 커서 이탈 방지 - 창(테두리 포함) 후 전부 1
+    ![Lost Ark Magic Borderless Setting](/assets/img/2020-06-28/lostark_setting.png)
+
 ## 마치며
 
-내 인생 처음으로 100만원이 넘어가는 모니터를 사보았습니다. 이 모니터는 못해도 10년은 사용해야 하지 않을까...<br>
+제 인생 처음으로 100만원이 넘어가는 모니터를 사보았습니다. 이 모니터는 못해도 10년은 사용해야 하지 않을까...<br>
 아직까지는 매우 만족하며 사용하고 있습니다.<br>
 이 모니터의 유일한 단점이라면, 회사에서도 49인치 32:9 모니터를 쓰고 싶게 만든다는 것 뿐입니다.<br>
 게임들이 32:9를 지원하지 않을까 걱정하지 말고, 무조건 큰 걸로 삽시다.<br>
