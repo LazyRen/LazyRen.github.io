@@ -434,6 +434,7 @@ module.exports = {
   config: {
     fontSize: 14,
     fontFamily: '"JetBrains Mono", D2Coding, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    macOptionSelectionMode: 'force',
     hyperline: {
       plugins: [ "ip", "cpu", "memory", "network" ]
     },
@@ -441,11 +442,12 @@ module.exports = {
   },
   modifierKeys: { altIsMeta: true },
 
-  // `hyper-one-dark` / `hyper-one-dark-vivid` / `hyperterm-atom-dark`
+  // themes: "hyper-one-dark-vivid" / "hyper-one-dark" / "hyper-one-dark-vivid" / "hyperterm-atom-dark"
   plugins: ["hyper-one-dark-vivid", "hyper-font-ligatures", "hyperline" , "hyper-pane", "hyper-quit", "hyper-search", "hypercwd", "hyper-drop-file", "hyper-always-on-top"]
 }
-
 ```
+
+  `macOptionSelectionMode`를 `force`로 바꿈으로서 `tmux`나 `vim`에서 `option` + 마우스 드래그 후 copy-paste를 system clipboard 상에서 진행할 수 있습니다.
 
 * [기본 맥 터미널 용 테마 다운로드/설치](https://github.com/lysyi3m/macos-terminal-themes)
 
