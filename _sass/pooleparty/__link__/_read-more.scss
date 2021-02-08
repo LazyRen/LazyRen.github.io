@@ -27,6 +27,7 @@
   @extend .faded;
   margin-top: 1.5rem;
   margin-bottom: 3rem;
+  text-align: right;
 
   &::after {
     content: " \2192";
@@ -42,4 +43,3 @@
     -moz-osx-font-smoothing: grayscale;
   }
 }
-

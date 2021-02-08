@@ -3,6 +3,7 @@ sitemap: false
 ---
 {% unless site.hydejack.no_search or jekyll.environment == 'development' %}
 {% assign pages = site.html_pages | where_exp:"page","page.sitemap != false" %}
+{% assign docs = site.documents | where_exp:"doc","doc.sitemap != false" %}
 {
   "pages": [
     {% for page in pages %}{
@@ -12,9 +13,9 @@ sitemap: false
       {% if page.content     %}"content": {{     page.content     | markdownify | strip_html | jsonify }},{% endif %}
       "url": {{                                  page.url         | jsonify }}
     }{% unless forloop.last %},{% endunless %}{% endfor %}
-  ], 
+  ],
   "documents": [
-    {% for doc in site.documents %}{
+    {% for doc in docs %}{
       {% if doc.image       %}"image": {{       doc.image       | jsonify }},{% endif %}
       {% if doc.title       %}"title": {{       doc.title       | jsonify }},{% endif %}
       {% if doc.date        %}"date": {{        doc.date        | jsonify }},{% endif %}

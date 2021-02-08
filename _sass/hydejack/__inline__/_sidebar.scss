@@ -23,17 +23,17 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 hy-drawer {
-  width: 100%; 
-  position: relative; 
-  overflow: hidden; 
-  display: block; 
-  z-index: 4; 
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  z-index: 4;
   @media screen {
-    
+
   }
 
   @media screen and (min-width: $break-point-3) {
-    
+
     position: fixed;
     width: $sidebar-width;
     top: 0;
@@ -45,22 +45,22 @@ hy-drawer {
       position: relative;
       width: 100%;
     }
-    
 
-    
+
+
   }
 
   @media screen and (min-width: $break-point-dynamic) {
     width: calc(50% - #{$half-content});
 
-    
+
   }
 
-  
+
 }
 
 .sidebar {
-  
+
   position: relative;
   display: flex;
   justify-content: center;
@@ -68,23 +68,32 @@ hy-drawer {
   color: rgba(255, 255, 255, .75);
   text-align: center;
   min-height: 100vh;
-  
+  &.invert { color: rgba(32, 32, 32, .75) }
+
 
   a {
-    color: #fff; 
-    border-bottom-color: rgba(255, 255, 255, 0.2); 
-    text-decoration-color: rgba(255, 255, 255, 0.2); 
-    &:hover { 
-//       border-bottom-color: #fff; 
-//       text-decoration-color: #fff; 
-    }
+
+    color: #fff;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    text-decoration-color: rgba(255, 255, 255, 0.2);
+
+
+  }
+
+  &.invert a {
+
+    color: #222;
+    border-bottom-color: rgba(32, 32, 32, 0.2);
+    text-decoration-color: rgba(32, 32, 32, 0.2);
+
+
   }
 }
 
 
 
 .sidebar-bg {
-  
+
   position: absolute;
   top: 0;
   left: calc(50% - 50vw);
@@ -101,12 +110,12 @@ hy-drawer {
     right: 0;
     background: rgba(0, 0, 0, 0.05);
   }
-  
+
 
   &.sidebar-overlay::after {
-//     background: -moz-linear-gradient(top, rgba(32,32,32,0) 0%, rgba(32,32,32,0.5) 50%, rgba(32,32,32,0) 100%); 
-//     background: -webkit-linear-gradient(top, rgba(32,32,32,0) 0%,rgba(32,32,32,0.5) 50%, rgba(32,32,32,0) 100%); 
-    background: linear-gradient(to bottom, rgba(32,32,32,0) 0%,rgba(32,32,32,0.5) 50%, rgba(32,32,32,0) 100%); 
+//     background: -moz-linear-gradient(top, rgba(32,32,32,0) 0%, rgba(32,32,32,0.5) 50%, rgba(32,32,32,0) 100%);
+//     background: -webkit-linear-gradient(top, rgba(32,32,32,0) 0%,rgba(32,32,32,0.5) 50%, rgba(32,32,32,0) 100%);
+    background: linear-gradient(to bottom, rgba(32,32,32,0) 0%,rgba(32,32,32,0.5) 50%, rgba(32,32,32,0) 100%);
   }
 }
 
@@ -148,6 +157,11 @@ hy-drawer {
   }
 }
 
+.sidebar.invert .sidebar-about > a.sidebar-title{
+  &::after { border-color: rgba(32, 32, 32, 0.2) }
+  &:hover::after { border-color: #222 }
+}
+
 .sidebar-nav > ul {
   list-style: none;
   padding-left: 0;
@@ -165,6 +179,3 @@ hy-drawer {
     .nav-btn-bar > :nth-child(2) { border: none }
   }
 }
-
-
-

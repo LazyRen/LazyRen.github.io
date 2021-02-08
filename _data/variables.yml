@@ -11,14 +11,12 @@
   font_weight_bold: 700 #=bold
   font_weight_heading: 700 #=bold
 
-  # content_width: 42 #rem
-  # content_width_2: 48 #rem
-  # content_width_5: 54 #rem
-  content_width: 48 #rem
-  content_width_2: 54 #rem
-  content_width_5: 60 #rem
+  content_width: 42 #rem
+  content_width_2: 48 #rem
+  content_width_5: 54 #rem
 
   sidebar_width: 21 #rem
+  border_radius: 0.5 #rem
 
   break_point_1: 42 #em
   break_point_2: 54 #em

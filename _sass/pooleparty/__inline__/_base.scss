@@ -23,8 +23,8 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 * {
-  box-sizing: border-box; 
-//   // -webkit-tap-highlight-color: transparent; 
+  box-sizing: border-box;
+//   // -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -59,8 +59,10 @@ p {
 }
 
 .lead {
+  @extend .border-radius;
   margin-left: -1rem;
   margin-right: -1rem;
+  margin-bottom: 1.5rem;
 }
 
 img, video {
@@ -71,6 +73,3 @@ img, video {
     height: auto;
   }
 }
-
-
-

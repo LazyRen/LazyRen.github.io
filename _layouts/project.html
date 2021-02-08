@@ -11,7 +11,7 @@ layout: base
 
 <article
   id="project"
-  class="page"
+  class="page mb6"
   role="article"
   {% unless nsd %}vocab="http://schema.org/" typeof="CreativeWork" resource="#project"{% endunless %}
   >
@@ -19,28 +19,30 @@ layout: base
     <h1 class="page-title" property="name">{{ project.title }}</h1>
 
     <p class="post-date heading">
-
-      {% if major >= 4 and minor >= 1 %}
-        {% assign parent = site.pages | find:"show_collection",project.collection %}
-      {% else %}
-        {% assign parent = site.pages | where:"show_collection",project.collection | first %}
-      {% endif %}
-
-      {% if parent %}
-        <a href="{{ parent.url | relative_url }}" class="flip-title" property="genre">{{ parent.title }}</a>
-      {% endif %}
-
-      {% unless site.hydejack.hide_dates %}
-        {% if parent %}{{ separator }}{% endif %}
-        <time datetime="{{ project.date | date_to_xmlschema }}">{{ project.date | date:proj_format }}</time>
-        {% if project.end_date.size > 0 %}
-          {{ from_to_separator }}
-          <time datetime="{{ project.end_date | date_to_xmlschema }}">{{ project.end_date | date:proj_format }}</time>
+      <span>
+        {% if major >= 4 and minor >= 1 %}
+          {% assign parent = site.pages | find:"show_collection",project.collection %}
+        {% else %}
+          {% assign parent = site.pages | where:"show_collection",project.collection | first %}
         {% endif %}
-      {% endunless %}
 
-      <span class="fr">
+        {% if parent %}
+          <a href="{{ parent.url | relative_url }}" class="flip-title" property="genre">{{ parent.title }}</a>
+        {% endif %}
+
+        {% unless site.hydejack.hide_dates %}
+          {% if parent %}{{ separator }}{% endif %}
+          <time datetime="{{ project.date | date_to_xmlschema }}">{{ project.date | date:proj_format }}</time>
+          {% if project.end_date.size > 0 %}
+            {{ from_to_separator }}
+            <time datetime="{{ project.end_date | date_to_xmlschema }}">{{ project.end_date | date:proj_format }}</time>
+          {% endif %}
+        {% endunless %}
+      </span>
+
+      <span class="ellipsis ml1">
         <span class="sr-only">{{ separator }} {{ site.data.strings.links | default:"Links" }}{{ site.data.strings.colon }}</span>
+        <span class="{{ site.data.strings.links_icon | default:'icon-link' }}" title="{{ site.data.strings.links | default:'Links' }}"></span>
         {% for link in project.links %}
           <a class="external" href="{{ link.url }}" property="sameAs">{{ link.title }}</a>
           {% unless forloop.last %}{{ separator }}{% endunless %}
@@ -49,7 +51,7 @@ layout: base
     </p>
 
     {% assign screenshot = project.screenshot | default:project.image %}
-    <div class="lead aspect-ratio sixteen-nine">
+    <div class="img-wrapper lead aspect-ratio sixteen-nine {% unless screenshot %}fallback-img{% endunless %}">
       {% if screenshot %}
         {% include_cached components/hy-img.html
           img=screenshot
@@ -69,7 +71,7 @@ layout: base
   {{ content }}
 </article>
 
-<hr class="dingbat related" />
+{% include components/dingbat.html %}
 
 {% assign addons = page.addons | default:site.hydejack.project_addons %}
 {% unless addons %}{% assign addons = "about,newsletter,other" | split:"," %}{% endunless %}

@@ -7,11 +7,11 @@
     <div class="nav-btn">
       <span class="icon-search"></span>
     </div>
-    <input 
+    <input
       id="_search-input"
       type="search"
       class="form-control form-control-lg nav-btn"
-      placeholder="{% unless site.hydejack.no_search or jekyll.environment == 'development' %}{{ site.data.strings.search_placeholder | default:'Type something...'}}{% else %}SEARCH NOT ENABLED DURING DEVELOPMENT{% endunless %}"
+      placeholder="{% unless site.hydejack.no_search or jekyll.environment == 'development' %}{{ site.data.strings.search_placeholder | default:'Type something...'}}{% else %}Build with JEKYLL_ENV=production to enable search.{% endunless %}"
     />
     <button type="reset" class="nav-btn no-hover">
       <span class="sr-only">{{ site.data.strings.close | default:"Close" }}</span>

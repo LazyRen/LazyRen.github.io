@@ -54,7 +54,6 @@ author:
     github:          lazyren
     stackoverflow:   4294737
     email:           daein0lee@gmail.com
-    resume:          /resume/
 
 # Add links to the sidebar.
 # menu:
@@ -167,10 +166,10 @@ defaults:
       seo:
         type:          WebPage
 
-# kramdown:
-#   math_engine:         katex
-#   math_engine_opts:    {}
-#   footnote_backlink:   '&#x21a9;&#xfe0e;'
+kramdown:
+  math_engine:         mathjax
+  math_engine_opts:    {}
+  footnote_backlink:   '&#x21a9;&#xfe0e;'
 
 
 # 3rd Party Integrations
@@ -282,6 +281,7 @@ hydejack:
   # seeing an old date.
   hide_dates:          false
 
+  hide_last_modified:  false
   # Note that dark mode only works in the PRO version of Hydejack.
   dark_mode:
     # Set to `true` to always use the dark theme.
@@ -299,7 +299,7 @@ hydejack:
   # Only use if you know what Service Workers are and how they can impact your site!
   offline:
     enabled:           false
-    cache_version:     7
+    cache_version:     13
     precache_assets:
       - /assets/img/swipe.svg
 

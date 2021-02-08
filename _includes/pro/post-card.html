@@ -10,15 +10,15 @@
 
 {% assign sizes = '' %}
 {% if include.featured %}
-  {% capture sizes %}(min-width: {{ break_point_5 }}em) {{ content_width_5 | plus:2 }}rem, 
-                     (min-width: {{ break_point_2 }}em) {{ content_width_2 | plus:2 }}rem, 
-                     (min-width: {{ break_point_1 }}em) {{ content_width   | plus:2 }}rem, 
+  {% capture sizes %}(min-width: {{ break_point_5 }}em) {{ content_width_5 | plus:2 }}rem,
+                     (min-width: {{ break_point_2 }}em) {{ content_width_2 | plus:2 }}rem,
+                     (min-width: {{ break_point_1 }}em) {{ content_width   | plus:2 }}rem,
                                                         {{ content_width            }}rem
   {% endcapture %}
 {% else %}
-  {% capture sizes %}(min-width: {{ break_point_5 }}em) {{ content_width_5 | plus:2 | divided_by:2 | minus:0.5 }}rem, 
-                     (min-width: {{ break_point_2 }}em) {{ content_width_2 | plus:2 | divided_by:2 | minus:0.5 }}rem, 
-                     (min-width: {{ break_point_1 }}em) {{ content_width   | plus:2 | divided_by:2 | minus:0.5 }}rem, 
+  {% capture sizes %}(min-width: {{ break_point_5 }}em) {{ content_width_5 | plus:2 | divided_by:2 | minus:0.5 }}rem,
+                     (min-width: {{ break_point_2 }}em) {{ content_width_2 | plus:2 | divided_by:2 | minus:0.5 }}rem,
+                     (min-width: {{ break_point_1 }}em) {{ content_width   | plus:2 | divided_by:2 | minus:0.5 }}rem,
                                                         {{ content_width                                       }}rem
   {% endcapture %}
 {% endif %}
@@ -26,7 +26,7 @@
 
 <article class="project-card">
   <a href="{{ post.url | relative_url }}" class="no-hover no-print-link {% unless post.hide_image %}flip-project{% endunless %}" tabindex="-1">
-    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img">
+    <div class="project-card-img aspect-ratio sixteen-nine {% if post.image %}flip-project-img{% else %}fallback-img{% endif %}">
       {% if post.image %}
         {% include_cached components/hy-img.html img=post.image alt=post.title sizes=sizes width=864 height=486 %}
       {% endif %}

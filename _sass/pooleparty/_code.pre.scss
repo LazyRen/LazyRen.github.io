@@ -1,4 +1,4 @@
-// Copyright (c) 2017 Florian Klampfer <https://qwtel.com/>
+// Copyright (c) 2020 Florian Klampfer <https://qwtel.com/>
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -26,6 +26,7 @@ code {
 }
 
 .figure-base {
+  @include border-radius();
   @extend .color-transition;
   margin-left: -1rem;
   margin-right: -1rem;
@@ -38,6 +39,7 @@ code {
 .pre-base {
   @extend .figure-base;
   padding: 1rem;
+  margin-bottom: 1.5rem;
   background-color: var(--gray-bg);
 
   // HACK: prevents painting for some reason
@@ -54,46 +56,155 @@ pre {
   @extend .pre-base;
   margin-top: 0;
   display: block;
-  line-height: 1.5;
-  font-size: .85em;
+  font-size: .83em;
+  line-height: 1.5em;
   position: relative;
 }
 
 pre > code {
+  display: inline-block;
+  position: relative;
+  min-width: 100%;
   padding: 0;
   color: inherit;
   background-color: transparent;
   font-size: 1em;
 
-  .highlight-code-line {
-    @extend .color-transition;
-    &:before { content: ' ' }
+  // .__hl {
+  //   @extend .color-transition;
+  //   display: inline-block;
+  //   position: absolute;
+  //   left: -1rem;
+  //   right: -1rem;
+  //   background: var(--accent-color-highlight);
+  //   border-left: .25rem solid var(--accent-color-faded);
+  //   z-index: -1;
+  // }
+}
+
+.pre-header-common {
+  @extend .color-transition;
+  height: 2rem;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+div.highlight {
+  position: relative;
+
+  > .pre-header {
+    @extend .figure-base;
+    @extend .pre-header-common;
+    display: block;
+    color: var(--gray)!important;
+    background-color: var(--gray-bg);
+
+    > span {
+      font-size: smaller;
+    }
+
+    > * {
+      display: inline-block;
+      padding: .3rem 1rem .2rem;
+    }
+  }
+
+  > button {
+    @extend .pre-header-common;
     position: absolute;
-    left: 0;
-    display: inline-block;
-    width: 100%;
-    background: var(--border-color);
-    border-left: 3px solid var(--accent-color);
-    opacity: 0.33;
-    z-index: -1;
+    top: 0;
+    right: -1rem;
+    color: var(--menu-text);
+    background: none;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-top-left-radius: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 300ms;
+
+    &:hover {
+      background: var(--gray-bg);
+    }
+
+    &.copy-success {
+      > .icon-copy {
+        animation-name: icon-copy;
+        animation-duration: 1.5s;
+        animation-timing-function: ease;
+      }
+      > .icon-checkmark {
+        animation-name: icon-checkmark;
+        animation-duration: 1.5s;
+        animation-timing-function: ease;
+      }
+    }
+    > .icon-copy {
+      display: inline-block;
+    }
+    > .icon-checkmark {
+      position: absolute;
+
+      top: 50%;
+      margin-top: -3em;
+
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+  }
+
+  &:hover > button {
+    opacity: 1;
+    transition: opacity 100ms;
+  }
+
+  > .pre-header ~ pre.highlight {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-top: .65rem;
+  }
+
+  > .pre-header ~ button {
+    opacity: 1;
   }
 }
 
-.pre-header {
-  @extend .color-transition;
-  display: block;
-  margin-left: -1rem;
-  margin-right: -1rem;
-  padding: 0.4rem 1rem 0.25rem;
-  border-bottom: 1px solid var(--border-color);
-  font-style: normal!important;
-  font-size: smaller;
-  color: var(--gray)!important;
-  background-color: var(--gray-bg);
-  .lang { color: var(--menu-text) }
+body.no-break-layout {
+  div.highlight > button {
+    border-right: none;
+  }
 }
 
-.pre-header + pre.highlight {
-  padding-top: .75rem;
+@keyframes icon-checkmark {
+  0% {
+    transform: translateY(0);
+  }
+  15%, 85% {
+    transform: translateY(2.5em);
+  }
+  100% {
+    transform: translateY(5em);
+  }
+}
+
+@keyframes icon-copy {
+  0% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(2.5em);
+  }
+  15.01%, 85% {
+    transform: translateY(-2.5em);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 // >>>>> LINK

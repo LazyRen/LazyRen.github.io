@@ -90,11 +90,11 @@ body:not(.no-large-headings) {
 }
 
 h1, h2, h3, .h1, .h2, .h3 {
-  margin: 3rem 0 1rem;
+  margin: 4rem 0 1rem;
 }
 
 h4, h5, h6, .h4, .h5, .h6 {
-  margin: 2rem 0 .5rem;
+  margin: 3rem 0 .5rem;
 }
 
 p {
@@ -202,7 +202,7 @@ blockquote {
   font-weight: var(--font-weight-heading);
 }
 
-.fine {
+.fine, .smaller {
   font-size: smaller;
 }
 
@@ -215,12 +215,12 @@ blockquote {
   text-align: center;
 }
 
-
 h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
   position: relative;
 
   > .permalink {
     text-decoration: none;
+    border: none;
     opacity: 0;
     transition: opacity 400ms;
 

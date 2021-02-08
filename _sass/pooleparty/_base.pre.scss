@@ -50,8 +50,10 @@ p {
 }
 
 .lead {
+  @extend .border-radius;
   margin-left: -1rem;
   margin-right: -1rem;
+  margin-bottom: 1.5rem;
 }
 
 img, video {

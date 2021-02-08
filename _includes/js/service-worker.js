@@ -21,7 +21,7 @@
 // which won't change between content updates.
 // {% capture cache_version %}v{{ site.hydejack.offline.cache_version | default:"1" }}{% endcapture %}
 // {% capture site_key %}sw{{ '/' | relative_url }}{% endcapture %}
-const SHELL_CACHE = "shell-9.0.5--{{ cache_version }}--{{ site_key }}";
+const SHELL_CACHE = "shell-9.1.0--{{ cache_version }}--{{ site_key }}";
 
 // A separate assets cache that won't be invalidated when there's a newer version of Hydejack.
 // NOTE: Whenever you make changes to any of the files in yor `assets` folder,
@@ -47,8 +47,7 @@ const GOOGLE_FONTS = "https://fonts.googleapis.com/css?family={{ google_fonts | 
 // {% endif %}
 
 const SHELL_FILES = [
-  "{{ '/assets/css/hydejack-9.0.5.css' | relative_url }}",
-  "{{ '/assets/js/search-worker-9.0.5.js' | relative_url }}",
+  "{{ '/assets/css/hydejack-9.1.0.css' | relative_url }}",
   "{{ '/assets/js/service-worker.js' | relative_url }}",
 ];
 
