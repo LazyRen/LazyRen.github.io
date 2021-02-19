@@ -15,7 +15,7 @@
       </li>
     {% endfor %}
   {% else %}
-    {% assign nodes = site.pages | concat: site.documents | where: "sidebar", true | sort: "order" %}
+    {% assign nodes = site.html_pages | concat: site.documents | where: "sidebar", true | sort: "order" %}
     {% assign tag_nodes = nodes | where: "type", "tag" %}
     {% for node in nodes %}
       {% unless node.redirect_to %}

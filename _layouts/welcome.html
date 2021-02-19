@@ -3,8 +3,15 @@
 layout: about
 ---
 
+{% assign version = jekyll.version | split:'.' %}
+{% assign major = version[0] | plus:0 %}
+{% assign minor = version[1] | plus:0 %}
+{% assign patch = version[2] | plus:0 %}
+
 {% assign strings = site.data.strings %}
 {% assign no_third_column = page.no_third_column | default:site.hydejack.no_third_column | default:false %}
+
+{% assign nodes = site.html_pages | concat: site.documents %}
 
 {% if content contains "<!--projects-->" %}
 {% capture projects_x %}
@@ -12,10 +19,10 @@ layout: about
   <div class="columns mt2 {% unless no_third_column %}columns-break{% endunless %}">
     {% for project_path in page.selected_projects %}
       {% if major >= 4 and minor >= 1 %}
-       {% assign project = site.projects | find_exp:"project", "project_path == project.path or project_path == project.url" %}
+       {% assign project = site.documents | find_exp:"project", "project_path == project.path or project_path == project.url" %}
       {% else %}
-                            {% assign project = site.projects | where_exp:"project", "project_path == project.path" | first %}
-        {% unless project %}{% assign project = site.projects | where_exp:"project", "project_path == project.url"  | first %}{% endunless %}
+                            {% assign project = site.documents | where_exp:"project", "project_path == project.path" | first %}
+        {% unless project %}{% assign project = site.documents | where_exp:"project", "project_path == project.url"  | first %}{% endunless %}
       {% endif %}
 
       {% assign featured = page.featured | default:project.featured | default:page.big_project | default:project.big_project %}
@@ -43,10 +50,10 @@ layout: about
 {% assign projects_page = page.projects_page | default:page.more_projects %}
 {% if projects_page %}
   {% if major >= 4 and minor >= 1 %}
-    {% assign more_projects = site.pages | find_exp:"page", "projects_page == page.path or projects_page == page.url" %}
+    {% assign more_projects = nodes | find_exp:"page", "projects_page == page.path or projects_page == page.url" %}
   {% else %}
-                              {% assign more_projects = site.pages | where_exp:"page", "projects_page == page.path" | first %}
-    {% unless more_projects %}{% assign more_projects = site.pages | where_exp:"page", "projects_page == page.url"  | first %}{% endunless %}
+                              {% assign more_projects = nodes | where_exp:"page", "projects_page == page.path" | first %}
+    {% unless more_projects %}{% assign more_projects = nodes | where_exp:"page", "projects_page == page.url"  | first %}{% endunless %}
   {% endif %}
 
   {% if more_projects %}
@@ -56,7 +63,7 @@ layout: about
       {{ text | replace:"<!--projects_title-->", projects_title }}
     </p>
   {% else %}
-    Page with path <code>{{ page.more_posts }}</code> not found.
+    Page with path <code>{{ projects_page }}</code> not found.
   {% endif  %}
 {% endif %}
 {% endcapture %}
@@ -96,10 +103,10 @@ layout: about
 {% assign posts_page = page.posts_page | default:page.more_posts %}
 {% if posts_page %}
   {% if major >= 4 and minor >= 1 %}
-    {% assign more_posts = site.pages | find_exp:"page", "posts_page == page.path or posts_page == page.url" %}
+    {% assign more_posts = nodes | find_exp:"page", "posts_page == page.path or posts_page == page.url" %}
   {% else %}
-                           {% assign more_posts = site.pages | where_exp:"page", "posts_page == page.path" | first %}
-    {% unless more_posts %}{% assign more_posts = site.pages | where_exp:"page", "posts_page == page.url"  | first %}{% endunless %}
+                           {% assign more_posts = nodes | where_exp:"page", "posts_page == page.path" | first %}
+    {% unless more_posts %}{% assign more_posts = nodes | where_exp:"page", "posts_page == page.url"  | first %}{% endunless %}
   {% endif %}
   {% if more_posts %}
     {% capture posts_title %}<a class="heading flip-title" href="{{ more_posts.url | relative_url }}">{{ more_posts.title }}</a>{% endcapture %}
@@ -108,7 +115,7 @@ layout: about
       {{ text | replace:"<!--posts_title-->", posts_title }}
     </p>
   {% else %}
-    Page with path <code>{{ page.more_posts }}</code> not found.
+    Page with path <code>{{ posts_page }}</code> not found.
   {% endif  %}
 {% endif %}
 {% endcapture %}

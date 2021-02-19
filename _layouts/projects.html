@@ -6,7 +6,8 @@ layout: plain
 {{ content }}
 
 {% assign show_collection = page.show_collection | default:"projects" %}
-{% assign ordered_projects = site[show_collection] | sort:"date" | reverse %}
+{% assign empty_col = '' | split:'.' %}
+{% assign ordered_projects = site[show_collection] | default:empty_col | sort:"date" | reverse %}
 {% assign nsd = site.hydejack.no_structured_data | default:site.no_structured_data %}
 
 {% assign projects_group_by = site.data.strings.date_formats.projects_group_by | default:"%Y" %}

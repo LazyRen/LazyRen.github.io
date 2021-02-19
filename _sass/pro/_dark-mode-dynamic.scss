@@ -4,6 +4,11 @@
 
 @media screen and (prefers-color-scheme: dark) {
   body {
-    @include darkmode();
+    @include dark-mode();
+  }
+
+  .tippy-content {
+    -webkit-font-smoothing: initial;
+    -moz-osx-font-smoothing: initial;
   }
 }

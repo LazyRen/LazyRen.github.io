@@ -110,7 +110,7 @@
   {% unless site.hydejack.no_mark_external or site.no_mark_external %}
     @import "hydejack/_mark-external.pre.scss";
   {% endunless %}
-   
+
   {% unless site.hydejack.no_break_layout %}
     @import "hydejack/_break-layout.pre.scss";
   {% endunless %}
@@ -122,6 +122,7 @@
 {% endunless %}
 
 @import "spinner";
+@import "tippy";
 
 @import "syntax";
 @import "pro/syntax-dark";

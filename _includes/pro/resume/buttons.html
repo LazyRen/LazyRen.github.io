@@ -1,0 +1,34 @@
+<div class="screen-only">
+  {% if page.buttons.print %}
+    <button class="btn btn-sm btn-primary mt1" onclick="window.print()">
+      <small class="icon-printer"></small>
+      {{ site.data.strings.print | default: "Print" }}
+    </button>
+  {% endif %}
+  {% if page.buttons.pdf %}
+    {% assign pdf = page.buttons.pdf %}
+    {% if pdf %}
+      <a href="{% include smart-url url=pdf %}" class="btn btn-sm btn-primary mt1">
+        <small class="icon-file-pdf"></small>
+        {{ site.data.strings.resume.download_pdf | default: "PDF" }}
+      </a>
+    {% endif %}
+  {% endif %}
+  {% if page.buttons.vcf %}
+    {% assign abs_url = page.url | absolute_url %}
+    {% assign vcf = page.buttons.vcf | replace:"<!--url-->",abs_url %}
+    <a type="text/directory" href="{% include smart-url url=vcf %}" class="btn btn-sm btn-primary no-mark-external mt1">
+      <small class="icon-user-plus"></small>
+      {{ site.data.strings.resume.download_vcf | default: "vCard" }}
+    </a>
+  {% endif %}
+  {% if page.buttons.json %}
+    {% assign json = page.buttons.json %}
+    {% if json %}
+    <a href="{% include smart-url url=json %}" class="btn btn-sm btn-primary mt1" download>
+      <small class="content-json"></small>
+      {{ site.data.strings.resume.download_json | default: "JSON" }}
+    </a>
+    {% endif %}
+  {% endif %}
+</div>

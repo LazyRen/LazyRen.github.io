@@ -4,22 +4,7 @@
   font-size: 1.25rem;
 }
 
-@mixin lightmode() {
-  --body-color: #{$body-color};
-  --body-bg: #{$body-bg};
-  --border-color: #{$border-color};
-  --gray: #{$gray};
-  --gray-bg: #{$gray-bg};
-  --gray-text: #{$gray-text};
-  --menu-text: #{$menu-text};
-
-  .content {
-    -webkit-font-smoothing: initial;
-    -moz-osx-font-smoothing: initial;
-  }
-}
-
-@mixin darkmode() {
+@mixin dark-mode() {
   --body-color: #ccc;
   --body-bg: var(--dark-mode-body-bg);
   --border-color: var(--dark-mode-border-color);
@@ -27,6 +12,8 @@
   --gray-bg: rgba(255,255,255,.033);
   --gray-text: rgba(255,255,255,.625);
   --menu-text: rgba(255,255,255,.25);
+  --inv-body-color: #{$body-color};
+  --inv-body-bg: #{$body-bg};
 
   .content {
     -webkit-font-smoothing: antialiased;
@@ -36,10 +23,10 @@
 
 @media screen {
   body.light-mode {
-    @include lightmode();
+    @include light-mode();
   }
 
   body.dark-mode {
-    @include darkmode();
+    @include dark-mode();
   }
 }

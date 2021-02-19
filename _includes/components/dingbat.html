@@ -1,4 +1,6 @@
-{% if site.clap_button %}
+{% if site.clap_button == false %}
+  <hr class="dingbat related mb6" />
+{% elsif site.clap_button %}
   <clap-button class="mb6" {% if include.hidden == true %}hidden{% endif %}></clap-button>
   {% unless site.clap_button %}
     <p class="message centered border-radius" {% if include.hidden == true %}hidden{% endif %}>

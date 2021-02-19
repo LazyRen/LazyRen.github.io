@@ -77,7 +77,7 @@ author:
 #     url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2020. All rights reserved.
+copyright:             © 2021. All rights reserved.
 
 # Format of the permalinks
 # permalink:             /blog/:categories/:year-:month-:day-:title/
@@ -265,6 +265,9 @@ hydejack:
   # This only affects the meta tag, not the color specified in the app manifest.
   no_theme_color:      false
 
+  # Disable the breadcrumbs above the title
+  no_breadcrumbs:      false
+
   # Set to `true` when building with the `--lsi` option
   use_lsi:             false
 
@@ -384,6 +387,34 @@ google_site_verification: "zIn7l_GwuOi4WnyRQsdhI9Jpn6IAs0SLR_4HG8OZzsM"
 #     - https://github.com/<username>
 
 
+# Plugin Configs
+# ---------------------------------------------------------------------------------------
+
+optional_front_matter:
+  remove_originals:    true
+
+readme_index:
+  remove_originals:    true
+  with_frontmatter:    true
+
+relative_links:
+  collections:         true
+
+titles_from_headings:
+  strip_title:         true
+  collections:         true
+
+compress_html:
+  comments:            ["<!-- ", " -->"]
+  clippings:           all
+  endings:             all
+  ignore:
+    envs:              [development]
+
+sass:
+  style:               compressed
+
+
 # Jekyll Compose Defaults
 # ---------------------------------------------------------------------------------------
 
@@ -413,34 +444,6 @@ jekyll_compose:
       links:
         - title: Project Link
           url: https://example.com
-
-
-# Other Plugins
-# ---------------------------------------------------------------------------------------
-
-optional_front_matter:
-  remove_originals:    true
-
-readme_index:
-  remove_originals:    true
-  with_frontmatter:    true
-
-relative_links:
-  collections:         true
-
-titles_from_headings:
-  strip_title:         true
-  collections:         true
-
-compress_html:
-  comments:            ["<!-- ", " -->"]
-  clippings:           all
-  endings:             all
-  ignore:
-    envs:              [development]
-
-sass:
-  style:               compressed
 
 # jekyll-feed settings
 feed:

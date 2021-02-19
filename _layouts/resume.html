@@ -3,6 +3,11 @@
 layout: base
 ---
 
+{% assign version = jekyll.version | split:'.' %}
+{% assign major = version[0] | plus:0 %}
+{% assign minor = version[1] | plus:0 %}
+{% assign patch = version[2] | plus:0 %}
+
 {% assign strings = site.data.strings %}
 {% assign colon = strings.colon | default:":" %}
 {% assign icons = strings.resume.icons %}
@@ -20,40 +25,12 @@ layout: base
   {% unless nsd %}vocab="http://schema.org/" typeof="Person" resource="#resume"{% endunless %}
   >
   {% include pro/resume/header.html %}
+  {% include pro/resume/buttons.html %}
 
   <div class="columns contact {% unless no_third_column %}columns-break{% endunless %}">
     {% include pro/resume/basics.html %}
     {% include pro/resume/profiles.html %}
   </div>
-
-  {% comment %}
-  {% unless page.no_buttons %}
-    <div class="mt2 screen-only">
-      <button class="btn btn-sm btn-primary" onclick="window.print()">
-        <small class="icon-printer"></small>
-        {{ site.data.strings.print | default: "Print" }}
-      </button>
-      {% assign pdf = site.static_files | find:"path", "/assets/Resume.pdf" %}
-      {% if pdf %}
-        <a href="{{ pdf.path | relative_url }}" class="btn btn-sm btn-primary" download>
-          <small class="icon-file-pdf"></small>
-          {{ site.data.strings.resume.download_pdf | default: "PDF" }}
-        </a>
-      {% endif %}
-      <a type="text/directory" href="http://h2vx.com/vcf/{{ page.url | absolute_url }}" class="btn btn-sm btn-primary no-mark-external">
-        <small class="icon-user-plus"></small>
-        {{ site.data.strings.resume.download_vcf | default: "vCard" }}
-      </a>
-      {% assign json = site.pages | find:"url", "/assets/resume.json" %}
-      {% if json %}
-      <a href="{{ json.path | relative_url }}" class="btn btn-sm btn-primary" download>
-        <small class="content-json"></small>
-        {{ site.data.strings.resume.download_json | default: "JSON" }}
-      </a>
-      {% endif %}
-    </div>
-  {% endunless %}
-  {% endcomment %}
 
   <div class="columns {% unless no_third_column %}columns-break{% endunless %}">
     {% assign l_col = page.left_column %}
