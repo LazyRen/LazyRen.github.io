@@ -8,7 +8,7 @@ image:
   path: /assets/img/2020-12-21/utterances.png
 ---
 
-Disqus is somewhat default comments plugin for the Hydejack and most of the static site. But I had some issues with Disqus, so I looked elsewhere to find new comments plugin.
+Disqus is used as default comments plugin for the Hydejack and most of the static site. But I had some issues with Disqus, so I looked elsewhere to find new comments plugin.
 
 1. Disqus loads slowly.<br>
 2. link within comment is **broken**.<br>
