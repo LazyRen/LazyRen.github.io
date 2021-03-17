@@ -37,6 +37,7 @@ used `scss` file has been changed to `my-inline.scss` from `my-style.scss` to pr
 {:.note}
 
 ```css
+/* file: "/_sass/my-inline.scss" */
 // Sidebar Modification
 
 .sidebar {
@@ -122,12 +123,13 @@ input[type="checkbox"]:checked ~ ul{
 ![git diff](/assets/img/2020-08-02/nav_html.png)
 
 Change made in `my-inline.scss` was to properly show submenu.<br>
-Changes in [this file](https://github.com/LazyRen/LazyRen.github.io/blob/master/_includes/body/nav.html) is to actually print submenu(tags) to the sidebar.
+Changes in [nav.html](https://github.com/LazyRen/LazyRen.github.io/blob/master/_includes/body/nav.html) is to actually print submenu(tags) to the sidebar.
 
 ### Code explanation
 
 ```liquid
-{% raw %}
+<!-- file: "/_layouts/tag-list.html" -->
+{%- raw -%}
 {% assign nodes = site.pages | concat: site.documents | where: "sidebar", true | sort: "order" %}
 {% assign tag_nodes = nodes | where: "type", "tag" %}
 {% for node in nodes %}
@@ -166,7 +168,7 @@ Changes in [this file](https://github.com/LazyRen/LazyRen.github.io/blob/master/
 Above is the actual code that I've added. I'll try my best to explain in detail for each code segment.
 
 ```liquid
-{% raw %}
+{%- raw -%}
 {% assign nodes = site.pages | concat: site.documents | where: "sidebar", true | sort: "order" %}
 {% assign tag_nodes = nodes | where: "type", "tag" %}
 {% endraw %}
@@ -176,7 +178,7 @@ Above is the actual code that I've added. I'll try my best to explain in detail 
 `tag_nodes`: From what we've collected, filter tags only.(We've set the sidebar & tag property in `*.md` file)
 
 ```liquid
-{% raw %}
+{%- raw -%}
 {% for node in nodes %}
   {% unless node.redirect_to %}
     {% if node.type != "tag" %}
@@ -216,7 +218,36 @@ We create checkbox & label *iff* `subnodes` list is not empty. And create list o
 
 ## tag-list.html
 
-Adding [this file](https://github.com/LazyRen/LazyRen.github.io/blob/master/_layouts/tag-list.html) to `_layouts` folder will enable using `layout: tag-list` for the featured_tags.<br>
+Adding [tag-list.html](https://github.com/LazyRen/LazyRen.github.io/blob/master/_layouts/tag-list.html) to `_layouts` folder will enable using `layout: tag-list` for the featured_tags.<br>
+
+```html
+<!-- file: "/_layouts/tag-list.html" -->
+---
+layout: page
+---
+{%- raw -%}
+
+{{ content }}
+
+{% assign posts = site.tags[page.slug] %}
+
+{% assign date_formats  = site.data.strings.date_formats               %}
+{% assign list_group_by = date_formats.list_group_by | default:"%Y"    %}
+{% assign list_entry    = date_formats.list_entry    | default:"%d %b" %}
+
+{% for post in posts %}
+  {% assign currentdate = post.date | date:list_group_by %}
+  {% if currentdate != date %}
+    {% unless forloop.first %}</ul>{% endunless %}
+    <h2 id="{{ list_group_by | slugify }}-{{ currentdate | slugify }}" class="hr">{{ currentdate }}</h2>
+    <ul class="related-posts">
+    {% assign date = currentdate %}
+  {% endif %}
+  {% include components/post-list-item.html post=post format=list_entry %}
+  {% if forloop.last %}</ul>{% endif %}
+{% endfor %}
+{% endraw %}
+```
 
 ## _featured_categories/*.md
 

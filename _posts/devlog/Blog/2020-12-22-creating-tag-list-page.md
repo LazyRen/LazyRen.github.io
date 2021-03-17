@@ -23,6 +23,7 @@ Since many tags are not listed on the sidebar, I've always wanted to have a page
 ## tags.md
 
 ```markdown
+<!-- file: "/tags.md" -->
 ---
 layout: tags
 title: Tags
@@ -47,7 +48,8 @@ It finds all categories & tags from the site & list them like `list` or `tag-lis
 ---
 layout: page
 ---
-{% raw %}
+{%- raw -%}
+
 {{ content }}
 
 {% assign documents = site.documents %}

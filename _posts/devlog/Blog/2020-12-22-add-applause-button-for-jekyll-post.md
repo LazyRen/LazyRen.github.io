@@ -25,7 +25,7 @@ Basically, I will add applause button for each-and-every post. Unless author spe
 /_config.yml
 /_includes/head/links-static.html
 /_layouts/post.html
-_sass/my-style.scss
+/_sass/my-style.scss
 ```
 
 * this unordered seed list will be replaced by the toc
@@ -37,6 +37,7 @@ It's not really necessary, but I just wanted to avoid inserting `applause_button
 If you have a post that doesn't need applause button, insert `applause_button: false` to the frontmatter of that post.
 
 ```yaml
+# file: "/_config.yml"
 defaults:
   # You can use the following to enable comments on all posts.
   - scope:
@@ -51,7 +52,8 @@ defaults:
 Jekyll needs js & css files ready. So here it is.
 
 ```html
-{% raw %}
+<!-- file: "/_includes/head/links-static.html" -->
+{%- raw -%}
 {% if page.applause_button %}
   <link rel="stylesheet" href="https://unpkg.com/applause-button/dist/applause-button.css">
   <script src="https://unpkg.com/applause-button/dist/applause-button.js"></script>
@@ -69,7 +71,8 @@ Sorry, I don't know to be honest. Please share your ideas for this.
 {.note}
 
 ```html
-{% raw %}
+<!-- file: "/_layouts/post.html" -->
+{%- raw -%}
 {% if page.applause_button %}
   <applause-button
     color={{ site.accent_color | default:'rgb(79,177,186)' }}
@@ -88,6 +91,7 @@ Sorry, I don't know to be honest. Please share your ideas for this.
 * Number has same color as applause button
 
 ```css
+/* file: "/_sass/my-style.scss" */
 // applause-button
 
 applause-button {

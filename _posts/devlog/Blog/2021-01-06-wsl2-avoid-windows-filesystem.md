@@ -67,6 +67,7 @@ Change starting direcotry to the root folder of the user.
 Add below line to the ubuntu profile from `settings.json`.
 
 ```json
+//file: "settings.json"
 "startingDirectory": "//wsl$/Ubuntu/home/lazyren"
 
 # Profile will look like below.

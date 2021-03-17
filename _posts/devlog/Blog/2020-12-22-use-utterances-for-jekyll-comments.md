@@ -60,6 +60,7 @@ There is two choices,
 I'll go with the second choice. Either way, you have to put `comments: provider:` to the `_config.yml`.
 
 ```yaml
+# file: "/_config.yml"
 # Set which comment system to use
 comments:
   # 'disqus' or 'utterances' are available
@@ -88,7 +89,8 @@ Choose the right comment provider's code to insert based on the `site.comments.p
 disqus's code will remain as-is, we only need to add utterances's code so it can parse values from `_config.yml`. If you don't want to use `_config.yml`, you may just copy & hard-code script from [utterances](https://utteranc.es/).
 
 ```html
-{% raw %}
+<!-- file: "/_includes/my-comments.html" -->
+{%- raw -%}
 {% assign provider = site.comments.provider | default:"disqus" %}
 {% if provider == "disqus" %}
   {% assign disqus = site.disqus | default:site.disqus_shortname %}
@@ -116,7 +118,8 @@ disqus's code will remain as-is, we only need to add utterances's code so it can
 You don't want to link disqus if you are not using it. Wrap linking line with proper if statement.
 
 ```html
-{% raw %}
+<!-- file: "/_includes/head/links-static.html" -->
+{%- raw -%}
 {% if site.comments.provider == "disqus" and site.disqus %}
   <link rel="dns-prefetch" href="https://{{ disqus }}.disqus.com" id="_hrefDisqus">
 {% endif %}
@@ -128,6 +131,7 @@ You don't want to link disqus if you are not using it. Wrap linking line with pr
 To [adjust size of utterances](https://github.com/utterance/utterances/issues/160) to fit into the blog content-width, insert below code into `_sass/my-style.scss`.
 
 ```css
+/* file: "/_sass/my-style.scss" */
 .utterances {
   max-width: 100%;
 }
