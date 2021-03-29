@@ -8,6 +8,7 @@
     {% for skl in resume.skills %}
       <dt class="fl">{{ skl.name }}</dt>
       <dd class="faded clearafter">
+        {% if skl.level %}
         <div class="fr">
           <span class="sr-only">{{ strings.resume.level | default:"Level" }}{{ colon }}</span>
           {% assign level = skl.level | slugify %}
@@ -40,6 +41,7 @@
             {{ skl.level }}
           {% endunless %}
         </div>
+        {% endif %}
         {% if skl.keywords.size > 0 %}
         <div>
           <span class="sr-only">{{ strings.resume.keywords | default:"Keywords" }}{{ colon }}</span>

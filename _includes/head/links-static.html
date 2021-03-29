@@ -6,8 +6,11 @@
 <link rel="manifest" href="{{ '/assets/site.webmanifest' | relative_url }}">
 
 {% if site.google_fonts %}
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  {%- capture google_fonts_url %}{{ site.google_fonts_url | default:'https://fonts.googleapis.com' }}{%- endcapture -%}
+  <link rel="dns-prefetch" href="{{ google_fonts_url }}">
+  {%- if google_fonts_url == 'https://fonts.googleapis.com' -%}
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  {%- endif -%}
 {% endif %}
 
 {% if site.google_analytics %}
@@ -16,7 +19,7 @@
 
 <link rel="preload" href="{{ '/assets/img/swipe.svg' | relative_url }}" as="image" id="_hrefSwipeSVG">
 
-<link rel="dns-prefetch" href="{{ '/assets/js/search-worker-9.1.2.js' | relative_url }}" as="worker" id="_hrefSearch">
+<link rel="dns-prefetch" href="{{ '/assets/js/search-worker-9.1.3.js' | relative_url }}" as="worker" id="_hrefSearch">
 {% if site.kramdown.math_engine == 'katex' %}
   {% capture katex_url %}{{ 'assets/bower_components/katex/dist/katex.min.css' | relative_url }}{% endcapture %}
   <link rel="dns-prefetch" href="{{ katex_url }}" id="_katexPreload">

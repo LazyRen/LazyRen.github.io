@@ -7,6 +7,6 @@ html {
   --accent-color-highlight: #{fade-out({{ color }}, 0.9)};
   --accent-color-darkened: #{darken({{ color }}, 7.5%)};
   --theme-color: {{ theme_color }};
-  --dark-mode-body-bg: #{hsl(hue({{ theme_color }}), 10%, 17.5%)};
-  --dark-mode-border-color: #{hsl(hue({{ theme_color }}), 10%, 22.5%)};
+  --dark-mode-body-bg: #{hsl(hue({{ theme_color }}), saturation({{ theme_color }}) / 8, 17.5%)};
+  --dark-mode-border-color: #{hsl(hue({{ theme_color }}), saturation({{ theme_color }}) / 8, 22.5%)};
 }

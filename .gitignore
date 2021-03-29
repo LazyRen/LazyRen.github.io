@@ -47,5 +47,3 @@ vendor
 *.gem
 _zip
 /stats.json
-
-#<removed>

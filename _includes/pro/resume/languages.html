@@ -8,6 +8,7 @@
     {% for lng in resume.languages %}
       <dt class="fl">{{ lng.language }}</dt>
       <dd class="faded clearafter">
+        {% if lng.fluency %}
         <div class="fr">
           <span class="sr-only">{{ strings.resume.fluency | default:"Fluency" }}{{ colon }}</span>
           {% assign fluency = lng.fluency | slugify %}
@@ -50,6 +51,7 @@
             {{ lng.fluency }}
           {% endunless %}
         </div>
+        {% endif %}
       </dd>
     {% endfor %}
   </dl>
