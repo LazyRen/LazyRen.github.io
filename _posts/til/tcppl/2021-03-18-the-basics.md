@@ -21,6 +21,7 @@ image:
 ## Types, Variables, and Arithmetic
 
 A *declaration* specifies a type for the named entity:
+
 * *type*: set of possible values and a set of operations (for an object)
 * *object*: some memry that holds a value of some type
 * *value*: set of bits interpreted according to a type
@@ -30,7 +31,7 @@ A *declaration* specifies a type for the named entity:
 
 You can use **{}-list form** other than traditional C-style **= form** to narrow conversions.
 
-```C++
+```c++
 int var = 7.2;    // var becomes 7
 int var2 {7.2};   // error: floating-point to integer conversion
 int var3 = {7.2}; // same as above(the = is redundant)
@@ -38,6 +39,7 @@ int var3 = {7.2}; // same as above(the = is redundant)
 
 Use `auto` with `= syntax` to make type be deduced from the initializer.<br>
 Use `auto` when...
+
 * The definition is in a large scope where we want to make the type clearly visible to readers of our code
 * We want to be explicit about a variable's range or precision
 * Avoid redundancy and writing long type names (especially for generic programming)
