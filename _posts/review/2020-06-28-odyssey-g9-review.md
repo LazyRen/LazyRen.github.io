@@ -128,13 +128,23 @@ image:
 
 ## 게임별 설정 방법
 
+### Apex Legends
+
+```txt
+// file: "C:\Users\{UserName}\Saved Games\Respawn\Apex\local\videoconfig.txt"
+...
+"setting.defaultres"            "3440"
+"setting.defaultresheight"      "1440"
+...
+```
+
 ### Lost Ark
 
 1. 로스트 아크 설정 파일(`C:\Program Files (x86)\Smilegate\Games\LOSTARK\EFGame\Config\UserOption.xml`)로 해상도 변경<br>
     (게임 내에서 원하는 해상도가 있을 경우 스킵하셔도 됩니다.)
 
     ```xml
-    <!-- C:\Program Files (x86)\Smilegate\Games\LOSTARK\EFGame\Config\UserOption.xml -->
+    <!-- file: "C:\Program Files (x86)\Smilegate\Games\LOSTARK\EFGame\Config\UserOption.xml" -->
     <CurrentResolutionData>
         <ResolutionX>3440</ResolutionX>
         <ResolutionY>1440</ResolutionY>
