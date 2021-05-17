@@ -49,7 +49,7 @@ defaults:
 
 ## links-static.html
 
-Jekyll needs js & css files ready. So here it is.
+Jekyll needs js & css files ready. So here it is. Add below code to the end of the file.
 
 ```html
 <!-- file: "/_includes/head/links-static.html" -->
@@ -64,15 +64,14 @@ Jekyll needs js & css files ready. So here it is.
 ## post.html
 
 Applause button(if enabled) seats between contents and post-nodes such as author / comments.<br>
-If Applause button is disabled, make sure to prints origina dingbat. I've used site's accent_color (which you can change from `_config.yml`), but feel free to choose the best color for your blog.
-
-Make sure to put proper `url` for the applause button. If there is more than one applause button in one post...<br>
-Sorry, I don't know to be honest. Please share your ideas for this.
-{.note}
+If Applause button is disabled, make sure to prints original dingbat. I've used site's accent_color (which you can change from `_config.yml`), but feel free to choose the best color for your blog.
 
 ```html
 <!-- file: "/_layouts/post.html" -->
 {%- raw -%}
+<!-- ... -->
+{% include components/dingbat.html %}
+
 {% if page.applause_button %}
   <applause-button
     color={{ site.accent_color | default:'rgb(79,177,186)' }}
@@ -81,10 +80,15 @@ Sorry, I don't know to be honest. Please share your ideas for this.
 {% else %}
   <hr class="dingbat related" />
 {% endif %}
+
+{% assign addons = page.addons | default:site.hydejack.post_addons %}
+<!-- ... -->
 {% endraw %}
 ```
 
 ## my-style.scss
+
+Add below code to the end of the file.
 
 * Change size
 * Make button centered
