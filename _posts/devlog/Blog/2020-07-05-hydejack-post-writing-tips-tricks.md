@@ -76,7 +76,7 @@ Example:
 <summary>Expand/Collapse Button</summary>
 <div markdown="1">
 **Hello World!**<br>
-emphasised by *markdown*.
+emphasized by *markdown*.
 </div>
 </details>
 <br>
@@ -87,7 +87,7 @@ Markdown:
 <summary>Expand/Collapse Button</summary>
 <div markdown="1">
 **Hello World!**<br>
-emphasised by *markdown*.
+emphasized by *markdown*.
 </div>
 </details>
 ```
