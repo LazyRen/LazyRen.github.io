@@ -38,6 +38,7 @@ validation-status.json
 validation-report.json
 
 # Folders to ignore
+.vscode
 node_modules
 .bundle
 .jekyll-cache

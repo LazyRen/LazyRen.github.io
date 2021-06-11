@@ -251,7 +251,7 @@ Mac osX은 매년 메이저 업데이트가 진행되며 올해에도 9월 25일
 
 * [Dropbox](https://www.dropbox.com/ko/downloading)
 
-  개인적인 사용으로는 Goodgle Drive를 사용하지만, 무료 용량의 압박이 있어 지난 학기 Goodnote Backup 및 특정 앱들(Alfred라던지)은 설정파일 공유를 위하여 사용합니다.
+  개인적인 사용으로는 Google Drive를 사용하지만, 무료 용량의 압박이 있어 지난 학기 Goodnote Backup 및 특정 앱들(Alfred라던지)은 설정파일 공유를 위하여 사용합니다.
 
 * [Better Touch Tool](https://folivora.ai/)
 

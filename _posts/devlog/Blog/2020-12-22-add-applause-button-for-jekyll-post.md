@@ -8,12 +8,12 @@ image:
   path: /assets/img/2020-12-21/post_end.png
 ---
 
-When I revisted the [hydejack's offical site](https://hydejack.com/showcase/lazyren/), I noticed little [clapping button](https://help.medium.com/hc/en-us/articles/115011350967-Claps) that set at the end of the post.<br>
+When I revisited the [Hydejack official site](https://hydejack.com/showcase/lazyren/), I noticed little [clapping button](https://help.medium.com/hc/en-us/articles/115011350967-Claps) that set at the end of the post.<br>
 It seems good idea to have light-cost (compare to commenting) way to communicate with visitors. So I gave some research on it and finally made it as above.
 
 <!--more-->
 
-[@qwtel](https://github.com/qwtelhttps://github.com/qwtel), the author of this jekyll theme provides a nice [applause button service](https://getclaps.dev/), but unfortunatelly, $5 per month is too expensive to pay for this small blog.
+[@qwtel](https://github.com/qwtelhttps://github.com/qwtel), the author of this jekyll theme provides a nice [applause button service](https://getclaps.dev/), but unfortunately, $5 per month is too expensive to pay for this small blog.
 
 So I ended up with [applause](https://applause-button.com/). Which is free, ([donation](https://opencollective.com/applause-button) for a good service is always an option.) and easy-to-install.(not 100% true, if you ask me. I couldn't find good guideline on how to customize it.)
 
@@ -33,8 +33,8 @@ Basically, I will add applause button for each-and-every post. Unless author spe
 
 ## _config.yml
 
-It's not really necessary, but I just wanted to avoid inserting `applause_button: true` to each and every posts' frontmatter.
-If you have a post that doesn't need applause button, insert `applause_button: false` to the frontmatter of that post.
+It's not really necessary, but I just wanted to avoid inserting `applause_button: true` to each and every posts' front matter.
+If you have a post that doesn't need applause button, insert `applause_button: false` to the front matter of that post.
 
 ```yaml
 # file: "/_config.yml"

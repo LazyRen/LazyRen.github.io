@@ -40,7 +40,7 @@ bool Insert(const KeyType &key, const ValueType &value);
    class Context {
        const KeyType search_key = key;
        NodeSnapshot current_snapshot;
-       NodeSanpshot parent_snapshot;
+       NodeSnapshot parent_snapshot;
    }
    ```
 
@@ -103,7 +103,7 @@ Insert와 매우 유사한 구조를 지님.
    class Context {
        const KeyType search_key = key;
        NodeSnapshot current_snapshot;
-       NodeSanpshot parent_snapshot;
+       NodeSnapshot parent_snapshot;
    }
    ```
 
@@ -194,7 +194,7 @@ default page size of 8K
 
 ##### Machine
 
-Intel Xeon W3550 (at 3.07GHz) with 8 hyperthread logical cores + 24GB RAM
+Intel Xeon W3550 (at 3.07GHz) with 8 hyper thread logical cores + 24GB RAM
 
 ##### Evaluation Datasets
 
@@ -266,7 +266,7 @@ three key types
 
 ![Fig. 8](/assets/img/2019-01-03/Screen Shot 2018-11-13 at 12.09.17 AM.png)
 
-* better localidty
+* better locality
 * reduces the number of small memory allocations
 * wasted  memory space
 

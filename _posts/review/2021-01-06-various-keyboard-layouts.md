@@ -124,7 +124,7 @@ Leopold FC660M(66키)
 
 ![Varmilo VA68M](/assets/img/2021-01-06/65_varmilo_va68m.jpg){: .centered}
 
-Varmil VA68M(68키)
+Varmilo VA68M(68키)
 {:.figcaption}
 
 최대한 표준 키캡 크기들을 준수하면서 사이즈를 줄인 모습입니다. 우 컨트롤 키와 방향키 사이의 작은 여백이 아쉽습니다.

@@ -1,7 +1,7 @@
 ---
 layout: tag-list
 type: tag
-title: Bw Tree
+title: Bw-Tree
 slug: bwtree
 category: devlog
 sidebar: true

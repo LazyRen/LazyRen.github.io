@@ -82,7 +82,7 @@ Check [this post](/devlog/use-utterances-for-jekyll-comments) for more info.
 
 ## Add applause button for Jekyll post
 
-When I revisted the [hydejack's offical site](https://hydejack.com/showcase/lazyren/), I noticed little [clapping button](https://help.medium.com/hc/en-us/articles/115011350967-Claps) that set at the end of the post. It seems good idea to have light-cost (compare to commenting) way to communicate with visitors. So I gave some research on it and finally made it as below.
+When I revisited the [Hydejack official site](https://hydejack.com/showcase/lazyren/), I noticed little [clapping button](https://help.medium.com/hc/en-us/articles/115011350967-Claps) that set at the end of the post. It seems good idea to have light-cost (compare to commenting) way to communicate with visitors. So I gave some research on it and finally made it as below.
 
 ![applause button](/assets/img/2020-12-21/post_end.png)
 
@@ -101,8 +101,8 @@ Check [this post](/devlog/add-applause-button-for-jekyll-post) for more info.
 
 ## Conclusion
 
-This post orignally started with sidebar modification only. But now it has become a huge post. I might divide this post into smaller ones.
+This post originally started with sidebar modification only. But now it has become a huge post. I might divide this post into smaller ones.
 I'm not an expert in web development. Adding simple submenu was pretty challenging & time consuming job for me. But taking some time to dig around, I've learned one or two things about how jekyll is working, and web programming.<br>
 it's pretty fun!<br>
-You may find some odd parts, need help implementing features, or you have any suggestions for the improvment please don't hesitate to contact me.<br>
+You may find some odd parts, need help implementing features, or you have any suggestions for the improvement please don't hesitate to contact me.<br>
 I'd be very delightful to have any comments.<br>

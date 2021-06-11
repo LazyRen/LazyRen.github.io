@@ -23,7 +23,7 @@ image:
 A *declaration* specifies a type for the named entity:
 
 * *type*: set of possible values and a set of operations (for an object)
-* *object*: some memry that holds a value of some type
+* *object*: some memory that holds a value of some type
 * *value*: set of bits interpreted according to a type
 * *variable*: named object
 
@@ -65,7 +65,7 @@ C++ provides strongly typed `enum class` witch enforces to use `ENUMNAME::ENUMVA
 
 If you want old school C way (which is quite handy sometimes especially with implicit conversion to `int`), remove the `class` from `enum class` to get a "plain `enum`".
 
-By default, an `enum class` has only assignment, initialization, and comparisions defined. However, we can define other operators for it.
+By default, an `enum class` has only assignment, initialization, and comparisons defined. However, we can define other operators for it.
 
 ## Modularity
 
@@ -75,14 +75,14 @@ The key point is that the function bodies(function *definitions*) are "elsewhere
 
 ### Separate Compilation
 
-C++ supports a notion of separte compilation where user code sees only *declarations* of types and functions used. The *definitions* of those types and functions are in separate source files and compiled separately.
+C++ supports a notion of separate compilation where user code sees only *declarations* of types and functions used. The *definitions* of those types and functions are in separate source files and compiled separately.
 
-![Compile Dependency](/assets/img/2021-03-18/separte_compilation.png)
+![Compile Dependency](/assets/img/2021-03-18/separate_compilation.png)
 
-The code in `user.cpp` & `vector.cpp` shares the Vector interfance information presented in `Vector.h`, but the two files are otherwise independent and can be separately comiled.
+The code in `user.cpp` & `vector.cpp` shares the Vector interface information presented in `Vector.h`, but the two files are otherwise independent and can be separately compiled.
 {.figcaption}
 
 ### Namespaces
 
-Offers a mechanism for expressing that some declarations belong toghether and that their names shouldn't clash with other names.<br>
+Offers a mechanism for expressing that some declarations belong together and that their names shouldn't clash with other names.<br>
 [Unnamed namespaces can be also used to make an identifier translation unit local](https://stackoverflow.com/questions/357404/why-are-unnamed-namespaces-used-and-what-are-their-benefits).

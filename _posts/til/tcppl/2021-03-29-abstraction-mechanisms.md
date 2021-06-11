@@ -12,7 +12,7 @@ image:
 >
 > - Douglas Adams
 
-* this unordered seed list will be replaced by the toc
+- this unordered seed list will be replaced by the toc
 {:toc}
 
 <!--more-->
@@ -32,10 +32,10 @@ public:
 
 Above class is a *pure interface* to specific containers defined later. The word **virtual** means "may be redefined later in a class derived from this one."
 
-* *virtual function*: A function declared **virtual**<br>
+- *virtual function*: A function declared **virtual**<br>
     A class derived from **Container** provides an implementation for the interface(*virtual functions*).
-* *pure virtual*: A function syntax with **=0**; that is, some class derived from **Container** *must* define the function.
-* *abstract class*: A class with a pure virtual function; it is impossible to define an object of class type with *pure virtual function*.
+- *pure virtual*: A function syntax with **=0**; that is, some class derived from **Container** *must* define the function.
+- *abstract class*: A class with a pure virtual function; it is impossible to define an object of class type with *pure virtual function*.
     A class that provides the interface to a variety of other classes is often called a *polymorphic type*.
 
 ### Inheritance
@@ -52,10 +52,10 @@ public:
 }
 ```
 
-* Class **Vector_container**(*subclass*) "is derived from" / "is a subtype of" class **Container**(*superclass*).
-* Class **Container** is "a base of" class **Vector_container**.
+- Class **Vector_container**(*subclass*) "is derived from" / "is a subtype of" class **Container**(*superclass*).
+- Class **Container** is "a base of" class **Vector_container**.
 
-When superclass's virtual function is called, proper subclass's overrided function must be called. The object must contain information to allow it to select the right function to call at run time. Each class with virtual functions has its own *virtual function table* identifying its virtual functinos.
+When superclass's virtual function is called, proper subclass's override function must be called. The object must contain information to allow it to select the right function to call at run time. Each class with virtual functions has its own *virtual function table* identifying its virtual functions.
 {:.note}
 
 ![Virtual Function Table](/assets/img/2021-03-29/vtbl.png)
@@ -64,9 +64,9 @@ The implementation of the caller needs only to know the location of the pointer 
 
 A class hierarchy offers two kinds of benefits:
 
-* *Interface inheritance*: An object of a *derived class* can be used wherever an object of a *base class* is required.<br>
+- *Interface inheritance*: An object of a *derived class* can be used wherever an object of a *base class* is required.<br>
     That is, the *base class* acts as an interface for the derived class.
-* *Implementation inheritance*: A *base class* provides functions or data that simplifies the implementation of *derived class*.
+- *Implementation inheritance*: A *base class* provides functions or data that simplifies the implementation of *derived class*.
 
 ## Copy and Move
 
@@ -103,7 +103,7 @@ public:
     ~vector() { delete[] elem; }
 
     // copy constructor
-    Vector(const Vecotr& other) : elem{new double[other.sz]}, sz(other.sz) {
+    Vector(const Vector& other) : elem{new double[other.sz]}, sz(other.sz) {
         for (int i = 0; i < sz; i++)
             elem[i] = other.elem[i];
     }
@@ -127,6 +127,7 @@ public:
 
 The book used `elem{new double[sz]}` for the copy constructor. Which I believe, is *wrong*.<br>
 According to the [reference](https://en.cppreference.com/w/cpp/language/constructor), the order of member initializers in the list is irrelevant: the actual order of initialization is as follows:<br>
+
 1) If the constructor is for the most-derived class, virtual bases are initialized in the order in which they appear in depth-first left-to-right traversal of the base class declarations (left-to-right refers to the appearance in base-specifier lists)<br>
 2) Then, direct bases are initialized in left-to-right order as they appear in this class's base-specifier list<br>
 3) Then, non-static data member are initialized in order of declaration in the class definition.<br>
@@ -180,7 +181,7 @@ A move constructor & assignment does *not* take **const** argument: they suppose
 
 After a move, a moved-from object should be in a state that allows a destructor to be run.<br>
 Typically, we should also allow assignment to a moved from object.<br>
-This is something we often forget about, but very important to prevent malfuction.
+This is something we often forget about, but very important to prevent malfunction.
 {:.note title="IMPORTANT"}
 
 ### Suppressing Operations
@@ -248,18 +249,21 @@ class Less_than {
     const T val;
 public:
     Less_than(const T& v) : val(v) {}
-    bool operator()(const T& x) const { retrun x < val; } // call operator
+    bool operator()(const T& x) const { return x < val; } // call operator
 }
 ```
 
 The function called **operator()** implements the "function call", "call", or "application" operator **()**.
 
 We can define named variables of type Less_than for some argument type:
+
 ```c++
 Less_than<int> lti {42};          // lti(i) will compare i to 42 using < (i<42)
 Less_than<string> lts {"Backus"}; // lts(s) will compare s to "Backus" using < (s<"Backus")
 ```
+
 We can call such an object, just as we call a function:
+
 ```c++
 void fct(int n, const string & s)
 {

@@ -21,7 +21,7 @@ instruction, thread 갯수와 insert ratio를 받아서 테스트 케이스가 �
 e.x) tmp0.txt 24999번째 줄에 "i 500" 존재, tmp1.txt 4번째 줄에 "d 500" 존재.
 생성시에는 24999번째로 "i 500" 생성이후 24503번째로 "d 500"을 생성했으나, 스레드 별로 파일을 나누다 보니 문제 발생.
 
-e.x.2) 직접 실행 결과 천만 단위의 opeartion에서 최대 6000, 그것도 첫 스레드에서만 failed delete 발생.
+e.x.2) 직접 실행 결과 천만 단위의 operation에서 최대 6000, 그것도 첫 스레드에서만 failed delete 발생.
 대부분의 경우 failed delete가 발생하지 않음.
 
 * this unordered seed list will be replaced by the toc
@@ -38,7 +38,7 @@ e.x.2) 직접 실행 결과 천만 단위의 opeartion에서 최대 6000, 그것
  * Assume that insert_ratio + delete_ration == 10
 */
 void BenchmarkRandOperation(int total_operation, int thread_num) {
-  // Get an empty trrr; do not print its construction message
+  // Get an empty tree; do not print its construction message
   TreeType *t = GetEmptyTree(true);
 
   // This is used to record time taken for each individual thread

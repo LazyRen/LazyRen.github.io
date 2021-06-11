@@ -55,7 +55,7 @@ This work is licensed under a [Attribution-ShareAlike 3.0](https://creativecommo
 
 * Producer owns a can.
 
-  * kocks over can when product is ready.
+  * knocks over can when product is ready.
   * reset can when product is all used up.
 
 * **Consumer**
@@ -81,9 +81,9 @@ This work is licensed under a [Attribution-ShareAlike 3.0](https://creativecommo
 
 * Correctness
 
-  * Mutual Exclusion -> *safety*<br>pet & Bob never togethjer in pond
+  * Mutual Exclusion -> *safety*<br>pet & Bob never together in pond
   * No Starvation -> *liveness*
-  * Producer/Consumer -> *safety*<br>The pet never enter pond unlesss ther is food / Bob never provide food if there is unconsumed food.
+  * Producer/Consumer -> *safety*<br>The pet never enter pond unless there is food / Bob never provide food if there is unconsumed food.
 
 #### Amdahl's Law
 
@@ -187,7 +187,7 @@ There are n-1 levels.
 * Only one thread makes it through
 * At most n-L threads enter level L
 * mutual exclusion at level L = n-1
-* Starvation-Free but weak fairness(overtaken by others who come laterly)
+* Starvation-Free but weak fairness(overtaken by others who come lately)
 
 ### Bakery Algorithm
 
@@ -276,7 +276,7 @@ class Bakery implements Lock {
 
 ![history](/assets/img/2019-12-17/history.png)
 
-* Invocation & Rsponse **match** if
+* Invocation & Response **match** if
   * thread names agree & object names agree
 * Invocation is **pending** if
   * it has no matching response
@@ -333,7 +333,7 @@ class Bakery implements Lock {
 
 ### Turing Computability
 
-* Methematical model of computation
+* Mathematical model of computation
 * What is (and is not) computable
 
 ### Shared-Memory Computability
@@ -455,7 +455,7 @@ public class RegMRSWRegister implements Register {
 * Array of MRSW atomic registers
 * Collect twice
   * If both agree, done
-  * othersiwse, redo
+  * otherwise, redo
 
 ```java
 public class SimpleSnapshot implements Snapshot {
@@ -519,7 +519,7 @@ public class WaitFreeSnapshot implements Snapshot {
     int i = Thread.getID();
     int[] snap = this.scan(); // scan before write
     SnapValue oldValue = r[i].read();
-    SnapValue newValue = new Snapvalue(oldValue.label+1, value, snap);
+    SnapValue newValue = new SnapValue(oldValue.label+1, value, snap);
     r[i].write(newValue);
   }
 
@@ -556,7 +556,7 @@ public class WaitFreeSnapshot implements Snapshot {
 
 ## The Relative Power of Synchronization Operations
 
-#### Wait-Free Implementation
+### Wait-Free Implementation
 
 * **Every method call completes in finite number of steps**
 * Implies no *mutual exclusion*
@@ -606,7 +606,7 @@ public class WaitFreeSnapshot implements Snapshot {
 
 ### FIFO Queue Implementation of Consensus
 
-##### Generic Consensus Protocol
+#### Generic Consensus Protocol
 
 ```java
 abstract class ConsensusProtocol<T> implements Consensus<T> {
@@ -653,7 +653,7 @@ public class QueueConsensus<T> extends ConsensusProtocol<T> {
   * If it can be used to **solve n-thread consensus** together with atomic read/write registers
 * **Theorem**
   * If you can implement *X* from *Y*. And *X* has consensus number *n*, then *Y* has consensus number at least *n*
-  * Conversely, if *X* has consensus number *n*. And *Y* has consensus number *m* < *n*, thern there is no way to construct a wait-free implementation of *X* by *Y*
+  * Conversely, if *X* has consensus number *n*. And *Y* has consensus number *m* < *n*, then there is no way to construct a wait-free implementation of *X* by *Y*
   * Example : **Multiple Assignment Theorem**
     * Atomic registers cannot implement multiple assignment
     * If we can write to 2 slots out of 3 array locations, we can solve 2-consensus -> which is impossible with atomic registers(consensus number 1)
@@ -928,7 +928,7 @@ class TASlock {
     while (state.getAndSet(true)) {};
   }
 
-  voud unlock() {
+  void unlock() {
     state.set(false);
   }
 }
@@ -1061,7 +1061,7 @@ public class Backoff implements Lock {
 ```
 
 * Pros
-  * Easy to imeplement / beats TTAS  lock
+  * Easy to implement / beats TTAS lock
 * Cons
   * Must choose parameters carefully
   * Not portable across platforms
@@ -1130,7 +1130,7 @@ class CLHLock implements Lock {
 * Pros
   * Small, constant-size overhead per thread
   * FCFS
-  * Lock release affects perdecessor only
+  * Lock release affects predecessor only
   * Space complexity: O(L+N)
 * Cons
   * Doesn't work for uncached NUMA architectures (intel)
@@ -1194,7 +1194,7 @@ class MCSLock implements Lock {
 ### Fine-Grained Synchronization
 
 * Split object into *independently-synchronized components*
-  * Instedad of using a single lock
+  * Instead of using a single lock
   * Methods conflict when they access...
     * The same component
     * At the same time
@@ -1213,7 +1213,7 @@ class MCSLock implements Lock {
 
 ### Lazy Synchronization
 
-* Postpond hard work
+* Postponed hard work
 * Remove in two steps
   * Logical removal
     * Mark component to be deleted

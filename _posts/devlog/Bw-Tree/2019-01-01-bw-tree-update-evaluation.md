@@ -59,7 +59,7 @@ Update 함수의 성능을 평가하는 테스트 코드 생성의 편의성을 
 `Update()` 진행시에 가장 먼저 호출되는 함수 입니다. BwTree를 순회하면서 해당 key가 가지고 있는 모든 value를 반환합니다. 이를 위해 많은 양의 연산이 소요됩니다.
 
 * 10.38%  `NodeID NavigateInnerNode(Context *context_p)`<br>
-`TraverseReadOptimized()` 함수와 `Traverse()` 함수에서 leaf node에 도달하기 전까지 무한 반복문 내에서 inner node를 모두 탐색하는 함수입니다. 가장 많은 양의 호출이 있으며, Update에는 Traver류의 함수가 3회나 호출 되기 때문에 높은 %를 나타내고 있습니다.
+`TraverseReadOptimized()` 함수와 `Traverse()` 함수에서 leaf node에 도달하기 전까지 무한 반복문 내에서 inner node를 모두 탐색하는 함수입니다. 가장 많은 양의 호출이 있으며, Update에는 Traverse류의 함수가 3회나 호출 되기 때문에 높은 %를 나타내고 있습니다.
 
 * 5.79% `void AddGarbageNode(const BaseNode *node_p)`<br>
 다수의 delete/insert node 가 leaf node에 삽입 됨에 따라 node split이 빈번하게 발생하고 이로 인해 AddGarbageNode가 자주 호출 되며, garbage node list에 삽입을 CAS를 통해 해결하기 때문에 여러 스레드 접근시 한 번 호출되었을 때 여러번 spin이 도는 경우가 있습니다.
@@ -82,7 +82,7 @@ Traverse 함수 내에서 호출되는 함수입니다. Leaf node에서 key를 �
 `Update()` 진행시에 가장 먼저 호출되는 함수 입니다. BwTree를 순회하면서 해당 key가 가지고 있는 모든 value를 반환합니다. 이를 위해 많은 양의 연산이 소요됩니다.
 
 * 8.87%  `NodeID NavigateInnerNode(Context *context_p)`<br>
-`TraverseReadOptimized()` 함수와 `Traverse()` 함수에서 leaf node에 도달하기 전까지 무한 반복문 내에서 inner node를 모두 탐색하는 함수입니다. 가장 많은 양의 호출이 있으며, Update에는 Traver류의 함수가 3회나 호출 되기 때문에 높은 %를 나타내고 있습니다.
+`TraverseReadOptimized()` 함수와 `Traverse()` 함수에서 leaf node에 도달하기 전까지 무한 반복문 내에서 inner node를 모두 탐색하는 함수입니다. 가장 많은 양의 호출이 있으며, Update에는 Traverse류의 함수가 3회나 호출 되기 때문에 높은 %를 나타내고 있습니다.
 
 * 7.46% `void  NavigateLeafNode(Context *context_p, std::vector<ValueType> &value_list)`<br>
 Traverse 함수 내에서 호출되는 함수입니다. Leaf node에서 key를 찾은 후 연관된 value들을 모으는 함수입니다. Delta chain의 끝에서부터 순회하며 merge와 split을 처리합니다.

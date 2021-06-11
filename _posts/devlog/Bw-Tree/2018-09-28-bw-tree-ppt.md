@@ -29,7 +29,7 @@ tags: bwtree
 
 ### Latch-free
 
-Bw Tree는 현대 muliti core CPU상에서 좋은 성능을 얻기 위하여 latch free design 을 적용시킨 트리구조입니다. data의 insert / delete / update 및 트리 구조 변경을 위하여 lock을 전혀 사용하지 않기 때문에 다른 스레드들이 yield되지 않습니다.
+Bw Tree는 현대 multi core CPU상에서 좋은 성능을 얻기 위하여 latch free design 을 적용시킨 트리구조입니다. data의 insert / delete / update 및 트리 구조 변경을 위하여 lock을 전혀 사용하지 않기 때문에 다른 스레드들이 yield되지 않습니다.
 
 ### Mapping Table
 
@@ -41,7 +41,7 @@ Bw Tree는 현대 muliti core CPU상에서 좋은 성능을 얻기 위하여 lat
 
 ### High Performance
 
-즉, Bw Tree는 latch free design과 Delta Update를 통한 CPU cahe hit ratio 상승으로 modern multi core CPU 상에서 높은 성능을 발휘할 수 있는 Microsoft Research가 발표한 새로운 자료구조입니다.
+즉, Bw Tree는 latch free design과 Delta Update를 통한 CPU cache hit ratio 상승으로 modern multi core CPU 상에서 높은 성능을 발휘할 수 있는 Microsoft Research가 발표한 새로운 자료구조입니다.
 
 ## Implementation
 
@@ -49,14 +49,14 @@ Bw Tree는 현대 muliti core CPU상에서 좋은 성능을 얻기 위하여 lat
 
 ### Mapping Table
 
-앞서 설명하였듯이 mapping table은 latch-free desing을 적용시키기 위한 helping tool입니다. Bw Tree내에서 하나의 logical node는 parent node와 left sibling node로 부터 오는 두개의 inbound pointers를 가지고 있습니다. 두개의 pointer를 atomic하게 update하는 것은 하드웨어의 도움 없이는 불가능 하므로 Bw Tree는 mapping table을 통해 PID를 physical pointer로 변경시키는 방법을 사용합니다.
+앞서 설명하였듯이 mapping table은 latch-free design을 적용시키기 위한 helping tool입니다. Bw Tree내에서 하나의 logical node는 parent node와 left sibling node로 부터 오는 두개의 inbound pointers를 가지고 있습니다. 두개의 pointer를 atomic하게 update하는 것은 하드웨어의 도움 없이는 불가능 하므로 Bw Tree는 mapping table을 통해 PID를 physical pointer로 변경시키는 방법을 사용합니다.
 즉, parent node와 left sibling node는 logical pointer, 즉 PID를 저장하고 있고, 실제 접근이 필요할 경우 mapping table을 통해 PID를 physical pointer로 치환하여 사용합니다. 이경우 inbound pointer의 갯수와 상관없이 한번의 CaS instruction을 통해 mapping table의 physical pointer를 변경할 수 있으므로 atomicity가 보장됩니다.
 
 ### Logical Node
 
-앞서 설명하였듯, Bw Tree는 delta update를 통해 delta chain을 유지하기 때문에 Bw Tree 구조에서 node는 delta chain과 basenode가 합쳐진 logical node로 구성되어 있습니다. Basenode는 일반적으로 생각하는 node구조로, 정렬된 (key, value) 배열과 metadata를 포함하고 있으며, 각각의 delta record는 data의 변경사항과 metadata를 포함하고 있습니다.
+앞서 설명하였듯, Bw Tree는 delta update를 통해 delta chain을 유지하기 때문에 Bw Tree 구조에서 node는 delta chain과 base node가 합쳐진 logical node로 구성되어 있습니다. Base node는 일반적으로 생각하는 node구조로, 정렬된 (key, value) 배열과 metadata를 포함하고 있으며, 각각의 delta record는 data의 변경사항과 metadata를 포함하고 있습니다.
 
-메타데이터에는 key search에 사용되는 low-key, higk-key 외에도 size, depth, 변경된 data의 basenode offset등 tree traversal과 SMO에 사용될 값들을 저장하고 있습니다.
+메타데이터에는 key search에 사용되는 low-key, high-key 외에도 size, depth, 변경된 data의 base node offset등 tree traversal과 SMO에 사용될 값들을 저장하고 있습니다.
 
 Delta Chain은 singly linked list 구조로 data 변경사항을 담고 있습니다. Logical Node를 가르키고 있는 모든 inbound pointer는 delta chain의 가장 앞에 있는 Delta record를 가르키고 있어야 하며, 이를 통해 가장 최신의 delta record부터 node 탐색을 실시합니다.
 
@@ -85,18 +85,18 @@ Delta Chain은 singly linked list 구조로 data 변경사항을 담고 있습�
 1. insert or update라면, 검색은 성공한 것이며 해당 value를 리턴합니다.
 2. delete라면, 해당 키값은 지워진 것이므로 검색은 실패한 것으로 간주되며 값이 존재하지 않다는 것을 뜻합니다.
 
-Delta Chain에서 key를 발견하지 못할 경우, basenode에 도달하게 되며, basenode상의 배열에서 key를 찾기 위해 binary search를 진행합니다.
+Delta Chain에서 key를 발견하지 못할 경우, base node에 도달하게 되며, base node상의 배열에서 key를 찾기 위해 binary search를 진행합니다.
 
 ### Consolidation
 
-앞서 살펴보았듯이 delta update는 항상 delta chain의 가장 앞에 새로운 delta record를 부착시키며, delta record가 증가할 수록 노드 검색의 오버헤드가 커집니다. 이 오버헤드를 최소화하기 위하여 Bw Tree는 delta chain의 크기가 일정 threshold를 넘어갈 경우 consolidation을 진행하여 하나의 logical node를 다시 단일 basenode로 변경합니다.
+앞서 살펴보았듯이 delta update는 항상 delta chain의 가장 앞에 새로운 delta record를 부착시키며, delta record가 증가할 수록 노드 검색의 오버헤드가 커집니다. 이 오버헤드를 최소화하기 위하여 Bw Tree는 delta chain의 크기가 일정 threshold를 넘어갈 경우 consolidation을 진행하여 하나의 logical node를 다시 단일 base node로 변경합니다.
 thread가 tree traversing을 진행하던 도중 특정 logical node의 depth(delta chain length)가 threshold보다 큼을 감지할경우, 해당 thread는 진행 중이던 작업을 마무리 한 이후 node에 대한 consolidation을 진행합니다.
 
 가장 먼저 기존의 base node를 복사하여 새로운 base node를 생성합니다.
 
-이후 delta chain상에 존재하는 data 변경사항들을 새로운 basenode에 적용시킵니다.
+이후 delta chain상에 존재하는 data 변경사항들을 새로운 base node에 적용시킵니다.
 
-마지막으로 delta update 때와 마찬가지로 mapping table의 ptr를 CaS instruction을 통해 새로 생성한 basenode로 변경시킵니다. 이때 주의해야할 점은 만약 해당 CaS instruction이 실패할 경우 thread는 consolidation 작업을 포기하고 새로 생성한 base node를 삭제합니다. 해당 logical node는 이후 임의의 thread가 접근할 경우 다시 length가 threshold를 넘어감을 확인하기 때문에 그때에 다시 consolidation을 진행하게 됩니다.
+마지막으로 delta update 때와 마찬가지로 mapping table의 ptr를 CaS instruction을 통해 새로 생성한 base node로 변경시킵니다. 이때 주의해야할 점은 만약 해당 CaS instruction이 실패할 경우 thread는 consolidation 작업을 포기하고 새로 생성한 base node를 삭제합니다. 해당 logical node는 이후 임의의 thread가 접근할 경우 다시 length가 threshold를 넘어감을 확인하기 때문에 그때에 다시 consolidation을 진행하게 됩니다.
 만약 성공했을 경우 기존의 logical node는 차후 설명할 epoch mechanism을 통해 deletion이 일어나도 안전해졌을 때에 deletion을 진행합니다.
 
 ### Range Search

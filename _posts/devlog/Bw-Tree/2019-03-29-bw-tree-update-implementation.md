@@ -33,7 +33,7 @@ bool Update(const KeyType &key, const ValueType &oldValue, const ValueType &newV
   EpochNode *epoch_node_p = epoch_manager.JoinEpoch();
 
   /* update will be performed iff old value is exist and new value is not.
-   * YOU MUST use previous one to be percise, but in order to make test case easier
+   * YOU MUST use previous one to be precise, but in order to make test case easier
    * we DO NOT check for the newValue's existence
    */
   while(1) {
@@ -123,7 +123,7 @@ retry_traverse:
   // version the parent node snapshot will be overwritten with this child
   // node snapshot
   //
-  // NOTE 2: We could not use GetLatestNodeSnashot() here since it checks
+  // NOTE 2: We could not use GetLatestNodeSnapshot() here since it checks
   // current_level, which is -1 at this point
   context_p->current_snapshot.node_id = INVALID_NODE_ID;
 
@@ -148,7 +148,7 @@ retry_traverse:
     if(context_p->abort_flag == true) {
       bwt_printf("Navigate Inner Node abort. ABORT\n");
 
-      // If NavigateInnerNode() aborts then it retrns INVALID_NODE_ID
+      // If NavigateInnerNode() aborts then it returns INVALID_NODE_ID
       // as a double check
       // This is the only situation that this function returns
       // INVALID_NODE_ID
@@ -159,7 +159,7 @@ retry_traverse:
 
     // This might load a leaf child
     // Also LoadNodeID() does not guarantee the node bound matches
-    // seatch key. Since we could readjust using the split side link
+    // search key. Since we could readjust using the split side link
     // during Navigate...Node()
     LoadNodeID(child_node_id, context_p);
 

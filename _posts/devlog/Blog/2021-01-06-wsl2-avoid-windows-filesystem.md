@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "WSL2 - Avioud using Jekyll on Windows Filesystem"
+title: "WSL2 - Avoid using Jekyll on Windows Filesystem"
 subtitle: "Bundle Jekyll is too slow on Windows"
 category: devlog
 tags: blog jekyll
@@ -42,7 +42,7 @@ Solution? Migrate your blog to the Linux filesystem. Re-clone your repo.
 
 ![Linux Jekyll Compile Time](/assets/img/2021-01-06/wsl2_native_fs_jekyll.png){: style="height: 800px;"}
 
-By simple migrating to Linux filesystem, the comepile time has been reduced to 1/10(2.6 sec).<br>
+By simple migrating to Linux filesystem, the compile time has been reduced to 1/10(2.6 sec).<br>
 But you need some settings to fully take advantage of WSL2.
 
 ## Additional Settings
@@ -63,7 +63,7 @@ Make a shortcuts to the blog folder or root folder for the future.
 
 ### Windows Terminal
 
-Change starting direcotry to the root folder of the user.
+Change starting directory to the root folder of the user.
 Add below line to the ubuntu profile from `settings.json`.
 
 ```json

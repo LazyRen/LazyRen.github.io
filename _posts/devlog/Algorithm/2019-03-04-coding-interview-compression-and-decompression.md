@@ -97,7 +97,7 @@ string decomp(string str)
 decomp 함수가 가장 먼저 하는 일은 prefix number를 파싱하는 작업입니다. 만약 해당 작업이 실패할 경우 (`invalid_argument error`) 현재 파싱하는 문자열이 `number[string]` 꼴이 아닌 [] 내의 문자열 이거나 standalone 문자열일 것 입니다.<br>@ standalone string 이란?<br>편의상 붙인 이름으로 `2[3[a]b]` 에서 마지막 `b` / `1[ab]cde2[fg]` 에서 가운데 있는 `cde`  같은 문자열들을 의미합니다.
 
 1. prefix number 파싱 성공<br>숫자 파싱에 성공하였다는 것은 현재의 문자열의 `number[string]` 꼴을 띄고 있다는 것을 의미합니다.<br>`string content = decomp(str.substr(pos+1, findMatchingBracket(str, 0) - pos - 1));` 라인을 통해 `[string]` 에서 string에 해당하는 부분을 재귀적으로 파싱합니다. 이때 파싱한 string은 앞서 받아온 prefix number 만큼 반복되어 리턴 값에 추가 됩니다.<br>하나의 string 내의 여러 부분 string을 파싱하기 위해 일련의 과정은 while문 내에 존재합니다.
-2. prfix number 파싱 실패 (== string parsing)<br>`invalid_argument error`를 통해 파싱이 실패하였을 경우 문자열 파싱을 진행합니다.<br>앞서 설명한 두가지 꼴 ([] 내의 문자열 이거나 standalone 문자열) 인 경우를 구분하여 파싱을 진행합니다.
+2. prefix number 파싱 실패 (== string parsing)<br>`invalid_argument error`를 통해 파싱이 실패하였을 경우 문자열 파싱을 진행합니다.<br>앞서 설명한 두가지 꼴 ([] 내의 문자열 이거나 standalone 문자열) 인 경우를 구분하여 파싱을 진행합니다.
 
 ### Corner Cases
 

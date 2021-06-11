@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "C++ 이진 탐색/이분 탐색(Binray Search)"
+title: "C++ 이진 탐색/이분 탐색(Binary Search)"
 subtitle: "C++ Binary Search"
 category: devlog
 tags: algorithm
