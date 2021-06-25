@@ -287,7 +287,7 @@ hydejack:
   advertise:           false
 
   # Hide the clap button preview, even in development
-  clab_button:         false
+  clap_button:         false
 
   # Buyers of the PRO version can opt to hide all dates from the theme.
   # Frequent consumers of online content will know that nothing devalues a post like
@@ -340,6 +340,7 @@ collections:
 exclude:
   - .jekyll-cache
   - .sass-cache
+  - '*.toml'
   - vendor
   - Gemfile
   - Gemfile.lock
