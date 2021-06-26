@@ -24,7 +24,7 @@ Basically, I will add applause button for each-and-every post. Unless author spe
 ```default
 /_config.yml
 /_includes/head/links-static.html
-/_layouts/post.html
+/_includes/components/dingbat.html
 /_sass/my-style.scss
 ```
 
@@ -61,28 +61,22 @@ Jekyll needs js & css files ready. So here it is. Add below code to the end of t
 {% endraw %}
 ```
 
-## post.html
+## dingbat.html
 
 Applause button(if enabled) seats between contents and post-nodes such as author / comments.<br>
 If Applause button is disabled, make sure to prints original dingbat. I've used site's accent_color (which you can change from `_config.yml`), but feel free to choose the best color for your blog.
 
 ```html
-<!-- file: "/_layouts/post.html" -->
+<!-- file: "/_includes/components/dingbat.html" -->
 {%- raw -%}
-<!-- ... -->
-{% include components/dingbat.html %}
-
 {% if page.applause_button %}
-  <applause-button
+  <applause-button class="mb6"
     color={{ site.accent_color | default:'rgb(79,177,186)' }}
     url={{ site.url }}{{ page.url }} >
   </applause-button>
 {% else %}
-  <hr class="dingbat related" />
+  <!-- original content of dingbat.html -->
 {% endif %}
-
-{% assign addons = page.addons | default:site.hydejack.post_addons %}
-<!-- ... -->
 {% endraw %}
 ```
 

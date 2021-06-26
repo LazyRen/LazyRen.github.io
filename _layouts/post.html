@@ -26,15 +26,6 @@ layout: base
 
 {% include components/dingbat.html %}
 
-{% if page.applause_button %}
-  <applause-button
-    color={{ site.accent_color | default:'rgb(79,177,186)' }}
-    url={{ site.url }}{{ page.url }} >
-  </applause-button>
-{% else %}
-  <hr class="dingbat related" />
-{% endif %}
-
 {% assign addons = page.addons | default:site.hydejack.post_addons %}
 {% unless addons %}{% assign addons = "about,newsletter,related,random" | split:"," %}{% endunless %}
 {% for addon in addons %}
