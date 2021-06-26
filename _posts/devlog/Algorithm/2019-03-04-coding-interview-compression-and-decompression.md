@@ -6,9 +6,9 @@ category: devlog
 tags: algorithm coding-interview
 ---
 
-![Question](/assets/img/2019-03-04/question.png)
+![Question]
 
-[문제보기](https://techdevguide.withgoogle.com/resources/compress-decompression/)
+[문제보기]
 
 <!--more-->
 
@@ -42,7 +42,7 @@ e.x) given input `3[abc]4[ab]c` --> `1[3[abc]4[ab]c]`
 
 ## 문제 풀이
 
-![CaDexample](/assets/img/2019-03-04/CaDexample.jpeg)
+![CaD example]
 
 decomp() 함수는 한번에 하나의 `[string]` 을 처리합니다. 위의 그림은 주어진 예제 `3[abc]4[ab]c` 를 해결하는 모습을 그린 것 입니다. 화살표마다 decomp() 함수가 실행됩니다.
 
@@ -144,3 +144,8 @@ int findMatchingBracket(string str, int start)
   return -1;
 }
 ```
+
+<!-- Links -->
+[문제보기]: https://techdevguide.withgoogle.com/resources/former-interview-question-compression-and-decompression "Former interview question: compression and decompression"
+[Question]: /assets/img/2019-03-04/question.png
+[CaD example]: /assets/img/2019-03-04/CaDexample.jpeg

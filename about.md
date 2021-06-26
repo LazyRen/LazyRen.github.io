@@ -10,10 +10,10 @@ order: 1
 ## Hello, World!
 
 Hi, I'm **DaeIn Lee**, *a.k.a.* **Lazy Ren**.<br>
-I'm currently working at **[SAP Labs Korea](https://www.sap.com/korea/about/labs-korea.html)**, and previsouly was CSE student of **[Hanyang University](https://www.hanyang.ac.kr/)**.<br>
+I'm currently working at **[SAP Labs Korea]**, and previsouly was CSE student of **[Hanyang University]**.<br>
 I like to solve brain teasing problems in field of CSE (probably the reason I liked multi-core programming / OS courses).<br>
-And I'm also a [heavy gamer](https://steamcommunity.com/id/lazyren)!<br>
-Pleaseh check my [resume](/resume/) if you wish to know more about me.
+And I'm also a [heavy gamer]!<br>
+Pleaseh check my [resume] if you wish to know more about me.
 
 ***
 
@@ -24,6 +24,7 @@ Pleaseh check my [resume](/resume/) if you wish to know more about me.
 ## Work Hard to be Lazy
 
 _My motto to live by._
+{:.lead}
 
 > “Working hard to be lazy basically means investing the extra effort (working hard) at first so that it will pay off in the long run (be lazy).”
 
@@ -51,13 +52,21 @@ Try a new process, if that doesn’t help as much as you hoped, try another proc
 The worst thing that could happen is that you don’t find any improvement in your work process and go back to your original process and just work hard.<br>
 Did you lose anything?
 
-[original post](http://blog.vivekmahbubani.com/2007/03/work-hard-to-be-lazy.html)<br>
+[original post]
 
 ***
 
 Blog created by DaeIn Lee on July 19. 2018 in Vancouver,<br>
-based on the jekyll theme [Hydejack](https://hydejack.com).
+based on the jekyll theme [Hydejack].
 
 ***
 
 <!--author-->
+
+<!-- Links -->
+[SAP Labs Korea]: https://www.sap.com/korea/about/labs-korea.html
+[Hanyang University]: https://www.hanyang.ac.kr/
+[heavy gamer]: https://steamcommunity.com/id/lazyren
+[resume]: /resume/
+[original post]: http://blog.vivekmahbubani.com/2007/03/work-hard-to-be-lazy.html
+[Hydejack]: https://hydejack.com

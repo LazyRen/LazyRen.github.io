@@ -8,7 +8,7 @@ image:
   path: /assets/img/2021-03-16/lamborghini/sian.jpeg
 ---
 
-[489,900원](https://www.lego.com/ko-kr/product/lamborghini-sian-fkp-37-42115)이라는 충격적인 가격의 [레고 테크닉 람보르기니 시안](https://www.lego.com/ko-kr/campaigns/lamborghini-sian) 모델입니다.<br>
+[489,900원]이라는 충격적인 가격의 [레고 테크닉 람보르기니 시안] 모델입니다.<br>
 ~~역시 레고는 어른들의 장난감이 맞습니다.~~
 
 <!--more-->
@@ -44,3 +44,7 @@ image:
 ### 리어윙 & 엔진
 
 ![](/assets/img/2021-03-16/lamborghini/back.gif){:.centered}
+
+<!-- Links -->
+[489,900원]: https://www.lego.com/ko-kr/product/lamborghini-sian-fkp-37-42115
+[레고 테크닉 람보르기니 시안]: https://www.lego.com/ko-kr/campaigns/lamborghini-sian

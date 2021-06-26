@@ -35,7 +35,7 @@ image:
 
 지금 위에 나와있는 이미지는 가장 기본적인 풀배열 윈키인 104키...가 아니라 텐키 위에 멀티미디어 키가 4개 추가된 108키입니다.
 
-R1~R4 까지 와 1x1부터 1x6.25까지 각각의 숫자가 무엇을 의미하는지 헷갈리실텐데요, 각각은 키보드 키캡에 적용된 [프로파일](https://namu.wiki/w/%ED%82%A4%EB%B3%B4%EB%93%9C/%ED%82%A4%EC%BA%A1?from=%ED%82%A4%EC%BA%A1#s-2.4)에 따른 열과 키캡의 크기를 의미합니다.
+R1~R4 까지 와 1x1부터 1x6.25까지 각각의 숫자가 무엇을 의미하는지 헷갈리실텐데요, 각각은 키보드 키캡에 적용된 [프로파일]에 따른 열과 키캡의 크기를 의미합니다.
 
 #### 프로파일
 
@@ -45,7 +45,7 @@ R1~R4 까지 와 1x1부터 1x6.25까지 각각의 숫자가 무엇을 의미하�
 {: style="background-color: white;"}
 
 위 3개의 프로파일은 가장 대표적인 키캡 프로파일들로 키보드에 장착했을때 가운데가 오목해지도록 인체공학적으로 설계되어있습니다. (스텝 스컬쳐2(Step Sculpture2)라고 부릅니다.)<br>
-키캡마다 부르는 방식이 다른데... 위에 적힌 배열과 달리 [dev/tty](https://drop.com/buy/drop-matt3o-devtty-custom-keycap-set#imagecarousel)나 [GMK Carbon](https://drop.com/buy/gmk-carbon-custom-keycap-set#imagecarousel) 키캡을 보시면 최상단 펑션열이 R0, 최하단이 R4 혹은 R5라고 적혀있습니다. (프로파일 그림에서는 좌측이 R0, 우측이 R4가 됩니다.)<br>
+키캡마다 부르는 방식이 다른데... 위에 적힌 배열과 달리 [dev/tty]나 [GMK Carbon] 키캡을 보시면 최상단 펑션열이 R0, 최하단이 R4 혹은 R5라고 적혀있습니다. (프로파일 그림에서는 좌측이 R0, 우측이 R4가 됩니다.)<br>
 키캡을 변경할때 중요한 점은 각 키캡이 어떤 열로 제작되었냐에 따라 같은 1x1이라 할지라도 장착하였을때 주위 열과 각도가 다를 수 있음에 주의해야한다는 점입니다. 이는 뒤에서 레이아웃을 설명하며 한번 더 말씀드리겠습니다.
 
 #### 키캡 크기
@@ -103,7 +103,7 @@ Duck Octagon(84키)
 {:.figcaption}
 
 최소한의 크기에 텐키리스를 담아낸 레이아웃입니다.<br>
-[QMK](https://docs.qmk.fm/#/) 등으로 키보드 펌웨어 업데이트가 가능한 커스텀 키보드에서 사용할 경우
+[QMK] 등으로 키보드 펌웨어 업데이트가 가능한 커스텀 키보드에서 사용할 경우
 잘 사용하지 않는 우윈도우, 스크롤락, PA/BR 키 3개를 제외하고 텐키리스의 모든 키를 담아낼 수 있습니다.
 
 이를 위해 하단 우측 모디키 하나가 삭제되었고, 나머지 우측 모디키 3개도 1u로 크기가 변경되었습니다.<br>
@@ -180,3 +180,9 @@ Filco Minila
 * [Physical Keyboard Layouts Explained In Detail](https://drop.com/talk/947/physical-keyboard-layouts-explained-in-detail?utm_source=linkshare&referer=MUP8N5)
 * [Keyboard LAB - 키캡규격](https://kbdlab.co.kr/index.php?mid=board_keycap&document_srl=2576)
 * [Matt3o - Anatomy of a Keyboard](https://matt3o.com/anatomy-of-a-keyboard/)
+
+<!-- Links -->
+ [프로파일]: https://namu.wiki/w/%ED%82%A4%EB%B3%B4%EB%93%9C/%ED%82%A4%EC%BA%A1?from=%ED%82%A4%EC%BA%A1#s-2.4
+ [dev/tty]: https://drop.com/buy/drop-matt3o-devtty-custom-keycap-set#imagecarousel
+ [GMK Carbon]: https://drop.com/buy/gmk-carbon-custom-keycap-set#imagecarousel
+ [QMK]: https://docs.qmk.fm/#/

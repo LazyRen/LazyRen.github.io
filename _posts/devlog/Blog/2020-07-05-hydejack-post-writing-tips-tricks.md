@@ -101,7 +101,7 @@ This is a text with a footnote[^1].
     [kramdown]: http://kramdown.gettalong.org "hp"
     ```
 
-[kramdown hp]: <http://kramdown.gettalong.org> "hp"
+[kramdown hp]: http://kramdown.gettalong.org "hp"
 
 * A [link][kramdown] to the homepage.
 
@@ -111,7 +111,7 @@ This is a text with a footnote[^1].
     [kramdown hp]: http://kramdown.gettalong.org "hp"
     ```
 
-[kramdown]: <http://kramdown.gettalong.org> "hp"
+[kramdown]: http://kramdown.gettalong.org "hp"
 
 ### Expand/Collapse
 

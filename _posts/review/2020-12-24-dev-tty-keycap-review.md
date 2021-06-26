@@ -8,7 +8,7 @@ image:
   path: /assets/img/2020-12-24/dev_tty.jpg
 ---
 
-디자이너 [Matt3o](https://matt3o.com/)의 [dev/tty](https://drop.com/buy/drop-matt3o-devtty-custom-keycap-set)(속칭 '데브띠') 리뷰입니다.
+디자이너 [Matt3o]의 [dev/tty] (속칭 '데브띠') 리뷰입니다.
 
 <!--more-->
 
@@ -24,7 +24,7 @@ image:
 | 프로파일 | MT3 Profile |
 | 각인 | 염료 승화 |
 
-[스스로를 retro-junkie 라고 칭하는](https://matt3o.com/about-mt3-profile-and-devtty-set/) Matt3o의 대표작이라 할 수 있는 dev/tty 키캡입니다.<br>
+[스스로를 retro-junkie 라고 칭하는] Matt3o의 대표작이라 할 수 있는 dev/tty 키캡입니다.<br>
 
 ~~이름만 들어도 장착하면 개발력 + 5% 패시브가 달릴 것 같은 기분이...~~
 {:.faded}
@@ -37,7 +37,7 @@ image:
 
 1970년대 IBM beamspring terminal에서 영감을 받은 프로파일로 특유의 높은 높이와 자체 경사를 가지고 있으며,
 키캡의 상당부로 키캡이 모여들면서 오목하게 파여져 있어 손가락을 파지하는 것만으로도 일반 키캡들과는 다른 느낌을 줍니다.<br>
-[또한 MT3 프로파일은 Matt3o가 직접 개발한 프로파일](https://matt3o.com/about-mt3-profile-and-devtty-set/)로, [Drop](https://drop.com/mechanical-keyboards/home)에서만 만나볼 수 있는 프로파일입니다.
+[또한 MT3 프로파일은 Matt3o가 직접 개발한 프로파일]로, [Drop]에서만 만나볼 수 있는 프로파일입니다.
 
 ![Side view](/assets/img/2020-12-24/side_view.jpg)
 
@@ -51,7 +51,7 @@ image:
 키보드 자체 경사 5~7 도가 주어졌을때 R3 열이 평평하게 되어 이상적인 각도를 만든다고 합니다.
 현재 IKBC MF-87 흑축에 물려서 사용하고 있는데, 첫날에만 조금 어색했고 둘쨋 날인 지금 매우 만족스럽게 타건중입니다.
 
-[Mito](https://mitormk.com/)의 [Canvas 키캡](https://drop.com/buy/massdrop-x-mito-canvas-xda-custom-keycap-set)과 더불어 꼭 가지고 싶었던 키캡 중 하나였는데 [이번 공제](https://drop.com/buy/drop-matt3o-devtty-custom-keycap-set#overview)로 얻을 수 있어 만족스럽습니다.
+[Mito]의 [Canvas 키캡]과 더불어 꼭 가지고 싶었던 키캡 중 하나였는데 [이번 공제]로 얻을 수 있어 만족스럽습니다.
 
 ## 공제에 대하여
 
@@ -89,3 +89,13 @@ Unicorn Barf 키트의 경우 자칫 심심할 수 있는 (오히려 이 심플�
 
 네, "케이블"만 8만원이 넘습니다. ~~하하하하하핳 내가 봐도 미친 것 같아 하하하하하핳~~
 {:.figcaption}
+
+<!-- Links -->
+[Matt3o]: https://matt3o.com/
+[스스로를 retro-junkie 라고 칭하는]: https://matt3o.com/about-mt3-profile-and-devtty-set/
+[dev/tty]: https://drop.com/buy/drop-matt3o-devtty-custom-keycap-set
+[또한 MT3 프로파일은 Matt3o가 직접 개발한 프로파일]: https://matt3o.com/about-mt3-profile-and-devtty-set/
+[Drop]: https://drop.com/mechanical-keyboards/home
+[Mito]: https://mitormk.com/
+[Canvas 키캡]: https://drop.com/buy/massdrop-x-mito-canvas-xda-custom-keycap-set
+[이번 공제]: https://drop.com/buy/drop-matt3o-devtty-custom-keycap-set#overview
