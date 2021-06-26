@@ -20,7 +20,7 @@ Disqus is used as default comments plugin for the Hydejack and most of the stati
 
 It's not hard to setup [utterances](https://github.com/utterance/utterances).<br>
 First of all, you should install [utterances app](https://github.com/apps/utterances) to the blog repository.
-Since we are gonna migrate from disqus, proper changes must be made to `my-comments.html` & `links-static.html`.<br>
+After that, since we are gonna migrate from disqus, proper changes must be made to `my-comments.html` & `links-static.html`.<br>
 
 3 files to be modified. (check [related commit](https://github.com/LazyRen/LazyRen.github.io/commit/8dcf03700c7f3d0f581b27a6fcf2e8a4d8396340))
 
@@ -43,13 +43,13 @@ If you followed [instructions from utterances](https://utteranc.es/), you will e
         repo="[ENTER REPO HERE]"
         issue-term="pathname"
         label="comments"
-        theme="dark-blue"
+        theme="photon-dark"
         crossorigin="anonymous"
         async>
 </script>
 ```
 
-My recommendation for the theme is, `github-light` for the light mode, `dark-blue` for the dark mode.
+My recommendation for the theme is, `github-light` for the light mode, `photon-dark` for the dark mode.
 {:.note}
 
 There is two choices,

@@ -202,7 +202,7 @@ utterances:
   repo:                "LazyRen/LazyRen.github.io"
   issue-term:          "pathname"
   label:               "Comments"
-  theme:               "dark-blue"
+  theme:               "photon-dark"
 
 # Setting a tinyletter username will enable the newsletter subscription box.
 # PRO version only!
