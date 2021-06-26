@@ -65,6 +65,54 @@ A custom label.
 A custom label.
 {:.note title="Attention"}
 
+### Footnotes
+
+This is a text with a footnote[^1].
+
+[^1]: Your footnote text.
+    Can have multiple lines...
+
+    ...and multiple paragraphs.
+    Can contain *Markdown*.
+
+```default
+This is a text with a footnote[^1].
+
+[^1]: Your footnote text.
+    Can have multiple lines...
+
+    ...and multiple paragraphs.
+    Can contain *Markdown*.
+```
+
+### Links
+
+* A [link](http://kramdown.gettalong.org) to the kramdown homepage.
+
+    ```default
+    A [link](http://kramdown.gettalong.org) to the kramdown homepage.
+    ```
+
+* A link to the [kramdown hp].
+
+    ```default
+    A link to the [kramdown hp].
+
+    [kramdown]: http://kramdown.gettalong.org "hp"
+    ```
+
+[kramdown hp]: <http://kramdown.gettalong.org> "hp"
+
+* A [link][kramdown] to the homepage.
+
+    ```default
+    A [link][kramdown hp]to the homepage.
+
+    [kramdown hp]: http://kramdown.gettalong.org "hp"
+    ```
+
+[kramdown]: <http://kramdown.gettalong.org> "hp"
+
 ### Expand/Collapse
 
 You can add expand/collapse contents with [simple HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details).<br>
@@ -124,7 +172,7 @@ Markdown:
 
 ### Adding image captions
 
-You can add captions to large images by adding the `figcaption` class to the paragraph after the image:
+You can add captions to large images/tables/codeblock by adding the `figcaption` class to the paragraph after the image:
 
 Example:
 
@@ -172,15 +220,6 @@ Markdown:
 ```markdown
 I'm faded, faded, faded.
 {:.faded}
-```
-
-### Adding captions
-
-Just like images, you can add captions to tables by adding the `figcaption` class to the paragraph after the table.
-
-```markdown
-An optional caption for a table/image/code block
-{:.figcaption}
 ```
 
 ### Small tables
