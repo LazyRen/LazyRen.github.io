@@ -136,13 +136,13 @@ defaults:
 
   # Don't include documents in assets in the sitemap
   - scope:
-      path:            assets/
+      path:            assets/**
     values:
       sitemap:         false
 
   # Don't include licenses in sitemap (feel free to delete)
   - scope:
-      path:            licenses/
+      path:            licenses/**
     values:
       layout:          plain
       sitemap:         false
