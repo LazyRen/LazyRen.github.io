@@ -147,6 +147,18 @@ defaults:
       layout:          plain
       sitemap:         false
 
+  # Don't include site verification file(for google) in the sitemap
+  - scope:
+      path:            google93abcae935f31b7d.html
+    values:
+      sitemap:         false
+
+  # Don't include site verification file(for naver) in the sitemap
+  - scope:
+      path:            navera03014a241218f942080c56d67e79469.html
+    values:
+      sitemap:         false
+
   # You can use the following to enable comments on all posts.
   - scope:
       type:            posts
