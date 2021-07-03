@@ -1,14 +1,19 @@
 .dl-table {
   a {
-    @supports ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
-      text-underline-offset: .7rem;
+    @supports (
+      (text-decoration-thickness: initial) and (text-underline-offset: initial)
+    ) {
+      text-underline-offset: 0.7rem;
     }
-    @supports not ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
-      padding-bottom: .3rem;
+    @supports not (
+      (text-decoration-thickness: initial) and (text-underline-offset: initial)
+    ) {
+      padding-bottom: 0.3rem;
     }
   }
 
-  .btn, .gumroad-button  {
+  .btn,
+  .gumroad-button {
     margin: 1rem 0;
   }
 }
@@ -40,6 +45,17 @@ applause-button {
   max-width: 100%;
 }
 
+// Giscus
+
+.giscus,
+.giscus-frame {
+  width: 100%;
+}
+
+.giscus-frame {
+  border: none;
+}
+
 // Resume
 
 .project-date {
@@ -50,16 +66,16 @@ applause-button {
 // Printing
 
 @media print {
-   a[href]:after {
-      display: none;
-      visibility: hidden;
-   }
+  a[href]:after {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 // Image centering
 
 img.centered {
-  display:block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -75,10 +91,10 @@ img.centered {
 }
 
 .iframe-container iframe {
-   border: 0;
-   height: 100%;
-   left: 0;
-   position: absolute;
-   top: 0;
-   width: 100%;
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
