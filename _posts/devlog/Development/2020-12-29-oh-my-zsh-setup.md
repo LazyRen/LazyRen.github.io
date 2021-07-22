@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Linux(Ubuntu)에서 oh-my-zsh 설치 및 세팅하기"
-subtitle: "Linux(Ubuntu) oh-my-zsh Basic Setup Guide"
+title: "oh-my-zsh 설치 및 세팅하기"
+subtitle: "oh-my-zsh Basic Setup Guide"
 category: devlog
 tags: development terminal
 image:
@@ -22,52 +22,47 @@ oh-my-zsh 설정 및 추천 플로그인들의 설치 방법입니다.
 
 ```shell
 # Install Zsh
-apt install zsh
+brew install zsh
+
+# Change zsh as default sh
+chsh -s $(which zsh)
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-## Pure Theme
+## Install Fonts
 
-> [Pretty, minimal and fast ZSH prompt](https://github.com/sindresorhus/pure)
-
-### Installing Node.js (for npm)
-
-[Check latest nvm version](https://github.com/nvm-sh/nvm#install--update-script)
+oh-my-zsh (especially with theme like Powerlevel10k) requires font with specific font ligature & icons.
+You can get them from [Nerd Font](https://github.com/ryanoasis/nerd-fonts#font-installation).
 
 ```shell
-# Install nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-
-# Install Node.js
-nvm install node --lts
+brew tap homebrew/cask-fonts
+brew install --cask font-jetbrains-mono-nerd-font
 ```
 
-### Install Pure Theme
+I'm currently using `JetBrainsMono Nerd Font Mono`. Feel free to choose what suits you the best.
+{:note}
 
-Check [installation guide](https://github.com/sindresorhus/pure#install) for detail.
+## Install Theme
 
-```shell
-npm install --global pure-prompt
-```
+Install theme that you want. I personally moved from pure them to Powerlevel10k.
+(AFAIK, Powerlevel10k is [faster](https://gist.github.com/romkatv/7cbab80dcbc639003066bb68b9ae0bbf) than Pure theme)
 
-add below code to the `~/.zshrc`.
+### Powerlevel10k
 
-```shell
-# .zshrc
+> [Powerlevel10k](https://github.com/romkatv/powerlevel10k) is a theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience.
 
-ZSH_THEME=""
+Check [get started](https://github.com/romkatv/powerlevel10k#get-started) to find your best installation option.
 
-autoload -U promptinit; promptinit
-prompt pure
-```
+Don't forget to change `ZSH_THEME="powerlevel10k/powerlevel10k"` from `~/.zshrc`!
+{:.note}
 
 ## OMZ Plugins
 
 ### zsh-syntax-highlighting
 
-> [Fish shell-like syntax highlighting for Zsh.](https://github.com/zsh-users/zsh-syntax-highlighting)
+> [Fish shell-like syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) for Zsh.
 
 Check [Installation Guide](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md) for detail.
 
@@ -85,7 +80,7 @@ Check [Installation Guide](https://github.com/zsh-users/zsh-syntax-highlighting/
 
 ### zsh-autosuggestions
 
-> [Fish-like fast/unobtrusive autosuggestions for zsh.](https://github.com/zsh-users/zsh-autosuggestions)
+> [Fish-like fast/unobtrusive autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) for zsh.
 
 Check [Installation Guide](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md) for detail.
 
@@ -115,6 +110,33 @@ cat /usr/share/doc/autojump/README.Debian
 . /usr/share/autojump/autojump.sh
 ```
 
+### fzf
+
+> [fzf](https://github.com/junegunn/fzf) is a general-purpose command-line fuzzy finder.
+
+```shell
+brew install fzf
+
+# To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
+```
+
+### enhancd
+
+> [A next-generation cd](https://github.com/b4b4r07/enhancd) command with an interactive filter ✨
+
+```shell
+zplug "b4b4r07/enhancd", use:init.sh
+```
+
+### exa
+
+> [exa](https://github.com/ogham/exa) is a modern replacement for ls.
+
+```shell
+brew install exa
+```
+
 ## Others
 
 * Remove directory highlighting for WSL.
@@ -126,5 +148,49 @@ cat /usr/share/doc/autojump/README.Debian
 * Add [git aliases](https://gist.github.com/LazyRen/89e3faaf518c137530d6d80ed5a9773a) to the zsh.
 
     ```shell
-    # Create .zsh file in the $ZSH/custom folder.
+    # Create .zsh file in the $ZSH_CUSTOM folder.
+
+    alias ga="git add"
+    alias gaa="git add --all"
+    alias gb="git branch"
+    alias gba="git branch -a"
+    alias gc="git commit"
+    alias gca="git commit --amend"
+    alias gcm="git commit -m"
+    alias gco="git checkout"
+    alias gd="git diff"
+    alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
+    alias gm="git merge"
+    alias gp="git push"
+    alias gpl="git pull"
+    alias gs="git status"
+
+    # Gerrit
+    gpg() {
+        if [ -z "$1" ]; then
+            BRANCH_NAME="$(git for-each-ref --format='%(upstream:short)' "$(git symbolic-ref -q HEAD)" | cut -d '/' -f2)"
+        else
+            BRANCH_NAME="$1"
+        fi
+        git push origin HEAD:refs/for/$BRANCH_NAME
+    }
+
+    gpgwip() {
+        if [ -z "$1" ]; then
+            BRANCH_NAME="$(git for-each-ref --format='%(upstream:short)' "$(git symbolic-ref -q HEAD)" | cut -d '/' -f2)"
+        else
+            BRANCH_NAME="$1"
+        fi
+        git push origin HEAD:refs/for/$BRANCH_NAME%wip
+    }
+
+    gpgready() {
+        if [ -z "$1" ]; then
+            BRANCH_NAME="$(git for-each-ref --format='%(upstream:short)' "$(git symbolic-ref -q HEAD)" | cut -d '/' -f2)"
+        else
+            BRANCH_NAME="$1"
+        fi
+        git commit --amend --no-edit
+        git push origin HEAD:refs/for/$BRANCH_NAME%ready
+    }
     ```
