@@ -137,6 +137,19 @@ zplug "b4b4r07/enhancd", use:init.sh
 brew install exa
 ```
 
+### autoupdate
+
+> [oh-my-zsh plugin](https://github.com/TamCore/autoupdate-oh-my-zsh-plugins) for auto updating of git-repositories in $ZSH_CUSTOM folder
+
+```shell
+git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins $ZSH_CUSTOM/plugins/autoupdate
+```
+
+Add autoupdate to the plugins=() list in your ~/.zshrc file and you're done.
+The updates will be executed automatically as soon as the oh-my-zsh updater is started.
+Note that this will autoupdate both plugins and also themes found in the $ZSH_CUSTOM folder.
+{:.note}
+
 ## Others
 
 * Remove directory highlighting for WSL.
