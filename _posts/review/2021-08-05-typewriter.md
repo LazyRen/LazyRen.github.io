@@ -31,10 +31,14 @@ image:
 
 ## 디테일
 
+### 타이핑
+
 ![typing](/assets/img/2021-08-05/typewriter.gif){:.centered}
 
 진짜 타자기처럼 움직입니다! ~~26만원 짜린데 이정돈 해야...~~
 {:.figcaption}
+
+### 클로즈업
 
 ![upper view](/assets/img/2021-08-05/upper_view.jpg){:.centered}
 
