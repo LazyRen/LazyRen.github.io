@@ -87,5 +87,5 @@ layout: page
 {% endraw %}
 ```
 
-It is very short code, but I invested some times to figure out how `liquid` is working.<br>
+It is very short code, but I invested some times to figure out how `liquid` works.<br>
 So... If you find this post useful, please click applause button for me :)
