@@ -1,10 +1,10 @@
 ---
 layout: list
 type: category
-title: TIL
-slug: til
+title: Studylog
+slug: studylog
 sidebar: true
 order: 3
 description: >
-  Today I Learned...
+  Log study results
 ---

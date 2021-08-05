@@ -2,7 +2,7 @@
 layout: post
 title: "The Basics"
 subtitle: "The Basics"
-category: til
+category: studylog
 tags: cpp tcpppl
 image:
   path: /assets/img/2021-03-18/tcpppl.jpg
