@@ -50,21 +50,10 @@ author:
   email:               daein0lee@gmail.com
   picture:             /assets/img/seattle.png
   social:
-    linkedin:        daein-lee-3b6ba9139
-    github:          lazyren
-    stackoverflow:   4294737
-    email:           daein0lee@gmail.com
-
-# Add links to the sidebar.
-# menu:
-#   - title:             Blog
-#     url:               /blog/
-#   - title:             Projects
-#     url:               /projects/
-#   - title:             Résumé*
-#     url:               /resume/
-#   - title:             Documentation
-#     url:               /docs/
+    linkedin:          daein-lee-3b6ba9139
+    github:            lazyren
+    stackoverflow:     4294737
+    email:             daein0lee@gmail.com
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
@@ -96,7 +85,7 @@ excerpt_separator:     <!--more-->
 # remote_theme: hydecorp/hydejack@v9
 
 
-# Customizaton
+# Customization
 # ----------------------------------------------------------------------------------------
 
 # Sidebar image and theme color of the site.
@@ -195,26 +184,26 @@ kramdown:
 # ----------------------------------------------------------------------------------------
 
 # Set your Google Analytics id to receive `pageview` events.
-# To remove Google Anaylics from your page, remove the line below.
+# To remove Google Analytics from your page, remove the line below.
 google_analytics:      UA-68290006-3
 
 # Set which comment system to use
 comments:
-  # 'disqus' or 'utterances' are available
+  # 'disqus' / 'giscus' / 'utterances' are available
   provider:            giscus
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
-disqus:                lazyrengithub
+# disqus:                lazyrengithub
 
 # You must install utterances github app before use.(https://github.com/apps/utterances)
 # Make sure all variables are set properly. Check below link for detail.
 # https://utteranc.es/
-utterances:
-  repo:                "LazyRen/LazyRen.github.io"
-  issue-term:          "pathname"
-  label:               "Comments"
-  theme:               "photon-dark"
+# utterances:
+#   repo:                "LazyRen/LazyRen.github.io"
+#   issue-term:          "pathname"
+#   label:               "Comments"
+#   theme:               "photon-dark"
 
 # You must install giscus github app before use.(https://github.com/apps/giscus)
 # Make sure all variables are set properly. Check below link for detail.
