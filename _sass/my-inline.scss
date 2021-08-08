@@ -3,6 +3,14 @@
   text-shadow: rgba(0, 0, 0, 0.25) 0.1rem 0.1rem 0.15rem;
 }
 
+.post-title {
+  word-break: keep-all;
+}
+
+.page-title {
+  word-break: keep-all;
+}
+
 // Sidebar Modification
 
 .sidebar {
