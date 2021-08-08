@@ -16,21 +16,27 @@ image:
 * this unordered seed list will be replaced by the toc
 {:toc}
 
-## Part 1
-
-전문가를 향한 C++ 첫걸음
-{:.lead}
+## Part 1: 전문가를 향한 C++ 첫걸음
 
 > C++ 기초를 다지기 위한 초단기 속성 코스부터 시작하여 스트링과 스트링 뷰를 다루는 방법을 깊이 있게 살펴본다.
 > 또한 C++ 코드를 읽기 쉽게 작성하는 방법을 소개한다.
 
-### Chapter 1
+### Chapter 1: C++와 표준 라이브러리 초단기 속성 코스
 
 * Nested Namespace
-* [std::byte](https://en.cppreference.com/w/cpp/types/byte)
+* [std::byte](https://en.cppreference.com/w/cpp/types/byte) (Since C++17)
 * [Scoped Enumerations](https://en.cppreference.com/w/cpp/language/enum)
-* Initializer in if/switch Statement
-* [Switch Fallthrough](https://en.cppreference.com/w/cpp/language/attributes/fallthrough)Switch Fallthrough
+* Initializer in if/switch Statement (Since C++17)
+* [Switch Fallthrough](https://en.cppreference.com/w/cpp/language/attributes/fallthrough) (Since C++17)
 
 Continue with [Chapter 1: C++와 표준 라이브러리 초단기 속성 코스](2021-08-06-chapter-1.md){:.heading.flip-title}
+{:.read-more}
+
+### Chapter 2: 스트링과 스트링 뷰 다루기
+
+* C Style String
+* Raw String Literal
+* std::string_view Class (Since C++17)
+
+Continue with [Chapter 2: 스트링과 스트링 뷰 다루기](2021-08-07-chapter-2.md){:.heading.flip-title}
 {:.read-more}
