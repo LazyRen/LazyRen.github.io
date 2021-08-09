@@ -78,7 +78,7 @@ volunteer:
     summary: "Mentoring for the major courses of CSE with juniors"
     highlights:
       - "Data Structure; Teaching & helping sophomores on the data structure course."
-      - "Database  Systems; Teaching & helping sophomores on the database system course."
+      - "Database Systems; Teaching & helping sophomores on the database system course."
       - "Awarded 'Hanyang Best Mentor' for mentoring Database Systems course."
   - organization: "Hanmille, Foreigner Mentoring Program"
     position: "Mentor"
@@ -166,8 +166,8 @@ skills:
     level: "Intermediate"
     keywords:
       - "Concurrent Programming"
-      - "Operating System"
       - "C/C++"
+      - "Rust"
   - name: "Algorithm"
     level: "Intermediate"
   - name: "Web Development"
