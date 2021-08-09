@@ -40,3 +40,11 @@ Continue with [Chapter 1: C++와 표준 라이브러리 초단기 속성 코스]
 
 Continue with [Chapter 2: 스트링과 스트링 뷰 다루기](2021-08-07-chapter-2.md){:.heading.flip-title}
 {:.read-more}
+
+### Chapter 3: 코딩 스타일
+
+* Documentation
+* Naming Convention & Formatting
+
+Continue with [Chapter 3: 코딩 스타일](2021-08-08-chapter-3.md){:.heading.flip-title}
+{:.read-more}
