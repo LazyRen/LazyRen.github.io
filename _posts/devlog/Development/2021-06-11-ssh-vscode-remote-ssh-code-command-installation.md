@@ -7,8 +7,8 @@ tags: development terminal vscode translation
 ---
 
 VSCode Remote SSH와 터미널을 함께 사용하여 서버에서 개발할 때, VSCode Integrated terminal이 아닌
-별개의 터미널 프로그램을 사용할경우 `code` 명령어를 사용하여 VSCode 창을 열 수가 없습니다.`git commit`등의 명령어도 에디터로
-`vim`을 열게됩니다.
+별개의 터미널 프로그램을 사용할경우 `code` 명령어를 사용하여 VSCode 창을 열 수가 없습니다.
+`git commit`등의 명령어도 기본 에디터로 `vim`을 열게됩니다.
 
 [블로그 포스트](https://ianloic.com/2021/02/16/vscode-remote-and-the-command-line/)를 참조하여 서버에 ssh로 연결하였을 때도
 `code` 명령어를 사용하는 방법에 대해 알아보겠습니다.
@@ -61,3 +61,6 @@ ssh 접속된 터미널에서 `code` 명령어를 사용할 때, 최소 하나�
 ```shell
 git config --global core.editor "code --wait"
 ```
+
+* [Ian McKellar 블로그 포스트](https://ianloic.com/2021/02/16/vscode-remote-and-the-command-line/)
+{:.note title="출처"}
