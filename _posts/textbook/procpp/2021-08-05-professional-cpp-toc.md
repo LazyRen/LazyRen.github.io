@@ -58,3 +58,12 @@ Continue with [Chapter 3: 코딩 스타일](2021-08-08-chapter-3.md){:.heading.f
 
 Continue with [Chapter 4: 전문가다운 C++ 프로그램 디자인](2021-08-09-chapter-4.md){:.heading.flip-title}
 {:.read-more}
+
+### Chapter 5: 객체지향 디자인
+
+* 객체지향 철학
+* 객체 관계
+* 추상화
+
+Continue with [Chapter 5: 객체지향 디자인](2021-08-10-chapter-5.md){:.heading.flip-title}
+{:.read-more}
