@@ -48,3 +48,13 @@ Continue with [Chapter 2: 스트링과 스트링 뷰 다루기](2021-08-07-chapt
 
 Continue with [Chapter 3: 코딩 스타일](2021-08-08-chapter-3.md){:.heading.flip-title}
 {:.read-more}
+
+## Part 2: 전문가답게 C++ 소프트웨어 디자인하기
+
+### Chapter 4: 전문가다운 C++ 프로그램 디자인
+
+* 추상화(Abstraction)
+* 재사용(Reuse)
+
+Continue with [Chapter 4: 전문가다운 C++ 프로그램 디자인](2021-08-09-chapter-4.md){:.heading.flip-title}
+{:.read-more}
