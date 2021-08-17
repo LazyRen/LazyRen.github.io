@@ -294,6 +294,10 @@ Mac osX은 매년 메이저 업데이트가 진행되며 올해에도 9월 25일
 
   Trackpad 의 스크롤 방향은 매우 직관적입니다. 하지만 맥북에 마우스를 연결하게 되면 휠 방향이 평소 윈도우에서 사용하던 때와 반대로 됩니다. 이러한 상황을 해결하기 위한 앱으로, Trackpad, Mouse 각각의 휠 방향 지정을 따로 해줄 수 있습니다. 단점이라면 가끔 가다가 설정이 풀린다는 것인데, 설정을 해제했다가 다시 해주면 해결됩니다.
 
+* [AltTab](https://alt-tab-macos.netlify.app)
+
+  맥은 기본으로 모든 workspace에서 열려 있는 앱들을 cmd-tab으로 순환합니다. 이보다는 현재 위치한 워크스페이스 내의 앱들만 순환하고 싶은데, 옵션으로 제공해주지 않습니다. AltTab 앱을 사용하면 윈도우와 비슷하게 cmd-tab을 사용할 수 있도록 설정이 가능합니다.
+
 * [BeardedSpice](http://beardedspice.github.io)
 
   touch bar의 멀티미디어 키나 추가 세팅한 단축키를 이용해 모든 멀티 미디어(iTunes는 물론이고 Genie, 멜론, Youtube...)를 컨트롤 할 수 있게 해주는 훌륭한 프로그램입니다. Safari/Chrome 사용시 처음에 한해 [애플이벤트의 자바스크립트 허용](https://github.com/beardedspice/beardedspice/wiki/Won't-work-issue-after-Chrome-Update-(68.0.3440.75-and-later))을 해줘야합니다.
