@@ -67,3 +67,13 @@ Continue with [Chapter 4: 전문가다운 C++ 프로그램 디자인](2021-08-09
 
 Continue with [Chapter 5: 객체지향 디자인](2021-08-10-chapter-5.md){:.heading.flip-title}
 {:.read-more}
+
+### Chapter 6: 재사용을 고려한 디자인
+
+* 재사용 철학
+* 코드를 재사용할 수 있도록 디자인하는 방법
+* 사용성 높은 인터페이스 디자인
+* SOLID 원칙
+
+Continue with [Chapter 6: 재사용을 고려한 디자인](2021-08-18-chapter-6.md){:.heading.flip-title}
+{:.read-more}
