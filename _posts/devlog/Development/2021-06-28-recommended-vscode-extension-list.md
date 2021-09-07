@@ -238,11 +238,11 @@ Git을 사용하여 코드 버전 관리를 하고 있다면 **필수**로 설�
 </div>
 </details>
 
-### [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) :pushpin:
+### ~~[Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)~~ :pushpin:
 
 ![Bracket Pair Colorizer 2](/assets/img/2021-06-28/bracket-pair-colorizer.png)
 
-매칭되는 괄호를 색칠해주는 익스텐션입니다.
+~~매칭되는 괄호를 색칠해주는 익스텐션입니다.~~
 
 <details>
 <summary>추천 설정</summary>
@@ -269,6 +269,29 @@ Git을 사용하여 코드 버전 관리를 하고 있다면 **필수**로 설�
 ],
 "bracket-pair-colorizer-2.highlightActiveScope": true,
 "bracket-pair-colorizer-2.showBracketsInGutter": true,
+```
+</div>
+</details>
+
+기존 Bracket Pair Colorizer에 존재하던 성능 이슈를 해결하기 위해 [2021 August Update](https://code.visualstudio.com/updates/v1_60#_high-performance-bracket-pair-colorization)로 VS Code에 기본으로 Bracket Pair Colorization이 추가되었습니다.<br>
+기존 익스텐션을 삭제하고 아래 설정을 적용하는 것을 권장드립니다.
+{:.note}
+
+<details>
+<summary>Built-in bracket colorization 설정</summary>
+<div markdown="1">
+```json
+"editor.bracketPairColorization.enabled": true,
+"workbench.colorCustomizations": {
+    "editorIndentGuide.activeBackground": "#F4FF81",
+    "editorBracketHighlight.foreground1": "#F4FF81",
+    "editorBracketHighlight.foreground2": "#84FFFF",
+    "editorBracketHighlight.foreground3": "#B388FF",
+    "editorBracketHighlight.foreground4": "#F78C6C",
+    "editorBracketHighlight.foreground5": "#CCFF90",
+    "editorBracketHighlight.foreground6": "#EA80FC",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#FF80AB",
+},
 ```
 </div>
 </details>
