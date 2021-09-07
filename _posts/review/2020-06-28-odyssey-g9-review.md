@@ -39,7 +39,7 @@ image:
 
 ## 설치
 
-![첫 모습](/assets/img/2020-06-28/g9_delivered.jpg)
+![첫 모습](/assets/img/2020-06-28/g9_delivered.jpg){:.centered}
 전 처음에 당연히 배달해주신 분이 설치도 같이 진행해 주시는 줄 알았는데(인터넷에서 그랬는데...) 그냥 문 앞에 놔주시며 "엄청 큰 거 사셨네요~" 하고 가버리셨습니다.<br>
 제 몸뚱아리만 한 박스를 옮겨서 조립하고 혼자서 책상위로 옮기면서 패널이 깨지지는 않을까 조심 조심 옮기는데 땀이 뻘뻘 쏟아지더군요.<br>
 다행히도 설치 후 **[액정 테스트](http://www.monitor.co.kr/)**까지 진행한 결과 **양품 당첨!**
@@ -79,7 +79,7 @@ USB 3.0은 인식은 되는데 펌웨어 업그레이드 1%에서 튕깁니다.<
 그렇기 때문에 게임을 비롯한 여러 창들을 창모드로 한번에 여러개를 틀어서, 21:9 / 16:9 + 멀티 태스킹을 하기에 최적화 되어 있습니다.<br>
 마치 다음과 같이 말이죠. (사이버 펑크/위쳐3/포르자 호라이즌/ 등 32:9 전체 화면으로 플레이할시 더더욱 감동적인 게임들도 물론 존재합니다.)
 
-![Apex Legend](/assets/img/2020-06-28/apex_split.png)
+![Apex Legend](/assets/img/2020-06-28/apex_split.png){:.centered}
 
 ## 멀티 태스킹 환경 설정
 
@@ -91,20 +91,23 @@ USB 3.0은 인식은 되는데 펌웨어 업그레이드 1%에서 튕깁니다.<
 ![FancyZones Testing](/assets/img/2020-06-28/fancyzone.gif)
 
 * **멀티 태스킹**<br>
-    ![Grid 3](/assets/img/2020-06-28/grid3.png)<br>
+    ![Grid 3](/assets/img/2020-06-28/grid3.png){:.centered}<br>
     3칸 짜리 Grid를 선택하면 됩니다. 32:9의 광활한 화면은 3분할 하였을 때 가장 웹서핑 하기 좋은 크기가 만들어집니다.<br>
     개발 할 때는 VS Code / 구글 / 터미널 하나씩 열어두면 딱 맞습니다.
-    ![Multi Tasking](/assets/img/2020-06-28/blog.png)
+    ![Multi Tasking](/assets/img/2020-06-28/blog.png){:.centered}
 * **16:9 게임**<br>
-    ![Priority Grid 3](/assets/img/2020-06-28/coh2_split.png)
+    ![Priority Grid 3](/assets/img/2020-06-28/coh2_split.png){:.centered}
     3칸 짜리 Grid 중 Priority Grid를 선택합니다.<br>
     이 경우 가운데에 16:9 Grid가 위치하게 됩니다. 혹은 2칸 짜리 Grid를 선택하면 16:9 화면 2개로 분할됩니다.
 * **21:9 게임**<br>
-    ![Priority Grid 2](/assets/img/2020-06-28/grid2.png)<br>
+    ![Priority Grid 2](/assets/img/2020-06-28/grid2.png){:.centered}<br>
     2칸 짜리 Priority Grid를 선택하면 됩니다.<br>
     32:9를 지원하지 않지만 21:9를 지원하는 게임이나, 32:9로 하기엔 너무나 광활한 화면을 보여주는 게임들을 즐기기 좋은 그리드입니다. 혹은 영상 시청도 좋습니다.<br>
-    ![Lostark](/assets/img/2020-06-28/lostark.png)
-    *아직 만난 적 없는 모코코를 알탭 없이 찾고 있어...*{:.figure}
+
+    ![Lostark](/assets/img/2020-06-28/lostark.png){:.centered}
+
+    *아직 만난 적 없는 모코코를 알탭 없이 찾고 있어...*
+    {:.figcaption}
 
     게임을 위와 같이 플레이하기 위해서는 **창모드**로 게임을 플레이 해야 합니다.<br>
     **전체 화면**은 물론이고, **전체 창 모드(borderless window)**의 경우도 강제로 한 모니터의 전체 화면을 사용하기 때문에 사용해서는 안됩니다.<br>
@@ -113,14 +116,14 @@ USB 3.0은 인식은 되는데 펌웨어 업그레이드 1%에서 튕깁니다.<
 
 ### [Magic Borderless](https://store.steampowered.com/app/1022230/Magic_Borderless/)
 
-![Magic Borderless](/assets/img/2020-06-28/magic_borderless.gif)<br>
+![Magic Borderless](/assets/img/2020-06-28/magic_borderless.gif){:.centered}<br>
 거추장 스러운 상단바를 없애주고, 프로그램 정렬 / 마우스 가두기 / 작업 표시줄 비활성화 등 사실상 창모드 게임을 위해 필요한 모든 기능을 제공하는 프로그램입니다.<br>
 (당연하게도) 개발자에게서 받은 거라곤 하나도 없지만 이런 좋은 프로그램은 열심히 홍보해야 하니 다들 커피 한 잔 아껴서 구매해 보시길...
 
-사용법도 간단합니다. 프로그램을 창모드로 실행할 경우 자동으로 감지하고 실행됩니다. (안된다면 트레이에서 실행하면 됩니다.)
-![Magic Borderless Setting 01](/assets/img/2020-06-28/magic_borderless_01.png)<br>
-프로그램 리스트 중 설정하고자 하는 프로그램을 선택하여 다음과 같이 설정합니다.
-![Magic Borderless Setting 02](/assets/img/2020-06-28/magic_borderless_02.png)<br>
+사용법도 간단합니다. 프로그램을 창모드로 실행할 경우 자동으로 감지하고 실행됩니다. (안된다면 트레이에서 실행하면 됩니다.)<br>
+![Magic Borderless Setting 01](/assets/img/2020-06-28/magic_borderless_01.png){:.centered}<br>
+프로그램 리스트 중 설정하고자 하는 프로그램을 선택하여 다음과 같이 설정합니다.<br>
+![Magic Borderless Setting 02](/assets/img/2020-06-28/magic_borderless_02.png){:.centered}<br>
 
 * 테두리 없는 창(보더리스)<br>
     첫번째 옵션을 선택해주면 됩니다.
