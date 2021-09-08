@@ -55,10 +55,35 @@ Install theme that you want. I personally moved from pure them to Powerlevel10k.
 
 Check [get started](https://github.com/romkatv/powerlevel10k#get-started) to find your best installation option.
 
-Don't forget to change `ZSH_THEME="powerlevel10k/powerlevel10k"` from `~/.zshrc`!
-{:.note}
+1. Clone this repository in oh-my-zsh's themes directory:
+
+    ```shell
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    ```
+
+2. Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in `~/.zshrc`.
 
 ## OMZ Plugins
+
+### autoupdate
+
+> [oh-my-zsh plugin](https://github.com/TamCore/autoupdate-oh-my-zsh-plugins) for auto updating of git-repositories in $ZSH_CUSTOM folder
+
+1. Clone this repository in oh-my-zsh's plugins directory:
+
+    ```shell
+    git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/autoupdate
+    ```
+
+2. Add the plugin to the list of plugins for Oh My Zsh to load (inside `~/.zshrc`):
+
+    ```shell
+    plugins=([plugins...] autoupdate)
+    ```
+
+The updates will be executed automatically as soon as the oh-my-zsh updater is started.
+Note that this will auto update both plugins and themes found in the $ZSH_CUSTOM folder.
+{:.note}
 
 ### zsh-syntax-highlighting
 
@@ -96,18 +121,30 @@ Check [Installation Guide](https://github.com/zsh-users/zsh-autosuggestions/blob
     plugins=([plugins...] zsh-autosuggestions)
     ```
 
+### zsh-completions
+
+> Additional completion definitions for Zsh.
+
+Check [git repo](https://github.com/zsh-users/zsh-completions#oh-my-zsh) for detail.
+
+1. Clone this repository in oh-my-zsh's plugins directory:
+
+    ```shell
+    git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+    ```
+
+2. Add the plugin to the list of plugins for Oh My Zsh to load (inside `~/.zshrc`):
+
+    ```shell
+    plugins=([plugins...] zsh-completions)
+    ```
+
 ### Autojump
 
 > [autojump](https://github.com/wting/autojump) - a faster way to navigate your filesystem
 
 ```shell
-apt install autojump
-
-# Follow instructions
-cat /usr/share/doc/autojump/README.Debian
-
-# add following line to ~/.zshrc
-. /usr/share/autojump/autojump.sh
+brew install autojump
 ```
 
 ### fzf
@@ -136,19 +173,6 @@ zplug "b4b4r07/enhancd", use:init.sh
 ```shell
 brew install exa
 ```
-
-### autoupdate
-
-> [oh-my-zsh plugin](https://github.com/TamCore/autoupdate-oh-my-zsh-plugins) for auto updating of git-repositories in $ZSH_CUSTOM folder
-
-```shell
-git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins $ZSH_CUSTOM/plugins/autoupdate
-```
-
-Add autoupdate to the plugins=() list in your ~/.zshrc file and you're done.
-The updates will be executed automatically as soon as the oh-my-zsh updater is started.
-Note that this will autoupdate both plugins and also themes found in the $ZSH_CUSTOM folder.
-{:.note}
 
 ## Others
 
