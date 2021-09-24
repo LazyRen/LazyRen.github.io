@@ -20,7 +20,6 @@ LED의, LED에 의한, LED를 위한 [커스텀 키보드 오리온 2.5](http://
 * this unordered seed list will be replaced by the toc
 {:toc}
 
-
 ## 소개
 
 ![Orion layout](/assets/img/2021-04-12/orion_layout.jpg){:.centered}
@@ -53,7 +52,7 @@ INSERT ~ PAGE DOWN 등의 특수 키도 자주 사용하지만, 알파열 내에
 
 ![Key Mapping](/assets/img/2021-04-12/snow_tool.png){:.centered}
 
-FN Layber 키맵핑
+FN Layer 키맵핑
 {:.figcaption}
 
 기본 레이아웃에서 Capslock 키를 FN키로 맵핑하였습니다. Capslock의 경우 자주 사용하지도 않는데 너무나 좋은 위치에 있는 키인데요, 이렇게 FN키로 맵핑하면 왼손만으로
