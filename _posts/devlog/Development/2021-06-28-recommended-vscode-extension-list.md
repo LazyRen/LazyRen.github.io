@@ -59,8 +59,10 @@ VS Code에 새로운 기능을 추가하는 익스텐션들입니다.<br>
 
 ![Code Spell Checker](/assets/img/2021-06-28/code-spell-checker.gif)
 
-제 블로그는 물론이고 HANA DB와 같이 많은 프로그래머가 참여하고, 코드 리뷰를 진행하는 production 레벨의 코드에도 정말 많은 오타가 숨어 있었습니다. (특히 주석에...)<br>
-이 익스텐션을 사용하면 코드 작성시 오타를 확실하게 잡을 수 있습니다. (덤으로 기존 코드의 오타 수정도 하지 않고는 못 베기게 되는 문제가 발생합니다.)<br>
+제 블로그는 물론이고 HANA DB와 같이 많은 프로그래머가 참여하고,
+코드 리뷰를 진행하는 production 레벨의 코드에도 정말 많은 오타가 숨어 있었습니다. (특히 주석에...)<br>
+이 익스텐션을 사용하면 코드 작성시 오타를 확실하게 잡을 수 있습니다.
+(덤으로 기존 코드의 오타 수정도 하지 않고는 못 베기게 되는 문제가 발생합니다.)<br>
 
 기존 사전에 없는 단어라 할지라도 `Add word to Dictionary` 명령어를 통해 추가할 수 있습니다.
 {:.note}
@@ -273,7 +275,9 @@ Git을 사용하여 코드 버전 관리를 하고 있다면 **필수**로 설�
 </div>
 </details>
 
-기존 Bracket Pair Colorizer에 존재하던 성능 이슈를 해결하기 위해 [2021 August Update](https://code.visualstudio.com/updates/v1_60#_high-performance-bracket-pair-colorization)로 VS Code에 기본으로 Bracket Pair Colorization이 추가되었습니다.<br>
+기존 Bracket Pair Colorizer에 존재하던 성능 이슈를 해결하기 위해
+[2021 August Update](https://code.visualstudio.com/updates/v1_60#_high-performance-bracket-pair-colorization)부터
+VS Code에 기본으로 Bracket Pair Colorization이 추가되었습니다.<br>
 기존 익스텐션을 삭제하고 아래 설정을 적용하는 것을 권장드립니다.
 {:.note}
 
