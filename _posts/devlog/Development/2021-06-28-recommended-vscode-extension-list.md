@@ -95,6 +95,11 @@ Git을 사용하여 코드 버전 관리를 하고 있다면 **필수**로 설�
 파일 변경 내역 확인, 버전별 diff, commit 변경 사항 확인, line blame 등등 정말 많은 기능을 제공합니다.<br>
 워낙 좋은 기능들이 많기 때문에 설치하고 사용법도 한번 정독하시기를 권장드립니다.
 
+`Current Line Blame` 옵션을 킬 경우 `word wrap` [옵션이 적용이 안되는 버그](https://github.com/Axosoft/vscode-gitlens/issues/443)가 있습니다.<br>
+`word wrap` 옵션을 켜서 수평 스크롤을 없애기 원하는 분들은 `"gitlens.currentLine.scrollable": false` 세팅을 추가하여 해결할 수 있습니다.
+(대신 `cuurent line blame`이 짤려서 출력됩니다.)
+{:.note}
+
 ### [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
 
 ![Path Intellisense](/assets/img/2021-06-28/path-intellisense.gif)
@@ -286,6 +291,9 @@ VS Code에 기본으로 Bracket Pair Colorization이 추가되었습니다.<br>
 <div markdown="1">
 ```json
 "editor.bracketPairColorization.enabled": true,
+"editor.guides.bracketPairs": true,
+"editor.guides.highlightActiveIndentation": true,
+"editor.guides.indentation": true,
 "workbench.colorCustomizations": {
     "editorIndentGuide.activeBackground": "#F4FF81",
     "editorBracketHighlight.foreground1": "#F4FF81",
