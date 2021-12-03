@@ -8,7 +8,7 @@
     {% for skl in resume.skills %}
       <dt class="fl">{{ skl.name }}</dt>
       <dd class="faded clearafter">
-        {% if skl.level %}
+        {% if skl.level and skl.level != '' %}
         <div class="fr">
           <span class="sr-only">{{ strings.resume.level | default:"Level" }}{{ colon }}</span>
           {% assign level = skl.level | slugify %}
