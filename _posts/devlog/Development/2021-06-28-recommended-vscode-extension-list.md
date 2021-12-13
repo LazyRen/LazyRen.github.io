@@ -12,7 +12,7 @@ image:
 강력한 익스텐션들과 함께 사용할시 text editor를 벗어나 IDE에 가까운 모습을 보이면서도 가볍고, Mac/Windows/Linux 등 플랫폼을 가리지 않고
 사용되는 모습을 보면 각성한 마이크로스프트 사가 얼마나 무서운지 보여주는 것 같습니다.
 
-오늘은 Vs Code를 최대한 잘 활용하기 위해서 필요한 추천 익스텐션 리스트를 알아볼까 합니다.<br>
+오늘은 VS Code를 최대한 잘 활용하기 위해서 필요한 추천 익스텐션 리스트를 알아볼까 합니다.<br>
 
 <!--more-->
 
@@ -106,13 +106,14 @@ Git을 사용하여 코드 버전 관리를 하고 있다면 **필수**로 설�
 
 파일명 자동완성을 지원하는 익스텐션입니다.
 
-### [Polacode-2020](https://marketplace.visualstudio.com/items?itemName=jeff-hykin.polacode-2019) :heart:
+### ~~[Polacode-2020](https://marketplace.visualstudio.com/items?itemName=jeff-hykin.polacode-2019)~~ [CodeSnap](https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap) :heart:
 
 ![Path Intellisense](/assets/img/2021-06-28/polacode.gif)
 
 코드 스크린샷을 찍어주는 익스텐션입니다.
 
-기존 Polacode가 동작하지 않기 때문에 Polacode-2020을 받으셔야합니다.
+~~기존 Polacode가 동작하지 않기 때문에 Polacode-2020을 받으셔야합니다.~~<br>
+이젠 Polacode-2020도 동작하지 않으니 [CodeSnap](https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap)을 사용해보세요.
 {:.note title="Warning}
 
 ### [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager) :pushpin:
