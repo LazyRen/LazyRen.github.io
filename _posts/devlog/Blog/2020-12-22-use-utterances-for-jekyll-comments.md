@@ -17,7 +17,7 @@ But I had some issues with Disqus, so I looked elsewhere to find new comments pl
 
 [Utterances] uses github issues to save & display comments. So you have to give proper permission to the github-bot. But once you set things up correctly, it works very smoothly and fast. Only downside I've encountered so far is that it requires user to login to the github in order to write comments, and there is no default `reply` function. (All though you can mimic reply using `>` & `@`...)
 
-[Giscus] is almost identical to the `Utterances` except that it uses `github discussion` insteand of `issues`.<br>
+[Giscus] is almost identical to the `Utterances` except that it uses `github discussion` instead of `issues`.<br>
 I have once again migrated to giscus from utterances. It seems 'discussions' is more appropriate than 'issues' to place comments.
 
 [Utterances]: https://utteranc.es/

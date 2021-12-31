@@ -97,7 +97,7 @@ Git을 사용하여 코드 버전 관리를 하고 있다면 **필수**로 설�
 
 `Current Line Blame` 옵션을 킬 경우 `word wrap` [옵션이 적용이 안되는 버그](https://github.com/Axosoft/vscode-gitlens/issues/443)가 있습니다.<br>
 `word wrap` 옵션을 켜서 수평 스크롤을 없애기 원하는 분들은 `"gitlens.currentLine.scrollable": false` 세팅을 추가하여 해결할 수 있습니다.
-(대신 `cuurent line blame`이 짤려서 출력됩니다.)
+(대신 `current line blame`이 짤려서 출력됩니다.)
 {:.note}
 
 ### [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
