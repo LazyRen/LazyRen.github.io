@@ -32,11 +32,15 @@ rbenv를 통해 ruby를 다시 설치하는 과정이 필요합니다.
 
    ```console
    # with curl
-   curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
+   curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
    ```
 
 2. rbenv 명령어 인식을 위해 PATH에 경로 추가<br>
-   add PATH(`/home/{USER_NAME}/.rbenv/bin`) to ~/.bashrc or ~/.zshrc
+   add PATH(`$HOME/.rbenv/bin`) to ~/.bashrc or ~/.zshrc
+
+   ```console
+   echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
+   ```
 
 3. 쉘에 `rbenv init`을 입력후 나오는 데로 ~/.bashrc or ~/.zshrc에 내용 추가
 
