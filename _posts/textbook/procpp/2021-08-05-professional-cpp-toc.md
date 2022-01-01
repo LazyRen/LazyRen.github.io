@@ -18,7 +18,7 @@ image:
 
 ## Part 1: 전문가를 향한 C++ 첫걸음
 
-> C++ 기초를 다지기 위한 초단기 속성 코스부터 시작하여 스트링과 스트링 뷰를 다루는 방법을 깊이 있게 살펴본다.
+> C++ 기초를 다지기 위한 초단기 속성 코스부터 시작하여 스트링과 스트링 뷰를 다루는 방법을 깊이 있게 살펴본다.<br>
 > 또한 C++ 코드를 읽기 쉽게 작성하는 방법을 소개한다.
 
 ### Chapter 1: C++와 표준 라이브러리 초단기 속성 코스
@@ -76,4 +76,18 @@ Continue with [Chapter 5: 객체지향 디자인](2021-08-10-chapter-5.md){:.hea
 * SOLID 원칙
 
 Continue with [Chapter 6: 재사용을 고려한 디자인](2021-08-18-chapter-6.md){:.heading.flip-title}
+{:.read-more}
+
+## Part 3: 전문가답게 C++ 코딩하기
+
+> 메모리 관리, 재사용 가능한 클래스 작성법 상속과 같이 언어의 ㅈ주요 기능을 최대한 활용하는 방법 등을 소개한다.
+
+### Chapter 7: 메모리 관리
+
+* 다양한 메모리 사용 및 관리 방법
+* 스마트 포인터의 개념과 사용법
+* Garbage Collection
+* 흔히 발생하는 메모리 문제
+
+Continue with [Chapter 7: 메모리 관리](2022-01-01-chapter-7.md){:.heading.flip-title}
 {:.read-more}
