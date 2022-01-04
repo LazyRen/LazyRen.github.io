@@ -47,7 +47,8 @@ You may wish to check [commit history](https://github.com/LazyRen/LazyRen.github
 /_featured_tags/*.md
 ```
 
-Check [this post](/devlog/adding-foldable-submenu-to-the-sidebar) for more info.
+Continue with [Adding Foldable Submenu to the Sidebar](/devlog/adding-foldable-submenu-to-the-sidebar){:.heading.flip-title}
+{:.read-more}
 
 ## Creating Tag Cloud/List Page
 
@@ -78,7 +79,8 @@ Since we are gonna migrate from disqus, proper changes must be made to `my-comme
 /_includes/head/links-static.html
 ```
 
-Check [this post](/devlog/use-utterances-for-jekyll-comments) for more info.
+Continue with [Use Utterances/Giscus for Jekyll Comments System](/devlog/use-utterances-for-jekyll-comments){:.heading.flip-title}
+{:.read-more}
 
 ## Add applause button for Jekyll post
 
@@ -97,7 +99,8 @@ Basically, I will add applause button for each-and-every post. Unless author spe
 _sass/my-style.scss
 ```
 
-Check [this post](/devlog/add-applause-button-for-jekyll-post) for more info.
+Continue with [Add Applause Button for Jekyll Post](/devlog/add-applause-button-for-jekyll-post){:.heading.flip-title}
+{:.read-more}
 
 ## Conclusion
 
