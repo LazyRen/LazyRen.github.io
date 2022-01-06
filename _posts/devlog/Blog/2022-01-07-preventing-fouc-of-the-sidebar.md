@@ -19,7 +19,7 @@ Stands for *flash of unstyled content*. Let's ease the symptom for the sidebar a
 
 ## Find the cause of the problem
 
-![FOUC](/assets/img/2022-01-07/fouc.gif){:width="25%"}
+![FOUC](/assets/img/2022-01-07/fouc.gif){:.centered width="25%"}
 
 I have inlined css file for the sidebar content.
 Using `my-inline.scss` instead of `my-style.scss` helped me ease the symptom a little. But couldn't stop it from happening.
@@ -98,8 +98,9 @@ This will likely to hide *FOUC* happening.
 
 I'm personally very satisfied with the outcome :)
 
-![FOUC](/assets/img/2022-01-07/fouc.gif){:width="30%"}
-![FOUC Fixed](/assets/img/2022-01-07/fouc-fixed.gif){:width="30%"}
+{: .text-align-center }
+![FOUC](/assets/img/2022-01-07/fouc.gif){:width="33%"}
+![FOUC Fixed](/assets/img/2022-01-07/fouc-fixed.gif){:width="33%"}
 
 I still couldn't figure out why the background image of the sidebar is moving left & right for a brief moment.
 If anyone can help me on this issue, please leave me a comment. It would be very much appreciated. :)
