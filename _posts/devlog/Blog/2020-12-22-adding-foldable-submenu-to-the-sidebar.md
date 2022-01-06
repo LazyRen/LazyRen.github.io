@@ -217,7 +217,7 @@ Above is the actual code that I've added. I'll try my best to explain in detail 
 {% endraw %}
 ```
 
-`nodes`: From all the site pages & documents, take pages that has been mareked as `sidebar: true`. For me, In addition to the categories & tags, I've also added such property to [about.md](https://github.com/LazyRen/LazyRen.github.io/blob/master/about.md) & [tags.md](https://github.com/LazyRen/LazyRen.github.io/blob/master/tags.md).<br>
+`nodes`: From all the site pages & documents, take pages that has been marked as `sidebar: true`. For me, In addition to the categories & tags, I've also added such property to [about.md](https://github.com/LazyRen/LazyRen.github.io/blob/master/about.md) & [tags.md](https://github.com/LazyRen/LazyRen.github.io/blob/master/tags.md).<br>
 `tag_nodes`: From what we've collected, filter tags only.(We've set the sidebar & tag property in `*.md` file)
 
 ```liquid
