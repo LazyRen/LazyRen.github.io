@@ -149,7 +149,6 @@ You need to link proper icon & js you just created to the page. Append below cod
 
 ```html
 <!-- file: "/_includes/head/links-static.html" -->
-
 <!-- ... -->
 
 <!-- For sidebar folder -->
@@ -302,6 +301,7 @@ Note that `type` property has been added to indicate it is `category`.<br>
 `sidebar` property is also added, set it to `true` if you wish to see category from the sidebar.
 
 ```markdown
+<!-- file: "_featured_categories/*.md" -->
 ---
 layout: list
 type: category
@@ -321,6 +321,7 @@ Set `type` property as a `tag`.
 If you wish to see tag from the sidebar, set `sidebar` property to `true`.<br>
 
 ```markdown
+<!-- file: "_featured_tags/*.md" -->
 ---
 layout: tag-list
 type: tag
