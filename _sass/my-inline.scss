@@ -30,9 +30,9 @@
 
 .sidebar-nav-subitem {
   @extend .f4;
-  display: inline-block;
-  padding: .25rem 0;
   width:100%;
+  padding: .25rem 0;
+  display: inline-block;
 }
 
 .sidebar-nav-subitem:last-child {
@@ -40,9 +40,9 @@
 }
 
 .list-wrapper {
-  display: flex;
   text-align: left;
-  width: 18rem
+  width: 18rem;
+  display: flex;
 }
 
 .list-body {
@@ -89,4 +89,28 @@ input[type=checkbox]:checked ~ ul{
   transform-origin: top;
   transform: scaleY(1);
   transition: transform .2s ease-out;
+}
+
+
+// Prevent FOUC
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  20% { opacity: 0; }
+  40% { opacity: 0.4; }
+  60% { opacity: 0.6; }
+  80% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+.no-fouc {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-name: fadeIn;
+  opacity: 0;
+  // This line forces the browser to set the opacity to 1 after executing/finishing the animation
+  opacity: 1;
+
 }
