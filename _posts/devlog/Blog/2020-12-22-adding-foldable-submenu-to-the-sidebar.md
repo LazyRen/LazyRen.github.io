@@ -34,7 +34,6 @@ There is few files you need to edit/add for this.<br>
 /_featured_tags/*.md
 ```
 
-
 ## sidebar-folder.js
 
 You need to create new `js` file to properly create animated arrows for the foldable submenu.
