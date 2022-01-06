@@ -8,18 +8,23 @@ image:
   path: /assets/img/2020-08-02/sidebar.png
 ---
 
-Sidebar & category/tag has been modified as of 2020/12/15.<br>
-I'm updating this post to reflect those changes I've made.
-{:.note}
+* **2020/12/15** : Sidebar & category/tag has been modified.<br>
+  I'm updating this post to reflect those changes I've made.
+* **2022/01/07** : Update to print animated arrow for the foldable menu.
+{:.note title="Changelog"}
 
-In this post, I'll guide you how to add a submenu to the sidebar navigation.
+In this post, I'll guide you to add a foldable submenu to the sidebar navigation.
 
 <!--more-->
+
+## Files to modify
 
 There is few files you need to edit/add for this.<br>
 
 ```default
+/assets/js/sidebar-folder.js
 /_sass/my-inline.scss
+/_includes/head/links-static.html
 /_includes/body/nav.html
 /_layouts/tag-list.html
 /_featured_categories/*.md
@@ -28,6 +33,22 @@ There is few files you need to edit/add for this.<br>
 
 * this unordered seed list will be replaced by the toc
 {:toc}
+
+## sidebar-folder.js
+
+You need to create new `js` file to properly create animated arrows for the foldable submenu.
+Script itself is pretty short and simple. So I won't go detail with it. ~~I pretty much know nothing about JS.~~
+
+```js
+// file: "/assets/js/sidebar-folder.js"
+function spread(count){
+    document.getElementById('folder-checkbox-' + count).checked =
+    !document.getElementById('folder-checkbox-' + count).checked
+    document.getElementById('spread-icon-' + count).innerHTML =
+    document.getElementById('spread-icon-' + count).innerHTML == 'arrow_right' ?
+    'arrow_drop_down' : 'arrow_right'
+}
+```
 
 ## my-inline.scss
 
@@ -47,21 +68,21 @@ used `scss` file has been changed to `my-inline.scss` from `my-style.scss` to pr
 }
 
 .sidebar-sticky {
-  position: absolute;
   height: 100%;
   padding-top: 5%;
+  position: absolute;
 }
 
 .sidebar-nav-item {
-  width:100%;
   padding: .25rem 0;
+  width:100%;
 }
 
 .sidebar-nav-subitem {
   @extend .f4;
   width:100%;
-  display: inline-block;
   padding: .25rem 0;
+  display: inline-block;
 }
 
 .sidebar-nav-subitem:last-child {
@@ -70,12 +91,13 @@ used `scss` file has been changed to `my-inline.scss` from `my-style.scss` to pr
 
 .list-wrapper {
   text-align: left;
+  width: 18rem;
   display: flex;
 }
 
 .list-body {
-  text-align: left;
   margin: 0;
+  text-align: left;
 }
 
 .sidebar-about {
@@ -88,36 +110,50 @@ used `scss` file has been changed to `my-inline.scss` from `my-style.scss` to pr
 
 // Submenu Insertion
 
-.folder {
+.spread-btn{
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
   text-align: right;
   width: 100%;
-  color: #fff;
-  font-size: large;
-  cursor: pointer;
 }
 
-.folder:hover {
+.spread-btn:hover{
   color: #4FB1BA;
 }
 
-input[type="checkbox"]{
+input[type=checkbox]{
   display: none;
 }
 
-input[type="checkbox"] ~ ul{
+input[type=checkbox] ~ ul{
   height: 0;
-  transition: transform .2s ease-out;
   transform: scaleY(0);
-}
-
-input[type="checkbox"]:checked ~ ul{
-  list-style: none;
-  height: 100%;
-  transform-origin: top;
   transition: transform .2s ease-out;
-  transform: scaleY(1);
 }
 
+input[type=checkbox]:checked ~ ul{
+  height: 100%;
+  list-style: none;
+  transform-origin: top;
+  transform: scaleY(1);
+  transition: transform .2s ease-out;
+}
+```
+
+## links-static.html
+
+You need to link proper icon & js you just created to the page. Append below code to the end of the `links-static.html` file.
+
+```html
+<!-- file: "/_includes/head/links-static.html" -->
+
+<!-- ... -->
+
+<!-- For sidebar folder -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="/assets/js/sidebar-folder.js"></script>
 ```
 
 ## nav.html
@@ -129,41 +165,46 @@ Changes in [nav.html](https://github.com/LazyRen/LazyRen.github.io/blob/master/_
 
 ### Code explanation
 
-```liquid
+```html
 <!-- file: "/_layouts/tag-list.html" -->
 {%- raw -%}
-{% assign nodes = site.pages | concat: site.documents | where: "sidebar", true | sort: "order" %}
-{% assign tag_nodes = nodes | where: "type", "tag" %}
-{% for node in nodes %}
-  {% unless node.redirect_to %}
-    {% if node.type != "tag" %}
-      {% assign subnodes = tag_nodes | where_exp: "item", "item.category == node.slug" %}
-      {% assign count = count | plus: 1 %}
-      <li>
-        {% if subnodes != empty %}
-          <input type="checkbox" id="list-item-{{ count }}" />
-        {% endif %}
-        <div class="list-wrapper">
-          <a {% if forloop.first %}id="_navigation"{% endif %} href="{{ node.url | relative_url }}" class="sidebar-nav-item" {% if node.rel %}rel="{{ node.rel }}"{% endif %} >{{ node.title }}</a>
+<span class="sr-only">{{ site.data.strings.navigation | default:"Navigation" }}{{ site.data.strings.colon | default:":" }}</span>
+<ul>
+  {% assign nodes = site.html_pages | concat: site.documents | where: "sidebar", true | sort: "order" %}
+  {% assign tag_nodes = nodes | where: "type", "tag" %}
+  {% for node in nodes %}
+    {% unless node.redirect_to %}
+      {% if node.type != "tag" %}
+        {% assign subnodes = tag_nodes | where_exp: "item", "item.category == node.slug" %}
+        {% assign count = count | plus: 1 %}
+        <li>
           {% if subnodes != empty %}
-            <label class="folder" for="list-item-{{ count }}">▾</label>
+            <input type="checkbox" id="folder-checkbox-{{ count }}" />
           {% endif %}
-        </div>
-        {% for subnode in subnodes %}
-          {% if forloop.first %}<ul class="list-body">{% endif %}
-              <li>
-                <a class="sidebar-nav-subitem" href="{{ subnode.url | relative_url }}">{{ subnode.title }}</a>
-              </li>
-          {% if forloop.last %}</ul>{% endif %}
-        {% endfor %}
+          <div class="list-wrapper">
+            <a {% if forloop.first %}id="_navigation"{% endif %} href="{{ node.url | relative_url }}" class="sidebar-nav-item" {% if node.rel %}rel="{{ node.rel }}"{% endif %} >{{ node.title }}</a>
+            {% if subnodes != empty %}
+              <button class="spread-btn" onclick="javascript:spread({{ count }})">
+                <label id="spread-icon-{{ count }}" class="material-icons">arrow_right</label>
+              </button>
+            {% endif %}
+          </div>
+          {% for subnode in subnodes %}
+            {% if forloop.first %}<ul class="list-body">{% endif %}
+                <li>
+                  <a class="sidebar-nav-subitem" href="{{ subnode.url | relative_url }}">{{ subnode.title }}</a>
+                </li>
+            {% if forloop.last %}</ul>{% endif %}
+          {% endfor %}
+        </li>
+      {% endif %}
+    {% else %}
+      <li>
+        <a href="{{ node.redirect_to }}" class="sidebar-nav-item external">{{ node.title }}</a>
       </li>
-    {% endif %}
-  {% else %}
-    <li>
-      <a href="{{ node.redirect_to }}" class="sidebar-nav-item external">{{ node.title }}</a>
-    </li>
-  {% endunless %}
-{% endfor %}
+    {% endunless %}
+  {% endfor %}
+</ul>
 {% endraw %}
 ```
 
@@ -171,7 +212,7 @@ Above is the actual code that I've added. I'll try my best to explain in detail 
 
 ```liquid
 {%- raw -%}
-{% assign nodes = site.pages | concat: site.documents | where: "sidebar", true | sort: "order" %}
+{% assign nodes = site.html_pages | concat: site.documents | where: "sidebar", true | sort: "order" %}
 {% assign tag_nodes = nodes | where: "type", "tag" %}
 {% endraw %}
 ```
@@ -188,12 +229,14 @@ Above is the actual code that I've added. I'll try my best to explain in detail 
       {% assign count = count | plus: 1 %}
       <li>
         {% if subnodes != empty %}
-          <input type="checkbox" id="list-item-{{ count }}" />
+          <input type="checkbox" id="folder-checkbox-{{ count }}" />
         {% endif %}
         <div class="list-wrapper">
           <a {% if forloop.first %}id="_navigation"{% endif %} href="{{ node.url | relative_url }}" class="sidebar-nav-item" {% if node.rel %}rel="{{ node.rel }}"{% endif %} >{{ node.title }}</a>
           {% if subnodes != empty %}
-            <label class="folder" for="list-item-{{ count }}">▾</label>
+            <button class="spread-btn" onclick="javascript:spread({{ count }})">
+              <label id="spread-icon-{{ count }}" class="material-icons">arrow_right</label>
+            </button>
           {% endif %}
         </div>
         {% for subnode in subnodes %}
