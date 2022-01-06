@@ -17,6 +17,9 @@ In this post, I'll guide you to add a foldable submenu to the sidebar navigation
 
 <!--more-->
 
+* this unordered seed list will be replaced by the toc
+{:toc}
+
 ## Files to modify
 
 There is few files you need to edit/add for this.<br>
@@ -31,8 +34,6 @@ There is few files you need to edit/add for this.<br>
 /_featured_tags/*.md
 ```
 
-* this unordered seed list will be replaced by the toc
-{:toc}
 
 ## sidebar-folder.js
 
