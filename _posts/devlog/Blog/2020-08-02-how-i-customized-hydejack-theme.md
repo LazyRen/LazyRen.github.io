@@ -47,7 +47,7 @@ You may wish to check [commit history](https://github.com/LazyRen/LazyRen.github
 /_featured_tags/*.md
 ```
 
-Continue with [Adding Foldable Submenu to the Sidebar](/devlog/adding-foldable-submenu-to-the-sidebar){:.heading.flip-title}
+Continue with [Adding Foldable Submenu to the Sidebar](adding-foldable-submenu-to-the-sidebar){:.heading.flip-title}
 {:.read-more}
 
 ## Creating Tag Cloud/List Page
@@ -61,7 +61,8 @@ Since many tags are not listed on the sidebar, I've always wanted to have a page
 /_layouts/tags.html
 ```
 
-Check [this post](/devlog/creating-tag-list-page) for more info.
+Continue with [Creating Tag List Page](creating-tag-list-page){:.heading.flip-title}
+{:.read-more}
 
 ## Use [Utterances](https://utteranc.es/) as a comment plugin
 
@@ -79,7 +80,7 @@ Since we are gonna migrate from disqus, proper changes must be made to `my-comme
 /_includes/head/links-static.html
 ```
 
-Continue with [Use Utterances/Giscus for Jekyll Comments System](/devlog/use-utterances-for-jekyll-comments){:.heading.flip-title}
+Continue with [Use Utterances/Giscus for Jekyll Comments System](use-utterances-for-jekyll-comments){:.heading.flip-title}
 {:.read-more}
 
 ## Add applause button for Jekyll post
@@ -99,7 +100,7 @@ Basically, I will add applause button for each-and-every post. Unless author spe
 _sass/my-style.scss
 ```
 
-Continue with [Add Applause Button for Jekyll Post](/devlog/add-applause-button-for-jekyll-post){:.heading.flip-title}
+Continue with [Add Applause Button for Jekyll Post](add-applause-button-for-jekyll-post){:.heading.flip-title}
 {:.read-more}
 
 ## Conclusion

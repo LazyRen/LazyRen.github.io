@@ -202,3 +202,6 @@ To [adjust size of utterances](https://github.com/utterance/utterances/issues/16
   border: none;
 }
 ```
+
+Back to [How I customized Hydejack Theme](2020-08-02-how-i-customized-hydejack-theme.md){:.heading.flip-title}
+{:.read-more}
