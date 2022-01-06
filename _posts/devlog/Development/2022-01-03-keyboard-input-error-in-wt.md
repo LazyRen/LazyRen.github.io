@@ -22,7 +22,7 @@ image:
 
 ## TL;DR
 
-**한컴 입력기**<sup>Input Method Editor</sup>와 WT[^1] 간의 호환성 문제입니다.<br>
+**한컴 입력기**<sup>Input Method Editor</sup>와 WT 간의 호환성 문제입니다.<br>
 한컴 입력기를 제거하고 **Microsoft 입력기**를 사용하면 문제가 해결됩니다.
 
 ## 한컴 입력기 삭제 하는 방법
@@ -34,11 +34,11 @@ image:
     ![step1](/assets/img/2022-01-03/step1.png)
 2. `언어` 중 `한국어`를 찾아 오른쪽 끝에 위치한 더보기 아이콘**⋯**을 클릭해 `언어 옵션`을 선택합니다.
     ![step2](/assets/img/2022-01-03/step2.png)
-3. `키보드` 에서 `한컴 입력기`를 찾아 더보기 아이콘을 클릭해 `삭제` 합니다.[^2]
+3. `키보드` 에서 `한컴 입력기`를 찾아 더보기 아이콘을 클릭해 `삭제` 합니다.[^1]
     ![step3](/assets/img/2022-01-03/step3.png)
 
 * [Windows Terminal Issue #8877](https://github.com/microsoft/terminal/issues/8877)
 {:.note title="출처"}
 
-[^1]: Windows Terminal
+*[WT]: Windows Terminal
 [^2]: 저는 이미 삭제하여 `한컴 입력기`가 없어 `Microsoft 입력기`로 예시를 만들었습니다.

@@ -36,6 +36,8 @@ Add below code to the [_sass/my-inline.scss file](https://github.com/LazyRen/Laz
 used `scss` file has been changed to `my-inline.scss` from `my-style.scss` to prevent FOUC as much as possible. `Sidebar-sticky` still moves up and down at the first time tho...
 {:.note}
 
+*[FOUC]: Flash of Unstyled Content
+
 ```css
 /* file: "/_sass/my-inline.scss" */
 // Sidebar Modification
