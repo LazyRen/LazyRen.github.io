@@ -98,7 +98,7 @@ This will likely to hide *FOUC* happening.
 
 I'm personally very satisfied with the outcome :)
 
-{: .text-align-center }
+{:.text-align-center}
 ![FOUC](/assets/img/2022-01-07/fouc.gif){:width="33%"}
 ![FOUC Fixed](/assets/img/2022-01-07/fouc-fixed.gif){:width="33%"}
 
