@@ -32,7 +32,7 @@ It overrides any default css provided by other files.<br>
 
 ## Adding Submenu to the Sidebar
 
-![Sidebar](/assets/img/2020-08-02/sidebar.png)
+![Sidebar](/assets/img/2020-08-02/sidebar.png){:.centered width="33%"}
 
 In this section, I'll guide you how to add a submenu to the sidebar navigation.<br>
 There is few files you need to edit/add for this.<br>
@@ -52,7 +52,7 @@ Continue with [Adding Foldable Submenu to the Sidebar](adding-foldable-submenu-t
 
 ## Creating Tag Cloud/List Page
 
-![tag list](/assets/img/2020-12-21/tag_list.png)
+![tag list](/assets/img/2020-12-21/tag_list.png){:.centered width="33%"}
 
 Since many tags are not listed on the sidebar, I've always wanted to have a page where I can see all categories & tags I've used for the posts. And visitor may click on it to navigate related posts. To implement tag list, you only need to create two files to have a such page.
 
@@ -101,6 +101,17 @@ _sass/my-style.scss
 ```
 
 Continue with [Add Applause Button for Jekyll Post](add-applause-button-for-jekyll-post){:.heading.flip-title}
+{:.read-more}
+
+## Preventing FOUC of the Sidebar
+
+![FOUC Comparison](/assets/img/2022-01-07/comparison.gif){:.centered width="33%"}
+
+I always hated the sudden glitch of the sidebar at the very beginning of the web page loading.
+Yes it only happens at very first page of my blog, yet it really bugs me. They even have name for it. **FOUC**.
+Stands for *flash of unstyled content*. Let's ease the symptom for the sidebar at least a little.
+
+Continue with [Preventing FOUC of the Sidebar](2022-01-07-preventing-fouc-of-the-sidebar){:.heading.flip-title}
 {:.read-more}
 
 ## Conclusion
