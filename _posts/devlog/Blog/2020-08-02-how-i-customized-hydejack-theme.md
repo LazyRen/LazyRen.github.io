@@ -143,7 +143,18 @@ I always hated the sudden glitch of the sidebar at the very beginning of the web
 Yes it only happens at very first page of my blog, yet it really bugs me. They even have name for it. **FOUC**.
 Stands for *flash of unstyled content*. Let's ease the symptom for the sidebar at least a little.
 
-Continue with [Preventing FOUC of the Sidebar](2022-01-07-preventing-fouc-of-the-sidebar){:.heading.flip-title}
+Continue with [Preventing FOUC of the Sidebar](preventing-fouc-of-the-sidebar){:.heading.flip-title}
+{:.read-more}
+
+## How to Center an Image in Markdown
+
+From time to time, we want to align image center within the Jekyll post. But applying `CSS` style directly into the
+markdown file with `HTML` tag is cumbersome and not pretty. And I'm [not the only one searching for the way]!
+In this article, I'll guide you a easy solution to center an image within Jekyll blog post.
+
+[not the only one searching for the way]: https://stackoverflow.com/questions/23819197/jekyll-blog-post-centering-images
+
+Continue with [How to Center an Image in Markdown](how-to-center-an-image-in-markdown){:.heading.flip-title}
 {:.read-more}
 
 ## Conclusion
