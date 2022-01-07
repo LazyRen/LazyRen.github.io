@@ -178,6 +178,7 @@ kramdown:
   math_engine:         mathjax
   math_engine_opts:    {}
   footnote_backlink:   '&#x21a9;&#xfe0e;'
+  # hard_wrap:           true  # Setting it to `true` will interprets line breaks literally from the markdown file.
 
 
 # 3rd Party Integrations
