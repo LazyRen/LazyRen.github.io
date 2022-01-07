@@ -106,3 +106,28 @@ img.centered {
 div.highlight>.pre-header {
   overflow: hidden;
 }
+
+// Fancy Codeblock Scrollbar
+
+pre.highlight {
+  border-color: transparent;
+  transition: border-color 0.5s ease;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+    width: auto;
+  }
+
+  &:hover {
+    border-color: var(--gray);
+    transition: border-color 0.2s ease;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-color: inherit;
+    border-radius: 10px;
+    border-right-style: inset;
+    border-right-width: calc(100vw + 100vh);
+  }
+}
