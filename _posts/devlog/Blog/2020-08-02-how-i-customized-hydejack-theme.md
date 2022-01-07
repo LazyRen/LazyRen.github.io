@@ -8,9 +8,13 @@ image:
   path: /assets/img/2020-08-02/showcase.png
 ---
 
-Thanks to [@qwtel](https://qwtel.com/), I'm on the [showcase](https://hydejack.com/showcase/) of Hydejack's official blog!<br>
+Thanks to [@qwtel], I'm on the [showcase] of Hydejack's official blog!
 
-I had a plan to write a post about how I customized my blog, but thanks to his kind email, and posting on to the showcase, I've decided to write a post in English. So many others can check & apply to their github pages.
+I had a plan to write a post about how I customized my blog, but thanks to his kind email, and posting on to the
+showcase, I've decided to write a post in English. So many others can check & apply to their github pages.
+
+[@qwtel]: https://qwtel.com/
+[showcase]: https://hydejack.com/showcase/
 
 <!--more-->
 
@@ -19,16 +23,23 @@ I had a plan to write a post about how I customized my blog, but thanks to his k
 
 ## Documentations
 
-First, you should check [Hydejack's documentations](https://hydejack.com/docs/) to install & proceed.<br>
-If you wants to use free version, use [Hydejack-starter-kit](https://github.com/hydecorp/hydejack-starter-kit/tree/gh-pages).<br>
+First, you should check [Hydejack's documentations] to install & proceed.<br>
+If you wants to use free version, use [Hydejack-starter-kit].<br>
 Clone or download it. Note that linked branch is gh-pages. Not the master branch in order to use it as github pages.
 
-## Before we begin
+[Hydejack's documentations]: https://hydejack.com/docs/
+[Hydejack-starter-kit]: https://github.com/hydecorp/hydejack-starter-kit/tree/gh-pages
+
+## Before We Begin
 
 Hydejack theme provides `_sass/my-*.scss` files for a customization.<br>
 It's very helpful if you wish to change css of your homepage.<br>
 It overrides any default css provided by other files.<br>
-[Jekyll docs](https://jekyllrb.com/docs/), [Jekyll Liquid](https://jekyllrb.com/docs/liquid/), [Liquid docs](https://shopify.github.io/liquid/) are also a good start place for the beginner (such as myself).
+[Jekyll docs], [Jekyll Liquid], [Liquid docs] are also a good start place for the beginner (such as myself).
+
+[Jekyll docs]: https://jekyllrb.com/docs/
+[Jekyll Liquid]: https://jekyllrb.com/docs/liquid/
+[Liquid docs]: https://shopify.github.io/liquid/
 
 ## Adding Submenu to the Sidebar
 
@@ -36,7 +47,11 @@ It overrides any default css provided by other files.<br>
 
 In this section, I'll guide you how to add a submenu to the sidebar navigation.<br>
 There is few files you need to edit/add for this.<br>
-You may wish to check [commit history](https://github.com/LazyRen/LazyRen.github.io/commit/89aa07da3b9e9081b933f61c24a42b765b6d30cd), [and](https://github.com/LazyRen/LazyRen.github.io/commit/6d54aa8507b7595169214d61639ccb2fb5c2a4f6) [these](https://github.com/LazyRen/LazyRen.github.io/commit/69871512f1407d1b2892f621b69059b3b4c2bab2) for the updated method. (as of 2020/12/15)
+You may wish to check [commit history], [and] also [these] for the updated method. (as of 2020/12/15)
+
+[commit history]: https://github.com/LazyRen/LazyRen.github.io/commit/89aa07da3b9e9081b933f61c24a42b765b6d30cd
+[and]: https://github.com/LazyRen/LazyRen.github.io/commit/6d54aa8507b7595169214d61639ccb2fb5c2a4f6
+[these]: https://github.com/LazyRen/LazyRen.github.io/commit/69871512f1407d1b2892f621b69059b3b4c2bab2
 
 ```default
 /_sass/my-style.scss
@@ -54,7 +69,9 @@ Continue with [Adding Foldable Submenu to the Sidebar](adding-foldable-submenu-t
 
 ![tag list](/assets/img/2020-12-21/tag_list.png){:.centered width="33%"}
 
-Since many tags are not listed on the sidebar, I've always wanted to have a page where I can see all categories & tags I've used for the posts. And visitor may click on it to navigate related posts. To implement tag list, you only need to create two files to have a such page.
+Since many tags are not listed on the sidebar, I've always wanted to have a page where I can see all categories & tags
+I've used for the posts. And visitor may click on it to navigate related posts. To implement tag list, you only need to
+create two files to have a such page.
 
 ```default
 /tags.md
@@ -64,34 +81,49 @@ Since many tags are not listed on the sidebar, I've always wanted to have a page
 Continue with [Creating Tag List Page](creating-tag-list-page){:.heading.flip-title}
 {:.read-more}
 
-## Use [Utterances](https://utteranc.es/) as a comment plugin
+## Use [Utterances]/[Giscus] as a Comment Plugin
 
 ![Utterances](/assets/img/2020-12-21/utterances.png)
 
-It's not hard to setup [utterances](https://github.com/utterance/utterances).<br>
-First of all, you should install [utterances app](https://github.com/apps/utterances) to the blog repository.
-Since we are gonna migrate from disqus, proper changes must be made to `my-comments.html` & `links-static.html`.<br>
+Disqus is used as default comments plugin for the Hydejack and most of the static site.
+But I had some issues with Disqus, so I looked elsewhere to find new comments plugin.
 
-3 files to be modified. (check [related commit](https://github.com/LazyRen/LazyRen.github.io/commit/8dcf03700c7f3d0f581b27a6fcf2e8a4d8396340))
+1. Disqus loads slowly.<br>
+2. link within comment is **broken**.<br>
+   The most important reason I chose to move on. Disqus automatically adds prefix starting with `disq.us/url?`,
+   the problem is.... `disq.us` is not responding so the link gets lost.
 
-```default
-/_config.yml
-/_includes/my-comments.html
-/_includes/head/links-static.html
-```
+[Utterances] uses github issues to save & display comments. So you have to give proper permission to the github-bot.
+But once you set things up correctly, it works very smoothly and fast. Only downside I've encountered so far is that it
+requires user to login to the github in order to write comments, and there is no default `reply` function.
+(All though you can mimic reply using `>` & `@`...)
+
+[Giscus] is almost identical to the `Utterances` except that it uses `github discussion` instead of `issues`.<br>
+I have once again migrated to giscus from utterances.It seems 'discussions' is more appropriate than 'issues' to place
+comments.
+
+[Utterances]: https://utteranc.es/
+[Giscus]: https://giscus.vercel.app/
 
 Continue with [Use Utterances/Giscus for Jekyll Comments System](use-utterances-for-jekyll-comments){:.heading.flip-title}
 {:.read-more}
 
-## Add applause button for Jekyll post
+## Add Applause Button for Jekyll Post
 
-When I revisited the [Hydejack official site](https://hydejack.com/showcase/lazyren/), I noticed little [clapping button](https://help.medium.com/hc/en-us/articles/115011350967-Claps) that set at the end of the post. It seems good idea to have light-cost (compare to commenting) way to communicate with visitors. So I gave some research on it and finally made it as below.
+When I revisited the [Hydejack official site], I noticed little [clapping button] that set at the end of the post.
+It seems good idea to have light-cost (compare to commenting) way to communicate with visitors. So I gave some research
+on it and finally made it as below.
+
+[Hydejack official site]: https://hydejack.com/showcase/lazyren/
+[clapping button]: https://help.medium.com/hc/en-us/articles/115011350967-Claps
 
 ![applause button](/assets/img/2020-12-21/post_end.png)
 
 Basically, I will add applause button for each-and-every post. Unless author specifically set it otherwise.<br>
 
-4 files to be modified. (check [related commit](https://github.com/LazyRen/LazyRen.github.io/commit/346f496d80243fcfbd0f24b47daa10078efe954f))
+4 files to be modified. (check [related commit])
+
+[related commit]: https://github.com/LazyRen/LazyRen.github.io/commit/346f496d80243fcfbd0f24b47daa10078efe954f
 
 ```default
 /_config.yml
@@ -116,8 +148,11 @@ Continue with [Preventing FOUC of the Sidebar](2022-01-07-preventing-fouc-of-the
 
 ## Conclusion
 
-This post originally started with sidebar modification only. But now it has become a huge post. I might divide this post into smaller ones.
-I'm not an expert in web development. Adding simple submenu was pretty challenging & time consuming job for me. But taking some time to dig around, I've learned one or two things about how jekyll is working, and web programming.<br>
+This post originally started with sidebar modification only. But now it has become a huge post. I might divide this post
+into smaller ones. I'm not an expert in web development. Adding simple submenu was pretty challenging & time consuming
+job for me. But taking some time to dig around, I've learned one or two things about how jekyll is working, and web
+programming.<br>
 it's pretty fun!<br>
-You may find some odd parts, need help implementing features, or you have any suggestions for the improvement please don't hesitate to contact me.<br>
-I'd be very delightful to have any comments.<br>
+You may find some odd parts, need help implementing features, or you have any suggestions for the improvement please
+don't hesitate to contact me.<br>
+I'd be very delightful to have any comments or react with `applause button`.<br>

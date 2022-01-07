@@ -1,38 +1,49 @@
 ---
 layout: post
 title: "Use Utterances/Giscus for Jekyll Comments System"
-subtitle: "Use Utterances for Jekyll Comments System"
+subtitle: "Use Utterances/Giscus for Jekyll Comments System"
 category: devlog
 tags: blog github-pages jekyll
 image:
   path: /assets/img/2020-12-21/utterances.png
 ---
 
-Disqus is used as default comments plugin for the Hydejack and most of the static site.
-But I had some issues with Disqus, so I looked elsewhere to find new comments plugin.
+Disqus is used as default comments plugin for the Hydejack and most of the static site. But I had some issues with
+Disqus, so I looked elsewhere to find new comments plugin.
 
 1. Disqus loads slowly.<br>
 2. link within comment is **broken**.<br>
-   The most important reason I chose to move on. Disqus automatically adds prefix starting with `disq.us/url?`, the problem is.... `disq.us` is not responding so the link gets lost.
+   The most important reason I chose to move on. Disqus automatically adds prefix starting with `disq.us/url?`,
+   the problem is.... `disq.us` is not responding so the link gets lost.
 
-[Utterances] uses github issues to save & display comments. So you have to give proper permission to the github-bot. But once you set things up correctly, it works very smoothly and fast. Only downside I've encountered so far is that it requires user to login to the github in order to write comments, and there is no default `reply` function. (All though you can mimic reply using `>` & `@`...)
+[Utterances] uses github issues to save & display comments. So you have to give proper permission to the github-bot.
+But once you set things up correctly, it works very smoothly and fast. Only downside I've encountered so far is that it
+requires user to login to the github in order to write comments, and there is no default `reply` function.
+(All though you can mimic reply using `>` & `@`...)
 
 [Giscus] is almost identical to the `Utterances` except that it uses `github discussion` instead of `issues`.<br>
-I have once again migrated to giscus from utterances. It seems 'discussions' is more appropriate than 'issues' to place comments.
+I have once again migrated to Giscus from Utterances. It seems 'discussions' is more appropriate than 'issues' to place
+comments.
+
+[Utterances]: https://utteranc.es/
+[Giscus]: https://giscus.vercel.app/
 
 [Utterances]: https://utteranc.es/
 [Giscus]: https://giscus.vercel.app/
 
 <!--more-->
 
-It's not hard to setup [utterances](https://github.com/utterance/utterances) or [giscus](https://github.com/laymonage/giscus).<br>
-First of all, you should install [utterances app](https://github.com/apps/utterances)/[giscus app](https://github.com/apps/giscus) to the blog repository.
-After that, since we are gonna migrate from disqus, proper changes must be made to `my-comments.html` & `links-static.html`.<br>
+It's not hard to setup [Utterances] or [Giscus].<br>
+First of all, you should install [Utterances app]/[Giscus app] to the blog repository. After that, since we are gonna
+migrate from disqus, proper changes must be made to `my-comments.html` & `links-static.html`.<br>
 
-3 files to be modified. (check [utterance commit] or [giscus commit])
+[Utterances app]: https://github.com/apps/utterances
+[Giscus app]: https://github.com/apps/giscus
 
-[utterance commit]: https://github.com/LazyRen/LazyRen.github.io/commit/8dcf03700c7f3d0f581b27a6fcf2e8a4d8396340
-[giscus commit]: https://github.com/LazyRen/LazyRen.github.io/commit/053deedc4a5a3f49cf04cb8e8b496120aeab24a1
+3 files to be modified. (check [Utterance commit] or [Giscus commit])
+
+[Utterance commit]: https://github.com/LazyRen/LazyRen.github.io/commit/8dcf03700c7f3d0f581b27a6fcf2e8a4d8396340
+[Giscus commit]: https://github.com/LazyRen/LazyRen.github.io/commit/053deedc4a5a3f49cf04cb8e8b496120aeab24a1
 
 ```default
 /_config.yml
@@ -46,10 +57,9 @@ After that, since we are gonna migrate from disqus, proper changes must be made 
 
 ## _config.yml
 
-If you followed [instructions from utterances](https://utteranc.es/)/[giscus](https://giscus.vercel.app/),
-you will end up with simple javascript code like below.
+If you followed instructions for [Utterances]/[Giscus], you will end up with simple javascript code like below.
 
-* utterances
+* Utterances
 
     ```javascript
     <script src="https://utteranc.es/client.js"
@@ -62,10 +72,10 @@ you will end up with simple javascript code like below.
     </script>
     ```
 
-    My recommendation for the utterances theme is, `github-light` for the light mode, `photon-dark` for the dark mode.
+    My recommendation for the Utterances theme is, `github-light` for the light mode, `photon-dark` for the dark mode.
     {:.note}
 
-* giscus
+* Giscus
 
     ```javascript
     <script src="https://giscus.app/client.js"
@@ -126,10 +136,11 @@ You may have different values based on your option choices.
 
 ## my-comments.html
 
-Choose the right comment provider's code to insert based on the `site.comments.provider`.(that we've mentioned in `_config.yml`).
+Choose the right comment provider's code to insert based on the `site.comments.provider`.
+(that we've mentioned in `_config.yml`).
 
-disqus's code will remain as-is, we only need to add utterances/giscus's code so it can parse values from `_config.yml`.
-If you don't want to use `_config.yml`, you may just copy & hard-code script from [utterances](https://utteranc.es/)[giscus](https://giscus.vercel.app/).
+disqus's code will remain as-is, we only need to add Utterances/Giscus's code so it can parse values from `_config.yml`.
+If you don't want to use `_config.yml`, you may just copy & hard-code script from [Utterances]/[Giscus].
 
 ```html
 <!-- file: "/_includes/my-comments.html" -->
@@ -186,7 +197,11 @@ You don't want to link disqus if you are not using it. Wrap linking line with pr
 
 ## my-style.scss
 
-To [adjust size of utterances](https://github.com/utterance/utterances/issues/160)/[giscus](https://github.com/laymonage/giscus/issues/90) to fit into the blog content-width, insert below code into `_sass/my-style.scss`.
+To [adjust size of Utterances]/[or of Giscus] to fit into the blog content-width, insert below code into
+`_sass/my-style.scss`.
+
+[adjust size of Utterances]: https://github.com/utterance/utterances/issues/160
+[or of Giscus]: https://github.com/laymonage/giscus/issues/90
 
 ```css
 /* file: "/_sass/my-style.scss" */
