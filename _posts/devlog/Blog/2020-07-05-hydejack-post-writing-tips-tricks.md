@@ -6,7 +6,12 @@ category: devlog
 tags: blog
 ---
 
-Hydejack 테마를 이용하여 포스트를 작성할때 참고할 syntax 입니다.
+List of useful syntaxes you may find interesting when you write your own Jekyll posts.
+
+If you are interested in more syntax guide, please visit [Kramdown Syntax] & [Hydejack Writing] documentations.
+
+[Kramdown Syntax]: https://kramdown.gettalong.org/syntax.html
+[Hydejack Writing]: https://hydejack.com/docs/writing/
 
 <!--more-->
 
