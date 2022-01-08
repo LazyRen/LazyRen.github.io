@@ -67,6 +67,8 @@ A custom label.
 
 ### Footnotes
 
+Example:
+
 This is a text with a footnote[^1].
 
 [^1]: Your footnote text.
@@ -74,6 +76,8 @@ This is a text with a footnote[^1].
 
     ...and multiple paragraphs.
     Can contain *Markdown*.
+
+Markdown:
 
 ```default
 This is a text with a footnote[^1].
@@ -87,31 +91,41 @@ This is a text with a footnote[^1].
 
 ### Links
 
-* A [link](http://kramdown.gettalong.org) to the kramdown homepage.
+Example:
 
-    ```default
-    A [link](http://kramdown.gettalong.org) to the kramdown homepage.
-    ```
+A [link](http://kramdown.gettalong.org) to the kramdown homepage.<br>
+[Another link] to the kramdown homepage.<br>
+[Third link][kramdown] to the homepage.
 
-* A link to the [kramdown hp].
+[Another link]: http://kramdown.gettalong.org
+[Third Link]: http://kramdown.gettalong.org "Another link with title modified"
 
-    ```default
-    A link to the [kramdown hp].
+Markdown:
 
-    [kramdown]: http://kramdown.gettalong.org "hp"
-    ```
+```default
+A [link](http://kramdown.gettalong.org) to the kramdown homepage.<br>
+[Another link] to the kramdown homepage.<br>
+[Third link][kramdown] to the homepage.
 
-[kramdown hp]: http://kramdown.gettalong.org "hp"
+[Another link]: http://kramdown.gettalong.org
+[Third Link]: http://kramdown.gettalong.org "Another link with title modified"
+```
 
-* A [link][kramdown] to the homepage.
+### Abbreviation
 
-    ```default
-    A [link][kramdown hp]to the homepage.
+Example:
 
-    [kramdown hp]: http://kramdown.gettalong.org "hp"
-    ```
+OMG is abbreviated word.
 
-[kramdown]: http://kramdown.gettalong.org "hp"
+*[OMG]: Oh My God
+
+Markdown:
+
+```default
+OMG is abbreviated word.
+
+*[OMG]: Oh My God
+```
 
 ### Expand/Collapse
 
@@ -128,6 +142,7 @@ emphasized by *markdown*.
 </div>
 </details>
 <br>
+
 Markdown:
 
 ```markdown
@@ -156,18 +171,63 @@ You can add large text.
 {:.lead}
 ```
 
-### Changing image size
+### Center image
+
+This requires extra modification to the Hydejack Theme.<br>
+Check below post for more information.
+{:.note title="Warning"}
+
+Continue with [How to Center an Image in Markdown](how-to-center-an-image-in-markdown){:.heading.flip-title}
+{:.read-more}
+
+Example:
+
+![placeholder](https://via.placeholder.com/100x150){:.centered}
+
+Markdown:
+
+```markdown
+* With CSS class installed
+    ![placeholder](https://via.placeholder.com/100x150){:.centered}
+
+* Pure inline attribute used
+    ![placeholder](https://via.placeholder.com/100x150){:style="display:block; margin-left:auto; margin-right:auto"}
+```
+
+#### Centering Multiple Image
+
+Example:
+
+{:.text-align-center}
+![placeholder](https://via.placeholder.com/100x150)
+![placeholder](https://via.placeholder.com/100x150)
+
+Markdown:
+
+```markdown
+* With CSS class installed
+    {:.text-align-center}
+    ![placeholder](https://via.placeholder.com/100x150)
+    ![placeholder](https://via.placeholder.com/100x150)
+
+* Pure inline attribute used
+    {:style="text-align:center;"}
+    ![placeholder](https://via.placeholder.com/100x150)
+    ![placeholder](https://via.placeholder.com/100x150)
+```
+
+#### Changing image size
 
 You can change image size by adding css style to the paragraph after the image:
 
 Example:
 
-![Half-width image](https://placehold.it/800x100){: width="400" height="50"}
+![Half-width image](https://via.placeholder.com/800x100){: width="400" height="50"}
 
 Markdown:
 
 ```markdown
-![Half-width image](https://placehold.it/800x100){: width="400" height="50"}
+![Half-width image](https://via.placeholder.com/800x100){: width="400" height="50"}
 ```
 
 ### Adding image captions
@@ -176,7 +236,7 @@ You can add captions to large images/tables/codeblock by adding the `figcaption`
 
 Example:
 
-![Full-width image](https://placehold.it/800x100){:.lead width="800" height="100" loading="lazy"}
+![Full-width image](https://via.placeholder.com/800x100){:.lead width="800" height="100" loading="lazy"}
 
 An optional caption for an image.
 {:.figcaption}
@@ -184,7 +244,7 @@ An optional caption for an image.
 Markdown:
 
 ```markdown
-![Full-width image](https://placehold.it/800x100){:.lead width="800" height="100" loading="lazy"}
+![Full-width image](https://via.placeholder.com/800x100){:.lead width="800" height="100" loading="lazy"}
 
 A caption for an image.
 {:.figcaption}
