@@ -37,9 +37,13 @@ It's very helpful if you wish to change css of your homepage.<br>
 It overrides any default css provided by other files.<br>
 [Jekyll docs], [Jekyll Liquid], [Liquid docs] are also a good start place for the beginner (such as myself).
 
+I'm planning to manage customization items with :octocat:[Github Issue]. If you are interested; Please take a moment to visit.
+And please feel free to toss a new idea!
+
 [Jekyll docs]: https://jekyllrb.com/docs/
 [Jekyll Liquid]: https://jekyllrb.com/docs/liquid/
 [Liquid docs]: https://shopify.github.io/liquid/
+[Github Issue]: https://github.com/LazyRen/LazyRen.github.io/issues/34
 
 ## Adding Submenu to the Sidebar
 
