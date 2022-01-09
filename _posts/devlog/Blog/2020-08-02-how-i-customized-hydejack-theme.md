@@ -157,6 +157,16 @@ In this article, I'll guide you a easy solution to center an image within Jekyll
 Continue with [How to Center an Image in Markdown](how-to-center-an-image-in-markdown){:.heading.flip-title}
 {:.read-more}
 
+## Decorate Codeblock Scrollbar
+
+![Decorated Codeblock Scrollbar](/assets/img/2022-01-09/scrollbar.gif)
+
+Default scrollbar shown for codeblock in the Hydejack theme is clunky.<br>
+Let's change it to fancier version like above. It's plain simple.
+
+Continue with [Decorate Codeblock Scrollbar](decorate-codeblock-scrollbar){:.heading.flip-title}
+{:.read-more}
+
 ## Conclusion
 
 This post originally started with sidebar modification only. But now it has become a huge post. I might divide this post
