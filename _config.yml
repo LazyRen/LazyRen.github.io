@@ -246,7 +246,7 @@ hydejack:
   no_push_state:       false
 
   # Set to `true` if you want to disable the drawer
-  no_drawer:           true
+  no_drawer:           false
 
   # Set to `true` if you don't to use the auto-hiding (JavaScript based) navbar.
   # Note that this will not hide the navbar completely, only replace it with a static one.
