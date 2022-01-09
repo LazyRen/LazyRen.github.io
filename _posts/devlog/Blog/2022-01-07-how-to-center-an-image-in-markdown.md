@@ -72,16 +72,16 @@ option. Either way the outcome is the same. And if you wish to apply one-time at
 
 Example:
 
-![FOUC](/assets/img/2022-01-07/fouc.gif){:.centered width="25%"}
+![placeholder](https://via.placeholder.com/100x150)
 
 Markdown:
 
 ```markdown
 * With CSS class installed
-    ![FOUC](/assets/img/2022-01-07/fouc.gif){:.centered width="25%"}
+    ![placeholder](https://via.placeholder.com/100x150){:.centered}
 
 * Pure inline attribute used
-    ![FOUC](/assets/img/2022-01-07/fouc.gif){:style="display:block; margin-left:auto; margin-right:auto" width="25%"}
+    ![placeholder](https://via.placeholder.com/100x150){:style="display:block; margin-left:auto; margin-right:auto"}
 ```
 
 ### Centering Multiple Image
@@ -89,21 +89,21 @@ Markdown:
 Example:
 
 {:.text-align-center}
-![FOUC](/assets/img/2022-01-07/fouc.gif){:width="25%"}
-![FOUC Fixed](/assets/img/2022-01-07/fouc-fixed.gif){:width="25%"}
+![placeholder](https://via.placeholder.com/100x150)
+![placeholder](https://via.placeholder.com/100x150)
 
 Markdown:
 
 ```markdown
 * With CSS class installed
     {:.text-align-center}
-    ![FOUC](/assets/img/2022-01-07/fouc.gif){:width="25%"}
-    ![FOUC Fixed](/assets/img/2022-01-07/fouc-fixed.gif){:width="25%"}
+    ![placeholder](https://via.placeholder.com/100x150)
+    ![placeholder](https://via.placeholder.com/100x150)
 
 * Pure inline attribute used
     {:style="text-align:center;"}
-    ![FOUC](/assets/img/2022-01-07/fouc.gif){:width="25%"}
-    ![FOUC Fixed](/assets/img/2022-01-07/fouc-fixed.gif){:width="25%"}
+    ![placeholder](https://via.placeholder.com/100x150)
+    ![placeholder](https://via.placeholder.com/100x150)
 ```
 
 ## Center All Images by Default
