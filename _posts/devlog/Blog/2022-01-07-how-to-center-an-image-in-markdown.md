@@ -37,7 +37,7 @@ As you may have found it, [Kramdown supports inline attributes]!
 The syntax for the inline attribute is very easy. Add whatever you want to the `{: }` syntax as below.
 
 ```markdown
-This is *red*{: style="color: red"}.
+This is *red*{:style="color: red"}.
 ```
 
 ### Create CSS Classes
@@ -72,7 +72,7 @@ option. Either way the outcome is the same. And if you wish to apply one-time at
 
 Example:
 
-![placeholder](https://via.placeholder.com/100x150)
+![placeholder](https://via.placeholder.com/100x150){:.centered}
 
 Markdown:
 
