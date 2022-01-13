@@ -29,16 +29,12 @@ This work is licensed under a [Attribution-ShareAlike 3.0](https://creativecommo
 ### "Alice & Bob share a pond" / Mutual Exclusion
 
 * Cell Phone Protocol
-
   * One calls the other.
   * Problem: recipient might not be listening or not there at all.<br>Communication must be persistent / not transient
 
 * Flag Protocol<br>Raise flag -> wait until other's flag is down -> unleash pet -> lower flag after return
-
   * What if both raises flag?? : **Deadlock**
-
-  Raise flag -> while other's flag is up, *lower flag* & wait -> raise flag -> ...
-
+    Raise flag -> while other's flag is up, *lower flag* & wait -> raise flag -> ...
   * One must always defer for other. (**Unfair** & waiting)
 
 #### Mutual Exclusion
@@ -54,7 +50,6 @@ This work is licensed under a [Attribution-ShareAlike 3.0](https://creativecommo
 #### Solution
 
 * Producer owns a can.
-
   * knocks over can when product is ready.
   * reset can when product is all used up.
 
@@ -80,7 +75,6 @@ This work is licensed under a [Attribution-ShareAlike 3.0](https://creativecommo
   ```
 
 * Correctness
-
   * Mutual Exclusion -> *safety*<br>pet & Bob never together in pond
   * No Starvation -> *liveness*
   * Producer/Consumer -> *safety*<br>The pet never enter pond unless there is food / Bob never provide food if there is unconsumed food.
@@ -249,7 +243,6 @@ class Bakery implements Lock {
 * Method call is not an *event*
 
 * Method call is an **interval**
-
   * Must characterize *all* possible interactions with concurrent calls.
 
 * **Linearizable Object**
@@ -311,12 +304,10 @@ class Bakery implements Lock {
 ### Linearizability
 
 * History *H* is **linearizable** if it can be extended to *G* by
-
   * Appending zero or more responses to pending invocations
   * Discarding other pending invocations
 
 * So that *G* is equivalent to
-
   * **Legal sequential history** *S*
   * Where -><sub>G</sub> ⊂ -><sub>S</sub>
   * Means that *S* respects "real-time order" of G
@@ -672,11 +663,8 @@ public class QueueConsensus<T> extends ConsensusProtocol<T> {
   ```
 
 * A RMW method is **non-trivial** if
-
   * there exists a value *v* such that *v* ≠ func(*v*)
-
 * Any non-trivial RMW object has **consensus number at least 2**
-
   * Meaning, no wait-free implementation of RMW registers from atomic registers
 
   ```java
@@ -696,12 +684,10 @@ public class QueueConsensus<T> extends ConsensusProtocol<T> {
   ```
 
 * Any set of RMW objects that *commutes* or *overwrites* has consensus number exactly 2
-
   * Commute:  f<sub>i</sub>(f<sub>k</sub>(*v*))) =  f<sub>k</sub>(f<sub>i</sub>(*v*)))
   * Overwrite: f<sub>i</sub>(f<sub>k</sub>(*v*))) = f<sub>i</sub>(*v*)
   * `test-and-set`, `swap(getAndSet)`, `fetch-and-inc`
   * Can be proved by using critical section analysis with three threads.
-
 * `compare-and-set` has ∞ consensus number
 
   ```java
@@ -752,7 +738,6 @@ public class QueueConsensus<T> extends ConsensusProtocol<T> {
 * Each node contains a pointer to fresh *consensus object* used to decide on next operation
 
 * Object represented as
-
   * Initial Object state
   * A Log: a linked list of the method calls
 
@@ -818,7 +803,6 @@ public class Universal {
 ```
 
 * *Contention*: All threads repeatedly modify head
-
   * *Solution*: Make head an array<br>Thread *i* updates location *i*<br>Find head by finding max seq of nodes referenced by head array
   * Still not *wait-free*
 

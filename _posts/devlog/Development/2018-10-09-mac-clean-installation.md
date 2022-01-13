@@ -42,27 +42,22 @@ Mac osX은 매년 메이저 업데이트가 진행되며 올해에도 9월 25일
 ## 맥 설정 변경
 
 * 가장 먼저 진행할 것은 [한영전환 키 변경](http://macnews.tistory.com/3736)입니다.
-
   기존의 control + space, 혹은 TABS 키보다는 **shift+space**가 손 모양을 유지한 상태에서 가장 빠르게 한영전환을 진행하기 쉬우며 이후 linux에서도 동일한 키 세팅을 하여 사용하는 것이 가장 쉽게 느껴집니다. (기존이 편하신 분들은 굳이 변경하실 필요가 없습니다.)
 
   1.  메뉴 > 시스템 환경설정 > 키보드 > 단축키 탭으로 이동한 다음  입력 소스 단축키를 다음과 같이 변경합니다.
      ![keyboard_setting](/assets/img/2018-10-09/Screen Shot 2018-10-08 at 3.18.34 PM.png)
-
   2. 파인더에서 command + shift + G 키를 사용하여 `~/Library/Preferences/` 로 이동하여 `com.apple.symbolichotkeys.plist` 파일을 엽니다.
-  3. <key>61</key>를 찾아 해당 키의 파라미터 중 1048576을 찾아 **131072**로 변경합니다.
+  3. `61`을 찾아 해당 키의 파라미터 중 1048576을 찾아 **131072**로 변경합니다.
   4. 재시작 혹은 사용자 계정에서 로그아웃한 후 다시 로그인 하여 변경사항을 적용시킵니다.
 
-* [Home Folder 이름 변경](https://support.apple.com/en-us/HT201548)
+* [Home Folder 이름 변경](https://support.apple.com/en-us/HT201548)<br>
+  단순히 홈 폴더 이름에 대문자를 섞고 싶어서 진행했습니다. 루트 디렉토리의 이름이 바뀌는 것이기 때문에 가능하면 설치 직후에 진행하는 것이 좋습니다.
 
-   단순히 홈 폴더 이름에 대문자를 섞고 싶어서 진행했습니다. 루트 디렉토리의 이름이 바뀌는 것이기 때문에 가능하면 설치 직후에 진행하는 것이 좋습니다.
+* 파인더의 설정 변경<br>
+  Advanced 탭에서 파일 확장자 보기와 검색 진행을 현재 폴더로 변경합니다.<br>Download 폴더에서  `⌘` + `J` (`View` > `Show View Options`)를 선택한 후 Group By: Data Added, Sort by: Name으로 설정합니다.
 
-* 파인더의 설정 변경
-
-   Advanced 탭에서 파일 확장자 보기와 검색 진행을 현재 폴더로 변경합니다.<br>Download 폴더에서  `⌘` + `J` (`View` > `Show View Options`)를 선택한 후 Group By: Data Added, Sort by: Name으로 설정합니다.
-
-* [스크린샷 저장 위치 변경](http://macnews.tistory.com/3188)
-
-    터미널에 아래 명령어를 입력합니다. {경로 ex)  `/Users/LazyRen/Pictures/ScreenShot`}
+* [스크린샷 저장 위치 변경](http://macnews.tistory.com/3188)<br>
+  터미널에 아래 명령어를 입력합니다. {경로 ex)  `/Users/LazyRen/Pictures/ScreenShot`}
 
     ```shell
     defaults write com.apple.screencapture location 경로 && killall SystemUIServer
@@ -81,8 +76,7 @@ Mac osX은 매년 메이저 업데이트가 진행되며 올해에도 9월 25일
   defaults write -g ApplePressAndHoldEnabled -bool false
   ```
 
-* [한글에서도 ₩ 대신 \` 사용하기](https://gist.github.com/redism/43bc51cab62269fa97a220a7bb5e1103)
-
+* [한글에서도 ₩ 대신 \` 사용하기](https://gist.github.com/redism/43bc51cab62269fa97a220a7bb5e1103)<br>
   터미널에서 아래의 명령어를 실행시킵니다.
 
   ```sh
@@ -104,7 +98,6 @@ Mac osX은 매년 메이저 업데이트가 진행되며 올해에도 9월 25일
   ```
 
 * System Preferences
-
   * General<br>
     Show scroll bars: Always<br>
     Ask to keep changes when closing documents : True<br>
