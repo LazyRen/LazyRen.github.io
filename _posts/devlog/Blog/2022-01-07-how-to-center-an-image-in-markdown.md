@@ -78,10 +78,10 @@ Markdown:
 
 ```markdown
 * With CSS class installed
-    ![placeholder](https://via.placeholder.com/100x150){:.centered}
+  ![placeholder](https://via.placeholder.com/100x150){:.centered}
 
 * Pure inline attribute used
-    ![placeholder](https://via.placeholder.com/100x150){:style="display:block; margin-left:auto; margin-right:auto"}
+  ![placeholder](https://via.placeholder.com/100x150){:style="display:block; margin-left:auto; margin-right:auto"}
 ```
 
 ### Centering Multiple Image
@@ -96,14 +96,14 @@ Markdown:
 
 ```markdown
 * With CSS class installed
-    {:.text-align-center}
-    ![placeholder](https://via.placeholder.com/100x150)
-    ![placeholder](https://via.placeholder.com/100x150)
+  {:.text-align-center}
+  ![placeholder](https://via.placeholder.com/100x150)
+  ![placeholder](https://via.placeholder.com/100x150)
 
 * Pure inline attribute used
-    {:style="text-align:center;"}
-    ![placeholder](https://via.placeholder.com/100x150)
-    ![placeholder](https://via.placeholder.com/100x150)
+  {:style="text-align:center;"}
+  ![placeholder](https://via.placeholder.com/100x150)
+  ![placeholder](https://via.placeholder.com/100x150)
 ```
 
 ## Center All Images by Default

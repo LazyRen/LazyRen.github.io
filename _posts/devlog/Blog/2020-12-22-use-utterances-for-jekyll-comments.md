@@ -61,35 +61,35 @@ If you followed instructions for [Utterances]/[Giscus], you will end up with sim
 
 * Utterances
 
-    ```javascript
-    <script src="https://utteranc.es/client.js"
-            repo="[ENTER REPO HERE]"
-            issue-term="pathname"
-            label="comments"
-            theme="photon-dark"
-            crossorigin="anonymous"
-            async>
-    </script>
-    ```
+  ```javascript
+  <script src="https://utteranc.es/client.js"
+          repo="[ENTER REPO HERE]"
+          issue-term="pathname"
+          label="comments"
+          theme="photon-dark"
+          crossorigin="anonymous"
+          async>
+  </script>
+  ```
 
-    My recommendation for the Utterances theme is, `github-light` for the light mode, `photon-dark` for the dark mode.
-    {:.note}
+  My recommendation for the Utterances theme is, `github-light` for the light mode, `photon-dark` for the dark mode.
+  {:.note}
 
 * Giscus
 
-    ```javascript
-    <script src="https://giscus.app/client.js"
-            data-repo="[ENTER REPO HERE]"
-            data-repo-id="[your-repo-id]"
-            data-category="Comments"
-            data-category-id="[your-category-id]"
-            data-mapping="pathname"
-            data-reactions-enabled="1"
-            data-theme="dark_dimmed"
-            crossorigin="anonymous"
-            async>
-    </script>
-    ```
+  ```javascript
+  <script src="https://giscus.app/client.js"
+          data-repo="[ENTER REPO HERE]"
+          data-repo-id="[your-repo-id]"
+          data-category="Comments"
+          data-category-id="[your-category-id]"
+          data-mapping="pathname"
+          data-reactions-enabled="1"
+          data-theme="dark_dimmed"
+          crossorigin="anonymous"
+          async>
+  </script>
+  ```
 
 There is two choices,
 
