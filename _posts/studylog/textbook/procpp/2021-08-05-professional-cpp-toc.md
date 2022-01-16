@@ -29,7 +29,7 @@ image:
 * Initializer in if/switch Statement (Since C++17)
 * [Switch Fallthrough](https://en.cppreference.com/w/cpp/language/attributes/fallthrough) (Since C++17)
 
-Continue with [Chapter 1: C++와 표준 라이브러리 초단기 속성 코스](2021-08-06-chapter-1.md){:.heading.flip-title}
+Continue with [Chapter 1: C++와 표준 라이브러리 초단기 속성 코스](procpp-chapter-1){:.heading.flip-title}
 {:.read-more}
 
 ### Chapter 2: 스트링과 스트링 뷰 다루기
@@ -38,7 +38,7 @@ Continue with [Chapter 1: C++와 표준 라이브러리 초단기 속성 코스]
 * Raw String Literal
 * std::string_view Class (Since C++17)
 
-Continue with [Chapter 2: 스트링과 스트링 뷰 다루기](2021-08-07-chapter-2.md){:.heading.flip-title}
+Continue with [Chapter 2: 스트링과 스트링 뷰 다루기](procpp-chapter-2){:.heading.flip-title}
 {:.read-more}
 
 ### Chapter 3: 코딩 스타일
@@ -46,7 +46,7 @@ Continue with [Chapter 2: 스트링과 스트링 뷰 다루기](2021-08-07-chapt
 * Documentation
 * Naming Convention & Formatting
 
-Continue with [Chapter 3: 코딩 스타일](2021-08-08-chapter-3.md){:.heading.flip-title}
+Continue with [Chapter 3: 코딩 스타일](procpp-chapter-3){:.heading.flip-title}
 {:.read-more}
 
 ## Part 2: 전문가답게 C++ 소프트웨어 디자인하기
@@ -56,7 +56,7 @@ Continue with [Chapter 3: 코딩 스타일](2021-08-08-chapter-3.md){:.heading.f
 * 추상화(Abstraction)
 * 재사용(Reuse)
 
-Continue with [Chapter 4: 전문가다운 C++ 프로그램 디자인](2021-08-09-chapter-4.md){:.heading.flip-title}
+Continue with [Chapter 4: 전문가다운 C++ 프로그램 디자인](procpp-chapter-4){:.heading.flip-title}
 {:.read-more}
 
 ### Chapter 5: 객체지향 디자인
@@ -65,7 +65,7 @@ Continue with [Chapter 4: 전문가다운 C++ 프로그램 디자인](2021-08-09
 * 객체 관계
 * 추상화
 
-Continue with [Chapter 5: 객체지향 디자인](2021-08-10-chapter-5.md){:.heading.flip-title}
+Continue with [Chapter 5: 객체지향 디자인](procpp-chapter-5){:.heading.flip-title}
 {:.read-more}
 
 ### Chapter 6: 재사용을 고려한 디자인
@@ -75,7 +75,7 @@ Continue with [Chapter 5: 객체지향 디자인](2021-08-10-chapter-5.md){:.hea
 * 사용성 높은 인터페이스 디자인
 * SOLID 원칙
 
-Continue with [Chapter 6: 재사용을 고려한 디자인](2021-08-18-chapter-6.md){:.heading.flip-title}
+Continue with [Chapter 6: 재사용을 고려한 디자인](procpp-chapter-6){:.heading.flip-title}
 {:.read-more}
 
 ## Part 3: 전문가답게 C++ 코딩하기
@@ -89,5 +89,5 @@ Continue with [Chapter 6: 재사용을 고려한 디자인](2021-08-18-chapter-6
 * Garbage Collection
 * 흔히 발생하는 메모리 문제
 
-Continue with [Chapter 7: 메모리 관리](2022-01-01-chapter-7.md){:.heading.flip-title}
+Continue with [Chapter 7: 메모리 관리](procpp-chapter-7){:.heading.flip-title}
 {:.read-more}

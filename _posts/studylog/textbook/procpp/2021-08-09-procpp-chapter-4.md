@@ -77,5 +77,5 @@ private:
 * 라이브러리 코드를 사용하면 유지 보수에 문제가 발생할 수 있습니다.
 * 사용하는 라이브러리의 라이센스에 대해 잘 파악하고 있어야합니다.
 
-Back to [전문가를 위한 C++ (Professional C++) 작성 포스트 모음](2021-08-05-professional-cpp-toc.md){:.heading.flip-title}
+Back to [전문가를 위한 C++ (Professional C++) 작성 포스트 모음](professional-cpp-toc){:.heading.flip-title}
 {:.read-more}

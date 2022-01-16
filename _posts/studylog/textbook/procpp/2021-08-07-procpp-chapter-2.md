@@ -108,5 +108,5 @@ string_view extractExtension(string_view fileName) {
 }
 ```
 
-Back to [전문가를 위한 C++ (Professional C++) 작성 포스트 모음](2021-08-05-professional-cpp-toc.md){:.heading.flip-title}
+Back to [전문가를 위한 C++ (Professional C++) 작성 포스트 모음](professional-cpp-toc){:.heading.flip-title}
 {:.read-more}

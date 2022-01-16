@@ -181,7 +181,7 @@ public:
 </tbody>
 </table>
 
-Back to [전문가를 위한 C++ (Professional C++) 작성 포스트 모음](2021-08-05-professional-cpp-toc.md){:.heading.flip-title}
+Back to [전문가를 위한 C++ (Professional C++) 작성 포스트 모음](professional-cpp-toc){:.heading.flip-title}
 {:.read-more}
 
 [^1]: 프로그램을 실행하는 유저가 아닌 작성한 코드를 사용하는 프로그래머를 뜻합니다.

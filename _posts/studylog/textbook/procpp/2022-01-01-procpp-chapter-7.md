@@ -28,7 +28,7 @@ related_posts:
 ## 동적 메모리 다루기
 
 * 메모리 할당(`new`)한 경우 해제(`delete`)를 꼭 해줄 것
-    * 메모리 할당 해제 시 포인터를 `nullptr`로 초기화하여 *dangling pointer* / *use after free* / *double free* 방지
+  * 메모리 할당 해제 시 포인터를 `nullptr`로 초기화하여 *dangling pointer* / *use after free* / *double free* 방지
 * `nullptr`에 대한 `delete`는 **NOOP**입니다. (은근히 이거 체크하고 `delete` 콜하는 경우가 많던데 불필요한 코드입니다.)
 * **RAII**<sup>resource acquisition is initialization</sup> 기법을 활용할 것<br>
     *자원 할당은 초기화이다.* 라는 이 애매한 기법은 실제로도 많이 사용되는 C++ 중요한 기법인데요,
@@ -101,7 +101,6 @@ C 스타일 스트링에서 가장 흔히 발생하는 문제인 *과소 할당*
 2. `do_something2()`에서 메모리 할당 해제를 하지 않은 채로 `ptr`에 새로운 객체를 덮어 씌우고 있습니다. 기존 객체에 접근할 방법이 없습니다.
 위에 비하면 단순한 코딩 실수입니다.
 
-
 ```c++
 void do_something1(int* ptr1, int* ptr2) {
     // ...
@@ -136,5 +135,5 @@ int main() {
 
 등이 있습니다.
 
-Back to [전문가를 위한 C++ (Professional C++) 작성 포스트 모음](2021-08-05-professional-cpp-toc.md){:.heading.flip-title}
+Back to [전문가를 위한 C++ (Professional C++) 작성 포스트 모음](professional-cpp-toc){:.heading.flip-title}
 {:.read-more}
