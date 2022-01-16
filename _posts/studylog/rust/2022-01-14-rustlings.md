@@ -8,7 +8,7 @@ image:
   path:   /assets/img/ferris/flat-gesture.svg
 ---
 
-This is collection of [my solution] & explanation for the [rustlings] exercises(`version: 4.6.0`).
+This is the collection of [my solution] & explanation for the [rustlings] exercises(`version: 4.6.0`).
 
 If you are having hard time with [rustlings], I suggest you try [The Book] & [Rust By Example] first.
 
@@ -123,7 +123,7 @@ Continue with [Variables](rustlings-variables){:.heading.flip-title}
 ✅ Successfully ran exercises/strings/strings2.rs!
 ```
 
-### Error_handling
+### Error Handling
 
 ```shell
 ✅ Successfully tested exercises/error_handling/errors1.rs
