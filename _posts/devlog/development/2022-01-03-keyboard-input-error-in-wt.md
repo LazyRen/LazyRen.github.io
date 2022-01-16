@@ -30,12 +30,12 @@ image:
 윈도우 11 기준이므로 이전 버전들에서는 조금씩 다를 수 있습니다.
 {:.note}
 
-1.  `윈도우 설정` ➜ `시간 및 언어` ➜ `언어 및 지역`에 들어갑니다.
-    ![step1](/assets/img/2022-01-03/step1.png)
+1. `윈도우 설정` ➜ `시간 및 언어` ➜ `언어 및 지역`에 들어갑니다.
+   ![step1](/assets/img/2022-01-03/step1.png)
 2. `언어` 중 `한국어`를 찾아 오른쪽 끝에 위치한 더보기 아이콘**⋯**을 클릭해 `언어 옵션`을 선택합니다.
-    ![step2](/assets/img/2022-01-03/step2.png)
+   ![step2](/assets/img/2022-01-03/step2.png)
 3. `키보드` 에서 `한컴 입력기`를 찾아 더보기 아이콘을 클릭해 `삭제` 합니다.[^1]
-    ![step3](/assets/img/2022-01-03/step3.png)
+   ![step3](/assets/img/2022-01-03/step3.png)
 
 * [Windows Terminal Issue #8877](https://github.com/microsoft/terminal/issues/8877)
 {:.note title="출처"}
