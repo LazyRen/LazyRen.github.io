@@ -1,6 +1,6 @@
 ---
 layout:   post
-title:    "전문가를 위한 C++ (Professional C++) 작성 포스트 모음"
+title:    "전문가를 위한 C++ (Professional C++) 포스트 모음집"
 subtitle: "Professional C++ Related Posts"
 category: studylog
 tags:     cpp procpp
@@ -8,7 +8,7 @@ image:
   path:   /assets/img/2021-08-05/procpp.jpg
 ---
 
-마크 그레고리의 전문가를 위한 C++ 관련 포스트들 모음집입니다.
+마크 그레고리의 전문가를 위한 C++ 관련 포스트 모음집입니다.
 셀프스터디를 진행하면서 새롭게 배운 내용들에 관해서 짧게 포스트들을 작성할 예정입니다.
 
 <!--more-->
