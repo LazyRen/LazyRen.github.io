@@ -95,13 +95,16 @@ Continue with [Rustlings Topic: Move Semantics](rustlings-move-semantics){:.head
 Continue with [Rustlings Topic: Primitive Types](rustlings-primitive-types){:.heading.flip-title}
 {:.read-more}
 
-### Structs
+### Structures
 
 ```shell
 ✅ Successfully tested exercises/structs/structs1.rs
 ✅ Successfully tested exercises/structs/structs2.rs
 ✅ Successfully tested exercises/structs/structs3.rs
 ```
+
+Continue with [Rustlings Topic: Structures](rustlings-structures){:.heading.flip-title}
+{:.read-more}
 
 ### Enums
 
