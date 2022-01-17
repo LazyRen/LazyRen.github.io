@@ -15,12 +15,10 @@ You may find [solution code for the topic from my repo].
 
 <!--more-->
 
-* this unordered seed list will be replaced by the toc
+1. this ordered seed list will be replaced by the toc
 {:toc}
 
-## Exercises
-
-### functions1.rs
+## functions1.rs
 
 We can't use function without declaring it. Declare empty function with matching function
 signature.<br>
@@ -37,7 +35,7 @@ fn main() {
 }
 ```
 
-### functions2.rs
+## functions2.rs
 
 Rust requires that all parts of a function's signature to have type annotations.
 Any [integer type] will do. `i32`, `u32`, `usize` ... Choose one you like.
@@ -57,7 +55,7 @@ fn call_me(num: u32) {
 }
 ```
 
-### functions3.rs
+## functions3.rs
 
 If we look at the function signature of the `call_me(num: u32)`, the function expects to have one
 argument. Provide one argument when you call the function from the main function.
@@ -75,7 +73,7 @@ fn call_me(num: u32) {
 }
 ```
 
-### functions4.rs
+## functions4.rs
 
 Rust's syntax for the return type is `fn function_name() -> RET_TYPE`. We have to provide type
 annotation after `->`.
@@ -101,7 +99,7 @@ fn is_even(num: i32) -> bool {
 
 ```
 
-### functions5.rs
+## functions5.rs
 
 When we want to return something, we can use good-old-fashioned `return this;` **OR** provide
 statement without semicolon(`;`). Rust will interpret the statement as a return statement if you

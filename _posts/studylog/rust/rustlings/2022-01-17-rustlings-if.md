@@ -15,12 +15,10 @@ You may find [solution code for the topic from my repo].
 
 <!--more-->
 
-* this unordered seed list will be replaced by the toc
+1. this ordered seed list will be replaced by the toc
 {:toc}
 
-## Exercises
-
-### if1.rs
+## if1.rs
 
 > Remember in Rust that:
 >
@@ -41,7 +39,7 @@ pub fn bigger(a: i32, b: i32) -> i32 {
 }
 ```
 
-### if2.rs
+## if2.rs
 
 First, Rust requires each conditional block to return the same value. So `1` is not acceptable and
 won't compile.<br>

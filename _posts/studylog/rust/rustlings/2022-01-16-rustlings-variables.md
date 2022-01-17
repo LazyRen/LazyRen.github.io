@@ -10,26 +10,23 @@ tags:     rust rustlings
 > When a variable is immutable, once a value is bound to a name, you can’t change that value.
 > You can make them mutable by adding mut in front of the variable name.
 
-You may find [solution code for the topic from my repo].
-
-[solution code for the topic from my repo]: https://github.com/LazyRen/rustlings-solution/tree/main/exercises/variables
-
-<!--more-->
-
-* this unordered seed list will be replaced by the toc
-{:toc}
-
-## Exercises
-
 This is the first topic of the [rustlings]. And there is nothing really special about it.<br>
 Exercises are just checking whether you are familiar with basic syntaxes of the Rust.<br>
 If you find any of the exercise a bit confusing, please re-read [The Book] and/or [Rust By Example].
 
+You may find [solution code for the topic from my repo].
+
 [rustlings]: https://github.com/rust-lang/rustlings
 [The Book]: https://doc.rust-lang.org/book/index.html
 [Rust By Example]: https://doc.rust-lang.org/rust-by-example/index.html
+[solution code for the topic from my repo]: https://github.com/LazyRen/rustlings-solution/tree/main/exercises/variables
 
-### variables1.rs
+<!--more-->
+
+1. this ordered seed list will be replaced by the toc
+{:toc}
+
+## variables1.rs
 
 Rust uses `let` keyword to create a new variable binding.
 
@@ -41,7 +38,7 @@ fn main() {
 }
 ```
 
-### variables2.rs
+## variables2.rs
 
 If we only declared variable without type annotation or initialize value,
 compiler has no idea what that variable type will be.
@@ -92,7 +89,7 @@ fn main() {
 }
 ```
 
-### variables3.rs
+## variables3.rs
 
 In Rust, variable bindings are immutable by default.<br>
 But here we're trying to reassign a different value to x!
@@ -110,7 +107,7 @@ fn main() {
 }
 ```
 
-### variables4.rs
+## variables4.rs
 
 I have already explained that we must initialize variable before use in [variables2].<br>
 If not, we will encounter error like below:
@@ -137,7 +134,7 @@ fn main() {
 }
 ```
 
-### variables5.rs
+## variables5.rs
 
 Sometimes we may also like to reuse existing variable names because we are just converting
 values to different types like in this exercise.<br>
@@ -156,7 +153,7 @@ fn main() {
 }
 ```
 
-### variables6.rs
+## variables6.rs
 
 Constants are always immutable and they are declared with keyword `const` rather than keyword `let`.
 Constants types **must** also always be annotated.
