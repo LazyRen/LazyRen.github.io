@@ -163,5 +163,5 @@ fn main() {
 }
 ```
 
-Continue with [Rustlings](rustlings){:.heading.flip-title}
+Continue with [Rustlings Solution](rustlings){:.heading.flip-title}
 {:.read-more}
