@@ -78,6 +78,9 @@ Continue with [Rustlings Topic: If](rustlings-if){:.heading.flip-title}
 ✅ Successfully ran exercises/move_semantics/move_semantics5.rs!
 ```
 
+Continue with [Rustlings Topic: Move Semantics](rustlings-move-semantics){:.heading.flip-title}
+{:.read-more}
+
 ### Primitive Types
 
 ```shell
