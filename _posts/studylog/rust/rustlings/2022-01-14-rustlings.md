@@ -55,6 +55,9 @@ Continue with [Variables](rustlings-variables){:.heading.flip-title}
 ✅ Successfully ran exercises/functions/functions5.rs!
 ```
 
+Continue with [Functions](rustlings-functions){:.heading.flip-title}
+{:.read-more}
+
 ### If
 
 ```shell
