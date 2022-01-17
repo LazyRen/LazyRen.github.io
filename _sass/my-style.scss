@@ -103,8 +103,17 @@ img.centered {
   width: 100%;
 }
 
-div.highlight>.pre-header {
-  overflow: hidden;
+// Codeblock
+
+div.highlight {
+
+  >.pre-header {
+    overflow: hidden;
+
+    > span {
+      font-family: var(--code-font-family);
+    }
+  }
 }
 
 // Fancy Codeblock Scrollbar
