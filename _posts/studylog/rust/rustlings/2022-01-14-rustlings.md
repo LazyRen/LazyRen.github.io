@@ -92,6 +92,9 @@ Continue with [Rustlings Topic: Move Semantics](rustlings-move-semantics){:.head
 ✅ Successfully tested exercises/primitive_types/primitive_types6.rs
 ```
 
+Continue with [Rustlings Topic: Primitive Types](rustlings-primitive-types){:.heading.flip-title}
+{:.read-more}
+
 ### Structs
 
 ```shell
