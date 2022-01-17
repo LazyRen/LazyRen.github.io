@@ -31,6 +31,7 @@ You may find [solution code for the topic from my repo].
 Notice that there is no `;` after `a` or `b`. Since both will be *returned* from the function.
 
 ```rust
+/* file: "exercises/if/if1.rs" */
 pub fn bigger(a: i32, b: i32) -> i32 {
     if a > b {
         a
@@ -67,6 +68,7 @@ mod tests {
 Back to the problem, we have to return `bar` if input value is `fuzz` and `baz` for anything else.
 
 ```rust
+/* file: "exercises/if/if1.rs" */
 pub fn fizz_if_foo(fizzish: &str) -> &str {
     if fizzish == "fizz" {
         "foo"
@@ -83,6 +85,7 @@ You can also use [match control flow operation] to do the same.
 [match control flow operation]: https://doc.rust-lang.org/book/ch06-02-match.html
 
 ```rust
+/* file: "exercises/if/if1.rs" */
 pub fn fizz_if_foo(fizzish: &str) -> &str {
     match fizzish {
         "fizz" => "foo",

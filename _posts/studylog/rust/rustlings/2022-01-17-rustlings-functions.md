@@ -27,6 +27,7 @@ signature.<br>
 That is, function with name `call_me` & takes no argument and returns nothing.
 
 ```rust
+/* file: "exercises/functions/functions1.rs" */
 fn call_me() {
 
 }
@@ -39,9 +40,12 @@ fn main() {
 ### functions2.rs
 
 Rust requires that all parts of a function's signature to have type annotations.
-Any integer type will do. `i32`, `u32`, `usize` ... Choose one you like.
+Any [integer type] will do. `i32`, `u32`, `usize` ... Choose one you like.
+
+[integer type]: https://doc.rust-lang.org/book/ch03-02-data-types.html#integer-types
 
 ```rust
+/* file: "exercises/functions/functions2.rs" */
 fn main() {
     call_me(3);
 }
@@ -59,6 +63,7 @@ If we look at the function signature of the `call_me(num: u32)`, the function ex
 argument. Provide one argument when you call the function from the main function.
 
 ```rust
+/* file: "exercises/functions/functions3.rs" */
 fn main() {
     call_me(10);
 }
@@ -76,6 +81,7 @@ Rust's syntax for the return type is `fn function_name() -> RET_TYPE`. We have t
 annotation after `->`.
 
 ```rust
+/* file: "exercises/functions/functions4.rs" */
 fn main() {
     let original_price = 51;
     println!("Your sale price is {}", sale_price(original_price));
@@ -105,6 +111,7 @@ At the moment, `fn square(num: i32) -> i32` does not have return statement. Remo
 `num * num;` to make it as a return statement.
 
 ```rust
+/* file: "exercises/functions/functions5.rs" */
 fn main() {
     let answer = square(3);
     println!("The answer is {}", answer);

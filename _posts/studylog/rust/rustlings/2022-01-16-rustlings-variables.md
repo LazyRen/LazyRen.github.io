@@ -34,6 +34,7 @@ If you find any of the exercise a bit confusing, please re-read [The Book] and/o
 Rust uses `let` keyword to create a new variable binding.
 
 ```rust
+/* file: "exercises/variables/variables1.rs" */
 fn main() {
     let x = 5;
     println!("x has the value {}", x);
@@ -80,6 +81,7 @@ So the proper answer would be either
 2. Give `x` initialize value **AND** type annotation.
 
 ```rust
+/* file: "exercises/variables/variables2.rs" */
 fn main() {
     let x: u32 = 10;
     if x == 10 {
@@ -99,6 +101,7 @@ We can add `mut` to the variable binding to inform compiler that we want to modi
 later use.
 
 ```rust
+/* file: "exercises/variables/variables3.rs" */
 fn main() {
     let mut x = 3;
     println!("Number {}", x);
@@ -127,6 +130,7 @@ error: aborting due to previous error
 Give initialize value to the `x`.
 
 ```rust
+/* file: "exercises/variables/variables4.rs" */
 fn main() {
     let x: i32 = 1;
     println!("Number {}", x);
@@ -143,6 +147,7 @@ you can read more about 'Shadowing' in the book's section [Variables and Mutabil
 [Variables and Mutability]: https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#shadowing
 
 ```rust
+/* file: "exercises/variables/variables5.rs" */
 fn main() {
     let number = "T-H-R-E-E"; // don't change this line
     println!("Spell a Number : {}", number);
@@ -157,6 +162,7 @@ Constants are always immutable and they are declared with keyword `const` rather
 Constants types **must** also always be annotated.
 
 ```rust
+/* file: "exercises/variables/variables6.rs" */
 const NUMBER:i32 = 3;
 fn main() {
     println!("Number {}", NUMBER);

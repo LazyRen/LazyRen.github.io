@@ -42,7 +42,7 @@ You may also check my [rustlings solution repo] to see & run solution by yoursel
 ✅ Successfully ran exercises/variables/variables6.rs!
 ```
 
-Continue with [Variables](rustlings-variables){:.heading.flip-title}
+Continue with [Rustlings Topic: Variables](rustlings-variables){:.heading.flip-title}
 {:.read-more}
 
 ### Functions
@@ -55,7 +55,7 @@ Continue with [Variables](rustlings-variables){:.heading.flip-title}
 ✅ Successfully ran exercises/functions/functions5.rs!
 ```
 
-Continue with [Functions](rustlings-functions){:.heading.flip-title}
+Continue with [Rustlings Topic: Functions](rustlings-functions){:.heading.flip-title}
 {:.read-more}
 
 ### If
@@ -65,7 +65,7 @@ Continue with [Functions](rustlings-functions){:.heading.flip-title}
 ✅ Successfully tested exercises/if/if2.rs
 ```
 
-Continue with [If](rustlings-if){:.heading.flip-title}
+Continue with [Rustlings Topic: If](rustlings-if){:.heading.flip-title}
 {:.read-more}
 
 ### Move Semantics
