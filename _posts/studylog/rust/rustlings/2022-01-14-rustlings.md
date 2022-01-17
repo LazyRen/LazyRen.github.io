@@ -65,6 +65,9 @@ Continue with [Functions](rustlings-functions){:.heading.flip-title}
 ✅ Successfully tested exercises/if/if2.rs
 ```
 
+Continue with [If](rustlings-if){:.heading.flip-title}
+{:.read-more}
+
 ### Move Semantics
 
 ```shell
