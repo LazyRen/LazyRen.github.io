@@ -6,13 +6,13 @@ category: studylog
 tags:     rust rustlings
 ---
 
-Have a look at [ownership] & [reference and borrowing] to check further information about Rust
-functions.
+Have a look at [Ownership] & [Reference and Borrowing] to have understanding of one of the most
+important part of the Rust language.
 
 You may find [solution code for the topic from my repo].
 
-[ownership]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html
-[reference and borrowing]: https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html
+[Ownership]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html
+[Reference and Borrowing]: https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html
 [solution code for the topic from my repo]: https://github.com/LazyRen/rustlings-solution/tree/main/exercises/move_semantics
 
 <!--more-->
