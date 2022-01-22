@@ -114,6 +114,9 @@ Continue with [Rustlings Topic: Structures](rustlings-structures){:.heading.flip
 ✅ Successfully tested exercises/enums/enums3.rs
 ```
 
+Continue with [Rustlings Topic: Enums](rustlings-enums){:.heading.flip-title}
+{:.read-more}
+
 ### Modules
 
 ```shell
