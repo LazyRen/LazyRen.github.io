@@ -137,6 +137,9 @@ Continue with [Rustlings Topic: Modules](rustlings-modules){:.heading.flip-title
 ✅ Successfully tested exercises/collections/hashmap2.rs
 ```
 
+Continue with [Rustlings Topic: Collections](rustlings-collections){:.heading.flip-title}
+{:.read-more}
+
 ### Strings
 
 ```shell
