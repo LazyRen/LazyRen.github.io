@@ -125,6 +125,9 @@ Continue with [Rustlings Topic: Enums](rustlings-enums){:.heading.flip-title}
 ✅ Successfully ran exercises/modules/modules3.rs!
 ```
 
+Continue with [Rustlings Topic: Modules](rustlings-modules){:.heading.flip-title}
+{:.read-more}
+
 ### Collections
 
 ```shell
