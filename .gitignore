@@ -14,6 +14,7 @@ _drafts
 *.swp
 *.vi
 *~
+*Zone.Identifier
 
 # OS or Editor folders
 .DS_Store
