@@ -147,6 +147,9 @@ Continue with [Rustlings Topic: Collections](rustlings-collections){:.heading.fl
 ✅ Successfully ran exercises/strings/strings2.rs!
 ```
 
+Continue with [Rustlings Topic: Strings](rustlings-strings){:.heading.flip-title}
+{:.read-more}
+
 ### Error Handling
 
 ```shell
