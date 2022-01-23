@@ -8,9 +8,13 @@ image:
   path:   /assets/img/ferris/flat-gesture.svg
 ---
 
-This is the collection of [my solution] & explanation for the [rustlings] exercises(`version: 4.6.0`).
+This is the collection of [my solution] & explanation for the [rustlings] exercises.
 
-If you are having hard time with [rustlings], I suggest you try [The Book] & [Rust By Example] first.
+22.01.14: `version: 4.6.0`
+{:.note title="Rustlings Version Info"}
+
+If you are having hard time with [rustlings], I suggest you to try [The Book] & [Rust By Example]
+first.
 
 [my solution]: https://github.com/LazyRen/rustlings-solution
 [rustlings]: https://github.com/rust-lang/rustlings
