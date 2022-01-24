@@ -165,6 +165,9 @@ Continue with [Rustlings Topic: Strings](rustlings-strings){:.heading.flip-title
 ✅ Successfully tested exercises/error_handling/errors6.rs
 ```
 
+Continue with [Rustlings Topic: Error Handling](rustlings-error-handling){:.heading.flip-title}
+{:.read-more}
+
 ### Generics
 
 ```shell
