@@ -14,7 +14,7 @@ You may find [solution code for the topic from my repo].
 [Rust has two string types]: https://doc.rust-lang.org/book/ch08-02-strings.html
 [`&str`]: https://doc.rust-lang.org/std/primitive.str.html
 [`String`]: https://doc.rust-lang.org/std/string/struct.String.html
-[solution code for the topic from my repo]: https://github.com/rust-lang/rustlings/tree/main/exercises/strings
+[solution code for the topic from my repo]: https://github.com/LazyRen/rustlings-solution/tree/main/exercises/strings
 
 <!--more-->
 
