@@ -176,6 +176,9 @@ Continue with [Rustlings Topic: Error Handling](rustlings-error-handling){:.head
 ✅ Successfully tested exercises/generics/generics3.rs
 ```
 
+Continue with [Rustlings Topic: Generics](rustlings-generics){:.heading.flip-title}
+{:.read-more}
+
 ### Option
 
 ```shell
