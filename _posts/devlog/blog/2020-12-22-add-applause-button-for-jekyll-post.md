@@ -70,7 +70,7 @@ If Applause button is disabled, make sure to prints original dingbat. I've used 
 {% if page.applause_button %}
   <applause-button class="mb6"
     color={{ site.accent_color | default:'rgb(79,177,186)' }}
-    url={{ site.url }}{{ page.url }} >
+    url={{ post.url | absolute_url }} >
   </applause-button>
 {% else %}
   <!-- original content of dingbat.html -->

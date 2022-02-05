@@ -4,4 +4,5 @@
 <li class="h4">
   <a href="{{ post.url | relative_url }}" class="flip-title"><span>{{ post.title }}</span></a>
   {% unless site.hydejack.hide_dates %}<time class="faded fine" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date:format }}</time>{% endunless %}
+  {% if post.applause_button %}<span class="clap-count" data-url="{{ post.url | absolute_url }}"></span>{% endif %}
 </li>

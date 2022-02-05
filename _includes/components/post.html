@@ -28,6 +28,10 @@
         {%- assign tag_start          = site.data.strings.tag_start          | default:"on " -%}
         {%- assign tag_separator      = site.data.strings.tag_separator      | default:", "  -%}
         {%- include components/tag-list.html tags=post.tags meta=site.featured_tags start_with=tag_start separator=tag_separator -%}
+        {% if post.applause_button %}
+          {{ ' ' }}
+          <span class="clap-count" data-url="{{ post.url | absolute_url }}"></span>
+        {% endif %}
       {% endcapture %}
       <span class="ellipsis mr1">
         {{ foobar }}
