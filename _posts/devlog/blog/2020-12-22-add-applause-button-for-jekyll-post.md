@@ -13,8 +13,6 @@ It seems good idea to have light-cost (compare to commenting) way to communicate
 
 <!--more-->
 
-[@qwtel](https://github.com/qwtelhttps://github.com/qwtel), the author of this jekyll theme provides a nice [applause button service](https://getclaps.dev/), but unfortunately, $5 per month is too expensive to pay for this small blog.
-
 So I ended up with [applause](https://applause-button.com/). Which is free, ([donation](https://opencollective.com/applause-button) for a good service is always an option.) and easy-to-install.(not 100% true, if you ask me. I couldn't find good guideline on how to customize it.)
 
 Basically, I will add applause button for each-and-every post. Unless author specifically set it otherwise.<br>
