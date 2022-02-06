@@ -82,5 +82,5 @@ Sed vitae felis sit amet elit rhoncus blandit nec vitae nunc. Morbi iaculis ligu
 * [Hide code block scroll bar until cursor is in block?](https://github.com/cotes2020/jekyll-theme-chirpy/issues/414)
 {:.note title="Reference"}
 
-Back to [How I customized Hydejack Theme](2020-08-02-how-i-customized-hydejack-theme.md){:.heading.flip-title}
+Back to [How I customized Hydejack Theme](how-i-customized-hydejack-theme){:.heading.flip-title}
 {:.read-more}

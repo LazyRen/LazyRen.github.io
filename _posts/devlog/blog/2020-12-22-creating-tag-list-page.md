@@ -90,5 +90,5 @@ layout: page
 It is very short code, but I invested some times to figure out how `liquid` works.<br>
 So... If you find this post useful, please click applause button for me :)
 
-Back to [How I customized Hydejack Theme](2020-08-02-how-i-customized-hydejack-theme.md){:.heading.flip-title}
+Back to [How I customized Hydejack Theme](how-i-customized-hydejack-theme){:.heading.flip-title}
 {:.read-more}

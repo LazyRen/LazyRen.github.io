@@ -218,5 +218,5 @@ To [adjust size of Utterances]/[or of Giscus] to fit into the blog content-width
 }
 ```
 
-Back to [How I customized Hydejack Theme](2020-08-02-how-i-customized-hydejack-theme.md){:.heading.flip-title}
+Back to [How I customized Hydejack Theme](how-i-customized-hydejack-theme){:.heading.flip-title}
 {:.read-more}

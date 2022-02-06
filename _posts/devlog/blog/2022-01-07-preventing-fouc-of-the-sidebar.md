@@ -106,7 +106,7 @@ I still couldn't figure out why the background image of the sidebar is moving le
 If anyone can help me on this issue, please leave me a comment. It would be very much appreciated. :)
 {:.note}
 
-Back to [How I customized Hydejack Theme](2020-08-02-how-i-customized-hydejack-theme.md){:.heading.flip-title}
+Back to [How I customized Hydejack Theme](how-i-customized-hydejack-theme){:.heading.flip-title}
 {:.read-more}
 
 [workaround solution]: https://stackoverflow.com/questions/33587623/prevent-fouc-in-firefox-and-ie/55106593#55106593
