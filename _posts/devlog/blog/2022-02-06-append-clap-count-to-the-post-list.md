@@ -15,7 +15,7 @@ I wanted to check how many claps I got for each post without entering the post.
 
 <!--more-->
 
-4 files to be modified. (check [related commit](https://github.com/LazyRen/LazyRen.github.io/commit/5e0690e28b8af42219c4129a7dcc5d785f3774d5))
+4 files to be modified. (check [related commit](https://github.com/LazyRen/LazyRen.github.io/commit/4a45a5d0555e475dc1a10db919472442782d7d33))
 
 ```default
 _includes/components/post-list-item.html
