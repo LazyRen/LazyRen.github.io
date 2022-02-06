@@ -101,5 +101,11 @@ applause-button {
 }
 ```
 
-Back to [How I customized Hydejack Theme](2020-08-02-how-i-customized-hydejack-theme.md){:.heading.flip-title}
+## Append Clap Count to the Post List
+
+![clap-count](/assets/img/2022-02-06/list.png)
+
+Check [Append Clap Count to the Post List](append-clap-count-to-the-post-list){:.heading.flip-title} post.
+
+Back to [How I customized Hydejack Theme](how-i-customized-hydejack-theme){:.heading.flip-title}
 {:.read-more}

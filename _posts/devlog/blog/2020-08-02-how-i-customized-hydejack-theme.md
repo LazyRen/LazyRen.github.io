@@ -69,9 +69,26 @@ You may wish to check [commit history], [and] also [these] for the updated metho
 Continue with [Adding Foldable Submenu to the Sidebar](adding-foldable-submenu-to-the-sidebar){:.heading.flip-title}
 {:.read-more}
 
+## Append Clap Count to the Post List
+
+![List](/assets/img/2022-02-06/list.png){:.centered}
+
+4 files to be modified. (check [related commit](https://github.com/LazyRen/LazyRen.github.io/commit/5e0690e28b8af42219c4129a7dcc5d785f3774d5))
+I wanted to check how many claps I got for each post without entering the post.
+
+```default
+_includes/components/post-list-item.html
+_includes/components/post.html
+_includes/my-scripts.html
+_sass/my-style.scss
+```
+
+Continue with [Append Clap Count to the Post List](append-clap-count-to-the-post-list){:.heading.flip-title}
+{:.read-more}
+
 ## Creating Tag Cloud/List Page
 
-![tag list](/assets/img/2020-12-21/tag_list.png){:.centered width="33%"}
+![Tag List](/assets/img/2020-12-21/tag_list.png){:.centered width="33%"}
 
 Since many tags are not listed on the sidebar, I've always wanted to have a page where I can see all categories & tags
 I've used for the posts. And visitor may click on it to navigate related posts. To implement tag list, you only need to
@@ -121,13 +138,11 @@ on it and finally made it as below.
 [Hydejack official site]: https://hydejack.com/showcase/lazyren/
 [clapping button]: https://help.medium.com/hc/en-us/articles/115011350967-Claps
 
-![applause button](/assets/img/2020-12-21/post_end.png)
+![Applause Button](/assets/img/2020-12-21/post_end.png)
 
 Basically, I will add applause button for each-and-every post. Unless author specifically set it otherwise.<br>
 
-4 files to be modified. (check [related commit])
-
-[related commit]: https://github.com/LazyRen/LazyRen.github.io/commit/346f496d80243fcfbd0f24b47daa10078efe954f
+4 files to be modified. (check [related commit](https://github.com/LazyRen/LazyRen.github.io/commit/346f496d80243fcfbd0f24b47daa10078efe954f))
 
 ```default
 /_config.yml
