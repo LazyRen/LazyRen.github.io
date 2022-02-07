@@ -1,6 +1,6 @@
 # Ignore docs files
 _gh_pages
-_site*
+_site
 _drafts
 .ruby-version
 
@@ -29,6 +29,7 @@ nbproject
 *.sublime-project
 *.sublime-workspace
 .idea
+*.Zone.Identifier
 
 # Komodo
 *.komodoproject

@@ -81,9 +81,9 @@ layout: about
                          {% assign post = site.posts | where_exp:"post", "post_path == post.path" | first %}
         {% unless post %}{% assign post = site.posts | where_exp:"post", "post_path == post.url"  | first %}{% endunless %}
       {% endif %}
-      <div class="column {% if featured %}column-1{% else %}column-1-2{% endif %}">
+      <div class="column column-1-2">
         {% if post %}
-          {% include_cached pro/post-card.html post=post featured=featured %}
+          {% include_cached pro/post-card.html post=post %}
         {% else %}
           Post with path <code>{{ post_path }}</code> not found.
         {% endif %}
@@ -93,8 +93,8 @@ layout: about
 {% elsif site.posts.size > 1 %}
   <div class="columns mt2 {% unless no_third_column %}columns-break{% endunless %}">
     {% for post in site.posts limit:4 %}
-      <div class="column {% if featured %}column-1{% else %}column-1-2{% endif %}">
-        {% include_cached pro/post-card.html post=post featured=featured %}
+      <div class="column column-1-2">
+        {% include_cached pro/post-card.html post=post %}
       </div>
     {% endfor %}
   </div>

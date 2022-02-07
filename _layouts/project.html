@@ -24,7 +24,7 @@ layout: base
     <h1 class="page-title" property="name">{{ project.title }}</h1>
 
     <p class="post-date heading">
-      <span>
+      <span class="ellipsis mr1">
         {% if major >= 4 and minor >= 1 %}
           {% assign parent = site.pages | find:"show_collection",project.collection %}
         {% else %}
@@ -45,7 +45,7 @@ layout: base
         {% endunless %}
       </span>
 
-      <span class="ellipsis ml1" data-tippy-content="{{ site.data.strings.links | default:'Links' }}">
+      <span class="ellipsis ml1">
         <span class="sr-only">{{ separator }} {{ site.data.strings.links | default:"Links" }}{{ site.data.strings.colon }}</span>
         <span class="{{ site.data.strings.links_icon | default:'icon-link' }}" title="{{ site.data.strings.links | default:'Links' }}"></span>
         {% for link in project.links %}
