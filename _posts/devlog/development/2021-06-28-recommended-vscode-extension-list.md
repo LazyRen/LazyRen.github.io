@@ -100,6 +100,20 @@ Git을 사용하여 코드 버전 관리를 하고 있다면 **필수**로 설�
 (대신 `current line blame`이 짤려서 출력됩니다.)
 {:.note}
 
+### [Multiple clipboards for VSCode](https://marketplace.visualstudio.com/items?itemName=slevesque.vscode-multiclip)
+
+복사-붙여넣기에 여러 기능들을 추가해주는 익스텐션입니다. `Multiclip List Buffer`를 새롭게 key binding 시켜서
+이전에 복사했던 내용을 붙여넣을때 자주 사용하고 있습니다.
+
+#### Commands
+
+* Copy (Cmd+c on OSX or Ctrl+c on Windows and Linux)
+* Merge-Copy (Cmd+Shift+c on OSX or Ctrl+Shift+c on Windows and Linux)
+* Cut (Cmd+x on OSX or Ctrl+x on Windows and Linux)
+* Merge-Cut (Cmd+Shift+x on OSX or Ctrl+Shift+x on Windows and Linux)
+* Select clipboard to paste (Cmd+Alt+v on OSX or Ctrl+Alt+v on Windows and Linux)
+* Paste and cycle through clipboard items (Cmd+Shift+v on OSX or Ctrl+Shift+v on Windows and Linux)
+
 ### [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
 
 ![Path Intellisense](/assets/img/2021-06-28/path-intellisense.gif)
