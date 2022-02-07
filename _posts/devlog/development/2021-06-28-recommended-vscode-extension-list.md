@@ -246,6 +246,12 @@ Git을 사용하여 코드 버전 관리를 하고 있다면 **필수**로 설�
 </div>
 </details>
 
+### [TODO Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
+
+![TODO Tree](/assets/img/2021-06-28/todo-tree.png)
+
+프로젝트 내에서 `TODO`나 `FIXME` 등의 주석을 찾아 트리 형태로 나타내 주는 플러그인입니다.
+
 ### ~~[Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)~~ :pushpin:
 
 ![Bracket Pair Colorizer 2](/assets/img/2021-06-28/bracket-pair-colorizer.png)
@@ -420,9 +426,15 @@ Indentation은 중요한 문제니까요.
 
 language syntax 지원 익스텐션입니다.
 
-### [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer)
+### [Rust-analyzer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer) :pushpin:
 
 언어 지원 익스텐션입니다. Official Rust 언어 지원 익스텐션과 둘 중 하나만 설치하셔서 사용하시면 됩니다.
+
+### [Crates](https://marketplace.visualstudio.com/items?itemName=serayuzgur.crates) :pushpin:
+
+![Crates Update](/assets/img/2021-06-28/crate-update.gif)
+
+`crates.io` dependencies checking에 유용한 익스텐션입니다.
 
 ## Markdown
 
@@ -463,6 +475,10 @@ language syntax 지원 익스텐션입니다.
 ### [Better Shell Syntax](https://marketplace.visualstudio.com/items?itemName=jeff-hykin.better-shellscript-syntax)
 
 shell code syntax를 지원하는 익스텐션입니다.
+
+### [Better TOML](https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml)
+
+`TOML` 파일 syntax를 지원하는 익스텐션입니다.
 
 # 마치며
 
