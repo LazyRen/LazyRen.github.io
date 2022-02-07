@@ -164,6 +164,8 @@ Append below to the `my-style.scss`.
 
   svg {
     height: 1em;
+    vertical-align: middle;
+    width: 1em;
   }
 
   .flat {
