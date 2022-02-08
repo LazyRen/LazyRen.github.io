@@ -187,6 +187,9 @@ Continue with [Rustlings Topic: Generics](rustlings-generics){:.heading.flip-tit
 ✅ Successfully ran exercises/option/option3.rs!
 ```
 
+Continue with [Rustlings Topic: Option](rustlings-option){:.heading.flip-title}
+{:.read-more}
+
 ### Traits
 
 ```shell
