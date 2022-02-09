@@ -208,6 +208,9 @@ Continue with [Rustlings Topic: Traits](rustlings-traits){:.heading.flip-title}
 ✅ Successfully tested exercises/tests/tests3.rs
 ```
 
+Continue with [Rustlings Topic: Tests](rustlings-tests){:.heading.flip-title}
+{:.read-more}
+
 ### Standard Library Types
 
 ```shell
