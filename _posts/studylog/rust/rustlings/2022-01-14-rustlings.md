@@ -197,6 +197,9 @@ Continue with [Rustlings Topic: Option](rustlings-option){:.heading.flip-title}
 ✅ Successfully tested exercises/traits/traits2.rs
 ```
 
+Continue with [Rustlings Topic: Traits](rustlings-traits){:.heading.flip-title}
+{:.read-more}
+
 ### Tests
 
 ```shell
