@@ -223,6 +223,9 @@ Continue with [Rustlings Topic: Tests](rustlings-tests){:.heading.flip-title}
 ✅ Successfully tested exercises/standard_library_types/iterators5.rs
 ```
 
+Continue with [Rustlings Topic: Standard Library Types](rustlings-standard-library-types){:.heading.flip-title}
+{:.read-more}
+
 ### Threads
 
 ```shell
