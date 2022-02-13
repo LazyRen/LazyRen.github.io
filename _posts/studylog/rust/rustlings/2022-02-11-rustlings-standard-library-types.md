@@ -113,7 +113,8 @@ mod tests {
 
 ## arc1.rs
 
-[`Arc`] is a thread-safe reference-counting pointer, which stands for *Atomically Reference Counted*.
+[`Arc`] is a thread-safe reference-counting pointer, which stands for *Atomically Reference Counted*. Take a look at
+[this section] of the book for more information.
 
 > The type Arc<T> provides shared ownership of a value of type T, allocated in the heap. Invoking clone on Arc produces
 > a new Arc instance, which points to the same allocation on the heap as the source Arc, while increasing a reference
@@ -154,6 +155,7 @@ fn main() {
 ```
 
 [`Arc`]: https://doc.rust-lang.org/stable/std/sync/struct.Arc.html
+[this section]: https://doc.rust-lang.org/book/ch16-03-shared-state.html#atomic-reference-counting-with-arct
 
 ## iterators1.rs
 
