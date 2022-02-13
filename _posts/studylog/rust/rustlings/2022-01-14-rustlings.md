@@ -232,6 +232,9 @@ Continue with [Rustlings Topic: Standard Library Types](rustlings-standard-libra
 ✅ Successfully ran exercises/threads/threads1.rs!
 ```
 
+Continue with [Rustlings Topic: Threads](rustlings-threads){:.heading.flip-title}
+{:.read-more}
+
 ### Macro
 
 ```shell
