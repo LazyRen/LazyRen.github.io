@@ -244,6 +244,9 @@ Continue with [Rustlings Topic: Threads](rustlings-threads){:.heading.flip-title
 ✅ Successfully ran exercises/macros/macros4.rs!
 ```
 
+Continue with [Rustlings Topic: Macro](rustlings-macro){:.heading.flip-title}
+{:.read-more}
+
 ### Clippy
 
 ```shell
