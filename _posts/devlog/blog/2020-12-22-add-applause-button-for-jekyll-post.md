@@ -13,7 +13,12 @@ It seems good idea to have light-cost (compare to commenting) way to communicate
 
 <!--more-->
 
-So I ended up with [applause](https://applause-button.com/). Which is free, ([donation](https://opencollective.com/applause-button) for a good service is always an option.) and easy-to-install.(not 100% true, if you ask me. I couldn't find good guideline on how to customize it.)
+So I ended up with [applause](https://applause-button.com/). Which is free, ([donation](https://opencollective.com/applause-button) for a good service is always an option) and easy-to-install. (not 100% true, if you ask me. I couldn't find a good guideline on how to customize it.)
+
+![Backer](/assets/img/2020-12-22/backer.png)
+
+I also donated $5!
+{:.note title="Donation"}
 
 Basically, I will add applause button for each-and-every post. Unless author specifically set it otherwise.<br>
 
