@@ -254,6 +254,9 @@ Continue with [Rustlings Topic: Macro](rustlings-macro){:.heading.flip-title}
 ✅ Successfully compiled exercises/clippy/clippy2.rs!
 ```
 
+Continue with [Rustlings Topic: Clippy](rustlings-clippy){:.heading.flip-title}
+{:.read-more}
+
 ### Conversions
 
 ```shell
