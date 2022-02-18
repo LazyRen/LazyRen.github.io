@@ -267,6 +267,9 @@ Continue with [Rustlings Topic: Clippy](rustlings-clippy){:.heading.flip-title}
 ✅ Successfully tested exercises/conversions/as_ref_mut.rs
 ```
 
+Continue with [Rustlings Topic: Conversions](rustlings-conversions){:.heading.flip-title}
+{:.read-more}
+
 ### Advanced Errors
 
 ```shell
