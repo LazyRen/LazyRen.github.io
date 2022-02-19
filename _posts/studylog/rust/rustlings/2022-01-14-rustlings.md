@@ -289,6 +289,9 @@ Continue with [Rustlings Topic: Advanced Errors](rustlings-advanced-errors){:.he
 ✅ Successfully tested exercises/quiz4.rs
 ```
 
+Continue with [Rustlings Topic: Quiz](rustlings-quiz){:.heading.flip-title}
+{:.read-more}
+
 ## Completed!
 
 ```shell
