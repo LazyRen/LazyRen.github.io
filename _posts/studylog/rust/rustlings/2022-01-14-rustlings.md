@@ -277,6 +277,9 @@ Continue with [Rustlings Topic: Conversions](rustlings-conversions){:.heading.fl
 ✅ Successfully tested exercises/advanced_errors/advanced_errs2.rs
 ```
 
+Continue with [Rustlings Topic: Advanced Errors](rustlings-advanced-errors){:.heading.flip-title}
+{:.read-more}
+
 ### Quiz
 
 ```shell
