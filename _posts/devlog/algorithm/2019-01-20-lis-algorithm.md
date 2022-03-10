@@ -83,7 +83,6 @@ int main()
 
   printf("%lu\n", ans.size()-1);
 }
-
 ```
 
 O(log*n*)의 lower_bound() 함수를 최대 *n*번 실행시키므로 시간 복잡도는 O(*n*log*n*) 임을 알 수 있습니다<br>
@@ -162,8 +161,6 @@ vi lis(const vii &inp)
   /* 추가 코드 END */
   return lis;
 }
-
-
 ```
 
 변경 부분을 강조하기 위해서 주석으로 나타내 보았습니다. 실제로 앞서 보았던 코드와 비교했을때 추가된 코드가 몇 줄 안됩니다.<br>
