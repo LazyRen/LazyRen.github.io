@@ -8,7 +8,7 @@ tags: blog
 
 List of useful syntaxes you may find interesting when you write your own Jekyll posts.
 
-If you are interested in more syntax guide, please visit [Kramdown Syntax] & [Hydejack Writing] documentations.
+If you are interested in more syntax guides, please visit [Kramdown Syntax] & [Hydejack Writing] documentations.
 
 [Kramdown Syntax]: https://kramdown.gettalong.org/syntax.html
 [Hydejack Writing]: https://hydejack.com/docs/writing/
@@ -23,7 +23,7 @@ If you are interested in more syntax guide, please visit [Kramdown Syntax] & [Hy
 ```shell
 bundle update
 
-# livereload option enables auto reload of browser when file has been modified.
+# livereload option enables auto-reload of the browser when a file has been modified.
 bundle exec jekyll serve --livereload
 
 # if 'bundle exec' fails with ruby >= 3.0.0;
@@ -120,14 +120,14 @@ A [link](http://kramdown.gettalong.org) to the kramdown homepage.<br>
 
 Example:
 
-OMG is abbreviated word.
+OMG is an abbreviated word.
 
 *[OMG]: Oh My God
 
 Markdown:
 
 ```default
-OMG is abbreviated word.
+OMG is an abbreviated word.
 
 *[OMG]: Oh My God
 ```
@@ -179,7 +179,7 @@ You can add large text.
 ### Center image
 
 This requires extra modification to the Hydejack Theme.<br>
-Check below post for more information.
+Check the below post for more information.
 {:.note title="Warning"}
 
 Continue with [How to Center an Image in Markdown](how-to-center-an-image-in-markdown){:.heading.flip-title}
@@ -223,7 +223,7 @@ Markdown:
 
 #### Changing image size
 
-You can change image size by adding css style to the paragraph after the image:
+You can change the image size by adding CSS style to the paragraph after the image:
 
 Example:
 
@@ -237,7 +237,7 @@ Markdown:
 
 ### Adding image captions
 
-You can add captions to large images/tables/codeblock by adding the `figcaption` class to the paragraph after the image:
+You can add captions to large images/tables/code block by adding the `figcaption` class to the paragraph after the image:
 
 Example:
 
@@ -257,17 +257,17 @@ A caption for an image.
 
 ### Adding large quotes
 
-You can make a quote "pop out" by adding the `lead` class.
+You can make a quote "pop-out" by adding the `lead` class.
 
 Example:
 
-> You can make a quote "pop out".
+> You can make a quote "pop-out".
 {:.lead}
 
 Markdown:
 
 ```markdown
-> You can make a quote "pop out".
+> You can make a quote "pop-out".
 {:.lead}
 ```
 
@@ -300,7 +300,7 @@ to force a table to use the entire available content width. Note that stretched 
 An optional caption for a table
 {:.figcaption}
 
-You can add the `stretch-table` class to a markdown table by putting `{:.stretch-table}` in line directly below the table.
+You can add the `stretch-table` class to a markdown table by putting `{:.stretch-table}` inline directly below the table.
 
 Markdown:
 

@@ -22,7 +22,7 @@ In this post, I'll guide you to add a foldable submenu to the sidebar navigation
 
 ## Files to modify
 
-There is few files you need to edit/add for this.<br>
+There are a few files you need to edit/add for this.<br>
 
 ```default
 /assets/js/sidebar-folder.js
@@ -36,8 +36,8 @@ There is few files you need to edit/add for this.<br>
 
 ## sidebar-folder.js
 
-You need to create new `js` file to properly create animated arrows for the foldable submenu.
-Script itself is pretty short and simple. So I won't go detail with it. ~~I pretty much know nothing about JS.~~
+You need to create a new `js` file to properly create animated arrows for the foldable submenu.
+The script itself is pretty short and simple. So I won't go into detail about it. ~~I pretty much know nothing about JS.~~
 
 ```js
 // file: "/assets/js/sidebar-folder.js"
@@ -52,11 +52,13 @@ function spread(count){
 
 ## my-inline.scss
 
-Add below code to the [_sass/my-inline.scss file](https://github.com/LazyRen/LazyRen.github.io/blob/master/_sass/my-inline.scss), so it can display submenu properly.<br>
+Add below code to the [_sass/my-inline.scss file], so it can display submenu properly.
 
-used `scss` file has been changed to `my-inline.scss` from `my-style.scss` to prevent FOUC as much as possible. `Sidebar-sticky` still moves up and down at the first time tho...
+Used `scss` file has been changed to `my-inline.scss` from `my-style.scss` to prevent FOUC as much as possible.
+`sidebar-sticky` still moves up and down the first time tho...
 {:.note}
 
+[_sass/my-inline.scss file]: https://github.com/LazyRen/LazyRen.github.io/blob/master/_sass/my-inline.scss
 *[FOUC]: Flash of Unstyled Content
 
 ```css
@@ -144,7 +146,8 @@ input[type=checkbox]:checked ~ ul{
 
 ## links-static.html
 
-You need to link proper icon & js you just created to the page. Append below code to the end of the `links-static.html` file.
+You need to link the proper icon & js you just created to the page. Append the below code to the end of the
+`links-static.html` file.
 
 ```html
 <!-- file: "/_includes/head/links-static.html" -->
@@ -160,7 +163,9 @@ You need to link proper icon & js you just created to the page. Append below cod
 ![git diff](/assets/img/2020-08-02/nav_html.png)
 
 Change made in `my-inline.scss` was to properly show submenu.<br>
-Changes in [nav.html](https://github.com/LazyRen/LazyRen.github.io/blob/master/_includes/body/nav.html) is to actually print submenu(tags) to the sidebar.
+Changes in [nav.html] is to actually print submenu(tags) to the sidebar.
+
+[nav.html]: https://github.com/LazyRen/LazyRen.github.io/blob/master/_includes/body/nav.html
 
 ### Code explanation
 
@@ -216,8 +221,11 @@ Above is the actual code that I've added. I'll try my best to explain in detail 
 {% endraw %}
 ```
 
-`nodes`: From all the site pages & documents, take pages that has been marked as `sidebar: true`. For me, In addition to the categories & tags, I've also added such property to [about.md](https://github.com/LazyRen/LazyRen.github.io/blob/master/about.md) & [tags.md](https://github.com/LazyRen/LazyRen.github.io/blob/master/tags.md).<br>
+`nodes`: From all the site pages & documents, take pages that has been marked as `sidebar: true`. For me, In addition to the categories & tags, I've also added such property to [about.md] & [tags.md].<br>
 `tag_nodes`: From what we've collected, filter tags only.(We've set the sidebar & tag property in `*.md` file)
+
+[about.md]: https://github.com/LazyRen/LazyRen.github.io/blob/master/about.md
+[tags.md]: https://github.com/LazyRen/LazyRen.github.io/blob/master/tags.md
 
 ```liquid
 {%- raw -%}
@@ -256,9 +264,11 @@ Above is the actual code that I've added. I'll try my best to explain in detail 
 {% endraw %}
 ```
 
-While iterating nodes, create menu for those that aren't `tag` type.(Because `tag` type will be shown only as a submenu.)<br>
-`subnodes`: list of pages that have same `category` as a current `node.slug`. the property of `sidebar` is already filtered previously.<br>
-We create checkbox & label *iff* `subnodes` list is not empty. And create list of subnodes below.
+While iterating nodes, create a menu for those that aren't `tag` type. (Because the `tag` type will be shown only as a
+submenu.)
+
+`subnodes`: list of pages that have the same `category` as a current `node.slug`. the property of `sidebar` is already
+filtered previously. We create checkbox & label *iff* `subnodes` list is not empty. And create a list of subnodes below.
 
 ## tag-list.html
 
@@ -295,9 +305,9 @@ layout: page
 
 ## _featured_categories/*.md
 
-Category is used as a main menu for the sidebar.<br>
-Note that `type` property has been added to indicate it is `category`.<br>
-`sidebar` property is also added, set it to `true` if you wish to see category from the sidebar.
+A category is used as the main menu for the sidebar.<br>
+Note that the `type` property has been added to indicate it is `category`.<br>
+`sidebar` property is also added, set it to `true` if you wish to see a category from the sidebar.
 
 ```markdown
 <!-- file: "_featured_categories/*.md" -->
@@ -317,7 +327,7 @@ description: >
 
 add *.md file into the `_featured_tags` folder.<br>
 Set `type` property as a `tag`.
-If you wish to see tag from the sidebar, set `sidebar` property to `true`.<br>
+If you wish to see a tag from the sidebar, set the `sidebar` property to `true`.<br>
 
 ```markdown
 <!-- file: "_featured_tags/*.md" -->

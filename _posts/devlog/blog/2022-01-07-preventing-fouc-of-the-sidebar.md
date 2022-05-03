@@ -9,7 +9,7 @@ image:
 ---
 
 I always hated the sudden glitch of the sidebar at the very beginning of the web page loading.
-Yes it only happens at very first page of my blog, yet it really bugs me. They even have name for it. **FOUC**.
+Yes, it only happens on the very first page of my blog, yet it really bugs me. They even have a name for it. **FOUC**.
 Stands for *flash of unstyled content*. Let's ease the symptom for the sidebar at least a little.
 
 <!--more-->
@@ -21,10 +21,10 @@ Stands for *flash of unstyled content*. Let's ease the symptom for the sidebar a
 
 ![FOUC](/assets/img/2022-01-07/fouc.gif){:.centered width="25%"}
 
-I have inlined css file for the sidebar content.
-Using `my-inline.scss` instead of `my-style.scss` helped me ease the symptom a little. But couldn't stop it from happening.
-For some reason, `padding-top` is applied after content is loaded so I can see that the content is loaded at the very top,
-and flashes back to the coded location.
+I have inlined the CSS file for the sidebar content.
+Using `my-inline.scss` instead of `my-style.scss` helped me ease the symptom a little. But couldn't stop it from
+happening. For some reason, `padding-top` is applied after content is loaded so I can see that the content is loaded at
+the very top, and flashes back to the coded location.
 
 ```css
 /* file: "/_sass/my-inline.scss" */
@@ -37,15 +37,15 @@ and flashes back to the coded location.
 
 ## Solution
 
-I found a [workaround solution] that enforces code to slowly appear to give a time for it to load & apply css properly.
+I found a [workaround solution] that enforces code to slowly appear to give time for it to load & apply CSS properly.
 I know this is just a workaround, and the problem still lies below, but as long as I don't see it, I'm okay with it...
 
 You may check my [commit]. The implementation is very simple. I'll give `fadeIn` animation to the web element that is
-suffering *FOUC* problem. So viewer won't notice it.
+suffering the *FOUC* problem. So viewers won't notice it.
 
 ### Implementation
 
-There is only two files to touch.
+There are only two files to touch.
 
 ```default
 /_includes/body/sidebar-sticky.html
@@ -67,7 +67,7 @@ Add `no-fouc` class to the `sidebar-sticky`.
 
 Append below code to the `my-inline.scss` file.<br>
 Any web element with `no-fouc` class will have `fadeIn` animation for a 1 second.
-This will likely to hide *FOUC* happening.
+This will likely hide *FOUC* happening.
 
 ```css
 /* file: "/_sass/my-inline.scss" */
@@ -103,7 +103,7 @@ I'm personally very satisfied with the outcome :)
 ![FOUC Fixed](/assets/img/2022-01-07/fouc-fixed.gif){:width="33%"}
 
 I still couldn't figure out why the background image of the sidebar is moving left & right for a brief moment.
-If anyone can help me on this issue, please leave me a comment. It would be very much appreciated. :)
+If anyone can help me with this issue, please leave me a comment. It would be very much appreciated. :)
 {:.note}
 
 Back to [How I customized Hydejack Theme](how-i-customized-hydejack-theme){:.heading.flip-title}

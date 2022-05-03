@@ -8,21 +8,23 @@ image:
   path: /assets/img/2020-12-21/post_end.png
 ---
 
-When I revisited the [Hydejack official site](https://hydejack.com/showcase/lazyren/), I noticed little [clapping button](https://help.medium.com/hc/en-us/articles/115011350967-Claps) that set at the end of the post.<br>
-It seems good idea to have light-cost (compare to commenting) way to communicate with visitors. So I gave some research on it and finally made it as above.
+When I revisited the [Hydejack official site], I noticed a little [clapping button] that set at the end of the post.<br>
+It seems a good idea to have a light-cost (compare to commenting) way to communicate with visitors. So I gave some
+research on it and finally made it as above.
 
 <!--more-->
 
-So I ended up with [applause](https://applause-button.com/). Which is free, ([donation](https://opencollective.com/applause-button) for a good service is always an option) and easy-to-install. (not 100% true, if you ask me. I couldn't find a good guideline on how to customize it.)
+So I ended up with [applause]. Which is free, ([donation] for good service is always an option) and easy-to-install.<br>
+(not 100% true, if you ask me. I couldn't find a good guideline on how to customize it.)
 
 ![Backer](/assets/img/2020-12-22/backer.png)
 
 I also donated $5!
 {:.note title="Donation"}
 
-Basically, I will add applause button for each-and-every post. Unless author specifically set it otherwise.<br>
+Basically, I will add an applause button for the each-and-every post. Unless the author specifically set it otherwise.
 
-4 files to be modified. (check [related commit](https://github.com/LazyRen/LazyRen.github.io/commit/346f496d80243fcfbd0f24b47daa10078efe954f))
+4 files to be modified. (check [related commit])
 
 ```default
 /_config.yml
@@ -31,13 +33,19 @@ Basically, I will add applause button for each-and-every post. Unless author spe
 /_sass/my-style.scss
 ```
 
+[Hydejack official site]: https://hydejack.com/showcase/lazyren/
+[clapping button]: https://help.medium.com/hc/en-us/articles/115011350967-Claps
+[applause]: https://applause-button.com/
+[donation]: https://opencollective.com/applause-button
+[related commit]: https://github.com/LazyRen/LazyRen.github.io/commit/346f496d80243fcfbd0f24b47daa10078efe954f
+
 * this unordered seed list will be replaced by the toc
 {:toc}
 
 ## _config.yml
 
-It's not really necessary, but I just wanted to avoid inserting `applause_button: true` to each and every posts' front matter.
-If you have a post that doesn't need applause button, insert `applause_button: false` to the front matter of that post.
+It's not really necessary, but I just wanted to avoid inserting `applause_button: true` to every post's front matter. If
+you have a post that doesn't need an applause button, insert `applause_button: false` to the front matter of that post.
 
 ```yaml
 # file: "/_config.yml"
@@ -52,7 +60,7 @@ defaults:
 
 ## links-static.html
 
-Jekyll needs js & css files ready. So here it is. Add below code to the end of the file.
+Jekyll needs js & CSS files ready. So here it is. Add the below code to the end of the file.
 
 ```html
 <!-- file: "/_includes/head/links-static.html" -->
@@ -67,7 +75,8 @@ Jekyll needs js & css files ready. So here it is. Add below code to the end of t
 ## dingbat.html
 
 Applause button(if enabled) seats between contents and post-nodes such as author / comments.<br>
-If Applause button is disabled, make sure to prints original dingbat. I've used site's accent_color (which you can change from `_config.yml`), but feel free to choose the best color for your blog.
+If the Applause button is disabled, make sure to print the original dingbat. I've used the site's accent_color (which
+you can change from `_config.yml`), but feel free to choose the best color for your blog.
 
 ```html
 <!-- file: "/_includes/components/dingbat.html" -->
@@ -85,11 +94,11 @@ If Applause button is disabled, make sure to prints original dingbat. I've used 
 
 ## my-style.scss
 
-Add below code to the end of the file.
+Add the below code to the end of the file.
 
 * Change size
 * Make button centered
-* Number has same color as applause button
+* Number has the same color as applause button
 
 ```css
 /* file: "/_sass/my-style.scss" */

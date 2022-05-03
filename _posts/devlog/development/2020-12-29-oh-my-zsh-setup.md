@@ -8,7 +8,7 @@ image:
   path: /assets/img/2020-12-29/omz_logo.png
 ---
 
-This is very brief summary of installing [zsh] + [Oh My Zsh] with proper font & basic plugins for the *[OMZ]
+This is a very brief summary of installing [zsh] + [Oh My Zsh] with proper font & basic plugins for the OMZ
 
 [zsh]: https://en.wikipedia.org/wiki/Z_shell
 [Oh My Zsh]: https://ohmyz.sh/
@@ -33,7 +33,7 @@ sudo apt-get install zsh
 # For SUSE Linux
 sudo zypper install zsh
 
-# Change zsh as default shell
+# Change zsh as the default shell
 chsh -s $(which zsh)
 
 # Install Oh My Zsh
@@ -42,12 +42,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ## Install Fonts
 
-Oh My Zsh (especially with theme like [Powerlevel10k]) requires font with specific font ligature & icons.
+Oh My Zsh (especially with a theme like [Powerlevel10k]) requires font with specific font ligature & icons.
 
 I'm currently using [JetBrains Mono] for my dev. environment.
-To be exact, patched version from the [Nerd Font]. They are not that differ at standard use-cases,
-but powerlevel10k do require some of glyphs (icons) that [Nerd Font] provides.<br>
-I highly suggest to download both official & nerd font patched version and use official one as a fallback.
+To be exact, patched version from the [Nerd Font]. They are not that differ in standard use-cases,
+but powerlevel10k does require some of glyphs (icons) that [Nerd Font] provides.<br>
+I highly suggest downloading both official & nerd font patched versions and use the official one as a fallback.
 
 [JetBrains Mono]: https://www.jetbrains.com/lp/mono/
 [Nerd Font]: https://github.com/ryanoasis/nerd-fonts
@@ -70,7 +70,7 @@ https://github.com/JetBrains/JetBrainsMono/releases/latest
 # For Linux
 # JetBrains Mono
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
-# It's a bit trickier for the Linux to install/patch Nerd Font... Please check Nerd Font repo for more information.
+# It's a bit trickier for Linux to install/patch Nerd Font... Please check Nerd Font repo for more information.
 ```
 
 Append `JetBrains Mono` after the `JetBrainsMono Nerd Font Mono` to the font-family setting of your choice of IDE or
@@ -82,7 +82,7 @@ Terminal.
 
 ## Install Theme
 
-Install theme that you want. I personally moved from [Pure theme] to [Powerlevel10k].
+Install the theme that you want. I personally moved from [Pure theme] to [Powerlevel10k].
 (AFAIK, [Powerlevel10k] is [faster](https://gist.github.com/romkatv/7cbab80dcbc639003066bb68b9ae0bbf) than [Pure theme]
 and supports various options to personalize look & functions)
 
@@ -105,11 +105,11 @@ Check [get started](https://github.com/romkatv/powerlevel10k#get-started) to fin
 
 ## OMZ Plugins
 
-Any extension with :pushpin: attached are things that you **MUST INSTALL** for better life.
+Any extension with :pushpin: attached are things that you **MUST INSTALL** for a better life.
 
 ### autoupdate :pushpin:
 
-> [Oh My Zsh plugin](https://github.com/TamCore/autoupdate-oh-my-zsh-plugins) for auto updating of git-repositories in $ZSH_CUSTOM folder
+> [Oh My Zsh plugin](https://github.com/TamCore/autoupdate-oh-my-zsh-plugins) for auto-updating of git-repositories in $ZSH_CUSTOM folder
 
 1. Clone this repository in oh-my-zsh's plugins directory:
 
@@ -125,9 +125,9 @@ Any extension with :pushpin: attached are things that you **MUST INSTALL** for b
    ```
 
 The updates will be executed automatically as soon as the Oh My Zsh updater is started.
-Note that this will auto update both plugins and themes found in the $ZSH_CUSTOM folder.
+Note that this will auto-update both plugins and themes found in the $ZSH_CUSTOM folder.
 
-You may adjust how often omz checks for the update by adjusting below line from the `~/.zshrc` file.<br>
+You may adjust how often omz checks for the update by adjusting the below line from the `~/.zshrc` file.<br>
 {:.note title="Update Frequency"}
 
 ```shell

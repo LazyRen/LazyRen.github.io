@@ -8,20 +8,20 @@ image:
   path: /assets/img/2020-12-21/utterances.png
 ---
 
-Disqus is used as default comments plugin for the Hydejack and most of the static site. But I had some issues with
+Disqus is used as the default comments plugin for the Hydejack and most of the static sites. But I had some issues with
 Disqus, so I looked elsewhere to find new comments plugin.
 
 1. Disqus loads slowly.<br>
-2. link within comment is **broken**.<br>
+2. link within the comment is **broken**.<br>
    The most important reason I chose to move on. Disqus automatically adds prefix starting with `disq.us/url?`,
    the problem is.... `disq.us` is not responding so the link gets lost.
 
-[Utterances] uses github issues to save & display comments. So you have to give proper permission to the github-bot.
-But once you set things up correctly, it works very smoothly and fast. Only downside I've encountered so far is that it
-requires user to login to the github in order to write comments, and there is no default `reply` function.
+[Utterances] uses GitHub issues to save & display comments. So you have to give proper permission to the GitHub bot.
+But once you set things up correctly, it works very smoothly and fast. The only downside I've encountered so far is that
+it requires a user to log in to GitHub to write comments, and there is no default `reply` function.
 (All though you can mimic reply using `>` & `@`...)
 
-[Giscus] is almost identical to the `Utterances` except that it uses `github discussion` instead of `issues`.<br>
+[Giscus] is almost identical to the `Utterances` except that it uses `GitHub discussion` instead of `issues`.<br>
 I have once again migrated to Giscus from Utterances. It seems 'discussions' is more appropriate than 'issues' to place
 comments.
 
@@ -33,9 +33,9 @@ comments.
 
 <!--more-->
 
-It's not hard to setup [Utterances] or [Giscus].<br>
+It's not hard to set up [Utterances] or [Giscus].<br>
 First of all, you should install [Utterances app]/[Giscus app] to the blog repository. After that, since we are gonna
-migrate from disqus, proper changes must be made to `my-comments.html` & `links-static.html`.<br>
+migrate from Disqus, proper changes must be made to `my-comments.html` & `links-static.html`.<br>
 
 [Utterances app]: https://github.com/apps/utterances
 [Giscus app]: https://github.com/apps/giscus
@@ -57,7 +57,7 @@ migrate from disqus, proper changes must be made to `my-comments.html` & `links-
 
 ## _config.yml
 
-If you followed instructions for [Utterances]/[Giscus], you will end up with simple javascript code like below.
+If you followed instructions for [Utterances]/[Giscus], you will end up with simple javascript code like the below.
 
 * Utterances
 
@@ -91,7 +91,7 @@ If you followed instructions for [Utterances]/[Giscus], you will end up with sim
   </script>
   ```
 
-There is two choices,
+There are two choices,
 
 1. Hard coding: you can simply copy this code to the `my-comments.html`.
 2. You can use `_config.yml` so it can be more configurable.
@@ -139,7 +139,7 @@ You may have different values based on your option choices.
 Choose the right comment provider's code to insert based on the `site.comments.provider`.
 (that we've mentioned in `_config.yml`).
 
-disqus's code will remain as-is, we only need to add Utterances/Giscus's code so it can parse values from `_config.yml`.
+Disqus's code will remain as-is, we only need to add Utterances/Giscus's code so it can parse values from `_config.yml`.
 If you don't want to use `_config.yml`, you may just copy & hard-code script from [Utterances]/[Giscus].
 
 ```html
@@ -184,7 +184,7 @@ If you don't want to use `_config.yml`, you may just copy & hard-code script fro
 
 ## links-static.html
 
-You don't want to link disqus if you are not using it. Wrap linking line with proper if statement.
+You don't want to link Disqus if you are not using it. Wrap linking line with proper if statement.
 
 ```html
 <!-- file: "/_includes/head/links-static.html" -->

@@ -8,9 +8,9 @@ image:
   path: /assets/img/2022-01-07/centered-image.png
 ---
 
-From time to time, we want to align image center within the Jekyll post. But applying `CSS` style directly into the
+From time to time, we want to align the image center within the Jekyll post. But applying `CSS` style directly into the
 markdown file with `HTML` tag is cumbersome and not pretty. And I'm [not the only one searching for the way]!
-In this article, I'll guide you a easy solution to center an image within Jekyll blog post.
+In this article, I'll guide you through an easy solution to center an image within Jekyll's blog post.
 
 [not the only one searching for the way]: https://stackoverflow.com/questions/23819197/jekyll-blog-post-centering-images
 
@@ -22,8 +22,8 @@ In this article, I'll guide you a easy solution to center an image within Jekyll
 ## Kramdown
 
 If you look at [Jekyll's official doc], Jekyll uses [Kramdown] with [GFM] preprocessor. The good thing about Kramdown is
-that it gives you an extra option to modify markdown file. Check [Kramdown Quick Reference] or my [posting tip post].
-As you may have found it, [Kramdown supports inline attributes]!
+that it gives you an extra option to modify the markdown file. Check [Kramdown Quick Reference] or my
+[posting tip post]. As you may have found it, [Kramdown supports inline attributes]!
 
 [Jekyll's official doc]: https://jekyllrb.com/docs/configuration/markdown/
 [Kramdown]: https://kramdown.gettalong.org/quickref.html
@@ -60,15 +60,15 @@ img.centered {
 }
 ```
 
-There is also a way to do it without `class`. And I'll post both way, so please skip the part if you don't want
+There is also a way to do it without `class`. And I'll post both ways, so please skip the part if you don't want
 `CSS class`.
 {:.note}
 
 ### Centering One Image
 
-If you have installed `CSS Class` as above, you may choose to use first markdown example. If not, go with the second
-option. Either way the outcome is the same. And if you wish to apply one-time attribute to the element, *say adjusting
-`width` or `height` of the image*, it won't hurt to know the second option.
+If you have installed `CSS Class` as above, you may choose to use the first markdown example. If not, go with the second
+option. Either way, the outcome is the same. And if you wish to apply a one-time attribute to the element, *say
+adjusting `width` or `height` of the image*, it won't hurt to know the second option.
 
 Example:
 
@@ -109,7 +109,7 @@ Markdown:
 ## Center All Images by Default
 
 If you want all images to be centered by default, append below `CSS` code to the `_sass/my-style.scss`. But it may have
-unexpected side effects. I have not tested it for long time.
+unexpected side effects. I have not tested it for a long time.
 
 ```css
 /* file: "/_sass/my-style.scss" */

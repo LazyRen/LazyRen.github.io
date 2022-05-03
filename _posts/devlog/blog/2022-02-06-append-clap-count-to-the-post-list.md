@@ -65,8 +65,9 @@ Simply append `<span class="clap-count">` to the proper position. this span will
 {% endif %}
 {% endraw %}
 ```
-Same goes for the `post.html`. I deliberately placed clap count to the end of the line for both, because clap count is
-updated asynchronously. So it will be popped up *after* page load. I don't want to see whole line aligning again.
+The same goes for the `post.html`. I deliberately placed clap count at the end of the line for both, because clap count
+is updated asynchronously. So it will be popped up *after* the page load. I don't want to see the whole line aligning
+again.
 
 ```html
 <!-- file: "/_includes/components/post.html" -->
@@ -96,10 +97,10 @@ updated asynchronously. So it will be popped up *after* page load. I don't want 
 
 ## my-scripts.html
 
-This is where magic happens. [Applause] supports `POST - /get-multiple`. Issue [Code for minimal, non-clapable counts?]
-gave me a place to start with.
+This is where the magic happens. [Applause] supports `POST - /get-multiple`.
+Issue [Code for minimal, non-clapable counts?] gave me a place to start with.
 
-In short, script parses all `clap-count` to get `URL` of the post and asks to the [Applause] to get clap count.
+In short, the script parses all `clap-count` to get the `URL` of the post and asks the [Applause] to get clap count.
 
 ```html
 <!-- file: "/_includes/my-scripts.html" -->

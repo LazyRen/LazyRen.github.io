@@ -8,7 +8,9 @@ image:
   path: /assets/img/2020-12-21/tag_list.png
 ---
 
-Since many tags are not listed on the sidebar, I've always wanted to have a page where I can see all categories & tags I've used for the posts. And visitor may click on it to navigate related posts. To implement tag list, you only need to create two files to have a such page.
+Since many tags are not listed on the sidebar, I've always wanted to have a page where I can see all categories & tags
+I've used for the posts. And visitors may click on it to navigate related posts. To implement a tag list, you only need
+to create two files to have a such page.
 
 <!--more-->
 
@@ -35,14 +37,20 @@ description: >
 ---
 ```
 
-Create [tags.md](https://github.com/LazyRen/LazyRen.github.io/blob/master/tags.md) file in the root folder.<br>
-It will be displayed in sidebar, so set `sidebar` accordingly, and we must create new layout [tags](#tagshtml).
+Create [tags.md] file in the root folder.<br>
+It will be displayed in the sidebar, so set `sidebar` accordingly, and we must create a new layout [tags](#tagshtml).
+
+[tags.md]: https://github.com/LazyRen/LazyRen.github.io/blob/master/tags.md
 
 ### tags.html
 
-[tags.html](https://github.com/LazyRen/LazyRen.github.io/blob/master/_layouts/tags.html) should be located in `_layouts` folder.<br>
-It finds all categories & tags from the site & list them like `list` or `tag-list` style (they are layout that you will see when you click category or tag).<br>
-`type` property is also used in here, so **make sure you've added property** to the `*.md` files in `/featured_categories` & `/featured_tags`. (They are **NOT** there by default! I've created new property for this.)
+[tags.html] should be located in `_layouts` folder.<br>
+It finds all categories & tags from the site & lists them in `list` or `tag-list` style (they are layouts that you will
+see when you click category or tag).<br>
+`type` property is also used in here, so **make sure you've added property** to the `*.md` files in
+`/featured_categories` & `/featured_tags`. (They are **NOT** there by default! I've created a new property for this.)
+
+[tags.html]: https://github.com/LazyRen/LazyRen.github.io/blob/master/_layouts/tags.html
 
 ```liquid
 ---
@@ -87,8 +95,8 @@ layout: page
 {% endraw %}
 ```
 
-It is very short code, but I invested some times to figure out how `liquid` works.<br>
-So... If you find this post useful, please click applause button for me :)
+It is a very short code, but I invested some time to figure out how `liquid` works.<br>
+So... If you find this post useful, please click the applause button for me :)
 
 Back to [How I customized Hydejack Theme](how-i-customized-hydejack-theme){:.heading.flip-title}
 {:.read-more}

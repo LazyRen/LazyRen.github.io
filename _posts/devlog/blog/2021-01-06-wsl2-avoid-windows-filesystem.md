@@ -8,14 +8,17 @@ image:
   path: /assets/img/2021-01-06/bundler.png
 ---
 
-If any of you find jekyll compile time(`bundle exec jekyll serve`) is too slow on your *Windows - WSL environment*,
+If any of you find Jekyll compile-time(`bundle exec jekyll serve`) is too slow on your *Windows - WSL environment*,
 make sure that your blog is **NOT** located on **Windows Filesystem**!
 
 ## TL;DR
 
-[WSL2 is very slow in Windows filesystem](https://github.com/microsoft/WSL/issues/4197) (`/mnt/c`).<br>
+[WSL2 is very slow in Windows filesystem] (`/mnt/c`).<br>
 Clone your blog repo to the Linux filesystem (starting with `~/`).<br>
-[Access Linux filesystem](https://devblogs.microsoft.com/commandline/whats-new-for-wsl-in-windows-10-version-1903/) via explorer with path like below.
+[Access Linux filesystem] via explorer with a path like below.
+
+[WSL2 is very slow in Windows filesystem]: https://github.com/microsoft/WSL/issues/4197
+[Access Linux filesystem]: https://devblogs.microsoft.com/commandline/whats-new-for-wsl-in-windows-10-version-1903/
 
 ```default
 \\wsl$\{distro_name}\home\{user_name}
@@ -33,16 +36,18 @@ Clone your blog repo to the Linux filesystem (starting with `~/`).<br>
 
 ![Window Jekyll Compile Time](/assets/img/2021-01-06/windows_fs_jekyll.png){: style="height: 800px;"}
 
-There is a known issue [WSL2 filesystem performance is much slower than WSL2 in /mnt](https://github.com/microsoft/WSL/issues/4197).
+There is a known issue [WSL2 filesystem performance is much slower than WSL2 in /mnt].
 
-That being said, simple Jekyll compile takes about 40 seconds with my brand new $3000 computer. (5900x Do what I paid you for!)<br>
+That being said, simple Jekyll compile takes about 40 seconds with my brand new $3000 computer.<br>
 Solution? Migrate your blog to the Linux filesystem. Re-clone your repo.
+
+[WSL2 filesystem performance is much slower than WSL2 in /mnt]: https://github.com/microsoft/WSL/issues/4197
 
 ## Linux Filesystem
 
 ![Linux Jekyll Compile Time](/assets/img/2021-01-06/wsl2_native_fs_jekyll.png){: style="height: 800px;"}
 
-By simple migrating to Linux filesystem, the compile time has been reduced to 1/10(2.6 sec).<br>
+By simply migrating to the Linux filesystem, the compile-time has been reduced to 1/10(2.6 sec).<br>
 But you need some settings to fully take advantage of WSL2.
 
 ## Additional Settings
@@ -50,7 +55,9 @@ But you need some settings to fully take advantage of WSL2.
 ### Explorer
 
 We need to navigate to the folder freely with explorer.<br>
-[Access Linux filesystem](https://devblogs.microsoft.com/commandline/whats-new-for-wsl-in-windows-10-version-1903/) via explorer with path like below.
+[Access Linux filesystem] via explorer with a path like below.
+
+[Access Linux filesystem]: https://devblogs.microsoft.com/commandline/whats-new-for-wsl-in-windows-10-version-1903/
 
 ```default
 \\wsl$\{distro_name}\home\{user_name}
@@ -59,12 +66,12 @@ We need to navigate to the folder freely with explorer.<br>
 \\wsl$\Ubuntu\home\lazyren
 ```
 
-Make a shortcuts to the blog folder or root folder for the future.
+Make a shortcut to the blog folder or root folder for the future.
 
 ### Windows Terminal
 
 Change starting directory to the root folder of the user.
-Add below line to the ubuntu profile from `settings.json`.
+Add the below line to the ubuntu profile from `settings.json`.
 
 ```json
 //file: "settings.json"

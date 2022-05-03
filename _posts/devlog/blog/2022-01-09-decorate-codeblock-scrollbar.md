@@ -8,8 +8,8 @@ image:
   path: /assets/img/2022-01-09/scrollbar.gif
 ---
 
-Default scrollbar shown for codeblock in the Hydejack theme is clunky.<br>
-Let's change it to fancier version like above. It's plain simple.
+The default scrollbar shown for code block in the Hydejack theme is clunky.<br>
+Let's change it to a fancier version like above. It's plain simple.
 
 ![Default Scrollbar](/assets/img/2022-01-09/default_scrollbar.png)
 
@@ -23,7 +23,7 @@ Hydejack Default Codeblock Scrollbar
 
 ## File to modify
 
-There is few files you need to edit/add for this.<br>
+There are few files you need to edit/add for this.<br>
 
 ```default
 /_sass/my-style.scss
@@ -31,7 +31,7 @@ There is few files you need to edit/add for this.<br>
 
 ## my-style.scss
 
-Append below code to the `my-style.scss`. And we are done!
+Append the below code to the `my-style.scss`. And we are done!
 
 ```css
 /* file: "/_sass/my-style.scss" */
@@ -63,10 +63,10 @@ pre {
 
 ## Playground
 
-Fee free to play with decorated codeblock by yourself!
+Feel free to play with decorated code block by yourself!
 
 ```default
-Ths is new decorated version of the codeblock scrollbar.
+This is a new decorated version of the code block scrollbar.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus leo fringilla massa imperdiet pretium. Vestibulum sit amet quam sem. Aliquam lectus orci, tincidunt ut nunc in, placerat viverra felis. Etiam volutpat pretium purus, ac hendrerit felis faucibus eu. Quisque aliquet lacus tortor, eu gravida mi pretium sit amet. Proin at sem nec ligula laoreet cursus eget nec erat. Praesent porttitor placerat tortor, a tincidunt velit volutpat et. Integer molestie libero vitae erat feugiat pellentesque. Morbi turpis purus, volutpat ut sem nec, pharetra tristique sapien.
 
