@@ -102,8 +102,8 @@ I'll go with the second choice. Either way, you have to put `comments: provider:
 # file: "/_config.yml"
 # Set which comment system to use
 comments:
-  # 'disqus' or 'utterances' are available
-  provider:            utterances
+  # 'disqus' / 'giscus' / 'utterances' are available
+  provider:            giscus
 
 # You must install utterances github app before use.(https://github.com/apps/utterances)
 # Make sure all variables are set properly. Check below link for detail.
@@ -140,7 +140,7 @@ Choose the right comment provider's code to insert based on the `site.comments.p
 (that we've mentioned in `_config.yml`).
 
 Disqus's code will remain as-is, we only need to add Utterances/Giscus's code so it can parse values from `_config.yml`.
-If you don't want to use `_config.yml`, you may just copy & hard-code script from [Utterances]/[Giscus].
+If you don't want to use `_config.yml`, you may just copy & hard-code script from the [Utterances]/[Giscus].
 
 ```html
 <!-- file: "/_includes/my-comments.html" -->
