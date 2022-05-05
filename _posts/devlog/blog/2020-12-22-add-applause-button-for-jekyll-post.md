@@ -14,7 +14,8 @@ research on it and finally made it as above.
 
 <!--more-->
 
-So I ended up with [applause]. Which is free, ([donation] for good service is always an option) and easy-to-install.<br>
+So I ended up with [applause].<br>
+Which is free, ([donation] for a good service is always an option) and easy-to-install.<br>
 (not 100% true, if you ask me. I couldn't find a good guideline on how to customize it.)
 
 ![Backer](/assets/img/2020-12-22/backer.png)
