@@ -3,7 +3,8 @@
   text-shadow: rgba(0, 0, 0, 0.25) 0.1rem 0.1rem 0.15rem;
 }
 
-.post-title, .page-title {
+.post-title,
+.page-title {
   word-break: keep-all;
 }
 
@@ -21,12 +22,12 @@
 
 .sidebar-nav-item {
   padding: .25rem 0;
-  width:100%;
+  width: 100%;
 }
 
 .sidebar-nav-subitem {
   @extend .f4;
-  width:100%;
+  width: 100%;
   padding: .25rem 0;
   display: inline-block;
 }
@@ -47,7 +48,7 @@
 }
 
 .sidebar-about {
-  > a.sidebar-title {
+  >a.sidebar-title {
     &::after {
       width: 9rem;
     }
@@ -56,30 +57,30 @@
 
 // Submenu Insertion
 
-.spread-btn{
+.spread-btn {
   background: none;
   border: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   text-align: right;
   width: 100%;
 }
 
-.spread-btn:hover{
-  color: #4FB1BA;
+.spread-btn:hover {
+  color: white;
 }
 
-input[type=checkbox]{
+input[type=checkbox] {
   display: none;
 }
 
-input[type=checkbox] ~ ul{
+input[type=checkbox]~ul {
   height: 0;
   transform: scaleY(0);
   transition: transform .2s ease-out;
 }
 
-input[type=checkbox]:checked ~ ul{
+input[type=checkbox]:checked~ul {
   height: 100%;
   list-style: none;
   transform-origin: top;
@@ -91,12 +92,29 @@ input[type=checkbox]:checked ~ ul{
 // Prevent FOUC
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  20% { opacity: 0; }
-  40% { opacity: 0.4; }
-  60% { opacity: 0.6; }
-  80% { opacity: 0.8; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.4;
+  }
+
+  60% {
+    opacity: 0.6;
+  }
+
+  80% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .no-fouc {
