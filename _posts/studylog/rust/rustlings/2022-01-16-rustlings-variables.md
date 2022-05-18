@@ -11,8 +11,8 @@ tags:     rust rustlings
 > You can make them mutable by adding mut in front of the variable name.
 
 This is the first topic of the [rustlings]. And there is nothing really special about it.<br>
-Exercises are just checking whether you are familiar with basic syntaxes of the Rust.<br>
-If you find any of the exercise a bit confusing, please re-read [The Book] and/or [Rust By Example].
+Exercises are just checking whether you are familiar with the basic syntaxes of the Rust.<br>
+If you find any of the exercises a bit confusing, please re-read [The Book] and/or [Rust By Example].
 
 You may find [solution code for the topic from my repo].
 
@@ -40,8 +40,8 @@ fn main() {
 
 ## variables2.rs
 
-If we only declared variable without type annotation or initialize value,
-compiler has no idea what that variable type will be.
+If we only declared variables without type annotation or initialize value, the compiler has no idea what that variable
+type will be.
 
 So, it will return error like below:
 
@@ -70,7 +70,7 @@ error[E0381]: use of possibly-uninitialized variable: `x`
 error: aborting due to previous error
 ```
 
-Error says we are trying to use declared variable without initializing it.
+The error says we are trying to use the declared variable without initializing it.
 
 So the proper answer would be either
 
@@ -94,8 +94,7 @@ fn main() {
 In Rust, variable bindings are immutable by default.<br>
 But here we're trying to reassign a different value to x!
 
-We can add `mut` to the variable binding to inform compiler that we want to modify the variable in
-later use.
+We can add `mut` to the variable binding to inform the compiler that we want to modify the variable in later use.
 
 ```rust
 /* file: "exercises/variables/variables3.rs" */
@@ -109,8 +108,8 @@ fn main() {
 
 ## variables4.rs
 
-I have already explained that we must initialize variable before use in [variables2].<br>
-If not, we will encounter error like below:
+I have already explained that we must initialize a variable before use in [variables2].<br>
+If not, we will encounter an error like the below:
 
 [variables2]: #variables2rs
 
@@ -124,7 +123,7 @@ error[E0381]: borrow of possibly-uninitialized variable: `x`
 error: aborting due to previous error
 ```
 
-Give initialize value to the `x`.
+Initialize the variable `x`.
 
 ```rust
 /* file: "exercises/variables/variables4.rs" */
@@ -136,9 +135,9 @@ fn main() {
 
 ## variables5.rs
 
-Sometimes we may also like to reuse existing variable names because we are just converting
-values to different types like in this exercise.<br>
-Fortunately Rust has a powerful solution to this problem: 'Shadowing'!<br>
+Sometimes we may also like to reuse existing variable names because we are just converting values to different types
+like in this exercise.<br>
+Fortunately, Rust has a powerful solution to this problem: 'Shadowing'!<br>
 you can read more about 'Shadowing' in the book's section [Variables and Mutability].
 
 [Variables and Mutability]: https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#shadowing
@@ -155,7 +154,7 @@ fn main() {
 
 ## variables6.rs
 
-Constants are always immutable and they are declared with keyword `const` rather than keyword `let`.
+Constants are always immutable and they are declared with the keyword `const` rather than the keyword `let`.
 Constants types **must** also always be annotated.
 
 ```rust

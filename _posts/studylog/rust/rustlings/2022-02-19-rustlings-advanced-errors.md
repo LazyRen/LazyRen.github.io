@@ -6,7 +6,7 @@ category: studylog
 tags:     rust rustlings
 ---
 
-If you are having difficulties with the exercise, please check below references:
+If you are having difficulties with the exercise, please check the below references:
 
 * [Defining an error type]
 * [Boxing errors]
@@ -66,7 +66,7 @@ impl FromStr for PositiveNonzeroInteger {
 }
 ```
 
-As you can see, *advanced_errs1.rs* uses `FromStr` trait, and `?` operator instead of using `map_err()`.
+As you can see, *advanced_errs1.rs* uses the `FromStr` trait, and `?` operator instead of using `map_err()`.
 
 ```rust
 /* file: "exercises/advanced_errors/advanced_errs1.rs" */
@@ -160,18 +160,18 @@ Steps:
    }
    ```
 
-   Above will do.
+   The above will do.
 
 3. Handle the missing error cases in the `FromStr` implementation for `Climate`.
 
    > Parser for `Climate`.
    >
-   > 1. Split the input string into 3 fields: city, year, temp.
+   > 1. Split the input string into 3 fields: city, year, and temp.
    > 2. Return an error if the string is empty or has the wrong number of
    >    fields.
    > 3. Return an error if the city name is empty.
    > 4. Parse the year as a `u32` and return an error if that fails.
-   > 5. Parse the temp as a `f32` and return an error if that fails.
+   > 5. Parse the temp as an `f32` and return an error if that fails.
    > 6. Return an `Ok` value containing the completed `Climate` value.
 
    ```rust
@@ -197,7 +197,7 @@ Steps:
    ```
 
 4. Complete the partial implementation of `Display` for `ParseClimateError`.<br>
-   Actual string to print can be found from the test section.
+   The actual string to print can be found in the test section.
 
    ```rust
    impl Display for ParseClimateError {

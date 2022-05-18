@@ -9,13 +9,13 @@ tags:     rust rustlings
 > Rust’s standard library includes a number of very useful data structures called collections. Most other data types
 > represent one specific value, but collections can contain multiple values. Unlike the built-in array and tuple types,
 > the data these collections point to is stored on the heap, which means the amount of data does not need to be known at
-> compile time and can grow or shrink as the program runs.
+> compile-time and can grow or shrink as the program runs.
 >
 > This exercise will get you familiar with two fundamental data structures that are used very often in Rust programs:
 >
 > A [vector] allows you to store a variable number of values next to each other.
 > A [hash map] allows you to associate a value with a particular key. You may also know this by the names unordered map
-> in C++, dictionary in Python or an associative array in other languages.
+> in C++, dictionary in Python, or an associative array in other languages.
 
 You may find [solution code for the topic from my repo].
 
@@ -30,9 +30,9 @@ You may find [solution code for the topic from my repo].
 
 ## vec1.rs
 
-We can declare vector in many ways. The basic way is of course, using [`Vec::new()`].
+We can declare vector in many ways. The basic way is, of course, using [`Vec::new()`].
 Or we can use [`vec!`] macro. Helper methods such as [`to_vec()`] or [`into_vec()`] also helps.
-Rust supports various methods/functions for std structs. So it is better to visit rust api document.
+Rust supports various methods/functions for std structs. So it is better to visit the rust API document.
 
 In this exercise, I've used `slice::to_vec()` to copy contents of the `a` to `v`.
 
@@ -68,7 +68,7 @@ mod tests {
 
 This exercise gives us the taste of [`iterator()`].<br>
 [`fn iter_mut(&mut self)-> IterMut<'_, T>`] returns an iterator that **allows** modifying each value.
-Combine it with `for` loop, we can modify all values in the *vector*.
+Combining it with the `for` loop, we can modify all values in the *vector*.
 
 ```rust
 /* file: "exercises/collections/vec2.rs" */
@@ -101,7 +101,7 @@ mod tests {
 ## hashmap1.rs
 
 This exercise gives an example usage of [`HashMap`].<br>
-Take a look at rust API document if you are not familiar with it.
+Take a look at the rust API document if you are not familiar with it.
 
 ```rust
 /* file: "exercises/collections/hashmap1.rs" */

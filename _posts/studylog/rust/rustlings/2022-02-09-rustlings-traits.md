@@ -13,12 +13,12 @@ tags:     rust rustlings
 Traits are similar to a feature often called interfaces in other languages, although with some differences.
 {:.note}
 
-`trait` is one of the most important Rust feature that you must be familiar with. There are so many `trait` that Rust
+`trait` is one of the most important Rust features that you must be familiar with. There is so many `trait` that Rust
 provides. Such as [`Clone`], [`Copy`], [`Debug`], [`Default`], [`Deref`], [`From`], [`Ord`] etc.
 
-Sometimes you can use [Derive macros] macro, or sometimes you have to implement trait by yourself.
+Sometimes you can use [Derive macros] macro, or sometimes you have to implement the trait by yourself.
 Unfortunately, rustling only focuses on the basic usage of the trait rather than introducing Rust providing traits.
-So if you want to know more about common traits, I suggest you to read [blog article].
+So if you want to know more about common traits, I suggest you read [blog article].
 
 You may find [solution code for the topic from my repo].
 
@@ -46,7 +46,7 @@ impl MyTrait for MyStruct {
 }
 ```
 
-In this example, we have to implement `impl` block for the `trait AppendBar`.
+In this example, we have to implement the `impl` block for the `trait AppendBar`.
 
 ```rust
 /* file: "exercises/traits/traits1.rs" */
@@ -102,7 +102,7 @@ mod tests {
 `traits2.rs` is almost identical to the previous problem. The only difference is that now we have to implement
 `trait AppendBar` for the `Vec<String>` instead of `String`.
 
-The problems are very easy to solve. But `trait` has so many potential and so many common `trait` that Rust provides.
+The problems are very easy to solve. But `trait` has so much potential and so many common `trait` that Rust provides.
 So please take a look at [blog article] when you have time to find out common traits that you should know.
 
 ```rust

@@ -35,7 +35,7 @@ As I have briefly mentioned in [Enums] chapter, [`Result<T, E>`] is `enum` that 
 
 In this example, return type of the `generate_nametag_text()` is `Result<String, String>`. So the function returns
 either `Ok(String)` or `Err(String)`. Change `Some` to `Ok` for a valid argument.
-After that, we only have to implement when the argument is *not* valid.
+After that, we only have to implement it when the argument is *not* valid.
 
 The string we have to return can be found in test `explains_why_generating_nametag_test_fails()`. Implement missing
 `else` block to return `Err(String)`.
@@ -87,7 +87,7 @@ mod tests {
 > that case, we want to immediately return that error from our function and not try to multiply and add.
 
 [`parse()`] function returns `Result<F, <F as FromStr>::Err>`. We have to propagate *Error* if `parse()` goes wrong.
-One way to achieve this is to use `match` statement like below.
+One way to achieve this is to use the `match` statement like below.
 
 ```rust
 let qty = match item_quantity.parse::<i32>() {
@@ -99,17 +99,17 @@ let qty = match item_quantity.parse::<i32>() {
 But this is too long and cumbersome. Luckily for us, Rust provides [`?` operator] that immediately returns given `Err()`
 if function goes wrong.
 
-So above 3 line can be shorten into one-line code.
+So above 3 lines can be shortened into one-line code.
 
 ```rust
 let qty = item_quantity.parse::<i32>()?;
 ```
 
 I recommend you to read about [`?` operator] since it is not always
-applicable. Current function must return `Result<T, E>` type, and there must be a way to convert given `ERR(E2)` to
+applicable. The current function must return the `Result<T, E>` type, and there must be a way to convert the given `ERR(E2)` to
 `Err(E)`.
 
-Anyway, full code for the exercise is as below.
+Anyway, the full code for the exercise is as below.
 
 ```rust
 /* file: "exercises/error_handling/errors2.rs" */
@@ -150,7 +150,7 @@ mod tests {
 > This is a program that is trying to use a completed version of the `total_cost` function from the previous exercise.
 > It's not working though! Why not? What should we do to fix it?
 
-As I've said. Using [`?` operator] comes with limitation. Currently, `main()` doesn't return anything. It must return
+As I've said. Using [`?` operator] comes with limitations. Currently, `main()` doesn't return anything. It must return
 `Result<T, E>` to have code line like `let cost = total_cost(pretend_user_input)?;`.
 
 Change main function signature to `fn main() -> Result<(), ParseIntError>`. And return `Ok(())` at the end of the
@@ -264,10 +264,10 @@ As error message is saying, `PositiveNonzeroInteger::new()` returns `Result<Posi
 So, `?` *may* return `Err(CreationError)`. But Rust compiler has no idea about how to convert `Err(CreationError)`
 **into** `ParseIntError`!
 
-There is a two ways to solve this problem.
+There are two ways to solve this problem.
 
 1. [Boxing errors]<br>
-   Change return type of the `main()` to `Box<dyn error::Error>` which can hold any kind of `Error` type.
+   Change the return type of the `main()` to `Box<dyn error::Error>` which can hold any kind of `Error` type.
 
    ```rust
    fn main() -> Result<(), Box<dyn error::Error>> {
@@ -279,7 +279,7 @@ There is a two ways to solve this problem.
    ```
 
 2. Implement Trait [`std::convert::From`]<br>
-   So that compiler knows how to convert given `Error` type to return `Error` type.<br>
+   So that compiler knows how to convert the given `Error` type to return the `Error` type.<br>
    This is my personal preference. Because with `Box<dyn error::Error>`, we cannot know what type of `Error` it returns.
    It is determined at the *runtime*.<br>
    But it is more complicated, and it's not the intention of the current exercise. So let's go with the first option.

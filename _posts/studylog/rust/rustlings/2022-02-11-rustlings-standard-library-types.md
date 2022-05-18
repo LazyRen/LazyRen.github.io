@@ -26,22 +26,22 @@ You may find [solution code for the topic from my repo].
 > where a value can have as part of itself another value of the same type. To get around the issue,
 > we can use a [`Box`] - a smart pointer used to store data on the heap, which also allows us to wrap a recursive type.
 
-*Rust needs to know how much space a type takes up.* Also makes it *almost* impossible to have `variable-length array`.
+*Rust needs to know how much space a type takes up.* Also makes it *almost* impossible to have a `variable-length array`.
 (Just like good old `C++`) But that's another issue.
 {:.note}
 
-`Box<T>` is what Rust uses to do *heap allocation*. You can think of [`Box`] as a smart pointer which points to the `T`.
+`Box<T>` is what Rust uses to do *heap allocation*. You can think of [`Box`] as a smart pointer that points to the `T`.
 
 You'll use them most often in these situations:
 
-* When you have a type whose size can’t be known at compile time and you want to use a value of that type in a context
+* When you have a type whose size can’t be known at compile-time and you want to use a value of that type in a context
   that requires an exact size.
 * When you have a large amount of data and you want to transfer ownership but ensure the data won’t be copied when you
   do so.
 * When you want to own a value and you care only that it’s a type that implements a particular trait rather than being
   of a specific type.
 
-Getting back to the problem. When you try to run a test code, compiler will print warning & help as below:
+Getting back to the problem. When you try to run a test code, the compiler will print a warning & help as below:
 
 ```shell
 error[E0072]: recursive type `List` has infinite size
@@ -59,13 +59,13 @@ help: insert some indirection (e.g., a `Box`, `Rc`, or `&`) to make `List` repre
 
 Basically, we are declaring `List` enum. But the `List` enum contains `List` within itself(`Cons(i32, List)`).<br>
 If so, how can the compiler calculate the size of the `List`?<br>
-When the compiler tries to calculate the size of the `List`, it needs to know the size of `List`.
+When the compiler tries to calculate the size of the `List`, it needs to know the size of the `List`.
 So when the compiler ...
 
 Do you see the point?<br>
 This is what *recursive type has infinite size* means.
 
-But when we change `Cons(i32, List)` to the `Cons(i32, Box<List>)`; compiler doesn't need to know the size of `List` to
+But when we change `Cons(i32, List)` to the `Cons(i32, Box<List>)`; the compiler doesn't need to know the size of `List` to
 calculate the size of `Cons`. Because no matter the size, `List` will be stored in the *heap*, and `Cons` will only have
 the address of the `List`!
 
@@ -159,7 +159,7 @@ fn main() {
 
 ## iterators1.rs
 
-[Iterator] is essential tool to iterate over *collections*. We can even implement `trait Iterator` to our custom struct
+[Iterator] is an essential tool to iterate over *collections*. We can even implement `trait Iterator` to our custom struct
 to make it iterable.
 
 ```rust
@@ -185,15 +185,15 @@ fn main() {
 1. > Complete the `capitalize_first` function.<br>
    > "hello" -> "Hello"
 
-   To solve this, you first must find what [`std::str::Chars`] do.
-   According to the API doc, it gives iterator over the chars of a string slice. So the first `next()` from the `match`
-   expression will give you the first character from the string slice.
+   To solve this, you first must find what [`std::str::Chars`] does.
+   According to the API doc, it gives an iterator over the chars of a string slice. So the first `next()` from the `match`
+   the expression will give you the first character from the string slice.
 
 2. > Apply the `capitalize_first` function to a slice of string slices.<br>
    > Return a vector of strings.<br>
    > ["hello", "world"] -> ["Hello", "World"]
 
-   [`std::iter::iterator::map`] takes a closure and creates an iterator which calls that closure on each element.
+   [`std::iter::iterator::map`] takes a closure and creates an iterator that calls that closure on each element.
    Consider using `map` instead of `for` loop depending on the situation. Combining it with
    [`std::iter::iterator::collect`], you get a nice sweet collection(such as `Vec`) of converted value.
 
@@ -332,8 +332,8 @@ This problem can be solved easily with [`std::iter::Iterator::fold`].
 an initial value, and a closure with two arguments: an ‘accumulator’, and an element. The closure returns the value that
 the accumulator should have for the next iteration.
 
-As commented out, you may also use [`std::iter::Iterator::reduce`]. Which is essential same as `fold()` but takes first
-element as initial value.
+As commented out, you may also use [`std::iter::Iterator::reduce`]. Which is essentially the same as `fold()` but takes first
+element as an initial value.
 
 ```rust
 /* file: "exercises/standard_library_types/iterators4.rs" */
@@ -348,8 +348,8 @@ pub fn factorial(num: u64) -> u64 {
 
 ## iterators5.rs
 
-Now is the time to learn [`std::iter::Iterator::filter`]. It does what it name implies. It *filters out* elements that
-you don't need while iterating.
+Now is the time to learn [`std::iter::Iterator::filter`]. It does what its name implies. It *filters out* elements that
+you don't need it while iterating.
 
 ```rust
 fn count_iterator(map: &HashMap<String, Progress>, value: Progress) -> usize {
@@ -362,14 +362,14 @@ fn count_iterator(map: &HashMap<String, Progress>, value: Progress) -> usize {
 Function chaining in Rust is amazing yet sometimes hard to understand if you are not familiar with it.
 Let's try to understand what that one-line function body does.
 
-1. So we have [`HashMap`] named `map`. First we get iterator over hashmap's values with [`values()`].
-2. With given iterator, we now use [`std::iter::Iterator::filter`] to only collect elements that matches `value`. As you
+1. So we have [`HashMap`] named `map`. First, we get an iterator over hashmap's values with [`values()`].
+2. With the given iterator, we now use [`std::iter::Iterator::filter`] to only collect elements that match`value`. As you
    have guessed, the returned iterator from `filter()` will yield only the elements for which the closure returns true.
 3. Now we use [`std::iter::Iterator::count`] to count the number of iterations.
 
-As you can see, trait [`std::iter::Iterator`] supports so many methods, that it is worth to check API document.
+As you can see, trait [`std::iter::Iterator`] supports so many methods, that it is worth checking the API document.
 
-We have finished hard part. `count_collection_iterator()` is easier to implement.
+We have finished the hard part. `count_collection_iterator()` is easier to implement.
 
 ```rust
 fn count_collection_iterator(collection: &[HashMap<String, Progress>], value: Progress) -> usize {
@@ -380,8 +380,8 @@ fn count_collection_iterator(collection: &[HashMap<String, Progress>], value: Pr
 }
 ```
 
-`collection` is slice of hashmaps. With `collection.iter()`, we can iterate over each and every hashmaps. `map()` will
-help use to change that hashmap into desired count. [`std::iter::Iterator::sum`] will do what you have imagined :)
+`collection` is a slice of hashmaps. With `collection.iter()`, we can iterate over each and every hashmaps. `map()` will
+help us to change that hashmap into the desired count. [`std::iter::Iterator::sum`] will do what you have imagined :)
 
 Full code looks like this:
 

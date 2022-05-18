@@ -20,7 +20,7 @@ You may find [solution code for the topic from my repo].
 
 ## functions1.rs
 
-We can't use function without declaring it. Declare empty function with matching function
+We can't use a function without declaring it. Declare an empty function with matching function
 signature.<br>
 That is, function with name `call_me` & takes no argument and returns nothing.
 
@@ -37,8 +37,8 @@ fn main() {
 
 ## functions2.rs
 
-Rust requires that all parts of a function's signature to have type annotations.
-Any [integer type] will do. `i32`, `u32`, `usize` ... Choose one you like.
+Rust requires that all parts of a function's signature have type annotations.
+Any [integer type] will do. `i32`, `u32`, `usize` ... Choose the one you like.
 
 [integer type]: https://doc.rust-lang.org/book/ch03-02-data-types.html#integer-types
 
@@ -101,9 +101,8 @@ fn is_even(num: i32) -> bool {
 
 ## functions5.rs
 
-When we want to return something, we can use good-old-fashioned `return this;` **OR** provide
-statement without semicolon(`;`). Rust will interpret the statement as a return statement if you
-don't provide `;`.
+When we want to return something, we can use good-old-fashioned `return this;` **OR** to provide a statement without a
+semicolon(`;`). Rust will interpret the statement as a return statement if you don't provide `;`.
 
 At the moment, `fn square(num: i32) -> i32` does not have return statement. Remove `;` from
 `num * num;` to make it as a return statement.

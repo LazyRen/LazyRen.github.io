@@ -8,7 +8,7 @@ tags:     rust rustlings
 
 > Rust has three struct types: a classic C struct, a tuple struct, and a unit struct.
 
-Have a look at [Structures] & [Method Syntax] chapter and [keyword struct] API document to
+Have a look at the [Structures] & [Method Syntax] chapter and [keyword struct] API document to
 understand Rust's structure.
 
 You may find [solution code for the topic from my repo].
@@ -77,7 +77,7 @@ mod tests {
 
 ## structs2.rs
 
-Rust provides [update syntax] to create instances of struct from the existing object.
+Rust provides [update syntax] to create instances of the struct from the existing object.
 
 ```rust
 /* file: "exercises/structs/structs2.rs" */
@@ -128,7 +128,7 @@ mod tests {
 }
 ```
 
-In case you missed, take a closer look at
+In case you missed it, take a closer look at
 
 ```rust
 #[test]
@@ -151,8 +151,8 @@ where `..order_template` is used. Any other fields that are not mentioned will b
 
 ## structs3.rs
 
-In Rust, structure definition & implementation are separated. We need `impl` block to implement
-`method` for the structure. Check [Method Syntax] chapter for the further information.
+In Rust, structure definition & implementation are separated. We need an `impl` block to implement
+the `method` for the structure. Check the [Method Syntax] chapter for further information.
 
 ```rust
 /* file: "exercises/structs/structs3.rs" */

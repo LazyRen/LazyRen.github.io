@@ -6,8 +6,8 @@ category: studylog
 tags:     rust rustlings
 ---
 
-Have a look at [Ownership] & [Reference and Borrowing] to have understanding of one of the most
-important part of the Rust language.
+Have a look at [Ownership] & [Reference and Borrowing] to have an understanding of one of the most
+an important part of the Rust language.
 
 You may find [solution code for the topic from my repo].
 
@@ -38,12 +38,12 @@ error[E0596]: cannot borrow `vec1` as mutable, as it is not declared as mutable
    |     ^^^^^^^^^^^^^ cannot borrow as mutable
 ```
 
-On `line 11`, we use call `push` method for the `vec1` variable.<br>
-Which is *mutating* the `vec1`. Hence requiring `mut` keyword at declaration.
+On `line 11`, we use the call `push` method for the `vec1` variable.<br>
+Which is *mutating* the `vec1`. Hence requiring the `mut` keyword at declaration.
 
-Change declaration at `line 7` by appending `mut` keyword next to `let`.
+Change declaration at `line 7` by appending the `mut` keyword next to `let`.
 
-You may wondering why we don't need `mut` keyword with `vec0`. It will be covered at next problem.
+You may wondering why we don't need the `mut` keyword with `vec0`. It will be covered in the next problem.
 {:.note}
 
 ```rust
@@ -103,14 +103,14 @@ fn fill_vec(vec: Vec<i32>) -> Vec<i32>
 When we look at the function signature of the `fill_vec`, it takes one parameter(`vec`) as a
 `Vec<i32>`. Notice there is no borrowing(`&`) happening here.
 
-When you pass argument to the function like this, argument will be `copy` or `move` from the
+When you pass an argument to a function like this, an argument will be `copy` or `move` from the
 original value. If it is *moved*, the ownership goes to the **function**. So original variable
 cannot be used after the invocation.
 
 It's a bit confusing matter and I won't go further about this.<br>
 So please check [Ways Variables and Data Interact: Clone] if you feel lost.
 
-So how we suppose to handle this issue?<br>
+So how are we suppose to handle this issue?<br>
 When you run `rustlings hint move_semantics2`, you will get 3 different ways to fix this.
 
 1. Make another, separate version of the data that's in `vec0` and pass that
@@ -142,7 +142,7 @@ When you run `rustlings hint move_semantics2`, you will get 3 different ways to 
    ```
 
    Notice that above code is passing `vec0.clone()` to the function instead of `vec0`.<br>
-   We are making *clone* of the original vector and giving ownership of the *cloned one*. Therefore,
+   We are making a *clone* of the original vector and giving ownership of the *cloned one*. Therefore,
    we still can use original variable!
 
 2. Make `fill_vec` borrow its argument instead of taking ownership of it,
@@ -174,9 +174,9 @@ When you run `rustlings hint move_semantics2`, you will get 3 different ways to 
    }
    ```
 
-   In this solution, function signature (not only the name!) is changed to take `vec: &Vec<i32>`
+   In this solution, the function signature (not only the name!) is changed to take `vec: &Vec<i32>`
    instead of `vec: Vec<i32>`. Now the function doesn't take ownership of the given argument.
-   Instead, function *borrows* variable and make clone of it within the function.
+   Instead, function *borrows* variable and makes clone of it within the function.
 
 3. Make `fill_vec` *mutably* borrow its argument (which will need to be
    mutable), modify it directly, then not return anything. Then you can get rid
@@ -236,8 +236,8 @@ error[E0596]: cannot borrow `vec` as mutable, as it is not declared as mutable
 ...
 ```
 
-Since we need *mutable* vector in order to `push` into the vector, we need to provide `mut` keyword.
-Compiler is being nice to hint where it is required.
+Since we need a *mutable* vector to `push` into the vector, we need to provide the `mut` keyword.
+A compiler is being nice to hint where it is required.
 
 ```rust
 /* file: "exercises/move_semantics/move_semantics3.rs" */
@@ -300,10 +300,10 @@ If `vec![]` feels new to you, please visit [vec! macro] Rust API documentation.
 
 ## move_semantics5.rs
 
-> Make me compile only by reordering the lines in `main()`, but without adding, changing or removing
+> Make me compile only by reordering the lines in `main()`, but without adding, changing, or removing
 > any of them.
 
-This problem is about lifetime of references. [Validating References with Lifetimes] chapter will
+This problem is about a lifetime of references. [Validating References with Lifetimes] chapter will
 help your understanding.
 
 Long story short; You can have *Only one* mutable reference at the given time. Compiler error tells
@@ -323,7 +323,7 @@ error[E0499]: cannot borrow `x` as mutable more than once at a time
 
 Reference's scope starts from where it is introduced and continues through the last time that
 reference is used. So in here, I'm moving `*y += 100;` forward before declaring `z`. So the lifetime
-of `y` and `z` (which holds mutable reference to `x`) don't overlap.
+of `y` and `z` (which holds a mutable reference to `x`) don't overlap.
 
 ```rust
 /* file: "exercises/move_semantics/move_semantics5.rs" */

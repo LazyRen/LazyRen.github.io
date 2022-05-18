@@ -22,12 +22,12 @@ You may find [solution code for the topic from my repo].
 
 ## threads1.rs
 
-What seems to be the problem of the original code?<br>
-Code spawns new thread. That new thread & main thread will try to update/look at same variable `JobStatus`.
+What seems to be the problem with the original code?<br>
+Code spawns a new thread. That new thread & main thread will try to update/look at the same variable `JobStatus`.
 
 What should we first do?
 
-To eliminate chance of data racing; We first introduce [`Mutex`] around `JobStatus`.
+To eliminate the chance of data racing; We first introduce [`Mutex`] around `JobStatus`.
 
 ```rust
 let status = Arc::new(Mutex::new(JobStatus { jobs_completed: 0 }));
@@ -39,9 +39,9 @@ With `Mutex` inserted, we need to hold the lock before we access the variable. L
 let mut job_status = status_shared.lock().unwrap();
 ```
 
-Mutex lock in Rust is RAII-style lock. When the variable goes out of the scope, it will automatically unlocked.
+Mutex lock in Rust is an RAII-style lock. When the variable goes out of the scope, it will automatically be unlocked.
 
-The change of main thread's loop is to make sure thread goes sleep **without** lock acquired.
+The change of the main thread's loop is to make sure the thread goes to sleep **without** lock acquired.
 
 ```rust
 /* file: "exercises/threads/threads1.rs" */

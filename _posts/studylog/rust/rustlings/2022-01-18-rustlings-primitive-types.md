@@ -71,12 +71,12 @@ fn main() {
 
 ## primitive_types3.rs
 
-[Array] is one of the common and useful data structure of the programming world.
+[Array] is one of the common and useful data structures in the programming world.
 
 > A fixed-size array, denoted `[T; N]`, for the element type, `T`,
 > and the **non-negative compile-time** constant size, `N`.
 
-Unfortunately, Rust doesn't allow runtime deterministic array size. If you want one, easiest
+Unfortunately, Rust doesn't allow runtime deterministic array size. If you want one, the easiest
 solution would be using [Vec]. But keep in mind that the vector is allocated at the heap.
 
 ```rust
@@ -117,7 +117,7 @@ fn slice_out_of_array() {
 
 ## primitive_types5.rs
 
-Tuple is also widely used (except for the C/C++ I guess...?) primitive type in programming world.
+A tuple is also widely used (except for the C/C++ I guess...?) primitive type in the programming world.
 Take a look at [The Tuple Type] chapter & [Primitive Type tuple] API document.
 
 ```rust

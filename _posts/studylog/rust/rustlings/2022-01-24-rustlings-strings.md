@@ -24,11 +24,11 @@ You may find [solution code for the topic from my repo].
 ## strings1.rs
 
 The `current_favorite_color()` function is currently returning a string slice with the `'static`
-lifetime. But *function signature* suggests that it should return `String` type instead.
+lifetime. But *function signature* suggests that it should return the `String` type instead.
 
-Any structure that implements Trait [`ToString`] may converted to the `String` type by calling `to_string()` method.
-Or with `from()` method implemented by Trait [`From`]. We haven't covered the topic about **trait** in rustlings yet,
-but this is one of the core feature of Rust. So it is worth reading the [Traits chapter] from *the Book*.
+Any structure that implements Trait [`ToString`] may be converted to the `String` type by calling the `to_string()` method.
+Or with the `from()` method implemented by Trait [`From`]. We haven't covered the topic of **trait** in rustlings yet,
+but this is one of the core features of Rust. So it is worth reading the [Traits chapter] from *the Book*.
 
 ```rust
 /* file: "exercises/strings/strings1.rs" */
@@ -62,16 +62,16 @@ error[E0308]: mismatched types
   |                        help: consider borrowing here: `&word`
 ```
 
-Why does compiler expects string slice(`&str`)? Because function signature says so.
+Why does the compiler expect string slice(`&str`)? Because function signature says so.
 
 ```rust
 fn is_a_color_word(attempt: &str) -> bool
 ```
 
-Rustlings comment says we shouldn't modify function signature. So we have to modify argument to pass `&str` instead of
-`String` as compiler suggests.
+Rustlings comment says we shouldn't modify the function signature. So we have to modify the argument to pass `&str` instead of
+`String` as the compiler suggests.
 
-Rust compiler knows a lot, and it's suggestion is worth reading. So anytime compiler refuses to compile your code,
+Rust compiler knows a lot, and its suggestion is worth reading. So anytime the compiler refuses to compile your code,
 it is wise to check the error message.
 
 ```rust

@@ -63,7 +63,7 @@ mod tests {
 }
 ```
 
-Back to the problem, we have to return `bar` if input value is `fuzz` and `baz` for anything else.
+Back to the problem, we have to return `bar` if the input value is `fuzz` and `baz` for anything else.
 
 ```rust
 /* file: "exercises/if/if1.rs" */

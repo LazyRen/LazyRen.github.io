@@ -50,8 +50,8 @@ fn main() {
 Rust can create enumerations that have different variants with different types
 such as no data, anonymous structs, a single string, tuples, ... etc.
 
-This is very useful feature. In fact, one of the core feature of Rust, [`Result<T, E>`] & [`Option<T>`] are
-using this to return different type on situation.
+This is a very useful feature. In fact, one of the core features of Rust, [`Result<T, E>`] & [`Option<T>`] are
+a special type of `enum` that returns different types depending on the situation.
 
 Declare `enum Message` based on the usage from the `main()`.
 
@@ -90,13 +90,13 @@ fn main() {
 
 ## enums3.rs
 
-We already done declaring `enum Message` twice.
+We are already done declaring `enum Message` twice.
 Filling `fn process(&mut self, message: Message)` is the real problem.
 
-It is time to use [`match` expressions]. You can think `match` as advanced version
+It is time to use [`match` expressions]. You can think of `match` as an advanced version
 of *switch-case*.
 
-Implement `fn process(&mut self, message: Message)` so that it changes member variable
+Implement `fn process(&mut self, message: Message)` so that it changes the member variable
 of `State` based on the input parameter `message` type.
 
 [`match` expressions]: https://doc.rust-lang.org/reference/expressions/match-expr.html

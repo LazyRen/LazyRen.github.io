@@ -27,8 +27,8 @@ You may find [solution code for the topic from my repo].
 
 ## modules1.rs
 
-Everything is private in Rust by default. If you are will to use `fn make_sausage()` outside of the module
-`sausage_factory`, we need to declare function as public function with keyword `pub`.
+Everything is private in Rust by default. If you are willing to use `fn make_sausage()` outside of the module
+`sausage_factory`, we need to declare a function as a public function with the keyword `pub`.
 
 ```rust
 /* file: "exercises/modules/modules1.rs" */

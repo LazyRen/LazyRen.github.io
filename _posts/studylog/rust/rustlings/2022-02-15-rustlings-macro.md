@@ -24,7 +24,7 @@ You may find [solution code for the topic from my repo].
 Writing macro for Rust is another level of difficulty. But many libraries provide very useful macros. So it is important
 to know (at least) how to use them.
 
-To define a macro, we use `macro_rules!` construct. To *invoke* the macro, we append `!` after macro name.
+To define a macro, we use the `macro_rules!` construct. To *invoke* the macro, we append `!` after the macro name.
 
 ```rust
 /* file: "exercises/macros/macros1.rs" */
@@ -64,10 +64,10 @@ warning: unused macro definition: `my_macro`
 error: aborting due to previous error; 1 warning emitted
 ```
 
-If we run the code without any modification, we see one error and one warning. First we get error for can't find macro
+If we run the code without any modification, we see one error and one warning. First, we get the error for can't find macro
 `my_macro`, and yet we get another warning for *unused* macro definition: `my_macro`!
 
-It turns out the order of macro definition and usage is important. We have to place definition *before* we use them.
+It turns out the order of macro definition and usage is important. We have to place definitions *before* we use them.
 
 ```rust
 /* file: "exercises/macros/macros2.rs" */
@@ -84,7 +84,7 @@ fn main() {
 
 ## macros3.rs
 
-We have `my_macro` definition within mod `macros`. Thus when we use `my_macro` outside of the mod(`main`), Rust compiler
+We have the `my_macro` definition within mod `macros`. Thus when we use `my_macro` outside of the mod(`main`), the Rust compiler
 cannot find it.
 
 ```shell
@@ -97,7 +97,7 @@ error: cannot find macro `my_macro` in this scope
    = help: have you added the `#[macro_use]` on the module/import?
 ```
 
-Rust compiler gives you a hint to use `#[macro_use]` on the module/import. Take a look at documentation about
+Rust compiler gives you a hint to use `#[macro_use]` on the module/import. Take a look at the documentation about
 [`macro_use`]. We can also append `#[macro_export]` to the macro definition to use it outside of the module.
 
 ```rust

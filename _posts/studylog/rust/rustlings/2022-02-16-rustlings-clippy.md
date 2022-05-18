@@ -40,7 +40,7 @@ fn main() {
 }
 ```
 
-When we run original code(above) without modification, we can see clippy error as below:
+When we run the original code(above) without modification, we can see Clippy error as below:
 
 ```shell
 ❯ rustlings run clippy1
@@ -57,13 +57,13 @@ error: approximate value of `f32::consts::PI` found
    = help: consider using the constant directly
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#approx_constant
 
-error: could not compile `clippy1` due to previous error
+error: could not compile `clippy1` due to a previous error
 ```
 
 Indeed Rust provides many precision mathematical [constants] in the standard library.
 
-[Clippy] is convenient Rust tool that helps Rustacean to write clean-better code. With a little
-[setup], VS Code can directly output clippy warnings/errors.
+[Clippy] is a convenient Rust tool that helps Rustacean to write clean-better code. With a little
+[setup], VS Code can directly output Clippy warnings/errors.
 
 ```rust
 /* file: "exercises/clippy/clippy1.rs" */
@@ -99,8 +99,8 @@ fn main() {
 }
 ```
 
-One of the cool feature of the [Clippy] is that it also detects for *anti-pattern* and suggest
-better way to write clean-readable code.
+One of the cool features of the [Clippy] is that it also detects *anti-patterns* and suggest
+a better way to write clean-readable code.
 
 ```shell
 ❯ rustlings run clippy2

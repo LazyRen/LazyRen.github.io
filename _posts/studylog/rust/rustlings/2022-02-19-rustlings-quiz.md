@@ -7,7 +7,7 @@ tags:     rust rustlings
 ---
 
 Finally the last topic of the [Rustlings]!<br>
-I honestly didn't thought writing solutions would take this long. But finally I've made it!
+I honestly didn't think writing solutions would take this long. But finally, I've made it!
 
 Kudos to me!
 

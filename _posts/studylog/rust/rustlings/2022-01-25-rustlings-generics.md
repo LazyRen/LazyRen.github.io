@@ -27,7 +27,7 @@ You may find [solution code for the topic from my repo].
 > Vectors in rust make use of generics to create dynamically sized arrays of any type.
 > You need to tell the compiler what type we are pushing onto this vector.
 
-We need to use `&str` to accept item like `"milk"`.
+We need to use `&str` to accept items like `"milk"`.
 
 ```rust
 /* file: "exercises/generics/generics1.rs" */
@@ -39,7 +39,7 @@ fn main() {
 
 ## generics2.rs
 
-Using generic types [in method definition] is not that complicate. We usually use one letter (most
+Using generic types [in method definition] is not that complicated. We usually use one letter (most
 preferably `T`) for a generic type.
 
 > Note that we have to declare `T` just after `impl` so we can use it to specify that we’re
@@ -83,16 +83,16 @@ mod tests {
 > what functionality a type implements. For example, the following example uses the trait Display to
 > print and so it requires T to be bound by Display; that is, T must implement Display.
 
-To me, Rust' [bounds] felt new concept, yet very powerful tool. Bounding restricts the generic to
-types that conform to the bounds. So we can assume generic type can perform based on the bounding
-traits. And we have to implement trait for the types that we want to be used as a generic type.
+To me, Rust's [bounds] felt like a new concept, yet a very powerful tool. Bounding restricts the generic to
+types that conform to the bounds. So we can assume the generic type can perform based on the bounding
+traits. And we have to implement a trait for the types that we want to be used as a generic type.
 
 The one thing you have to keep in mind is that you have to know common `Traits` that Rust provides.
-This [blog post] gives you a tour to the most common `Traits` that you will see.
+This [blog post] gives you a tour of the most common `Traits` that you will see.
 
-let's get back to the exercise, we want to *print* the `ReportCard`. Which can be done by trait
+let's get back to the exercise, we want to *print* the `ReportCard`. This can be done by trait
 [`Display`]. `String` & `u8` already implements `Display`. But `grade`, is generic type variable.
-So we want to *enforce* that generic type to implement trait `Display`.
+So we want to *enforce* that generic type to implement the trait `Display`.
 
 ```rust
 pub struct ReportCard<T: std::fmt::Display> {
@@ -102,7 +102,7 @@ pub struct ReportCard<T: std::fmt::Display> {
 }
 ```
 
-By using `<T: std::fmt::Display>`, we are telling compiler that I will accept any kind of type as
+By using `<T: std::fmt::Display>`, we are telling the compiler that I will accept any kind of type as
 `T` as long as it implements trait `Display`. Sounds good!
 
 Now `grade` can be *displayed* as we want. We can use [`format!`] macro to print `ReportCard`.

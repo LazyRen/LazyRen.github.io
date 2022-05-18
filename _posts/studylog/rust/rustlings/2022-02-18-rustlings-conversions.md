@@ -65,9 +65,9 @@ The problem is, function signature(`fn average(values: &[f64]) -> f64`) suggests
 `f64`. But as error points out, `Div<usize>` (I guess division for `usize`) cannot be implicitly
 converted into `f64`.
 
-In situation like this, we can use [`as`] keyword.<br>
-[`as`] is useful tool that can convert *primitive type* into *another primitive type*. Similar to
-*casting* in C++. But beware, it is not magic keyword that can convert one thing into anything.
+In a situation like this, we can use the [`as`] keyword.<br>
+[`as`] is a useful tool that can convert *primitive type* into *another primitive type*. Similar to
+*casting* in C++. But beware, it is not a magic keyword that can convert one thing into anything.
 
 It doesn't (AFAIK) work for `String`/`Vector` or any *user-defined structure*.
 
@@ -100,7 +100,7 @@ mod tests {
 
 ## from_into.rs
 
-[`From`] and [`Into`] is very useful *Trait* that can convert value of *A type* into *B type*.
+[`From`] and [`Into`] are very useful *Trait* that can convert the value of *A type* into *B type*.
 
 You only have to implement [`From`]. [`Into`] will be automatically implemented for you.
 
@@ -112,7 +112,7 @@ Implement the trait as instructed.
 
 > Steps:
 >
-> 1. If the length of the provided string is 0, then return the default of Person
+> 1. If the length of the provided string is 0, then return the default of the Person
 > 2. Split the given string on the commas present in it
 > 3. Extract the first element from the split operation and use it as the name
 > 4. If the name is empty, then return the default of `Person`
@@ -183,7 +183,7 @@ Similar to the [`From`], but this may fail and return `Err`.
 >
 > 1. If the length of the provided string is 0, an error should be returned
 > 2. Split the given string on the commas present in it
-> 3. Only 2 elements should be returned from the split, otherwise return an error
+> 3. Only 2 elements should be returned from the split, otherwise, return an error
 > 4. Extract the first element from the split operation and use it as the name
 > 5. Extract the other element from the split operation and parse it into a `usize` as the age
 >    with something like `"4".parse::<usize>()`
@@ -357,7 +357,7 @@ For today's last exercise, it's time to use [`AsRef`] & [`AsMut`].
 
 They are used to convert (*mutable*) *reference-to-reference*.
 
-Nothing much to say about exercise itself...<br>
+Nothing much to say about the exercise itself...<br>
 You just put `<T: AsRef<str>>` into function signature.
 
 ```rust

@@ -35,7 +35,7 @@ You may find [solution code for the topic from my repo].
 ## option1.rs
 
 `Option` & `Result` is very decent `enum` feature that Rust provides. Most of the time you will find
-it useful to return *optional* value for any function.
+it is useful to return *optional* value for any function.
 
 With `Option<T>`, it may have either `Some(T)` or `None`. In this case, function `print_number`
 declaration looks like this:
@@ -48,8 +48,8 @@ It takes `maybe_number` which is `Option<u16>`. So we know that we can pass eith
 `None`. Let's fix the code to pass `Some(u16)` instead of pure `u16`. (which is unacceptable)
 
 Note that original code uses `unwrap()` to extract `u16` from `Option`. This is not recommended way
-to do so as it the program will panic if it encounters `None` from the `Option`. You have to either
-use *pattern matching* or `is_some()` / `is_none()` method. I deliberately used all just to show
+to do so as the program will panic if it encounters `None` from the `Option`. You have to either
+use *pattern matching* or `is_some()` / `is_none()` method. I deliberately used them all just to show
 you the basic usage of them.
 
 ```rust
@@ -84,7 +84,7 @@ fn main() {
 
 ## option2.rs
 
-[`if let`] & [`while let`] is also useful Rust feature that is - at least for me - new to me.
+[`if let`] & [`while let`] is also a useful Rust feature that is - at least for me - new to me.
 
 ```rust
 /* file: "exercises/option/option2.rs" */
@@ -114,9 +114,9 @@ fn main() {
 ## option3.rs
 
 Please do read [`ref`]. By default, match statements consume all they can, which can sometimes be a
-problem, when you don’t really need the value to be moved and owned. Which is the exact case here.
+problem, when you don’t need the value to be moved and owned. Which is the exact case here.
 
-By using `ref` keyword, we inform compiler that we don't want `move` to be happened. We rather
+By using the `ref` keyword, we inform the compiler that we don't want `move` to happen. We rather
 *borrow* the value(`y`) for a moment.
 
 ```rust
