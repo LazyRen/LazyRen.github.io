@@ -279,7 +279,7 @@ There are two ways to solve this problem.
    ```
 
 2. Implement Trait [`std::convert::From`]<br>
-   So that compiler knows how to convert the given `Error` type to return the `Error` type.<br>
+   So that compiler knows how to convert the given `CreationError` type to the `ParseIntError` type.<br>
    This is my personal preference. Because with `Box<dyn error::Error>`, we cannot know what type of `Error` it returns.
    It is determined at the *runtime*.<br>
    But it is more complicated, and it's not the intention of the current exercise. So let's go with the first option.
