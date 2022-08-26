@@ -114,7 +114,7 @@ Any extension with :pushpin: attached are things that you **MUST INSTALL** for a
 1. Clone this repository in oh-my-zsh's plugins directory:
 
    ```shell
-   git clone <https://github.com/TamCore/autoupdate-oh-my-zsh-plugins> ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/autoupdate
+   git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/autoupdate
    ```
 
 2. Add the plugin to the list of plugins for Oh My Zsh to load (inside `~/.zshrc`):
@@ -210,22 +210,6 @@ brew install fzf
 
 # To install useful key bindings and fuzzy completion:
 $(brew --prefix)/opt/fzf/install
-```
-
-### enhancd
-
-> [A next-generation cd](https://github.com/b4b4r07/enhancd) command with an interactive filter ✨
-
-```shell
-zplug "b4b4r07/enhancd", use:init.sh
-```
-
-### exa
-
-> [exa](https://github.com/ogham/exa) is a modern replacement for ls.
-
-```shell
-brew install exa
 ```
 
 ## Others
