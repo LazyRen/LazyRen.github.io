@@ -186,6 +186,16 @@ Let's change it to a fancier version like above. It's plain simple.
 Continue with [Decorate Codeblock Scrollbar](decorate-codeblock-scrollbar){:.heading.flip-title}
 {:.read-more}
 
+## Apply Image Gallery for each `img` in Posts
+
+![Image Gallery](/assets/img/2022-08-28/gify_neo.gif)
+
+Sometimes, you wish image in your blog to be clickable and people can see the image in better view.<br>
+Here is the solution to it.
+
+Continue with [Add Image Gallery for the All Images in Markdown Post](add-image-gallery){:.heading.flip-title}
+{:.read-more}
+
 ## Conclusion
 
 This post originally started with sidebar modification only. But now it has become a huge post. I might divide this post
