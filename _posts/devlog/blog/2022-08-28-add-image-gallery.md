@@ -98,7 +98,7 @@ Simply puts below option to anywhere.<br>
 (Somewhere around `# 3rd Party Integrations` would be sufficient)
 
 ```yml
-# file: _config.yml
+# file: "_config.yml"
 lightbox: true
 ```
 
@@ -107,7 +107,7 @@ lightbox: true
 Add below to the end of the file so the `css` file can be linked.
 
 ```html
-<!-- file: _includes/head/links-static.html -->
+<!-- file: "_includes/head/links-static.html" -->
 {% if site.lightbox %}
   <link rel="stylesheet" href="/assets/css/lightbox.css">
 {% endif %}
@@ -119,6 +119,7 @@ Import `js` script file that we've downloaded, and use [Hydejack event listener]
 executed every time the new page gets loaded.
 
 ```html
+<!-- file: "/home/lazyren/blog/_includes/my-scripts.html" -->
 {% if site.lightbox %}
   <script src="/assets/js/lightbox.js"></script>
 {% endif %}
