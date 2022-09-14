@@ -92,7 +92,7 @@ Hydejack blog.
 [`lightbox.js`]: https://github.com/LazyRen/LazyRen.github.io/blob/master/assets/js/lightbox.js
 [`lightbox.css`]: https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/css/lightbox.css
 
-### _config.yml
+### [_config.yml]
 
 Simply puts below option to anywhere.<br>
 (Somewhere around `# 3rd Party Integrations` would be sufficient)
@@ -102,24 +102,31 @@ Simply puts below option to anywhere.<br>
 lightbox: true
 ```
 
-### links-static.html
+[_config.yml]: https://github.com/LazyRen/LazyRen.github.io/blob/master/_config.yml#L227
+
+### [links-static.html]
 
 Add below to the end of the file so the `css` file can be linked.
 
 ```html
 <!-- file: "_includes/head/links-static.html" -->
+{%- raw -%}
 {% if site.lightbox %}
   <link rel="stylesheet" href="/assets/css/lightbox.css">
 {% endif %}
+{% endraw %}
 ```
 
-### my-scripts.html
+[links-static.html]: https://github.com/LazyRen/LazyRen.github.io/blob/master/_includes/head/links-static.html#L41
+
+### [my-scripts.html]
 
 Import `js` script file that we've downloaded, and use [Hydejack event listener] so the code can be
 executed every time the new page gets loaded.
 
 ```html
-<!-- file: "/home/lazyren/blog/_includes/my-scripts.html" -->
+<!-- file: "_includes/my-scripts.html" -->
+{%- raw -%}
 {% if site.lightbox %}
   <script src="/assets/js/lightbox.js"></script>
 {% endif %}
@@ -131,6 +138,8 @@ executed every time the new page gets loaded.
       apply_lightbox();
     });
 </script>
+{% endraw %}
 ```
 
+[my-scripts.html]: https://github.com/LazyRen/LazyRen.github.io/blob/master/_includes/my-scripts.html
 [Hydejack event listener]: https://hydejack.com/docs/scripts/#registering-push-state-event-listeners
