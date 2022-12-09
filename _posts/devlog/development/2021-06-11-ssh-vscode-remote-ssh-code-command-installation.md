@@ -34,21 +34,30 @@ VSCode Remote SSH와 터미널을 함께 사용하여 서버에서 개발할 때
 # file: "$PATH/code"
 #! /usr/bin/env zsh
 
-local script=$(echo ~/.vscode-server/bin/*/bin/code(*oc[1]N))
-if [[ -z ${script} ]]
-then
-    echo "VSCode remote script not found"
-    exit 1
-fi
-local socket=$(echo /run/user/$UID/vscode-ipc-*.sock(=oc[1]N))
-if [[ -z ${socket} ]]
-then
-    echo "VSCode IPC socket not found"
-    exit 1
-fi
-export VSCODE_IPC_HOOK_CLI=${socket}
-echo $script $@
-${script} $@
+local max_retry=10
+
+for i in {1..$max_retry}
+do
+    local script=$(echo ~/.vscode-server/bin/*/bin/remote-cli/code(*oc[$i]N))
+    if [[ -z ${script} ]]
+    then
+        echo "VSCode remote script not found"
+        exit 1
+    fi
+    local socket=$(echo /run/user/$UID/vscode-ipc-*.sock(=oc[$i]N))
+    if [[ -z ${socket} ]]
+    then
+        echo "VSCode IPC socket not found"
+        exit 1
+    fi
+    export VSCODE_IPC_HOOK_CLI=${socket}
+    ${script} $@ > /dev/null 2>&1
+    if [ "$?" -eq "0" ]; then
+        exit 0
+    fi
+done
+
+echo "Failed to find valid VS Code window"
 ```
 
 ssh 접속된 터미널에서 `code` 명령어를 사용할 때, 최소 하나의 `VSCode Remote - SSH` 세션이 연결되어 있어야합니다.
