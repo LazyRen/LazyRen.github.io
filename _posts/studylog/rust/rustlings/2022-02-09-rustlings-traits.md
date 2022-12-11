@@ -56,9 +56,7 @@ trait AppendBar {
 
 impl AppendBar for String {
     fn append_bar(self) -> Self {
-        let mut cloned_self = self.clone();
-        cloned_self.push_str("Bar");
-        cloned_self
+        self + "Bar"
     }
 }
 
