@@ -30,6 +30,8 @@ VSCode Remote SSH와 터미널을 함께 사용하여 서버에서 개발할 때
 `$PATH`에서 어떤 폴더들을 지원하는지 확실하지 않다면 `echo $PATH`로 확인할 수 있습니다.
 {:.note}
 
+### For ZSH
+
 ```shell
 # file: "$PATH/code"
 #! /usr/bin/env zsh
@@ -52,6 +54,38 @@ do
     fi
     export VSCODE_IPC_HOOK_CLI=${socket}
     ${script} $@ > /dev/null 2>&1
+    if [ "$?" -eq "0" ]; then
+        exit 0
+    fi
+done
+
+echo "Failed to find valid VS Code window"
+```
+
+### For Bash
+
+```shell
+#! /bin/bash
+
+max_retry=10
+
+for i in $(seq 1 $max_retry)
+do
+    recent_folder=$(ls ~/.vscode-server/bin/ -t | head -n$i)
+    script=$(echo ~/.vscode-server/bin/$recent_folder/bin/remote-cli/code)
+    if [[ -z ${script} ]]
+    then
+        echo "VSCode remote script not found"
+        exit 1
+    fi
+    socket=$(ls /run/user/$UID/vscode-ipc-* -t | head -n$i)
+    if [[ -z ${socket} ]]
+    then
+        echo "VSCode IPC socket not found"
+        exit 1
+    fi
+    export VSCODE_IPC_HOOK_CLI=${socket}
+    ${script} $@
     if [ "$?" -eq "0" ]; then
         exit 0
     fi
