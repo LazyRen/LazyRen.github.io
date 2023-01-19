@@ -344,5 +344,9 @@ description: >
 ---
 ```
 
+## Reference
+
+* [1n9yun's blog](https://1n9yun.github.io/posts/how-i-customized-hydejack-2-spread/)
+
 Back to [How I customized Hydejack Theme](how-i-customized-hydejack-theme){:.heading.flip-title}
 {:.read-more}
