@@ -170,7 +170,7 @@ Changes in [nav.html] is to actually print submenu(tags) to the sidebar.
 ### Code explanation
 
 ```html
-<!-- file: "/_layouts/tag-list.html" -->
+<!-- file: "/_includes/body/nav.html" -->
 {%- raw -%}
 <span class="sr-only">{{ site.data.strings.navigation | default:"Navigation" }}{{ site.data.strings.colon | default:":" }}</span>
 <ul>
