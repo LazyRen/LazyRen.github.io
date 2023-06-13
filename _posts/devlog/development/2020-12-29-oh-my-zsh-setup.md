@@ -73,11 +73,10 @@ https://github.com/JetBrains/JetBrainsMono/releases/latest
 # It's a bit trickier for Linux to install/patch Nerd Font... Please check Nerd Font repo for more information.
 ```
 
-Append `JetBrains Mono` after the `JetBrainsMono Nerd Font Mono` to the font-family setting of your choice of IDE or
-Terminal.
+Append `JetBrains Mono` after the `JetBrainsMono Nerd Font` to the font-family setting of your choice of IDE or Terminal.
 
 ```default
-"fontFamily": "JetBrainsMono Nerd Font Mono", "JetBrains Mono",
+"fontFamily": "JetBrainsMono Nerd Font", "JetBrains Mono",
 ```
 
 ## Install Theme
@@ -106,6 +105,14 @@ Check [get started](https://github.com/romkatv/powerlevel10k#get-started) to fin
 ## OMZ Plugins
 
 Any extension with :pushpin: attached are things that you **MUST INSTALL** for a better life.
+
+### autojump :pushpin:
+
+> [autojump](https://github.com/wting/autojump) - a faster way to navigate your filesystem
+
+```shell
+brew install autojump
+```
 
 ### autoupdate :pushpin:
 
@@ -136,23 +143,62 @@ You may adjust how often omz checks for the update by adjusting the below line f
 export UPDATE_ZSH_DAYS=1
 ```
 
-### zsh-syntax-highlighting :pushpin:
+### fzf
 
-> [Fish shell-like syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) for Zsh.
+> [fzf](https://github.com/junegunn/fzf) is a general-purpose command-line fuzzy finder.
 
-Check [Installation Guide](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md) for detail.
+```shell
+brew install fzf
+
+# To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
+```
+
+### ssh-agent
+
+> [ssh-agent](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ssh-agent) starts automatically ssh-agent to set up and load whichever credentials you want for ssh connections.
+
+```shell
+# file: "~/.zshrc"
+plugins=([plugins...] ssh-agent)
+```
+
+### zsh-autosuggestions :pushpin:
+
+> [Fish-like fast/unobtrusive autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) for zsh.
+
+Check [Installation Guide](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md) for detail.
 
 1. Clone this repository in oh-my-zsh's plugins directory:
 
    ```shell
-   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
    ```
 
 2. Add the plugin to the list of plugins for Oh My Zsh to load (inside `~/.zshrc`):
 
    ```shell
    # file: "~/.zshrc"
-   plugins=([plugins...] zsh-syntax-highlighting)
+   plugins=([plugins...] zsh-autosuggestions)
+   ```
+
+### zsh-completions :pushpin:
+
+> Additional completion definitions for Zsh.
+
+Check [git repo](https://github.com/zsh-users/zsh-completions#oh-my-zsh) for detail.
+
+1. Clone this repository in oh-my-zsh's plugins directory:
+
+   ```shell
+   git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+   ```
+
+2. Add the plugin to the list of plugins for Oh My Zsh to load (inside `~/.zshrc`):
+
+   ```shell
+   # file: "~/.zshrc"
+   plugins=([plugins...] zsh-completions)
    ```
 
 ### zsh-autosuggestions :pushpin:
@@ -193,31 +239,37 @@ Check [git repo](https://github.com/zsh-users/zsh-completions#oh-my-zsh) for det
    plugins=([plugins...] zsh-completions)
    ```
 
-### Autojump :pushpin:
+### zsh-syntax-highlighting :pushpin:
 
-> [autojump](https://github.com/wting/autojump) - a faster way to navigate your filesystem
+> [Fish shell-like syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) for Zsh.
 
-```shell
-brew install autojump
-```
+Check [Installation Guide](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md) for detail.
 
-### fzf
+1. Clone this repository in oh-my-zsh's plugins directory:
 
-> [fzf](https://github.com/junegunn/fzf) is a general-purpose command-line fuzzy finder.
+   ```shell
+   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+   ```
 
-```shell
-brew install fzf
+2. Add the plugin to the list of plugins for Oh My Zsh to load (inside `~/.zshrc`):
 
-# To install useful key bindings and fuzzy completion:
-$(brew --prefix)/opt/fzf/install
-```
+   ```shell
+   # file: "~/.zshrc"
+   plugins=([plugins...] zsh-syntax-highlighting)
+   ```
 
 ## Others
 
-* Remove directory highlighting for WSL.
-
+* ZSH History related configs
   ```shell
-  LS_COLORS="ow=01;36;40" && export LS_COLORS #WSL dir colors
+  # file: "~/.zshrc"
+  # Increase history size
+  export HISTFILESIZE=1000000000
+  export HISTSIZE=1000000000
+  # Append history incrementally(as soon as they are entered)
+  setopt INC_APPEND_HISTORY
+  # Remove duplicates
+  setopt HIST_FIND_NO_DUPS
   ```
 
 * Add [git aliases](https://gist.github.com/LazyRen/89e3faaf518c137530d6d80ed5a9773a) to the zsh.
@@ -269,4 +321,10 @@ $(brew --prefix)/opt/fzf/install
       git commit --amend --no-edit
       git push origin HEAD:refs/for/$BRANCH_NAME%ready
   }
+  ```
+
+* (WINDOWS ONLY) Remove directory highlighting for WSL.
+
+  ```shell
+  LS_COLORS="ow=01;36;40" && export LS_COLORS #WSL dir colors
   ```

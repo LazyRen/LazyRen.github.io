@@ -376,6 +376,17 @@ One Dark Pro Flat Theme
 </div>
 </details>
 
+### [Material Product Icons](https://marketplace.visualstudio.com/items?itemName=PKief.material-product-icons) :heart:
+
+VS Code 전반의 아이콘을 변경해주는 익스텐션입니다.
+
+<details>
+<summary>아이콘 미리보기</summary>
+<div markdown="1">
+![Material Icon Theme](/assets/img/2021-06-28/material-product-icons.png)
+</div>
+</details>
+
 # Programming Language Specific
 
 특정 언어와 관련된 익스텐션들입니다. 웹(HTML/Javascript etc.) 관련은 제 전문 분야가 아닌지라 일부러 제외하였습니다.<br>
