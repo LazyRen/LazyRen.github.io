@@ -201,44 +201,6 @@ Check [git repo](https://github.com/zsh-users/zsh-completions#oh-my-zsh) for det
    plugins=([plugins...] zsh-completions)
    ```
 
-### zsh-autosuggestions :pushpin:
-
-> [Fish-like fast/unobtrusive autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) for zsh.
-
-Check [Installation Guide](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md) for detail.
-
-1. Clone this repository in oh-my-zsh's plugins directory:
-
-   ```shell
-   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-   ```
-
-2. Add the plugin to the list of plugins for Oh My Zsh to load (inside `~/.zshrc`):
-
-   ```shell
-   # file: "~/.zshrc"
-   plugins=([plugins...] zsh-autosuggestions)
-   ```
-
-### zsh-completions :pushpin:
-
-> Additional completion definitions for Zsh.
-
-Check [git repo](https://github.com/zsh-users/zsh-completions#oh-my-zsh) for detail.
-
-1. Clone this repository in oh-my-zsh's plugins directory:
-
-   ```shell
-   git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
-   ```
-
-2. Add the plugin to the list of plugins for Oh My Zsh to load (inside `~/.zshrc`):
-
-   ```shell
-   # file: "~/.zshrc"
-   plugins=([plugins...] zsh-completions)
-   ```
-
 ### zsh-syntax-highlighting :pushpin:
 
 > [Fish shell-like syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) for Zsh.
