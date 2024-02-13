@@ -91,7 +91,7 @@ excerpt_separator:     <!--more-->
 
 # Sidebar image and theme color of the site.
 accent_image:
-  background:          center / cover url(/assets/img/music-cat-no-loop.gif)
+  background:          center / cover url(/assets/img/doguri.jpg)
   overlay:             false
 accent_color:          rgb(0,174,239)
 
