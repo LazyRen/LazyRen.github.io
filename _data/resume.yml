@@ -1,15 +1,14 @@
 basics:
-  name: "DaeIn Lee"
+  name: "Lee, DaeIn"
   label: "Software Engineer"
   picture: /assets/img/seattle.png
   email: "daein0lee@gmail.com"
   phone: "(+82) 10-6273-3127"
   website: "https://lazyren.github.io/"
   summary: >
-    Hello, I'm DaeIn Lee from SAP Labs Korea.<br>
-    I like to solve brain teasing problems in the field of CSE.<br>
-    I'd like to describe myself as a fast learner;<br>
-    I am confident that I can satisfy expectations of coworkers.
+    Hello, I'm Lee, DaeIn from SAP Labs Korea.<br>
+    I'm familiar with C++, Python and a bit of Rust.<br>
+    I'd like to describe myself as a fast-learner & early-adopter.<br>
   # location:
   #   address: "2712 Broadway St"
   #   postalCode: "CA 94115"
@@ -21,7 +20,7 @@ basics:
       username: "LazyRen"
       url: "https://github.com/LazyRen"
     - network: "LinkedIn"
-      username: "DaeIn Lee"
+      username: "Lee, DaeIn"
       url: "https://www.linkedin.com/in/daein-lee-3b6ba9139/"
 work:
   - company: "SAP Labs Korea"
@@ -32,15 +31,24 @@ work:
     summary: >
       SAP Labs Korea, a cornerstone of SAP HANA, now aims to bring the in-memory technology to the cloud where it acts as a single gateway to data of any size to harness the power of data wherever it resides and ensure the platform for intelligent enterprise.
     highlights:
+      - Transaction team developer (~2023/11/30)<br>
+        - Develop EBR(Epoch Based Reclamation) Skip List data structure used in HANA<br>
+        - Develop EBR SWMR(Single Writer Multiple Reader) Skip List data structure in Rust lang.<br>
+        - Fix Transaction concurrency issues/bugs in HANA<br>
+      - SQL on Files team developer (2023/06/01~)<br>
+        - Develop Delta table replication feature in HANA<br>
+          - Remote Subscription / FVT(Fabric Virtual Table) of Delta table<br>
   - company: "Samsung Research"
     position: "SW Engineer"
     website: "https://research.samsung.com/"
     startDate: "2020-02-03"
     endDate: "2020-12-31"
     summary: >
-      Samsung Research is the advanced research and development (R&D) hub of Samsung Electronics. The hub leads the development of the future technologies with more than 10,000 researchers and developers working in overseas R&D centers.
+      Samsung Research is the advanced research and development (R&D) hub of Samsung Electronics.
     highlights:
-      - "Software Capacity Building T/F"
+      - Software Capacity Building T/F<br>
+        - Educate Software newcomers to understand the software development process and tools.<br>
+        - Lecture on Algorithm/Problem solving skills<br>
   - company: "Samsung Research"
     position: "Intern"
     website: "https://research.samsung.com/"
@@ -162,12 +170,26 @@ awards:
 #     website: "https://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)"
 #     summary: "Innovative middle-out compression algorithm that changes the way we store data."
 skills:
-  - name: "Kernel Development"
+  - name: "Database Development"
+    level: "Master"
+    keywords:
+      - "HANA"
+      - "Concurrent Programming"
+      - "SQL on Files"
+  - name: "C++"
+    level: "Master"
+    keywords:
+      - "Modern C++(17/20)"
+      - "System Programming"
+  - name: "Rust"
     level: "Intermediate"
     keywords:
       - "Concurrent Programming"
-      - "C/C++"
-      - "Rust"
+      - "System Programming"
+  - name: "Python"
+    level: "Intermediate"
+    keywords:
+      - "PyUnit Testing"
   - name: "Algorithm"
     level: "Intermediate"
   - name: "Web Development"
@@ -192,16 +214,10 @@ interests:
       - "Tennis"
       - "Snowboarding"
       - "Cycling"
-  - name: "Reading"
-    keywords:
-      - "J. R. R. Tolkien"
-      - "이영도"
-      - "전민희"
   - name: "Gaming"
     keywords:
       - "Board Games"
       - "<a href='https://steamcommunity.com/id/lazyren'>Steam</a>"
-      - "<a href='http://www.companyofheroes.com/leaderboards#profile/steam/76561198031392006/standings'>Company of Heroes 2</a>"
 # references:
 #   - name: "Erlich Bachman"
 #     reference: >
