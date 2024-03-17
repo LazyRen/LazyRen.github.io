@@ -146,7 +146,7 @@ Whitefox Vanilla(68키)
 
 ![Whitefox Aria](/assets/img/2021-01-06/65_whitefox_aria.jpg){: .centered}
 
-Whitefox Aria(67키)
+Whitefox Aria(67키
 {:.figcaption}
 
 바로 위의 배열에서 1u * 3 모디키들만 일반 1.25u 크기의 2개의 모디키로 변경된 버전입니다.
@@ -159,6 +159,166 @@ Rama M65-A
 ~~변태 배열의 끝판왕입니다.~~<br>
 1.5u * 4개의 모디키, 7u 크기의 스페이스, 1.75u 크기의 우 쉬프트와 스텝 스컬처가 다른 내비키들까지...<br>
 윈도우 키도 없고 펑션키도 없는데 맵핑은 어떻게 하는걸까요? 저라면 누가 공짜로 줘도 못 쓸 것 같습니다.
+
+![Ark68](/assets/img/2021-01-06/65_ark68.jpg){: .centered}
+
+Ark68 (& Mode Envoy)
+{:.figcaption}
+
+제가 집과 회사에서 사용하고 있는 레이아웃 입니다. 자세한 키 맵핑은 [Ark68 키보드 리뷰](ark68-se-keyboard)에서 확인하실 수 있습니다.
+
+백스페이스를 쪼개서 `` ` ``& `\` 으로 활용하였습니다.
+
+<details>
+<summary>Keyboard Layout Editor JSON</summary>
+<div markdown="1">
+```json
+[
+  {
+    "c": "#0084c2"
+  },
+  "Esc",
+  "!\n1",
+  "@\n2",
+  "#\n3",
+  "$\n4",
+  "%\n5",
+  "^\n6",
+  "&\n7",
+  "*\n8",
+  "(\n9",
+  ")\n0",
+  "_\n-",
+  "+\n=",
+  "~\n`",
+  {
+    "c": "#dd1126"
+  },
+  "|\n\\"
+],
+[
+  {
+    "c": "#0084c2",
+    "w": 1.5
+  },
+  "Tab",
+  "Q",
+  "W",
+  "E",
+  "R",
+  "T",
+  "Y",
+  "U",
+  "I",
+  "O",
+  "P",
+  "{\n[",
+  "}\n]",
+  {
+    "c": "#dd1126",
+    "w": 1.5
+  },
+  "Backspace",
+  {
+    "c": "#dd1126"
+  },
+  "PgUp"
+],
+[
+  {
+    "c": "#0084c2",
+    "w": 1.75
+  },
+  "Caps Lock",
+  "A",
+  "S",
+  "D",
+  "F",
+  "G",
+  "H",
+  "J",
+  "K",
+  "L",
+  ":\n;",
+  "\"\n'",
+  {
+    "w": 2.25
+  },
+  "Enter",
+  {
+    "c": "#dd1126"
+  },
+  "PgDn"
+],
+[
+  {
+    "c": "#0084c2",
+    "w": 2.25
+  },
+  "Shift",
+  "Z",
+  "X",
+  "C",
+  "V",
+  "B",
+  "N",
+  "M",
+  "<\n,",
+  ">\n.",
+  "?\n/",
+  {
+    "c": "#dd1126",
+    "w": 1.75
+  },
+  "Shift",
+  {
+    "c": "#00773a"
+  },
+  "↑",
+  {
+    "c": "#dd1126"
+  },
+  "Fn"
+],
+[
+  {
+    "c": "#0084c2",
+    "w": 1.25
+  },
+  "Ctrl",
+  {
+    "w": 1.25
+  },
+  "Win",
+  {
+    "w": 1.25
+  },
+  "Alt",
+  {
+    "a": 7,
+    "w": 6.25
+  },
+  "",
+  {
+    "a": 4,
+    "w": 1.25
+  },
+  "Alt",
+  {
+    "w": 1.25
+  },
+  "Fn",
+  {
+    "x": 0.5,
+    "c": "#00773a"
+  },
+  "←",
+  "↓",
+  "→"
+]
+```
+</div>
+</details>
 
 #### 60%
 
@@ -181,9 +341,153 @@ Filco Minila
 백스페이스도 1u가 되어 최상단에 위치하네요.
 1.75u 크기의 ~~미친~~ 컨트롤키, 3u 크기의 귀여운 스페이스바가 보입니다.
 
+![Poker](/assets/img/2021-01-06/60_poker.jpg){: .centered}
+
+Vortex Pok3r
+{:.figcaption}
+
+제가 고등학교때 가장 처음으로 샀었던 기계식 키보드 중 하나인 포커 배열입니다.<br>
+@ladofa님이 댓글로 요청해주신 `GK61` 배열과도 동일합니다.<br>
+다른 부분은 다 무난한데 ~~크고 아름다운~~ 우슆이 인상적인 배열입니다.<br>
+사용성은 몰라도 정갈한 모습이 가장 심미적인 60% 배열이 아닐까 합니다.
+
+<details>
+<summary>Keyboard Layout Editor JSON</summary>
+<div markdown="1">
+```json
+[
+  {
+    "c": "#0084c2"
+  },
+  "Esc",
+  "!\n1",
+  "@\n2",
+  "#\n3",
+  "$\n4",
+  "%\n5",
+  "^\n6",
+  "&\n7",
+  "*\n8",
+  "(\n9",
+  ")\n0",
+  "_\n-",
+  "+\n=",
+  {
+    "w": 2
+  },
+  "Backspace"
+],
+[
+  {
+    "w": 1.5
+  },
+  "Tab",
+  "Q",
+  "W",
+  "E",
+  "R",
+  "T",
+  "Y",
+  "U",
+  "I",
+  "O",
+  "P",
+  "{\n[",
+  "}\n]",
+  {
+    "w": 1.5
+  },
+  "|\n\\"
+],
+[
+  {
+    "c": "#0084c2",
+    "w": 1.75
+  },
+  "Caps Lock",
+  "A",
+  "S",
+  "D",
+  "F",
+  "G",
+  "H",
+  "J",
+  "K",
+  "L",
+  ":\n;",
+  "\"\n'",
+  {
+    "w": 2.25
+  },
+  "Enter"
+],
+[
+  {
+    "c": "#0084c2",
+    "w": 2.25
+  },
+  "Shift",
+  "Z",
+  "X",
+  "C",
+  "V",
+  "B",
+  "N",
+  "M",
+  "<\n,",
+  ">\n.",
+  "?\n/",
+  {
+    "c": "#dd1126",
+    "w": 2.75
+  },
+  "Shift"
+],
+[
+  {
+    "c": "#0084c2",
+    "w": 1.25
+  },
+  "Ctrl",
+  {
+    "w": 1.25
+  },
+  "Win",
+  {
+    "w": 1.25
+  },
+  "Alt",
+  {
+    "a": 7,
+    "w": 6.25
+  },
+  "",
+  {
+    "w": 1.25,
+    "a": 4
+  },
+  "Alt",
+  {
+    "w": 1.25
+  },
+  "Menu",
+  {
+    "w": 1.25
+  },
+  "Ctrl",
+  {
+    "w": 1.25
+  },
+  "Fn"
+]
+```
+</div>
+</details>
+
 ## 출처
 
 * [Physical Keyboard Layouts Explained In Detail](https://drop.com/talk/947/physical-keyboard-layouts-explained-in-detail?utm_source=linkshare&referer=MUP8N5)
+* [Keyboard Layout Editor](http://www.keyboard-layout-editor.com/)
 * [Keyboard LAB - 키캡규격](https://kbdlab.co.kr/index.php?mid=board_keycap&document_srl=2576)
 * [Matt3o - Anatomy of a Keyboard](https://matt3o.com/anatomy-of-a-keyboard/)
 
