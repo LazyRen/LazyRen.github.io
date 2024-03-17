@@ -31,13 +31,13 @@ work:
     summary: >
       SAP Labs Korea, a cornerstone of SAP HANA, now aims to bring the in-memory technology to the cloud where it acts as a single gateway to data of any size to harness the power of data wherever it resides and ensure the platform for intelligent enterprise.
     highlights:
+      - SQL on Files team developer (2023/06/01~)<br>
+        - Develop Delta table replication feature in HANA<br>
+          - Remote Subscription / FVT(Fabric Virtual Table) of Delta table<br>
       - Transaction team developer (~2023/11/30)<br>
         - Develop EBR(Epoch Based Reclamation) Skip List data structure used in HANA<br>
         - Develop EBR SWMR(Single Writer Multiple Reader) Skip List data structure in Rust lang.<br>
         - Fix Transaction concurrency issues/bugs in HANA<br>
-      - SQL on Files team developer (2023/06/01~)<br>
-        - Develop Delta table replication feature in HANA<br>
-          - Remote Subscription / FVT(Fabric Virtual Table) of Delta table<br>
   - company: "Samsung Research"
     position: "SW Engineer"
     website: "https://research.samsung.com/"
