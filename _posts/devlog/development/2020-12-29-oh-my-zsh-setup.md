@@ -104,9 +104,9 @@ Check [get started](https://github.com/romkatv/powerlevel10k#get-started) to fin
 
 ## OMZ Plugins
 
-Any extension with :pushpin: attached are things that you **MUST INSTALL** for a better life.
+All the extensions listed here are things that you **MUST INSTALL** for a better life.
 
-### autojump :pushpin:
+### autojump
 
 > [autojump](https://github.com/wting/autojump) - a faster way to navigate your filesystem
 
@@ -114,7 +114,7 @@ Any extension with :pushpin: attached are things that you **MUST INSTALL** for a
 brew install autojump
 ```
 
-### autoupdate :pushpin:
+### autoupdate
 
 > [Oh My Zsh plugin](https://github.com/TamCore/autoupdate-oh-my-zsh-plugins) for auto-updating of git-repositories in $ZSH_CUSTOM folder
 
@@ -154,6 +154,19 @@ brew install fzf
 $(brew --prefix)/opt/fzf/install
 ```
 
+You can find zsh(bash) history easily with `fzf` installed.<br>
+Just type `ctrl + r` and type keywords to do a backward search of your zsh command history.
+
+![ctrl + r](/assets/img/2020-12-29/fzf-ctrl-r.gif){: .centered}
+
+`ctrl + t` shows a list of files and folders in the current directory and gives you access to search through it.
+
+Or end command with `**<tab>` to trigger filer search.
+
+![cd completion](/assets/img/2020-12-29/fzf-cd-tab.gif){: .centered}
+
+Check [A Quick Introduction To fzf](https://www.linuxuprising.com/2021/03/a-quick-introduction-to-fzf-interactive.html) for detail.
+
 ### ssh-agent
 
 > [ssh-agent](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ssh-agent) starts automatically ssh-agent to set up and load whichever credentials you want for ssh connections.
@@ -163,7 +176,7 @@ $(brew --prefix)/opt/fzf/install
 plugins=([plugins...] ssh-agent)
 ```
 
-### zsh-autosuggestions :pushpin:
+### zsh-autosuggestions
 
 > [Fish-like fast/unobtrusive autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) for zsh.
 
@@ -182,7 +195,7 @@ Check [Installation Guide](https://github.com/zsh-users/zsh-autosuggestions/blob
    plugins=([plugins...] zsh-autosuggestions)
    ```
 
-### zsh-completions :pushpin:
+### zsh-completions
 
 > Additional completion definitions for Zsh.
 
@@ -201,7 +214,7 @@ Check [git repo](https://github.com/zsh-users/zsh-completions#oh-my-zsh) for det
    plugins=([plugins...] zsh-completions)
    ```
 
-### zsh-syntax-highlighting :pushpin:
+### zsh-syntax-highlighting
 
 > [Fish shell-like syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) for Zsh.
 
