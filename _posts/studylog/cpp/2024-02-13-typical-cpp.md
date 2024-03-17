@@ -334,7 +334,7 @@ Unlike type alias, `enum class` is a different type, so we can do a overloading.
 * Reduce the risk that dependent values diverge
 * Makes it easier to manager defaults
 * Can help prevent uninitialized data
-* Are more convenient to write and user since C++20
+* Are more convenient to write and use since C++20
 * Make your APIs more expressive
 * Are typically discovered as the code evolves
   * Just don't forget to incorporate the improvements
