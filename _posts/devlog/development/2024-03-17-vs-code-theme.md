@@ -50,8 +50,6 @@ This however, require a help from a language server as this is done by overwriti
 
 ### Bracket Highlights
 
-Settings.json:
-
 * Default<br>
   ![Default](/assets/img/2024-03-17/bracket-default.png)
 
@@ -75,13 +73,29 @@ Settings.json:
 </div>
 </details>
 
+## Material Icon Theme
+
+Download [Material Icon Theme] and apply it from a command palette(`Preferences: File Icon Theme` & `Preferences: Product Icon Theme`)
+
+<details>
+<summary>View icons</summary>
+<div markdown="1">
+* File Icons<br>
+  ![Material File Icons](/assets/img/2024-03-17/material-theme-fileIcons.png){:.centered}
+* Folder Icons<br>
+  ![Material Folder Icons](/assets/img/2024-03-17/material-theme-folderIcons.png){:.centered}
+</div>
+</details>
+
+[Material Icon Theme]: https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
+
 ## Other VS Code Themes
 
 You may check [VS Code Themes] site for a brief look of each themes sorted in a install count.
 
 Some other themes I also considered are:
 
-<br>![GitHub Theme](/assets/img/2024-03-17/github-dark.svg)ß
+<br>![GitHub Theme](/assets/img/2024-03-17/github-dark.svg)
 
 [GitHub Theme]
 {:.figcaption}
