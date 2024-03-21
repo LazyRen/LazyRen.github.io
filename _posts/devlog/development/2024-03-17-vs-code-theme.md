@@ -27,7 +27,7 @@ I use `One Dark Pro Flat` theme from [One Dark Pro].
 * Modified<br>
   ![Modified](/assets/img/2024-03-17/one-dark-pro-modified.png)
 
-It's not a big change, but as you can see, I can easily detect difference between `variable` & `parameter` with a color and dimmed `variable` color a bit.
+It's not a big change, but as you can see, I can easily detect difference between `variable` & `parameter` with a color and dimmed `variable` color a bit. And user defined types have same syntax color as a native type.
 
 This however, require a help from a language server as this is done by overwriting `semantic token color`.
 
@@ -38,9 +38,10 @@ This however, require a help from a language server as this is done by overwriti
 "editor.semanticTokenColorCustomizations": {
   "[One Dark Pro Flat]": {
     "rules": {
-      "variable": "#E06C75",
+      "parameter": "#B392F0",
       "property": "#82B1FF",
-      "parameter": "#B392F0"
+      "type": "#C678DD",
+      "variable": "#E06C75"
     }
   }
 },
@@ -120,7 +121,7 @@ Some other themes I also considered are:
 [Catppuccin]
 {:.figcaption}
 
-I have tried several otehrs, but I always come back to the One Dark Pro.<br>
+I have tried several others, but I always come back to the One Dark Pro.<br>
 For some, they don't highlight all semantic tokens as I want, and others just don't feel right to me.
 
 [VS Code Themes]: https://vscodethemes.com/?language=cpp&type=dark&sortBy=installs
