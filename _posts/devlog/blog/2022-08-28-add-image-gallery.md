@@ -143,3 +143,51 @@ executed every time the new page gets loaded.
 
 [my-scripts.html]: https://github.com/LazyRen/LazyRen.github.io/blob/master/_includes/my-scripts.html
 [Hydejack event listener]: https://hydejack.com/docs/scripts/#registering-push-state-event-listeners
+
+### Remove LightBox Effect From a Blog Layout
+
+As @metehanozdeniz mentioned on a comment, LightBox also affects blog layout so if you click the image from a list of posts,
+it will lead you to a post page and image will be displayed on a pop up. Which require a viewer to click on a background to close the image pop up.
+
+I have made [the commit] to fix this issue.
+
+[the commit]: https://github.com/LazyRen/LazyRen.github.io/commit/290e69323d330060f1ec5d92dd7a554a96f20cb5
+
+#### _includes/components/post.html
+
+```html
+<!-- file: "_includes/components/post.html" -->
+{%- raw -%}
+<!-- ... -->
+
+{% assign no_lightbox      = include.no_lightbox      %}
+
+<!-- ... -->
+
+<div class="img-wrapper lead aspect-ratio sixteen-nine flip-project-img">
+  <!-- {% include_cached components/hy-img.html img=post.image alt=post.title width=864 height=486 %} -->
+  {% include_cached components/hy-img.html img=post.image alt=post.title width=864 height=486 %}
+  {% if no_lightbox %}
+    {% include_cached components/hy-img.html img=post.image alt=post.title class="no-lightbox" width=864 height=486 %}
+  {% else %}
+    {% include_cached components/hy-img.html img=post.image alt=post.title width=864 height=486 %}
+  {% endif %}
+</div>
+
+<!-- ... -->
+{% endraw %}
+```
+
+#### _layouts/blog.html
+
+```html
+<!-- file: "_layouts/blog.html" -->
+{%- raw -%}
+<!-- ... -->
+
+<!-- {% include_cached components/post.html post=post no_link_title=page.no_link_title no_excerpt=page.no_excerpt hide_image=page.hide_image %} -->
+{% include_cached components/post.html post=post no_link_title=page.no_link_title no_excerpt=page.no_excerpt hide_image=page.hide_image no_lightbox=true %}
+
+<!-- ... -->
+{% endraw %}
+```
