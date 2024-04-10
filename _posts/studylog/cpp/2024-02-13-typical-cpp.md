@@ -339,7 +339,7 @@ Unlike type alias, `enum class` is a different type, so we can do a overloading.
 * Are typically discovered as the code evolves
   * Just don't forget to incorporate the improvements
 
-## Furthermore
+## Reference
 
 * [Strongly Typed Containers - Sandor Dargo - C++ on Sea 2022](https://www.youtube.com/watch?v=0cTOqwrvq94)
 * [What Classes We Design and How - Peter Sommerlad - CppCon 2021](https://www.youtube.com/watch?v=iLpt23V2vQE)
