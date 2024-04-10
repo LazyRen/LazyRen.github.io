@@ -226,6 +226,8 @@ giscus:
 
 lightbox:              true
 
+mermaid:               true
+
 # Setting a tinyletter username will enable the newsletter subscription box.
 # PRO version only!
 # tinyletter:            <username>
